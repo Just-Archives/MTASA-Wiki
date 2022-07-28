@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>PT-BR/Argumentos Opcionais - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aeba731003d80e510aa5c3ca","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PT-BR/Argumentos_Opcionais","wgTitle":"PT-BR/Argumentos Opcionais","wgCurRevisionId":69088,"wgRevisionId":69088,"wgArticleId":11941,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PT-BR/Argumentos_Opcionais","wgRelevantArticleId":11941,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":
+"Argumentos_Opcionais/PT-BR","wgInternalRedirectTargetUrl":"/wiki/PT-BR/Argumentos_Opcionais"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<link rel="canonical" href="../PT-BR/Argumentos_Opcionais.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-PT-BR_Argumentos_Opcionais rootpage-PT-BR_Argumentos_Opcionais skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">PT-BR/Argumentos Opcionais</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">(Redirected from <a href="https://wiki.multitheftauto.com/index.php?title=Argumentos_Opcionais/PT-BR&amp;redirect=no" class="mw-redirect" title="Argumentos Opcionais/PT-BR">Argumentos Opcionais/PT-BR</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><b>Argumentos Opcionais</b> são argumentos que podem opcionalmente ser passados para qualquer função Lua, incluindo os internos do MTA: SA. Eles não são necessários para a função ser executada e podem ser desabilitados (valor == <i><a href="../Nil.html" title="Nil">nil</a></i>). Frequentemente, esse tipo de argumento não faz uma enorme diferença no comportamento da função.
+</p><p>É uma convenção Lua em que os argumentos escritos entre colchetes são opcionais, portanto, neste Wiki, você também pode encontrar funções com alguns argumentos entre colchetes. Isso significa que eles são opcionais e que não é necessário fornecê-los.
+</p><p>Vamos dar uma olhada nesta função:
+</p>
+<pre class="prettyprint lang-lua">vehicle createVehicle ( int model, float x, float y, float z, [ float rx, float ry, float rz ] )</pre>
+<p>Neste exemplo, <i>rx</i>, <i>ry</i>, and <i>rz</i> são argumentos opcionais, pois estão entre colchetes. Eles não precisam ser fornecidos para a função; será padronizado para nenhuma rotação em todos os eixos. Se fornecida, a função utilizará as rotações especificadas.
+</p>
+<h2><span id="Por_que_argumentos_opcionais_s.C3.A3o_usados.3F"></span><span class="mw-headline" id="Por_que_argumentos_opcionais_são_usados?">Por que argumentos opcionais são usados?</span></h2>
+<p>Na maioria das vezes, é chato ter que fornecer todos os argumentos de uma determinada função, especialmente se eles são os mesmos repetidamente. Os argumentos opcionais permitem que o scripter transmita apenas os dados realmente necessários para seu script, e isso ajuda a melhorar a legibilidade e o tamanho do código.
+</p>
+<h2><span class="mw-headline" id="Usando_os_argumentos_opcionais">Usando os argumentos opcionais</span></h2>
+<p>O argumento opcional é utilizado como argumentos normais. A única diferença é que eles serão padronizados para um determinado valor, se não for fornecido (em outras palavras, se <i>opcionalArgument == nil</i>, será então <i>opcionalArgument = defaultValue</i>).
+</p><p>Um problema comum para programadores novos é quando eles desejam fornecer apenas um argumento opcional, sem definir os que estão antes dele. Bem, isso é realmente simples de "consertar". Normalmente, eles podem ser definidos como <i><a href="../Nil.html" title="Nil">nil</a></i>, então eles serão padronizados com seus valores correspondentes enquanto o scripter ainda é capaz de definir o que ele realmente deseja. Por exemplo, se você quer somente definir a rotação do eixo Z da função <a href="../CreateVehicle.html" title="CreateVehicle">createVehicle</a> (e não sabe que <i>rx</i> e <i>ry</i> tem como padrão, o zero):
+</p>
+<pre class="prettyprint lang-lua">vehicle createVehicle ( int model, float x, float y, float z, [ float rx, float ry, float rz ] )</pre>
+<p>Você pode usar:
+</p>
+<pre class="prettyprint lang-lua">local meuCarrinho = createVehicle( getVehicleModelFromName( "Infernus" ), 0, 0, 5, nil, nil, 180 )</pre>
+<p>E o resultado será o carro Infernus girado 180 graus no eixo Z, no centro do mapa.
+</p>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #FFB2B2; background: transparent; border-left: 25px solid #FFB2B2;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top;" rowspan="2"><img alt="Dialog-warning.png" src="https://wiki.multitheftauto.com/images/1/1a/Dialog-warning.png" decoding="async" width="32" height="32" />
+</td>
+<td style="padding-left: 10px;"><b>Aviso:</b> Existem algumas funções nativas do MTA: SA que não seguem esta concordância, especialmente quando um argumento opcional está intimamente relacionado a outro (ex.: argumentos de cores nas funções DX e provavelmente outros): ao invés de substituir o valor <i>nil</i>, eles informam o erro 'bad argument' e não fazem nada. <b>Sempre verifique se isso funciona com uma função antes de usá-la em um script</b>.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<h2><span id="Fun.C3.A7.C3.B5es_personalizadas_com_argumentos_opcionais"></span><span class="mw-headline" id="Funções_personalizadas_com_argumentos_opcionais">Funções personalizadas com argumentos opcionais</span></h2>
+<p>Estas funções com argumentos opcionais ficam fáceis de ser gerenciada quando usado o <b>if</b>&#160;:
+</p>
+<pre class="prettyprint lang-lua">function aNotSoUsefulFunction( text )
+    if type( text ) == "string" or type( text ) == "nil" then -- Verifica se os argumentos corretos foram fornecidos
+        local realTextToOutput
+        if text == nil then
+            realTextToOutput = "Eu &lt;3 argumentos opcionais" -- Se a variável text for igual a nil (não especificado), é usado um padrão
+        else
+            realTextToOutput = text -- Aqui é definido o texto que o usuário especificou, isso se ele definiu
+        end
+        outputChatBox( realTextToOutput ) -- Texto publicado no chat
+    end
+end</pre>
+<p>Você também pode usar <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Short-circuit_evaluation">short-circuit evaluation</a>, se você preferir:
+</p>
+<pre class="prettyprint lang-lua">function aNotSoUsefulFunction( text )
+    local realTextToOutput = ( type( text ) == "string" or type( text ) == "nil" ) and ( type( text ) == "string" and text or "Eu &lt;3 argumentos opcionais" ) or nil
+    if realTextToOutput then -- Verifica se há algo para postar no chat
+        outputChatBox( realTextToOutput ) -- Poste o texto
+    end
+end</pre>
+<!-- 
+NewPP limit report
+Cached time: 20220727152839
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 81/1000000
+Post‐expand include size: 2159/2097152 bytes
+Template argument size: 1345/2097152 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1412/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.945      1 -total
+100.00%    1.945      1 Template:BR/Warning
+ 54.08%    1.052      1 Template:MessageBox
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:11941-0!canonical and timestamp 20220727152839 and revision id 69088. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Argumentos_Opcionais&amp;oldid=69088">https://wiki.multitheftauto.com/index.php?title=PT-BR/Argumentos_Opcionais&amp;oldid=69088</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=PT-BR%2FArgumentos+Opcionais" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=PT-BR%2FArgumentos+Opcionais" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="../PT-BR/Argumentos_Opcionais.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:PT-BR/Argumentos_Opcionais&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="../PT-BR/Argumentos_Opcionais.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Argumentos_Opcionais&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Argumentos_Opcionais&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/PT-BR/Argumentos_Opcionais.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/PT-BR/Argumentos_Opcionais.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Argumentos_Opcionais&amp;oldid=69088" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Argumentos_Opcionais&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Optional_Arguments" title="Optional Arguments – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-pl mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=PL/Argumenty_opcjonalne" title="Argumenty opcjonalne – polski" lang="pl" hreflang="pl" class="interlanguage-link-target"><span>Polski</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/Optional_Arguments" title="Optional Arguments – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=DE/Optionale_Argumente" title="Optionale Argumente – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 February 2021, at 16:49.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.008","walltime":"0.009","ppvisitednodes":{"value":81,"limit":1000000},"postexpandincludesize":{"value":2159,"limit":2097152},"templateargumentsize":{"value":1345,"limit":2097152},"expansiondepth":{"value":7,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1412,"limit":5000000},"timingprofile":["100.00%    1.945      1 -total","100.00%    1.945      1 Template:BR/Warning"," 54.08%    1.052      1 Template:MessageBox"]},"cachereport":{"timestamp":"20220727152839","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":75});});</script>
+</body>
+</html>

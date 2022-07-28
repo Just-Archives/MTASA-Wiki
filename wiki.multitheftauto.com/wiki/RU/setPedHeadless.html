@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/setPedHeadless - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"43a3e9c355f3ac2bcd0744c7","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/setPedHeadless","wgTitle":"RU/setPedHeadless","wgCurRevisionId":32277,"wgRevisionId":32277,"wgArticleId":5316,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Функции сервера","Функции клиента"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/setPedHeadless","wgRelevantArticleId":5316,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='both' data-subcaption='Функция клиента и сервера'>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_setPedHeadless rootpage-RU_setPedHeadless skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/setPedHeadless</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+С помощью этой функции можно задавать, есть ли у педа голова.
+</p>
+<h2><span id=".D0.A1.D0.B8.D0.BD.D1.82.D0.B0.D0.BA.D1.81"></span><span class="mw-headline" id="Синтакс">Синтакс</span></h2>
+<pre class="prettyprint lang-lua">bool setPedHeadless  ( ped thePed, bool headState )</pre>
+<h3><span id=".D0.9E.D0.B1.D1.8F.D0.B7.D0.B0.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.B0.D1.80.D0.B3.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D1.8B"></span><span class="mw-headline" id="Обязательные_аргументы">Обязательные аргументы</span></h3>
+<ul><li><b>thePed</b>: Пед у которого вы хотите задать, есть ли у педа голова.</li>
+<li><b>headState</b>: True если нужно убрать голову, false если пед с головой.</li></ul>
+<h3><span id=".D0.92.D0.BE.D0.B7.D0.B2.D1.80.D0.B0.D1.89.D0.B5.D0.BD.D0.B8.D1.8F"></span><span class="mw-headline" id="Возвращения">Возвращения</span></h3>
+<p>Возвращает <i>true</i> если успешно, <i>false</i> при ошибке.
+</p>
+<h2><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80"></span><span class="mw-headline" id="Пример">Пример</span></h2>
+<!-- BEGIN SECTION |1|server|Server|--><div class="serverHeader" onclick="expandSection(1);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander1">Click to collapse [-]</div>Server</div><div style="display:;" class="serverContent" id="section1">
+<p>Этот пример добавляет две команды, с помощью которых игрокам можно убирать и возвращаеть голову.
+</p>
+<pre class="prettyprint lang-lua">function removeMyHead(thePlayer)
+	setPedHeadless(thePlayer, true) -- Removes the players head
+	outputChatBox("You have been beheaded!", thePlayer, 255, 0, 0) -- A confirmation message for the player
+end
+addCommandHandler("beheadme", removeMyHead)
+
+function giveBackHead(thePlayer)
+	setPedHeadless(thePlayer, false) -- Gives the player a head
+	outputChatBox("You have been given a head!", thePlayer, 255, 0, 0) -- A confirmation message for the player
+end
+addCommandHandler("headmeup", giveBackHead)
+</pre>
+</div><!-- END SECTION |1|-->
+<h2><span id=".D0.A1.D0.BC.D0.BE.D1.82.D1.80.D0.B8.D1.82.D0.B5_.D1.82.D0.B0.D0.BA.D0.B6.D0.B5"></span><span class="mw-headline" id="Смотрите_также">Смотрите также</span></h2>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/addPedClothes&amp;action=edit&amp;redlink=1" class="new" title="RU/addPedClothes (page does not exist)">addPedClothes</a></li>
+<li><a href="createPed.html" title="RU/createPed">createPed</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/doesPedHaveJetPack&amp;action=edit&amp;redlink=1" class="new" title="RU/doesPedHaveJetPack (page does not exist)">doesPedHaveJetPack</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedAmmoInClip&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedAmmoInClip (page does not exist)">getPedAmmoInClip</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedArmor&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedArmor (page does not exist)">getPedArmor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedClothes&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedClothes (page does not exist)">getPedClothes</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedContactElement&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedContactElement (page does not exist)">getPedContactElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedFightingStyle&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedFightingStyle (page does not exist)">getPedFightingStyle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedGravity&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedGravity (page does not exist)">getPedGravity</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedOccupiedVehicle&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedOccupiedVehicle (page does not exist)">getPedOccupiedVehicle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedOccupiedVehicleSeat&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedOccupiedVehicleSeat (page does not exist)">getPedOccupiedVehicleSeat</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedStat&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedStat (page does not exist)">getPedStat</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedTarget&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedTarget (page does not exist)">getPedTarget</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedTotalAmmo&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedTotalAmmo (page does not exist)">getPedTotalAmmo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedWalkingStyle&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedWalkingStyle (page does not exist)">getPedWalkingStyle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedWeapon&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedWeapon (page does not exist)">getPedWeapon</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/getPedWeaponSlot&amp;action=edit&amp;redlink=1" class="new" title="RU/getPedWeaponSlot (page does not exist)">getPedWeaponSlot</a></li>
+<li><a href="getValidPedModels.html" title="RU/getValidPedModels">getValidPedModels</a></li>
+<li><a href="givePedJetPack.html" title="RU/givePedJetPack">givePedJetPack</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedChoking&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedChoking (page does not exist)">isPedChoking</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedDead&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedDead (page does not exist)">isPedDead</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedDoingGangDriveby&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedDoingGangDriveby (page does not exist)">isPedDoingGangDriveby</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedDucked&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedDucked (page does not exist)">isPedDucked</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedFrozen&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedFrozen (page does not exist)">isPedFrozen</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedHeadless&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedHeadless (page does not exist)">isPedHeadless</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedInVehicle&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedInVehicle (page does not exist)">isPedInVehicle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedInWater&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedInWater (page does not exist)">isPedInWater</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedOnFire&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedOnFire (page does not exist)">isPedOnFire</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isPedOnGround&amp;action=edit&amp;redlink=1" class="new" title="RU/isPedOnGround (page does not exist)">isPedOnGround</a></li>
+<li><a href="killPed.html" title="RU/killPed">killPed</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/reloadPedWeapon&amp;action=edit&amp;redlink=1" class="new" title="RU/reloadPedWeapon (page does not exist)">reloadPedWeapon</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/removePedClothes&amp;action=edit&amp;redlink=1" class="new" title="RU/removePedClothes (page does not exist)">removePedClothes</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/removePedFromVehicle&amp;action=edit&amp;redlink=1" class="new" title="RU/removePedFromVehicle (page does not exist)">removePedFromVehicle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/removePedJetPack&amp;action=edit&amp;redlink=1" class="new" title="RU/removePedJetPack (page does not exist)">removePedJetPack</a></li>
+<li><a href="setPedAnimation.html" title="RU/setPedAnimation">setPedAnimation</a></li>
+<li><a href="setPedAnimationProgress.html" title="RU/setPedAnimationProgress">setPedAnimationProgress</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/setPedAnalogControlState&amp;action=edit&amp;redlink=1" class="new" title="RU/setPedAnalogControlState (page does not exist)">setPedAnalogControlState</a></li>
+<li><a href="setPedArmor.html" title="RU/setPedArmor">setPedArmor</a></li>
+<li><a href="setPedChoking.html" title="RU/setPedChoking">setPedChoking</a></li>
+<li><a href="setPedDoingGangDriveby.html" title="RU/setPedDoingGangDriveby">setPedDoingGangDriveby</a></li>
+<li><a href="setPedFightingStyle.html" title="RU/setPedFightingStyle">setPedFightingStyle</a></li>
+<li><a href="setPedFrozen.html" title="RU/setPedFrozen">setPedFrozen</a></li>
+<li><a href="setPedGravity.html" title="RU/setPedGravity">setPedGravity</a></li>
+<li><a class="mw-selflink selflink">setPedHeadless</a></li>
+<li><a href="setPedOnFire.html" title="RU/setPedOnFire">setPedOnFire</a></li>
+<li><a href="setPedStat.html" title="RU/setPedStat">setPedStat</a></li>
+<li><a href="setPedWeaponSlot.html" title="RU/setPedWeaponSlot">setPedWeaponSlot</a></li></ul>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/setPedWalkingStyle&amp;action=edit&amp;redlink=1" class="new" title="RU/setPedWalkingStyle (page does not exist)">setPedWalkingStyle</a></li>
+<li><a href="warpPedIntoVehicle.html" title="RU/warpPedIntoVehicle">warpPedIntoVehicle</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727221806
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.014 seconds
+Real time usage: 0.015 seconds
+Preprocessor visited node count: 64/1000000
+Post‐expand include size: 2201/2097152 bytes
+Template argument size: 53/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 1173/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.661      1 -total
+ 68.94%    2.524      1 Template:RU/Ped_functions
+ 47.12%    1.725      1 Template:New_items
+ 23.22%    0.850      1 Template:Current_Version
+ 20.35%    0.745      1 Template:RU/Server_client_function
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5316-0!canonical and timestamp 20220727221806 and revision id 32277. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/setPedHeadless&amp;oldid=32277">https://wiki.multitheftauto.com/index.php?title=RU/setPedHeadless&amp;oldid=32277</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="../Category_%d0%a4%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%b8_%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b0.html" title="Category:Функции сервера">Функции сервера</a></li><li><a href="../Category_%d0%a4%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%b8_%d0%ba%d0%bb%d0%b8%d0%b5%d0%bd%d1%82%d0%b0.html" title="Category:Функции клиента">Функции клиента</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FsetPedHeadless" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FsetPedHeadless" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="setPedHeadless.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:RU/setPedHeadless&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="setPedHeadless.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/setPedHeadless&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/setPedHeadless&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/RU/setPedHeadless.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/RU/setPedHeadless.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/setPedHeadless&amp;oldid=32277" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/setPedHeadless&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=setPedHeadless" title="setPedHeadless – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 12 August 2012, at 04:37.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.014","walltime":"0.015","ppvisitednodes":{"value":64,"limit":1000000},"postexpandincludesize":{"value":2201,"limit":2097152},"templateargumentsize":{"value":53,"limit":2097152},"expansiondepth":{"value":10,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":1173,"limit":5000000},"timingprofile":["100.00%    3.661      1 -total"," 68.94%    2.524      1 Template:RU/Ped_functions"," 47.12%    1.725      1 Template:New_items"," 23.22%    0.850      1 Template:Current_Version"," 20.35%    0.745      1 Template:RU/Server_client_function"]},"cachereport":{"timestamp":"20220727221806","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":72});});</script>
+</body>
+</html>

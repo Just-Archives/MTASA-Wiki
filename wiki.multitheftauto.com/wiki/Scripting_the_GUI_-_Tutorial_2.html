@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Scripting the GUI - Tutorial 2 - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"966c197b99db4e77c7ca1f47","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Scripting_the_GUI_-_Tutorial_2","wgTitle":"Scripting the GUI - Tutorial 2","wgCurRevisionId":60929,"wgRevisionId":60929,"wgArticleId":5024,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["GUI Tutorials"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Scripting_the_GUI_-_Tutorial_2","wgRelevantArticleId":5024,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={
+"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Scripting_the_GUI_-_Tutorial_2 rootpage-Scripting_the_GUI_-_Tutorial_2 skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Scripting the GUI - Tutorial 2</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><b>Scripting the GUI - Tutorial 2 (Gates + Keypads)</b>
+</p><p>In this tutorial we will look at creating GUI keypads with combination codes for map-defined object gates.
+We will be using serverside keycodes, with some client - server interaction to verify the codes and report the outcome.
+</p><p><b>Note that this tutorial assumes you are familiar with all the content covered in the <a href="Introduction_to_Scripting_GUI.html" class="mw-redirect" title="Introduction to Scripting GUI">GUI Scripting Introduction</a>.</b>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:152px;"><a href="File_Gui_keypad_tutorial.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/4/4e/Gui_keypad_tutorial.png" decoding="async" width="150" height="286" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Gui_keypad_tutorial.html" class="internal" title="Enlarge"></a></div>GUI Keypad</div></div></div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Setting_up_the_Keypad"><span class="tocnumber">1</span> <span class="toctext">Setting up the Keypad</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Creating_the_GUI"><span class="tocnumber">1.1</span> <span class="toctext">Creating the GUI</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Managing_the_display"><span class="tocnumber">1.2</span> <span class="toctext">Managing the display</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Detecting_the_clicks"><span class="tocnumber">1.3</span> <span class="toctext">Detecting the clicks</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Handling_the_clicks"><span class="tocnumber">1.4</span> <span class="toctext">Handling the clicks</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Serverside_Verification"><span class="tocnumber">2</span> <span class="toctext">Serverside Verification</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Defining_the_keycode"><span class="tocnumber">2.1</span> <span class="toctext">Defining the keycode</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Verifying_the_code"><span class="tocnumber">2.2</span> <span class="toctext">Verifying the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Receiving_the_result"><span class="tocnumber">3</span> <span class="toctext">Receiving the result</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Catching_and_processing_the_result"><span class="tocnumber">3.1</span> <span class="toctext">Catching and processing the result</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Applying_the_Keypad"><span class="tocnumber">4</span> <span class="toctext">Applying the Keypad</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Creating_the_gate"><span class="tocnumber">4.1</span> <span class="toctext">Creating the gate</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Opening_the_keypad"><span class="tocnumber">4.2</span> <span class="toctext">Opening the keypad</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Opening_the_gate"><span class="tocnumber">4.3</span> <span class="toctext">Opening the gate</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Setting_up_the_Keypad">Setting up the Keypad</span></h2>
+<p>To begin, open up a clientside lua file (if you have been following the <a href="Introduction_to_Scripting_GUI.html" class="mw-redirect" title="Introduction to Scripting GUI">GUI Scripting Introduction</a>, this is gui.lua) to work with.
+</p>
+<h3><span class="mw-headline" id="Creating_the_GUI">Creating the GUI</span></h3>
+<p>By now, GUI creation should seem relatively straight forward, so we will not go over this in too much detail.
+As in <a href="Scripting_the_GUI_-_Tutorial_1.html" title="Scripting the GUI - Tutorial 1">Tutorial 1</a> we will be using <b>absolute</b> values in this tutorial.
+</p>
+<pre class="prettyprint lang-lua">function createKeypad()
+	-- get the screen width and height
+	local sWidth, sHeight = guiGetScreenSize()
+
+	-- create the window, using some maths to find the centre of the screen
+	local Width,Height = 142,276
+	local X = (sWidth/2) - (Width/2)
+	local Y = (sHeight/2) - (Height/2)
+	keypadWindow = guiCreateWindow(X,Y,Width,Height,"Keypad",false)
+	
+	-- don't allow people to resize the keypad
+	guiWindowSetSizable(keypadWindow,false)
+
+	-- create buttons labeled 0-9, "*", "#", "Enter" and "C" (clear)
+	keypadButton1 = guiCreateButton(13,68,37,36,"1",false,keypadWindow)
+	keypadButton2 = guiCreateButton(53,68,37,36,"2",false,keypadWindow)
+	keypadButton3 = guiCreateButton(93,68,37,36,"3",false,keypadWindow)
+	keypadButton4 = guiCreateButton(13,108,37,36,"4",false,keypadWindow)
+	keypadButton5 = guiCreateButton(53,108,37,36,"5",false,keypadWindow)
+	keypadButton6 = guiCreateButton(93,108,37,36,"6",false,keypadWindow)
+	keypadButton7 = guiCreateButton(13,148,37,36,"7",false,keypadWindow)
+	keypadButton8 = guiCreateButton(53,148,37,36,"8",false,keypadWindow)
+	keypadButton9 = guiCreateButton(93,148,37,36,"9",false,keypadWindow)
+	keypadButtonAsterix = guiCreateButton(13,188,37,36,"*",false,keypadWindow)
+	keypadButton0 = guiCreateButton(53,188,37,36,"0",false,keypadWindow)
+	keypadButtonHash = guiCreateButton(93,188,37,36,"#",false,keypadWindow)
+	keypadButtonExit = guiCreateButton(13,228,37,36,"Exit",false,keypadWindow)
+	keypadButtonEnter = guiCreateButton(53,228,37,36,"Enter",false,keypadWindow)
+	keypadButtonClear = guiCreateButton(93,228,37,36,"Clear",false,keypadWindow)
+
+	-- create a gridlist to act as a backdrop on the kaypad display
+	keypadGridlistDisplay = guiCreateGridList(13,25,117,33,false,keypadWindow)
+	guiGridListSetSelectionMode(keypadGridlistDisplay,2)
+	guiSetAlpha(keypadGridlistDisplay,0.6)
+	-- create a label so we can write text on the keypad display
+	keypadLabelDisplay = guiCreateLabel(14,26,115,30,"Enter Keycode.",false,keypadWindow)
+	guiLabelSetColor(keypadLabelDisplay,255,000,000)
+	guiLabelSetVerticalAlign(keypadLabelDisplay,"center")
+	guiLabelSetHorizontalAlign(keypadLabelDisplay,"center",false)
+	
+	guiSetVisible(keypadWindow,false)
+end
+
+-- create the GUI when the resource starts
+addEventHandler("onClientResourceStart",getResourceRootElement(getThisResource()),createKeypad)
+</pre>
+<p>As you can see, the keypad consists of 10 numerical keys (0-9), two character keys (* and #), a clear key, an exit key and an enter key.
+This means the codes used on the keypad can contain any of these characters (0123456789*#).
+</p>
+<h3><span class="mw-headline" id="Managing_the_display">Managing the display</span></h3>
+<p>We will begin by writing a small function to control the display on the keypad.
+This is done by encapsulating several methods of changing the text into a single function,
+which will enable us to easily add/remove text from the display later on.
+</p>
+<pre class="prettyprint lang-lua">function updateDisplay(text)
+	-- if we are passing some text
+	if text then
+		-- if its a digit or * or #, then append it to the end of the display
+		if tonumber(text) or text == "*" or text == "#" then
+			guiSetText(keypadLabelDisplay,guiGetText(keypadLabelDisplay) .. text)
+		-- otherwise replace the display with the new text
+		else
+			guiSetText(keypadLabelDisplay,text)
+		end	
+	-- if we pass nil, clear the display entirely
+	else
+		guiSetText(keypadLabelDisplay,"")
+	end
+end
+</pre>
+<p>We can now simply call updateDisplay(our text) to change the text on the display, or updateDisplay(nil) to clear it.
+</p>
+<h3><span class="mw-headline" id="Detecting_the_clicks">Detecting the clicks</span></h3>
+<p>With so many buttons that do very similar tasks on our keypad, there are two methods available to us for detecting when a player clicks on them.
+</p><p>We could add <a href="OnClientGUIClick.html" title="OnClientGUIClick">onClientGUIClick</a> events for every button individually, as we have done in previous tutorials; Or, alternatively, 
+we could add a single <a href="OnClientGUIClick.html" title="OnClientGUIClick">onClientGUIClick</a> handler for the window (which is the parent of all our other keypad GUI elements), filter our results to include only the buttons we want and trigger our own custom event.
+</p><p><br />
+For the purposes of this tutorial and in the interest of outlining multiple approaches, we will explore the second method, though either one is an acceptable solution.
+</p>
+<pre class="prettyprint lang-lua">addEventHandler("onClientGUIClick",keypadWindow,processKeypadClicks,true)
+</pre>
+<p><b>Notice the final argument is set to 'true'. This means that clicks on any other elements in the same branch of the tree will also trigger this event handle (eg. clicks on our buttons).</b>
+</p><p>Add this line of code into your createKeypad function, after your GUI has been created.
+</p><p><br />
+Now that we are detecting all clicks on our GUI, we need to filter out the ones we do not want (ie: clicks on the window or display) and trigger our custom event:
+</p>
+<pre class="prettyprint lang-lua">function processKeypadClicks(button,state)
+	if button == "left" and state == "up" then
+		-- if the source of this event is a gui button
+		if getElementType(source) == "gui-button" then
+			-- trigger our custom event and send the keypad id of this keypad as an argument
+			triggerEvent("onKeypadButtonClicked",source,getElementData(keypadWindow,"keypadID"))
+		end
+	end
+end
+</pre>
+<p>As you can see, we are now triggering our custom event "onKeypadButtonClicked" whenever a button is clicked on the keypad.
+Also note we use element data "keypadID" to differentiate between keypads. This data will need to be set whenever the player is shown a new keypad.
+We will cover this in more detail later.
+</p>
+<h3><span class="mw-headline" id="Handling_the_clicks">Handling the clicks</span></h3>
+<p>Much like when using <a href="TriggerServerEvent.html" title="TriggerServerEvent">triggerServerEvent</a> in previous tutorials, we now need to define the event, only this time it is purely clientside:
+</p>
+<pre class="prettyprint lang-lua">addEvent("onKeypadButtonClicked",false)
+addEventHandler("onKeypadButtonClicked",root,
+	function(keypadID)
+
+	end
+)
+</pre>
+<p>Note the second argument in <a href="AddEvent.html" title="AddEvent">addEvent</a> is set to false, indicating that this event cannot be triggered from the server.
+Also note, the function we are using in the <a href="AddEventHandler.html" title="AddEventHandler">addEventHandler</a> does not have a name. If you contract it down and remove the spacing, you get:
+</p>
+<pre class="prettyprint lang-lua">addEventHandler("onKeypadButtonClicked",root,function() ... end)
+</pre>
+<p>This simply means instead of storing the pointer to the function in a variable, we are passing it directly as an argument.
+Doing it this way cleans up the code and will often make it easier to follow.
+</p><p>Now that the event has been created, we can fill in the code logic that will control our button presses.
+</p>
+<pre class="prettyprint lang-lua">addEvent("onKeypadButtonClicked",false)
+addEventHandler("onKeypadButtonClicked",root,
+	function(keypadID)
+		-- clear the display if this is the first time its being used
+		if guiGetText(keypadLabelDisplay) == "Enter Keycode." or guiGetText(keypadLabelDisplay) == "Invalid Keycode." then
+			updateDisplay()
+		end
+	
+	
+		-- if its the clear button
+		if guiGetText(source) == "Clear" then
+			-- clear the display
+			updateDisplay()
+		
+		-- if its the enter button
+		elseif guiGetText(source) == "Enter" then
+			-- get the currently entered code from the display
+			local code = guiGetText(keypadLabelDisplay)
+			
+			-- if they have entered a code
+			if code then
+				-- trigger the server so we can verify their code
+				triggerServerEvent("verifyKeypadCode",getLocalPlayer(),code,keypadID)
+			end
+		
+		-- if its the exit button
+		elseif guiGetText(source) == "Exit" then
+			-- hide the keypad and reset the display text ready for next time
+			guiSetVisible(keypadWindow,false)
+			updateDisplay("Enter Keycode.")
+			showCursor(false,false)
+			
+		-- otherwise, it must be a character button
+		else
+			updateDisplay(guiGetText(source))	
+		end
+	end
+)
+</pre>
+<p>Note how when we are clearing the display, we simply call updateDisplay() with no arguments. We do not need to pass 'nil' to it as all parameters (and variables) are nil by default.
+</p>
+<h2><span class="mw-headline" id="Serverside_Verification">Serverside Verification</span></h2>
+<p>For this part of the tutorial, you will need to open up a serverside lua file from your resource to work with.
+</p>
+<h3><span class="mw-headline" id="Defining_the_keycode">Defining the keycode</span></h3>
+<p>Now that we have completed the keypad clicking logic, we need to move on to verifying the code entered into the keypad.
+To do this, we need to have the correct code stored somewhere on the server, which we can check the players code against.
+</p><p><b>Do not store sensitive information, such as keycodes or passwords, in a clientside file. All clientside files will be downloaded to the clients computer and can be accessed and read by anyone who has joined your server.</b>
+</p><p>For the purposes of this tutorial we will simply store the code in a serverside table, however it can be done any number of ways (such as serverside xml files or MySQL databases).
+</p>
+<pre class="prettyprint lang-lua">local keypadCodes = {
+	["a51MainGateKeypadCode"] = "4455*#"
+}
+</pre>
+<p>This table stores an entry called "a51MainGateKeypadCode" with the code 4455*#
+</p><p><b>This is the keycode that you will use to open the gate later on in this tutorial.</b>
+</p>
+<h3><span class="mw-headline" id="Verifying_the_code">Verifying the code</span></h3>
+<p>Now that we have a keycode to verify against, we can write our serverside event:
+</p>
+<pre class="prettyprint lang-lua">addEvent("verifyKeypadCode",true)
+addEventHandler("verifyKeypadCode",root,function(code,keypadID)
+	if code then
+		-- using the table we created earlier, check if the code supplied is the same as the code for this gate
+		if code == keypadCodes[keypadID] then
+			-- if it is, tell the client that it was successful
+			triggerClientEvent(client,"onKeypadVerificationSuccessful",client,keypadID)
+		else
+			-- if it is not, tell the client that it was not successful
+			triggerClientEvent(client,"onKeypadVerificationFailed",client,keypadID)
+		end
+	end
+end)
+</pre>
+<p>Here we use our table and the keypadID supplied by the player to check if the codes match.
+</p><p>If you are not using a table to store the codes, then you will need to replace 'keypadCodes[keypadID]' with your own storage method.
+Once it is verified (or not), we can trigger the client so the appropriate information can be shown on the keypad display.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Receiving_the_result">Receiving the result</span></h2>
+<p>We have now finished the serverside section of the tutorial, so you will need to open up the clientside lua file from your resource 
+that you were previously working on.
+</p><p><br />
+Once our code has been verified, the server will send back the response to the client.
+In just the same way as client -&gt; server interaction, we now need to add the event that the server is going to trigger on the client.
+</p>
+<h3><span class="mw-headline" id="Catching_and_processing_the_result">Catching and processing the result</span></h3>
+<p>First we will add the event for when the verification is successful:
+</p>
+<pre class="prettyprint lang-lua">addEvent("onKeypadVerificationSuccessful",true)
+addEventHandler("onKeypadVerificationSuccessful",root,
+	function()
+		-- hide the keypad and reset the display text ready for next time
+		guiSetVisible(keypadWindow,false)
+		updateDisplay("Enter Keycode.")
+		showCursor(false,false)
+	end
+)
+</pre>
+<p>Finally we can add the event for when the verification is unsuccessful:
+</p>
+<pre class="prettyprint lang-lua">addEvent("onKeypadVerificationFailed",true)
+addEventHandler("onKeypadVerificationFailed",root,
+	function()
+		-- update the display text to show the code was invalid
+		updateDisplay("Invalid Keycode.")
+	end
+)
+</pre>
+<p>This completes the keypad section of the tutorial.
+</p><p>For an example of how to implement this into a working gate system, carry on reading the next section.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Applying_the_Keypad">Applying the Keypad</span></h2>
+<p>For the keypad to have any use, we need something to use it on.
+For this tutorial we will be using gates, and as mentioned earlier we will create a main gate into A51.
+</p>
+<h3><span class="mw-headline" id="Creating_the_gate">Creating the gate</span></h3>
+<p>First of all, we need to create the gate object.
+For the purposes of this example, we will be using a map file to store the object. 
+While this is the recommended method for defining objects, it is not the only way to approach it.
+</p><p>Navigate to your resource folder and make a new file called gate.map, then add your new map file to your meta.xml using:
+</p>
+<pre class="prettyprint lang-lua">&lt;map src="gate.map"/&gt;
+</pre>
+<p><i>If you are unsure of map file syntax, please see the <a href="Writing_Gamemodes.html" title="Writing Gamemodes"> Writing Gamemodes Tutorial</a> or check the <a href="Object.html" class="mw-redirect" title="Object">Object</a> page for help.</i>
+</p>
+<pre class="prettyprint lang-lua">&lt;map&gt;
+    &lt;object id="a51MainGateKeypadCode" model="971" posX="96.736" posY="1918.352" posZ="20.694" rotX="0" rotY="0" rotZ="270.40" newPosX="96.751" newPosY="1914.474" newPosZ="20.694" /&gt;
+&lt;/map&gt;
+</pre>
+<p>This will create a gate object across the A51 entrance. The object will have position and rotation data, as well as its newPosX,newPosY and newPosZ information that we need to be able to move it.
+</p><p><b>Note that the object id is the same as the table entry we created earlier to hold the access code.</b>
+This is one possible method that could be accessed to link this gate with that particular keycode.
+</p>
+<h3><span class="mw-headline" id="Opening_the_keypad">Opening the keypad</span></h3>
+<p>Back in the clientside lua file again, we can now work on linking the gate and the keypad.
+</p><p>Now that we have our gate, we need a way of accessing the keypad to open it.
+For the purposes of this tutorial we will use a simple command, however you could just as easily use a colshape or button press.
+</p>
+<pre class="prettyprint lang-lua">addCommandHandler("a51gate",function()
+	guiSetVisible(keypadWindow,true)
+	showCursor(true,true)
+	setElementData(keypadWindow,"keypadID","a51MainGateKeypadCode")
+end)
+</pre>
+<p>Note that we set the element data "keypadID".
+This is very important because it allows us to keep track of which gate we are trying to open (in this case, the "a51MainGateKeypadCode" gate).
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Opening_the_gate">Opening the gate</span></h3>
+<p>With our gate created and our keypad ready, all thats left now is to open the gate.
+Having created custom events earlier for successfully and unsuccessfully verifying the code, this now becomes very easy to do.
+All we do is add an event handler for our custom "success" event, and using the keypadID we defined earlier we can move the gate inside it:
+</p>
+<pre class="prettyprint lang-lua">addEventHandler("onKeypadVerificationSuccessful",root,
+	-- keypadID is sent back from the server
+	function(keypadID)
+		-- get the gate object (this is where the id="a51MainGateKeypadCode" tag in the map file becomes useful)
+		local gate = getElementByID(keypadID)
+
+		-- if we found the object
+		if gate then
+			-- get the new position (as we defined in the map file)
+			local x = tonumber(getElementData(gate,"newPosX"))
+			local y = tonumber(getElementData(gate,"newPosY"))
+			local z = tonumber(getElementData(gate,"newPosZ"))
+
+			-- move the gate
+			moveObject(gate,1500,x,y,z)
+			
+			-- get the original position
+			x = tonumber(getElementData(gate,"posX"))
+			y = tonumber(getElementData(gate,"posY"))
+			z = tonumber(getElementData(gate,"posZ"))	
+			
+			-- set a timer to close the gate in 5 seconds
+			setTimer(moveObject,5000,1,gate,1500,x,y,z)
+		end
+	end
+)
+</pre>
+<p>Note how by using the keypadID sent back from the server, we can use if statements and checks against the id to control any number of gates from the same function.
+</p><p>You should now have a working example of a GUI Keypad controlling an A51 Gate.
+</p><p>For further GUI tutorials, see <a href="Scripting_the_GUI_-_Tutorial_3.html" title="Scripting the GUI - Tutorial 3">Tutorial 3 (Scrolling News Feed)</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727034516
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.011 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 126/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 7555/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5024-0!canonical and timestamp 20220727034516 and revision id 60929. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Scripting_the_GUI_-_Tutorial_2&amp;oldid=60929">https://wiki.multitheftauto.com/index.php?title=Scripting_the_GUI_-_Tutorial_2&amp;oldid=60929</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_GUI_Tutorials.html" title="Category:GUI Tutorials">GUI Tutorials</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Scripting+the+GUI+-+Tutorial+2" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Scripting+the+GUI+-+Tutorial+2" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Scripting_the_GUI_-_Tutorial_2.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:Scripting_the_GUI_-_Tutorial_2&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Scripting_the_GUI_-_Tutorial_2.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Scripting_the_GUI_-_Tutorial_2&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Scripting_the_GUI_-_Tutorial_2&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Scripting_the_GUI_-_Tutorial_2.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Scripting_the_GUI_-_Tutorial_2.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Scripting_the_GUI_-_Tutorial_2&amp;oldid=60929" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Scripting_the_GUI_-_Tutorial_2&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Scripting_the_GUI_-_Tutorial_2" title="Scripting the GUI - Tutorial 2 – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 26 November 2018, at 12:03.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.011","walltime":"0.012","ppvisitednodes":{"value":126,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7555,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727034516","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":71});});</script>
+</body>
+</html>

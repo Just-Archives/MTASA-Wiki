@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Client on Linux Manual - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ac2da255673a662dd3c5f88c","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Client_on_Linux_Manual","wgTitle":"Client on Linux Manual","wgCurRevisionId":75318,"wgRevisionId":75318,"wgArticleId":5279,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Needs Checking","Support"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Client_on_Linux_Manual","wgRelevantArticleId":5279,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":
+"Getting_MTA:SA_to_work_with_wine","wgInternalRedirectTargetUrl":"/wiki/Client_on_Linux_Manual"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<link rel="canonical" href="Client_on_Linux_Manual.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Client_on_Linux_Manual rootpage-Client_on_Linux_Manual skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Client on Linux Manual</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">(Redirected from <a href="https://wiki.multitheftauto.com/index.php?title=Getting_MTA:SA_to_work_with_wine&amp;redirect=no" class="mw-redirect" title="Getting MTA:SA to work with wine">Getting MTA:SA to work with wine</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #8181ff; background: transparent; border-left: 25px solid #8181ff;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top;" rowspan="2"><img alt="Dialog-information.png" src="https://wiki.multitheftauto.com/images/8/82/Dialog-information.png" decoding="async" width="32" height="32" />
+</td>
+<td style="padding-left: 10px;"><b>This article needs checking.</b>
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;"><hr style="background: #8181ff;" /><b>Reason(s):</b> MTA:SA support on Linux is on a best-effort basis, and you can run into a long list of issues. Also see "Known issues" paragraph
+</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #FFB2B2; background: transparent; border-left: 25px solid #FFB2B2;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top;" rowspan="2"><img alt="Dialog-warning.png" src="https://wiki.multitheftauto.com/images/1/1a/Dialog-warning.png" decoding="async" width="32" height="32" />
+</td>
+<td style="padding-left: 10px;"><b>Warning:</b> This page is for Linux players <b>ONLY</b>, for Windows go <a href="Client_Manual.html" title="Client Manual">here</a>.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Lutris"><span class="tocnumber">1</span> <span class="toctext">Lutris</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Before_you_start"><span class="tocnumber">2</span> <span class="toctext">Before you start</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Requirements"><span class="tocnumber">2.1</span> <span class="toctext">Requirements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Installing_the_game"><span class="tocnumber">3</span> <span class="toctext">Installing the game</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Running_the_game"><span class="tocnumber">4</span> <span class="toctext">Running the game</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Known_issues"><span class="tocnumber">4.1</span> <span class="toctext">Known issues</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Specific_issues_with_workarounds"><span class="tocnumber">4.2</span> <span class="toctext">Specific issues with workarounds</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_Also"><span class="tocnumber">5</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Lutris">Lutris</span></h2>
+<p>Lutris can be used instead for easier Prefix management, see
+<a href="Client_on_Linux_using_Lutris_Manual.html" title="Client on Linux using Lutris Manual">Client on Linux using Lutris Manual</a>
+</p>
+<h2><span class="mw-headline" id="Before_you_start">Before you start</span></h2>
+<p>First of all, please ensure your computer fits the requirements needed.
+Read the <a href="Client_Manual.html" title="Client Manual">Client Manual</a> page for further informations, or join us on <a rel="nofollow" class="external text" href="https://mtasa.com/discord">Discord</a>.
+</p><p>During this tutorial, make sure to <b>only use 32-bit Wine prefix</b> for MTA:SA, or else you'll run into a plethora of hard-to-fix issues.
+</p>
+<h3><span class="mw-headline" id="Requirements">Requirements</span></h3>
+<p>The hardware requirements for Multi Theft Auto: San Andreas are the same as on Windows.
+For software requirements, you need:
+</p>
+<ul><li>Wine (get it on your package manager (synaptic, apt, pacman, yum, etc.); follow instructions <a rel="nofollow" class="external text" href="https://www.winehq.org/download/ubuntu">here</a> if you're using Ubuntu</li></ul>
+<p>(as of MTA 1.4.1 Ubuntu's default Wine package seems to be incompatible with Visual C++, which is required to install MTA)
+</p>
+<ul><li>Windows fonts installed:
+<ul><li>tahoma.ttf</li>
+<li>tahomabd.ttf</li>
+<li>verdana.ttf</li></ul></li></ul>
+<p>Get them on the Internet, e.g. <a rel="nofollow" class="external text" href="http://fontonic.com/">fontonic.com</a>
+</p><p>Or get the zip archive with the 3 fonts <a rel="nofollow" class="external text" href="https://drive.google.com/open?id=0B4SUSkTXjliXZnBXV2pEWkdTTms">here</a>.
+</p><p>
+Install them in: </p><pre class="prettyprint lang-lua">~/.wine/dosdevices/c:/windows/Fonts/</pre>
+<p>(~/ points to your user home folder on Linux, .wine is the default wineprefix)
+</p>
+<h2><span class="mw-headline" id="Installing_the_game">Installing the game</span></h2>
+<p>Download the MTA installer from <a rel="nofollow" class="external text" href="http://www.mtasa.com/">mtasa.com</a>, ensure you can launch it (chmod +x) then install it when you want.<br />
+<b>Make sure to only use 32-bit Wine prefix for MTA:SA, or else you'll run into a plethora of hard-to-fix issues.</b>
+</p>
+<h2><span class="mw-headline" id="Running_the_game">Running the game</span></h2>
+<p>Once installed, double-clicking on the Multi Theft Auto.exe should work. If not, try in a terminal the following command: "wine Multi Theft Auto.exe" in the directory you installed Multi Theft Auto to.
+If it doesn't work, check the contents of the file c:/Program_Files/Multi Theft Auto/MTA/CEGUI.log, which may contain useful information.
+</p>
+<h3><span class="mw-headline" id="Known_issues">Known issues</span></h3>
+<ul><li>MTA isn't starting (even with fonts installed)</li></ul>
+<ol><li>Try to start MTA:SA in a virtual desktop
+<dl><dd>Go to WineConfig, choose the tab "Graphics" and select "Emulate a virtual desktop".<br /></dd></dl></li>
+<li>Try to delete your gta_sa.set file
+<dl><dd>which is located in the "GTA San Andreas User Files" folder, which can be found in your home directory.<br /><b>(Remember to create a copy, if you're playing San Andreas in singleplayer)</b></dd></dl></li>
+<li>Try to delete your MTA config file
+<dl><dd>which is: "MTA San Andreas 1.3/MTA/coreconfig.xml"<br /><b>(Also remember to create a copy, if you don't want to lose your edited MTA configuration)</b></dd></dl></li></ol>
+<ul><li>MTA won't start on Ubuntu 12.04 LTS [Temporary fix is available <a rel="nofollow" class="external text" href="https://forum.mtasa.com/topic/36206-mta-13-wont-start-on-ubuntu-1204/#comment-366248">here</a>. Although, just updating away from such an old version of Ubuntu is the recommended way to go]</li></ul>
+<ul><li>"SD #16 Error" when connecting to a server</li>
+<li>"No audio card detected" when launching either GTA:SA or MTA</li>
+<li>Using standard Full-screen mode on MTA might cause some occasional artifacts</li>
+<li>Enabling DXVK might not break GTA:SA, but it breaks MTA</li>
+<li>Using Linux brings a higher-than-usual chance for game crashes due to various reasons (sometimes to do with resources &amp; mods on individual servers)</li>
+<li>CEF crashes with some wine versions. Use <a rel="nofollow" class="external text" href="https://github.com/multitheftauto/mtasa-blue/issues/1000">workaround</a> for this issue</li></ul>
+<p><br /><br />
+<b>* Making the mistake of using a 64-bit prefix may <i>specifically</i> result in:</b>
+</p>
+<ul><li>"SD #16 Error" when connecting to a server</li>
+<li>"libcef.dll" MTA crash upon joining servers, or during gameplay (when server uses CEF and your CEF web browser is enabled)</li>
+<li>Even higher chance for instability, lag issues and game crashes</li></ul>
+<p>.. and much more
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Specific_issues_with_workarounds">Specific issues with workarounds</span></h3>
+<p><br />
+<b>Crash when connecting</b><br />
+Sometimes the audio-server makes problems (could be related to PulseAudio), in this case, you've to go to WineConfig and choose the tab Audio, then deselect "ALSA" and select "EsoundD". Save the settings and restart MTA.<br /><br />
+<b>Crash in basswma.dll module while streaming audio</b><br />
+Workaround: Install Windows Media Player 11<br />
+Before carrying this out, <a rel="nofollow" class="external text" href="https://wiki.winehq.org/Winetricks">install Winetricks</a>
+</p>
+<pre class="prettyprint lang-lua">winetricks -q wmp11
+
+If that doesnt solve the issue, try an older version:
+winetricks -q wmp10
+</pre>
+<p><b>Special Detections (SD)</b><br />
+This was already described above in general terms, of possible issues if you're not using 32-bit prefix as is recommended. But for this "Specific issues" section we will go in-depth more regarding <b>SD #21</b> kick from AC that commonly affects Linux/Wine users:<br />
+If you are using a 64-bit wine version/prefix you may have problems with <a rel="nofollow" class="external text" href="Anti-cheat_guide.html#.3Cenablesd.3E.3C.2Fenablesd.3E">Special Detections</a>. If the server you are trying to connect keeps showing something like <a rel="nofollow" class="external text" href="http://i.imgur.com/33T8a82.jpg">this</a>, then you should make a <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/title/Wine#WINEARCH">32 bit wine prefix</a> (or bottle).
+</p>
+<pre class="prettyprint lang-lua">export WINEARCH=win32 WINEPREFIX=~/.winegta
+winecfg</pre>
+<p>Look at your Windows version and press OK to create the prefix. Now you have a 32-bit wine prefix on ~/.winegta.
+Install GTA:SA and them MTA.
+After this, MTA and GTA have been installed within ~/.winegta prefix which is a 32-bit wine environment.
+</p><p><b>Note</b>: In some scenario's, while creating your 32-bit prefix, it may be needed to change Windows version on the bottom to Windows 7. But avoid it whenever possible.
+<br /><br />
+<b>Font Artifacts</b><br />
+If you see weird fonts artifacts <a rel="nofollow" class="external text" href="https://media.discordapp.net/attachments/278521065435824128/1000827089022373978/unknown.png">like this</a> then you need to add a new DLL override to your prefix/bottle. 
+</p>
+<ol><li>Open <b>Wine configuration</b> for your prefix/bottle, go to the Libraries tab</li>
+<li>Click on the '<b>New override for library</b>:' dropdown and select '<b>d3dx9_42'</b></li>
+<li>Click on '<b>Edit...'</b> and select '<b>Builtin (Wine)'</b> then 'OK'</li></ol>
+<p>Apply all the changes and you're good to go.<br /><br />
+</p><p><b>Closing words</b><br />
+To avoid many of the roadblocks when it comes to Linux/Wine issues in general, just use 32-bit Prefix as suggested. However, if you still run into issues, you can inform yourself better about MTA's Linux/Mac support levels and background by joining the <a rel="nofollow" class="external text" href="https://discord.gg/mtasa">MTA discord</a> and going to #help-support channel, to specifically read information at this pinned message: <a rel="nofollow" class="external free" href="https://discord.com/channels/278474088903606273/278521065435824128/894932698269900830">https://discord.com/channels/278474088903606273/278521065435824128/894932698269900830</a>
+<br />
+</p><p>We realize that the wiki pages &amp; documentation regarding Linux, macOS support (such as: through Wine, Lutris, PlayOnLinux, Parallels Desktop etc) is far from perfect, and that the list of potential issues you can run into isn't complete. As the MTA discord linked post tries to explain, these platforms are supported on a best-effort basis (in a technical sense, not an user support sense) and even then you'll find others on the MTA discord that are Linux users &amp; play MTA after performing some workarounds, that may be willing to help you. These people are also advised to add any known issue (and workaround for it) to the wiki documentations, so if that sounds like you then feel free to edit this page for instance, and help future users that find themselves in the same situation as you were. Linux/Wine just gives really obscure, hard to fix issues with MTA and other applications/games, including niche ones that individual users happen to resolve somehow.. that's the point.
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://nightly.mtasa.com/">nightly.mtasa.com</a> - For nightly builds.</li>
+<li><a rel="nofollow" class="external free" href="https://bugs.mtasa.com/view.php?id=8895">https://bugs.mtasa.com/view.php?id=8895</a> - a bug report containing useful info for running MTA in Wine</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727205655
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.026 seconds
+Real time usage: 0.029 seconds
+Preprocessor visited node count: 139/1000000
+Post‐expand include size: 2774/2097152 bytes
+Template argument size: 941/2097152 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 303/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    9.108      1 -total
+ 51.24%    4.667      1 Template:Needs_Checking
+ 35.62%    3.244      2 Template:MessageBox
+ 28.19%    2.568      1 Template:Warning
+ 17.05%    1.553      1 Template:WineFonts
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5279-0!canonical and timestamp 20220727205655 and revision id 75318. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Client_on_Linux_Manual&amp;oldid=75318">https://wiki.multitheftauto.com/index.php?title=Client_on_Linux_Manual&amp;oldid=75318</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="Category_Needs_Checking.html" title="Category:Needs Checking">Needs Checking</a></li><li><a href="Category_Support.html" title="Category:Support">Support</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Client+on+Linux+Manual" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Client+on+Linux+Manual" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Client_on_Linux_Manual.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="mw-list-item"><a href="Talk_Client_on_Linux_Manual.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Client_on_Linux_Manual.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Client_on_Linux_Manual&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Client_on_Linux_Manual&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Client_on_Linux_Manual.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Client_on_Linux_Manual.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Client_on_Linux_Manual&amp;oldid=75318" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Client_on_Linux_Manual&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/Client_on_Linux_Manual" title="Client on Linux Manual – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Client_on_Linux_Manual" title="Client on Linux Manual – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 24 July 2022, at 18:36.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.029","ppvisitednodes":{"value":139,"limit":1000000},"postexpandincludesize":{"value":2774,"limit":2097152},"templateargumentsize":{"value":941,"limit":2097152},"expansiondepth":{"value":7,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":303,"limit":5000000},"timingprofile":["100.00%    9.108      1 -total"," 51.24%    4.667      1 Template:Needs_Checking"," 35.62%    3.244      2 Template:MessageBox"," 28.19%    2.568      1 Template:Warning"," 17.05%    1.553      1 Template:WineFonts"]},"cachereport":{"timestamp":"20220727205655","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":94});});</script>
+</body>
+</html>

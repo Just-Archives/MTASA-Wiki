@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>ES/Sistema de eventos - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"92139a59f58fd9c5611b8595","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ES/Sistema_de_eventos","wgTitle":"ES/Sistema de eventos","wgCurRevisionId":42286,"wgRevisionId":42286,"wgArticleId":6388,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Translated/Scripting Concepts"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ES/Sistema_de_eventos","wgRelevantArticleId":6388,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":
+"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ES_Sistema_de_eventos rootpage-ES_Sistema_de_eventos skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">ES/Sistema de eventos</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>El sistema de eventos se encuentra en el núcleo del scripting de MTA. Los eventos funcionan en conjunto con el árbol de elementos. Los eventos son provocados cuando algo sucede - un jugador entra a un marcador, un elemento es cliqueado, etc. Cada evento tiene un elemento de origen, que es el que realiza la acción.
+</p>
+<h2><span class="mw-headline" id="Controladores_de_eventos">Controladores de eventos</span></h2>
+<p>Para usar el sistema de eventos, se une o liga el controlador de eventos a los elementos en el árbol de elementos usando <a href="addEventHandler.html" title="ES/addEventHandler">addEventHandler</a>. Cuando se hace esto, las funciones serán activadas para todos los eventos que fueron provocados en ese elemento, sus padres e hijos. Por si mismo, un controlador de eventos ligado al elemento <i>raíz</i> será provocado cuando ocurra un evento para cualquier elemento. Como consecuencia se debe usar generalmente un controlador específico, cuando se pueda. Si solo se desea ver cuando el jugador entra a un marcador específico, solo se une el controlador de evento a dicho marcador.
+</p><p>Cada controlador de evento tiene dos variables 'ocultas':
+</p>
+<ul><li><b>source</b>: Este es el elemento que origina el evento.</li>
+<li><b>this</b>: Este el elemento al cual se le provoca (p.ej. el que uniste con addEventHandler).</li></ul>
+<p>La variable <i>source</i> es la mas importante para la mayoría de los controladores. Casi siempre se querrá hacer referencia a esta variable para decir que elemento provoco el evento. La variable <i>this</i> tiene algunos usos para asegurarse de que el evento fue emitido por el elemento al que el controlador se unió.
+</p><p>Es <i>importante</i> notar que los eventos siguen la jerarquía de elementos. Inicialmente, todos los elementos provocan al elemento de <i>origen</i> (o <i>source</i> element), seguido de todos los elementos padres e hijos. Esto implica ciertas cosas:
+</p>
+<ul><li>Un evento provocado sobre el elemento raíz se provocará en cada elemento dentro del árbol de elementos. Esto debe ser evitado cuando sea posible.</li>
+<li>Todos los eventos en cualquier parte dentro del árbol de elementos serán provocado sobre el elemento raíz. Esto significa que simplemente  se atrapa cada evento de un tipo provocando a un controlador hacia el elemento raíz. Esto solo se debe realizar si verdaderamente se quiere cada evento de ese tipo, de otra forma se une al lugar más específico en el árbol de elementos.</li>
+<li>Puedes unir un controlador de eventos al elementeo raíz de un resource para obtener todos los eventos provocados por los elementos que el resource contiene.</li>
+<li>Puedes crear elementos 'falsos' o 'dummy' para captar eventos de un grupo de elementos hijos.</li>
+<li>Puedes usar elementos falsos especificándolos dentro de un archivo .map (p.ej. &lt;flag&gt;) y crear representaciones 'reales' para ellos (p.ej. objectos) y hacer que sean elementos hijos reales de un elemento falso. Los controladores de eventos pueden entonces ser unidos al elemento falso y recibiran todos los eventos de los elementos reales. Esto es útil para cuando un resource maneja la representación del elemento (creando los objetos, por ejemplo), mientras otro desea controlar eventos especiales. Esto podría ser un resource de mapa que quiera controlar una bandera siendo capturada de alguna manera - el resource de mapa (generalmente) no sería consistente de la forma en que la bandera es representada. Esto no importa ya que este pordría solo unir los controladores a su elemento bandera falso mientras el otro resource de modo de juego puede controlar la representacion.</li></ul>
+<p>La función unida a un evento es llamada y pasada con un montón de argumentos. Estos argumentos son específicos del evento. Cada evento tiene parámetros específicos, por ejemplo <a href="https://wiki.multitheftauto.com/index.php?title=ES/onClientGUIClick&amp;action=edit&amp;redlink=1" class="new" title="ES/onClientGUIClick (page does not exist)">onClientGUIClick</a> tiene 4 parámetros, que son:
+</p>
+<pre class="prettyprint lang-lua">string botón, string estado, int xAbsoluto, int yAbsoluto</pre>
+<p>La función unida a este evento pasará estos parametros como argumentos. Debes recordar que cada evento tiene diferentes parámetros.
+</p>
+<h2><span class="mw-headline" id="Eventos_incorporados">Eventos incorporados</span></h2>
+<p>MTA tiene un número de eventos incorporados, los cuales se encuentran en <a href="../Client_Scripting_Events.html" title="Client Scripting Events">Client Scripting Events</a> y <a href="../Scripting_Events.html" class="mw-redirect" title="Scripting Events">Scripting Events</a>.
+</p>
+<h2><span class="mw-headline" id="Eventos_personalizados">Eventos personalizados</span></h2>
+<p>Puedes crear tus propioas eventos que puedan ser provocados a travez de cualquier resource. Esta es una manéra importánte de comunicarse con otros resources y permitirles enlazarlos a tu código. Para agregar tus propios eventos, solo debes llamar la función <a href="addEvent.html" title="ES/addEvent">addEvent</a>. Luego puedes usar la función <a href="https://wiki.multitheftauto.com/index.php?title=ES/triggerEvent&amp;action=edit&amp;redlink=1" class="new" title="ES/triggerEvent (page does not exist)">triggerEvent</a> para provocar el evento en cualquier momento que quieras - incluso usando un timer, o basado en un evento general. 
+</p><p>Por ejemplo, puedes hacer un modo de juego de Captura la Bandera y quieres provocar un evento cuando un jugador capture la bandera. Podrías haces esto uniendo un controlador de eventos al evento estándar de MTA <a href="https://wiki.multitheftauto.com/index.php?title=ES/onMarkerHit&amp;action=edit&amp;redlink=1" class="new" title="ES/onMarkerHit (page does not exist)">triggerEvent</a> y verificar que el jugador que entró al marcador tiene la bandera. Si es así, entonces puedes provocar tu evento más específico <i>onFlagCaptured</i> y otros resources podrían controlarlo como ellos lo deseen.
+</p>
+<h2><span id="Cancelaci.C3.B3n"></span><span class="mw-headline" id="Cancelación">Cancelación</span></h2>
+<p>Los eventos pueden ser cancelados con <a href="cancelEvent.html" title="ES/cancelEvent">triggerEvent</a>. Esto puede tener una veriedad de consecuencias, pero en general significa que el servidor no realizará ninguna acción que debería hacer. Por ejemplo, cancelar el evento <a href="https://wiki.multitheftauto.com/index.php?title=ES/onPickupUse&amp;action=edit&amp;redlink=1" class="new" title="ES/onPickupUse (page does not exist)">onPickupUse</a> podría prevenir que un jugador se le de lo que intenta tomar de un pickup, cancelar el evento <a href="https://wiki.multitheftauto.com/index.php?title=ES/onVehicleStartEnter&amp;action=edit&amp;redlink=1" class="new" title="ES/onVehicleStartEnter (page does not exist)">onVehicleStartEnter</a> pordría prevenir que el jugador entre a un vehículo. Puedes comprobar si el evento actualmente activo ha sido cancelado usando <a href="https://wiki.multitheftauto.com/index.php?title=ES/wasEventCanceled&amp;action=edit&amp;redlink=1" class="new" title="ES/wasEventCanceled (page does not exist)">wasEventCanceled</a>. Es importante notar que cancelar el evento <i>no</i> previene que otros controladores de evento sean provocados.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727213126
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 24/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 98/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:6388-0!canonical and timestamp 20220727213126 and revision id 42286. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=ES/Sistema_de_eventos&amp;oldid=42286">https://wiki.multitheftauto.com/index.php?title=ES/Sistema_de_eventos&amp;oldid=42286</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../Category_Translated/Scripting_Concepts.html" title="Category:Translated/Scripting Concepts">Translated/Scripting Concepts</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=ES%2FSistema+de+eventos" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=ES%2FSistema+de+eventos" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Sistema_de_eventos.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:ES/Sistema_de_eventos&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Sistema_de_eventos.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ES/Sistema_de_eventos&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ES/Sistema_de_eventos&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/ES/Sistema_de_eventos.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/ES/Sistema_de_eventos.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ES/Sistema_de_eventos&amp;oldid=42286" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ES/Sistema_de_eventos&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Event_system" title="Event system – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 29 September 2014, at 12:02.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.008","walltime":"0.008","ppvisitednodes":{"value":24,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":98,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727213126","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":83});});</script>
+</body>
+</html>

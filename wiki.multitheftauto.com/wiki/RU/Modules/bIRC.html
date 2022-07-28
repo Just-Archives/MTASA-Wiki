@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/Modules/bIRC - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"a5fb843f8b986dd1f0d711bc","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/Modules/bIRC","wgTitle":"RU/Modules/bIRC","wgCurRevisionId":49262,"wgRevisionId":49262,"wgArticleId":6468,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Outdated Pages","Модули"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/Modules/bIRC","wgRelevantArticleId":6468,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='#0099AA' data-subcaption='Basic IRC Module'>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_Modules_bIRC rootpage-RU_Modules_bIRC skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/Modules/bIRC</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+</p>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #C0C0C0; background: transparent; border-left: 25px solid #C0C0C0;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top;" rowspan="2"><img alt="Dialog-information.png" src="https://wiki.multitheftauto.com/images/8/82/Dialog-information.png" decoding="async" width="32" height="32" />
+</td>
+<td style="padding-left: 10px;"><b>This article is (partially) outdated and the information may no longer apply.</b>
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;"><hr style="background: #C0C0C0;" /><b>Reason:</b> Разработка данного модуля, похоже, остановилась, смотрите <a href="../Resource_Irc.html" title="RU/Resource:Irc">resource:irc</a>.
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table style="float: right; border: 1px solid black; border-collapse: collapse; width: 310px">
+
+<tbody><tr style="font-weight: bold; font-style: italic; background-color: #9DC5FF; padding: 0px; text-align: center">
+<td colspan="2">Module info
+</td></tr>
+<tr>
+<td style="width: 100px; font-weight: bold; font-size: 12px; padding-left: 5px; padding-right: 10px">Name
+</td>
+<td>ml_birc
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Version
+</td>
+<td>1.0
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Author
+</td>
+<td><a href="../../User_Awwu.html" title="User:Awwu">Awwu</a> &lt;<a href="https://wiki.multitheftauto.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa9b8d8d8f9d8e9bba9d979b9396d4999597">[email&#160;protected]</a>&gt;
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Module website
+</td>
+<td><i>Нету</i>
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Download link
+</td>
+<td><i>Скоро</i>
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">License
+</td>
+<td><i>Без лицензии</i>
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Written in
+</td>
+<td>Неизвестно
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Operating system
+</td>
+<td>Только Windows
+</td></tr>
+<tr>
+<td style="font-weight: bold; font-size: 12px; padding-left: 5px">Compatible with
+</td>
+<td>1.0
+</td></tr></tbody></table>
+<p>Базовый IRC модуль (bIRC) предоставляет полнофункциональный IRC echo для сервера MTA:SA. На данный момент доступен только для Windows серверов на MTA:SA 1.0 (другие не протестированы).
+</p>
+<h2><span id=".D0.A3.D1.81.D1.82.D0.B0.D0.BD.D0.BE.D0.B2.D0.BA.D0.B0"></span><span class="mw-headline" id="Установка">Установка</span></h2>
+<p>Распакуйте файл ml_birc.dll в папку <i>server\mods\deathmatch\modules\</i> вашего сервера.
+</p>
+<h3><span class="mw-headline" id="mtaserver.conf">mtaserver.conf</span></h3>
+<p>Добавьте следующую строку в mtaserver.conf вашего сервера:
+</p>
+<pre class="prettyprint lang-xml">&lt;module src="ml_birc" /&gt;
+</pre>
+<h2><span id=".D0.9F.D1.80.D0.B5.D0.B4.D0.BE.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D1.8F.D0.B5.D0.BC.D1.8B.D0.B9_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.BE.D0.BD.D0.B0.D0.BB_.D1.81.D0.BA.D1.80.D0.B8.D0.BF.D1.82.D0.B8.D0.BD.D0.B3.D0.B0"></span><span class="mw-headline" id="Предоставляемый_функционал_скриптинга">Предоставляемый функционал скриптинга</span></h2>
+<h3><span class="mw-headline" id="Bot_functions">Bot functions</span></h3>
+<h4><span class="mw-headline" id="Creation">Creation</span></h4>
+<ul><li><a href="../../Modules/bIRC/ircCreateBot.html" title="Modules/bIRC/ircCreateBot">ircCreateBot</a></li>
+<li><a href="../../Modules/bIRC/ircDestroyBot.html" title="Modules/bIRC/ircDestroyBot">ircDestroyBot</a></li></ul>
+<h4><span class="mw-headline" id="Connection">Connection</span></h4>
+<ul><li><a href="../../Modules/bIRC/ircConnect.html" title="Modules/bIRC/ircConnect">ircConnect</a></li>
+<li><a href="../../Modules/bIRC/ircIsConnected.html" title="Modules/bIRC/ircIsConnected">ircIsConnected</a></li>
+<li><a href="../../Modules/bIRC/ircRegister.html" title="Modules/bIRC/ircRegister">ircRegister</a></li>
+<li><a href="../../Modules/bIRC/ircUnregister.html" title="Modules/bIRC/ircUnregister">ircUnregister</a></li>
+<li><a href="../../Modules/bIRC/ircQuit.html" title="Modules/bIRC/ircQuit">ircQuit</a></li></ul>
+<h4><span class="mw-headline" id="Other">Other</span></h4>
+<ul><li><a href="../../Modules/bIRC/ircGetBotByName.html" title="Modules/bIRC/ircGetBotByName">ircGetBotByName</a></li>
+<li><a href="../../Modules/bIRC/ircGetBots.html" title="Modules/bIRC/ircGetBots">ircGetBots</a></li>
+<li><a href="../../Modules/bIRC/ircGetBotState.html" title="Modules/bIRC/ircGetBotState">ircGetBotState</a></li>
+<li><a href="../../Modules/bIRC/ircGetName.html" title="Modules/bIRC/ircGetName">ircGetName</a></li>
+<li><a href="../../Modules/bIRC/ircGetQuitMessage.html" title="Modules/bIRC/ircGetQuitMessage">ircGetQuitMessage</a></li>
+<li><a href="../../Modules/bIRC/ircSetName.html" title="Modules/bIRC/ircSetName">ircSetName</a></li>
+<li><a href="../../Modules/bIRC/ircSetQuitMessage.html" title="Modules/bIRC/ircSetQuitMessage">ircSetQuitMessage</a></li></ul>
+<h3><span class="mw-headline" id="IRC_functions">IRC functions</span></h3>
+<h4><span class="mw-headline" id="Channel">Channel</span></h4>
+<ul><li><a href="../../Modules/bIRC/ircGetChannelMode.html" title="Modules/bIRC/ircGetChannelMode">ircGetChannelMode</a></li>
+<li><a href="../../Modules/bIRC/ircGetChannelTopic.html" title="Modules/bIRC/ircGetChannelTopic">ircGetChannelTopic</a></li>
+<li><a href="../../Modules/bIRC/ircGetChannelUsers.html" title="Modules/bIRC/ircGetChannelUsers">ircGetChannelUsers</a></li>
+<li><a href="../../Modules/bIRC/ircGetConnectedChannels.html" title="Modules/bIRC/ircGetConnectedChannels">ircGetConnectedChannels</a></li>
+<li><a href="../../Modules/bIRC/ircJoinChannel.html" title="Modules/bIRC/ircJoinChannel">ircJoinChannel</a></li>
+<li><a href="../../Modules/bIRC/ircPartChannel.html" title="Modules/bIRC/ircPartChannel">ircPartChannel</a></li>
+<li><a href="../../Modules/bIRC/ircSetChannelMode.html" title="Modules/bIRC/ircSetChannelMode">ircSetChannelMode</a></li>
+<li><a href="../../Modules/bIRC/ircSetChannelTopic.html" title="Modules/bIRC/ircSetChannelTopic">ircSetChannelTopic</a></li></ul>
+<h4><span class="mw-headline" id="User">User</span></h4>
+<ul><li><a href="../../Modules/bIRC/ircGetUserHost.html" title="Modules/bIRC/ircGetUserHost">ircGetUserHost</a></li>
+<li><a href="../../Modules/bIRC/ircGetUserMode.html" title="Modules/bIRC/ircGetUserMode">ircGetUserMode</a></li>
+<li><a href="../../Modules/bIRC/ircIsInChannel.html" title="Modules/bIRC/ircIsInChannel">ircIsInChannel</a></li></ul>
+<h4><span class="mw-headline" id="Communication">Communication</span></h4>
+<ul><li><a href="../../Modules/bIRC/ircBan.html" title="Modules/bIRC/ircBan">ircBan</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/ircInviteUser&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/ircInviteUser (page does not exist)">ircInviteUser</a></li>
+<li><a href="../../Modules/bIRC/ircKick.html" title="Modules/bIRC/ircKick">ircKick</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/ircSendMessage&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/ircSendMessage (page does not exist)">ircSendMessage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/ircSendNotice&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/ircSendNotice (page does not exist)">ircSendNotice</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/ircSendRaw&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/ircSendRaw (page does not exist)">ircSendRaw</a></li></ul>
+<h3><span class="mw-headline" id="Other_2">Other</span></h3>
+<ul><li><a href="../../Modules/bIRC/ircFormatHost.html" title="Modules/bIRC/ircFormatHost">ircFormatHost</a></li>
+<li><a href="../../Modules/bIRC/ircStrip.html" title="Modules/bIRC/ircStrip">ircStrip</a></li></ul>
+<h3><span class="mw-headline" id="Callbacks">Callbacks</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnAction&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnAction (page does not exist)">event_ircOnAction</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnCTCP&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnCTCP (page does not exist)">event_ircOnCTCP</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnChannelMode&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnChannelMode (page does not exist)">event_ircOnChannelMode</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnConnect&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnConnect (page does not exist)">event_ircOnConnect</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnDisconnect&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnDisconnect (page does not exist)">event_ircOnDisconnect</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnFailedConnection&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnFailedConnection (page does not exist)">event_ircOnFailedConnection</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnInvite&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnInvite (page does not exist)">event_ircOnInvite</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnJoinChannel&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnJoinChannel (page does not exist)">event_ircOnJoinChannel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnKick&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnKick (page does not exist)">event_ircOnKick</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnLostConnection&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnLostConnection (page does not exist)">event_ircOnLostConnection</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnNickChange&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnNickChange (page does not exist)">event_ircOnNickChange</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnNotice&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnNotice (page does not exist)">event_ircOnNotice</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnPartChannel&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnPartChannel (page does not exist)">event_ircOnPartChannel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnPing&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnPing (page does not exist)">event_ircOnPing</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnQuit&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnQuit (page does not exist)">event_ircOnQuit</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnRaw&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnRaw (page does not exist)">event_ircOnRaw</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnText&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnText (page does not exist)">event_ircOnText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Modules/bIRC/event_ircOnTopic&amp;action=edit&amp;redlink=1" class="new" title="Modules/bIRC/event ircOnTopic (page does not exist)">event_ircOnTopic</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727202818
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.026 seconds
+Real time usage: 0.027 seconds
+Preprocessor visited node count: 521/1000000
+Post‐expand include size: 10887/2097152 bytes
+Template argument size: 3313/2097152 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 81/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   11.225      1 -total
+ 47.49%    5.331      1 Template:Ml_birc_functions
+ 33.17%    3.724     51 Template:Ml_birc
+ 24.71%    2.774      1 Template:Ml_birc_callbacks
+ 17.05%    1.914      1 Template:Outdated
+  9.85%    1.106      1 Template:MessageBox
+  8.67%    0.973      1 Template:Module_Info
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:6468-0!canonical and timestamp 20220727202818 and revision id 49262. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/Modules/bIRC&amp;oldid=49262">https://wiki.multitheftauto.com/index.php?title=RU/Modules/bIRC&amp;oldid=49262</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../../Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="../../Category_Outdated_Pages.html" title="Category:Outdated Pages">Outdated Pages</a></li><li><a href="../../Category_%d0%9c%d0%be%d0%b4%d1%83%d0%bb%d0%b8.html" title="Category:Модули">Модули</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FModules%2FbIRC" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FModules%2FbIRC" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="bIRC.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:RU/Modules/bIRC&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="bIRC.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Modules/bIRC&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Modules/bIRC&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../../Special_WhatLinksHere/RU/Modules/bIRC.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../../Special_RecentChangesLinked/RU/Modules/bIRC.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Modules/bIRC&amp;oldid=49262" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Modules/bIRC&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Modules/bIRC" title="Modules/bIRC – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 23 September 2016, at 20:45.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script data-cfasync="false" src="https://wiki.multitheftauto.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.027","ppvisitednodes":{"value":521,"limit":1000000},"postexpandincludesize":{"value":10887,"limit":2097152},"templateargumentsize":{"value":3313,"limit":2097152},"expansiondepth":{"value":7,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":81,"limit":5000000},"timingprofile":["100.00%   11.225      1 -total"," 47.49%    5.331      1 Template:Ml_birc_functions"," 33.17%    3.724     51 Template:Ml_birc"," 24.71%    2.774      1 Template:Ml_birc_callbacks"," 17.05%    1.914      1 Template:Outdated","  9.85%    1.106      1 Template:MessageBox","  8.67%    0.973      1 Template:Module_Info"]},"cachereport":{"timestamp":"20220727202818","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":86});});</script>
+</body>
+</html>

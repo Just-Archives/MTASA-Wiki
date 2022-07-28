@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>PT-BR/Tutorial CEF - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"fd009a83bcd9ed9945231dc6","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PT-BR/Tutorial_CEF","wgTitle":"PT-BR/Tutorial CEF","wgCurRevisionId":69034,"wgRevisionId":69034,"wgArticleId":12792,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Changes in 1.5.9","Tutorials"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PT-BR/Tutorial_CEF","wgRelevantArticleId":12792,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-PT-BR_Tutorial_CEF rootpage-PT-BR_Tutorial_CEF skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">PT-BR/Tutorial CEF</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>Esta página possui uma breve introdução ao CEF.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#O_que_é_CEF?"><span class="tocnumber">1</span> <span class="toctext">O que é CEF?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Conceitos_Básicos"><span class="tocnumber">2</span> <span class="toctext">Conceitos Básicos</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sistema_de_Requisição_de_Domínios"><span class="tocnumber">3</span> <span class="toctext">Sistema de Requisição de Domínios</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Modo_remoto_versus_local"><span class="tocnumber">4</span> <span class="toctext">Modo remoto versus local</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Gerenciamento_de_Recursos"><span class="tocnumber">5</span> <span class="toctext">Gerenciamento de Recursos</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Como_carregar_arquivos_HTML_locais"><span class="tocnumber">5.1</span> <span class="toctext">Como carregar arquivos HTML locais</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Como_carregar_arquivos_locais_dentro_do_HTML"><span class="tocnumber">5.2</span> <span class="toctext">Como carregar arquivos locais dentro do HTML</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Exemplo"><span class="tocnumber">5.2.1</span> <span class="toctext">Exemplo</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="#Lua"><span class="tocnumber">5.2.1.1</span> <span class="toctext">Lua</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#meta.xml"><span class="tocnumber">5.2.1.2</span> <span class="toctext">meta.xml</span></a></li>
+<li class="toclevel-4 tocsection-11"><a href="#HTML"><span class="tocnumber">5.2.1.3</span> <span class="toctext">HTML</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Comunicação_bidirecional_entre_Lua_e_JS"><span class="tocnumber">6</span> <span class="toctext">Comunicação bidirecional entre Lua e JS</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Lua_para_JS"><span class="tocnumber">6.1</span> <span class="toctext">Lua para JS</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#JS_para_Lua"><span class="tocnumber">6.2</span> <span class="toctext">JS para Lua</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Depuração"><span class="tocnumber">7</span> <span class="toctext">Depuração</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Pontos_de_atenção"><span class="tocnumber">8</span> <span class="toctext">Pontos de atenção</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Uso_Avançado"><span class="tocnumber">9</span> <span class="toctext">Uso Avançado</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Desempenho"><span class="tocnumber">10</span> <span class="toctext">Desempenho</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Solução_de_Problemas"><span class="tocnumber">11</span> <span class="toctext">Solução de Problemas</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#google.com_não_funciona"><span class="tocnumber">11.1</span> <span class="toctext">google.com não funciona</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Funções_de_Scripting"><span class="tocnumber">12</span> <span class="toctext">Funções de Scripting</span></a>
+<ul>
+<li class="toclevel-2"><a href="#GUI_Functions"><span class="tocnumber">12.1</span> <span class="toctext">GUI Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Eventos_de_Scripting"><span class="tocnumber">13</span> <span class="toctext">Eventos de Scripting</span></a></li>
+</ul>
+</div>
+
+<h1><span id="O_que_.C3.A9_CEF.3F"></span><span class="mw-headline" id="O_que_é_CEF?">O que é CEF?</span></h1>
+<p>CEF é um acrônimo para <b>C</b>hromium <b>E</b>mbedded <b>F</b>ramework. Consiste em um <i>framework</i> para embutir navegadores baseados no Chromium em outras aplicações, neste caso, o MTA. CEF é construido a partir do projeto Chromium mantido pela Google, este por sua vez consiste em um motor web rápido, estável e seguro. É possível encontrar mais informações sobre o CEF em sua página do GoogleCode: <a rel="nofollow" class="external free" href="https://bitbucket.org/chromiumembedded/cef">https://bitbucket.org/chromiumembedded/cef</a>
+</p>
+<h1><span id="Conceitos_B.C3.A1sicos"></span><span class="mw-headline" id="Conceitos_Básicos">Conceitos Básicos</span></h1>
+<p>Criar uma nova instância do navegador é bem simples. Segue o exemplo para abrir a página do Youtube:
+</p>
+<pre class="prettyprint lang-lua">-- Criar um novo navegador remoto (seu tamanho é 800x600px), com transparência habilitada
+local browser = createBrowser(800, 600, true, true)
+
+-- Aguardar pelo navegador (isso é necessário porque o CEF roda em uma thread separada, portanto é necessário adotar o sistema de eventos assíncronos)
+addEventHandler("onClientBrowserCreated", browser,
+    function()
+        -- Agora é possível carregar a URL (o "source" desse evento é o navegador que foi criado)
+        loadBrowserURL(source, "https://youtube.com/")
+    end
+)</pre>
+<p>Este exemplo não requer solicitação de domínio já que o Youtube está na lista de domínios autorizados do MTA.
+</p>
+<h1><span id="Sistema_de_Requisi.C3.A7.C3.A3o_de_Dom.C3.ADnios"></span><span class="mw-headline" id="Sistema_de_Requisição_de_Domínios">Sistema de Requisição de Domínios</span></h1>
+<p>De modo a prevenir abuso quanto as possibilidades que o CEF oferece, decidiu-se introduzir um sistema de controle. Isso significa que domínios desconhecidos não serão carregados automaticamente caso não cumprir com pelo menos uma das exigências a seguir:
+</p>
+<ul><li>estar incluso na lista mantida pelo time de desenvolvimento do MTA</li>
+<li>ser autorizado pelo usuário após a chamada via <i>script</i> da função <code>requestBrowserDomains/Browser.requestDomains</code></li>
+<li>estar incluso na lista de domínios permitidos do usuário, esta disponível em: Configurações do MTA &#8594; Aba: Navegador &#8594; <i>Whitelist</i></li></ul>
+<p>Alguns domínios são conhecidos por conter conteúdo malicioso, portanto há uma chance desse estar na lista proibida - esta gerenciada automaticamente pelo MTA. Neste caso, nenhuma das alternativas citadas acima funcionará, portanto, todas as solicitações a ele serão negadas. Não há nada que o usuário ou o desenvolvedor possa fazer. Caso haja algum engano, é sugerido contatar nosso time de suporte.
+</p>
+<h1><span class="mw-headline" id="Modo_remoto_versus_local">Modo remoto versus local</span></h1>
+<p>Existem dois modos que o CEF pode rodar:
+</p><p>1. Modo local:
+</p>
+<ul><li>é possível executar código em Javascript sem restrição (vide: <a href="../ExecuteBrowserJavascript.html" title="ExecuteBrowserJavascript">executeBrowserJavascript</a>)</li>
+<li>é possível carregar sítios hospedados somente na pasta <code>resource</code></li>
+<li><i>não</i> é permitido carregar conteúdo remoto (e.g. www.mtasa.com)</li></ul>
+<p>2. Modo remoto:
+</p>
+<ul><li><i>não</i> é permitido executar código em Javascript</li>
+<li>é permitido carregar somente conteúdo remoto</li>
+<li>lembre-se que o usuário pode desabilitar o carregamento de <i>websites</i> remotos ou a execução de Javascript nas configurações</li></ul>
+<p>Vale ressaltar que não é possível mudar o modo do navegador após sua criação devido a limitações técnicas.
+</p>
+<h1><span class="mw-headline" id="Gerenciamento_de_Recursos">Gerenciamento de Recursos</span></h1>
+<h2><span class="mw-headline" id="Como_carregar_arquivos_HTML_locais">Como carregar arquivos HTML locais</span></h2>
+<p>Carregar um arquivo HTML local funciona de forma similar a carregar imagens.
+</p><p>Adicione o caminho para o arquivo HTML no <code>meta.xml</code> usando a seguinte tag:
+</p>
+<pre class="prettyprint lang-xml">&lt;file src="html/minhaInterface.html"/&gt;</pre>
+<h2><span class="mw-headline" id="Como_carregar_arquivos_locais_dentro_do_HTML">Como carregar arquivos locais dentro do HTML</span></h2>
+<p>Suponha que seja necessário carregar uma imagem ou reproduzir um vídeo que foi incluso no seu pacote do MTA. Isso é possível através de um URI específico no formato: <i><b>"<a rel="nofollow" class="external free" href="http://mta/">http://mta/</a>"</b></i>
+</p>
+<h3><span class="mw-headline" id="Exemplo">Exemplo</span></h3>
+<p>Este exemplo mostra como reproduzir um vídeo. Note que é necessário habilitar programação orientada a objeto.
+</p>
+<h4><span class="mw-headline" id="Lua">Lua</span></h4>
+<pre class="prettyprint lang-lua">-- Cria um navegador (modo local também é obrigatório para acessar arquivos locais)
+local janelaNavegador = Browser(640, 480, true, true)
+
+addEventHandler("onClientBrowserCreated", janelaNavegador,
+     function()
+          -- Carregar interface em HTML
+          janelaNavegador:loadURL("http://mta/local/html/meuVideo.html")
+
+     end
+)</pre>
+<h4><span class="mw-headline" id="meta.xml">meta.xml</span></h4>
+<pre class="prettyprint lang-lua">&lt;file src="html/meuVideo.html"/&gt;
+&lt;file src="midia/meuVideo.webm"/&gt;</pre>
+<h4><span class="mw-headline" id="HTML">HTML</span></h4>
+<pre class="prettyprint lang-html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;video width="640" height="480" controls&gt;
+         &lt;!-- todo arquivo local deve ter o prefixo http://mta/local --&gt;
+         &lt;source src="http://mta/local/midia/meuVideo.webm" type="video/webm"/&gt;
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<h1><span id="Comunica.C3.A7.C3.A3o_bidirecional_entre_Lua_e_JS"></span><span class="mw-headline" id="Comunicação_bidirecional_entre_Lua_e_JS">Comunicação bidirecional entre Lua e JS</span></h1>
+<p>A comunicação entre Lua e Javascript (JS) está somente disponível no modo local devido à razões de segurança.
+</p>
+<h2><span class="mw-headline" id="Lua_para_JS">Lua para JS</span></h2>
+<p>É possível chamar código em Javascript a partir do Lua usando a função <a href="../ExecuteBrowserJavascript.html" title="ExecuteBrowserJavascript">executeBrowserJavascript</a>.
+</p><p>Os links a seguir contém mais detalhes de como isso é implementado:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/src/WebWindow.lua#L180-189">https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/src/WebWindow.lua#L180-189</a></li>
+<li><a rel="nofollow" class="external free" href="https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/src/mtaevents.js#L9-L15">https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/src/mtaevents.js#L9-L15</a></li></ul>
+<h2><span class="mw-headline" id="JS_para_Lua">JS para Lua</span></h2>
+<p>É possível adicionar um evento-cliente no Javascript usando a função <i>triggerEvent</i> a qual é parte da classe estática <i>mta</i>.
+Segue a sintaxe:
+</p>
+<pre class="prettyprint lang-javascript">mta.triggerEvent(string evento, var parametro1, var parametro2, var parametro3, ...)
+</pre>
+<p>A fonte (variável "source") desse evento é sempre o elemento navegador que acionou este evento.
+</p><p>Estão disponíveis exemplos nos seguintes links:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/examples/html/ui2.html#L66">https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/examples/html/ui2.html#L66</a></li>
+<li><a rel="nofollow" class="external free" href="https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/examples/Main.lua#L35-L40">https://github.com/Jusonex/mtasa_cef_tools/blob/master/webui/examples/Main.lua#L35-L40</a></li></ul>
+<h1><span id="Depura.C3.A7.C3.A3o"></span><span class="mw-headline" id="Depuração">Depuração</span></h1>
+<p>O modo <i>desenvolvedor</i> pode ser habilitado da seguinte forma (digite no console após pressionar F8):
+</p>
+<pre class="prettyprint lang-lua">start runcode
+crun setDevelopmentMode(true, true)
+debugscript 3</pre>
+<p>Agora é possível visualizar os erros no navegador e os domínios/URLs bloqueados na janela de depuração no canto inferior da tela.
+</p>
+<h1><span id="Pontos_de_aten.C3.A7.C3.A3o"></span><span class="mw-headline" id="Pontos_de_atenção">Pontos de atenção</span></h1>
+<p>Importante lembrar que nem todas os recursos de um navegador recente estão disponíveis nos computadores de seus usuários. Um exemplo disso é o <b>WebGL</b>.
+</p><p><b>Adobe Flash</b> também é um recurso problemático. É um complemento habilitado por padrão, porém deve ser evitado porque é possível desabilita-lo nas configurações. Além disso, o Flash, por ser uma tecnologia defasada, não oferece muitas oportunidades para o desenvolvimento de funcionalidades que atendam às expectativas do usuário. Mais especificamente, o flash roda em um processo separado que está limitado a uma interface antiga (aquele dos anos 2010), o qual o desenvolvedor possui pouco controle sob ela. A alternativa recomendada é o <i>HTML5</i>, porque além de ser amplamente adotada, possui uma ótima API para reprodução de áudio/vídeo (<a rel="nofollow" class="external free" href="http://www.w3schools.com/tags/ref_av_dom.asp">http://www.w3schools.com/tags/ref_av_dom.asp</a>). Até mesmo há suporte a áudio 3D.
+</p>
+<h1><span id="Uso_Avan.C3.A7ado"></span><span class="mw-headline" id="Uso_Avançado">Uso Avançado</span></h1>
+<p>Como a implementação do CEF não contempla o <i>z-ordering</i> por padrão, é necessária uma implementação própria. A especificação sobre esse mecanismo pode ser encontrada em: <a rel="nofollow" class="external free" href="https://github.com/Jusonex/mtasa_cef_tools">https://github.com/Jusonex/mtasa_cef_tools</a>
+Há também algumas funções auxiliares para integrar essas classes facilmente com sua própria interface usando OOP. Será também criado um tutorial de como usar o CEF com o CEGUI.
+</p>
+<h1><span class="mw-headline" id="Desempenho">Desempenho</span></h1>
+<p>Criar várias instâncias de navegador não afeta o MTA diretamente porque o CEF roda em um processo distinto. Porém, devido a limitações técnicas, o MTA necessita de uma cópia dos dados de texturas na <i>thread</i> principal do GTA.
+</p><p>Caso não seja necessário manter o navegador visível, é recomendado encerra-lo para economizar recursos. Porém, caso ainda seja importante deixar o navegador rodando (e.g. manter o estado da página), é possível otimizar o desempenho desabilitando a renderização da página via <a href="../SetBrowserRenderingPaused.html" title="SetBrowserRenderingPaused">setBrowserRenderingPaused</a>. Isso faz com que o CEF pare de atualizar novos quadros e o MTA também irá pausar a cópia de textura.
+</p>
+<h1><span id="Solu.C3.A7.C3.A3o_de_Problemas"></span><span class="mw-headline" id="Solução_de_Problemas">Solução de Problemas</span></h1>
+<h3><span id="google.com_n.C3.A3o_funciona"></span><span class="mw-headline" id="google.com_não_funciona">google.com não funciona</span></h3>
+<p>Por padrão, ao acessar o endereço <code>google.com</code>, o usuário é redirecionado para um site filial específico dependendo do país em que está. No Brasil, por exemplo, o internauta é transferido para o <code>google.com.br</code>. É possível contornar esse problema ao acessar o seguinte endereço: <a rel="nofollow" class="external free" href="https://www.google.com/ncr">https://www.google.com/ncr</a>.
+</p>
+<h1><span id="Fun.C3.A7.C3.B5es_de_Scripting"></span><span class="mw-headline" id="Funções_de_Scripting">Funções de Scripting</span></h1>
+<ul><li><a href="../CanBrowserNavigateBack.html" title="CanBrowserNavigateBack">canBrowserNavigateBack</a></li>
+<li><a href="../CanBrowserNavigateForward.html" title="CanBrowserNavigateForward">canBrowserNavigateForward</a></li>
+<li><a href="../CreateBrowser.html" title="CreateBrowser">createBrowser</a></li>
+<li><a href="../ExecuteBrowserJavascript.html" title="ExecuteBrowserJavascript">executeBrowserJavascript</a></li>
+<li><a href="../FocusBrowser.html" title="FocusBrowser">focusBrowser</a></li>
+<li><a href="../GetBrowserProperty.html" title="GetBrowserProperty">getBrowserProperty</a></li>
+<li><a href="../GetBrowserSettings.html" title="GetBrowserSettings">getBrowserSettings</a></li>
+<li><a href="../GetBrowserSource.html" title="GetBrowserSource">getBrowserSource</a></li>
+<li><a href="../GetBrowserTitle.html" title="GetBrowserTitle">getBrowserTitle</a></li>
+<li><a href="../GetBrowserURL.html" title="GetBrowserURL">getBrowserURL</a></li>
+<li><a href="../InjectBrowserMouseDown.html" title="InjectBrowserMouseDown">injectBrowserMouseDown</a></li>
+<li><a href="../InjectBrowserMouseMove.html" title="InjectBrowserMouseMove">injectBrowserMouseMove</a></li>
+<li><a href="../InjectBrowserMouseUp.html" title="InjectBrowserMouseUp">injectBrowserMouseUp</a></li>
+<li><a href="../InjectBrowserMouseWheel.html" title="InjectBrowserMouseWheel">injectBrowserMouseWheel</a></li>
+<li><a href="../IsBrowserDomainBlocked.html" title="IsBrowserDomainBlocked">isBrowserDomainBlocked</a></li>
+<li><a href="../IsBrowserFocused.html" title="IsBrowserFocused">isBrowserFocused</a></li>
+<li><a href="../IsBrowserLoading.html" title="IsBrowserLoading">isBrowserLoading</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20806"><span style="color: #FFFFFF;">r20806</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="../IsBrowserRenderingPaused.html" title="IsBrowserRenderingPaused">isBrowserRenderingPaused</a></li></ul>
+</div></div>
+<ul><li><a href="../LoadBrowserURL.html" title="LoadBrowserURL">loadBrowserURL</a></li>
+<li><a href="../NavigateBrowserBack.html" title="NavigateBrowserBack">navigateBrowserBack</a></li>
+<li><a href="../NavigateBrowserForward.html" title="NavigateBrowserForward">navigateBrowserForward</a></li>
+<li><a href="../ReloadBrowserPage.html" title="ReloadBrowserPage">reloadBrowserPage</a></li>
+<li><a href="../RequestBrowserDomains.html" title="RequestBrowserDomains">requestBrowserDomains</a></li>
+<li><a href="../ResizeBrowser.html" title="ResizeBrowser">resizeBrowser</a></li>
+<li><a href="../SetBrowserAjaxHandler.html" title="SetBrowserAjaxHandler">setBrowserAjaxHandler</a></li>
+<li><a href="../SetBrowserProperty.html" title="SetBrowserProperty">setBrowserProperty</a></li>
+<li><a href="../SetBrowserRenderingPaused.html" title="SetBrowserRenderingPaused">setBrowserRenderingPaused</a></li>
+<li><a href="../SetBrowserVolume.html" title="SetBrowserVolume">setBrowserVolume</a></li>
+<li><a href="../ToggleBrowserDevTools.html" title="ToggleBrowserDevTools">toggleBrowserDevTools</a></li></ul>
+<h3><span class="mw-headline" id="GUI_Functions">GUI Functions</span></h3>
+<ul><li><a href="../GuiCreateBrowser.html" title="GuiCreateBrowser">guiCreateBrowser</a></li>
+<li><a href="../GuiGetBrowser.html" title="GuiGetBrowser">guiGetBrowser</a></li></ul>
+<p><br />
+</p>
+<h1><span class="mw-headline" id="Eventos_de_Scripting">Eventos de Scripting</span></h1>
+<ul><li><a href="../OnClientBrowserCreated.html" title="OnClientBrowserCreated">onClientBrowserCreated</a></li>
+<li><a href="../OnClientBrowserCursorChange.html" title="OnClientBrowserCursorChange">onClientBrowserCursorChange</a></li>
+<li><a href="../OnClientBrowserDocumentReady.html" title="OnClientBrowserDocumentReady">onClientBrowserDocumentReady</a></li>
+<li><a href="../OnClientBrowserInputFocusChanged.html" title="OnClientBrowserInputFocusChanged">onClientBrowserInputFocusChanged</a></li>
+<li><a href="../OnClientBrowserLoadingFailed.html" title="OnClientBrowserLoadingFailed">onClientBrowserLoadingFailed</a></li>
+<li><a href="../OnClientBrowserLoadingStart.html" title="OnClientBrowserLoadingStart">onClientBrowserLoadingStart</a></li>
+<li><a href="../OnClientBrowserNavigate.html" title="OnClientBrowserNavigate">onClientBrowserNavigate</a></li>
+<li><a href="../OnClientBrowserPopup.html" title="OnClientBrowserPopup">onClientBrowserPopup</a></li>
+<li><a href="../OnClientBrowserResourceBlocked.html" title="OnClientBrowserResourceBlocked">onClientBrowserResourceBlocked</a></li>
+<li><a href="../OnClientBrowserTooltip.html" title="OnClientBrowserTooltip">onClientBrowserTooltip</a></li>
+<li><a href="../OnClientBrowserWhitelistChange.html" title="OnClientBrowserWhitelistChange">onClientBrowserWhitelistChange</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727211848
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.021 seconds
+Real time usage: 0.023 seconds
+Preprocessor visited node count: 155/1000000
+Post‐expand include size: 2958/2097152 bytes
+Template argument size: 81/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1774/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.387      1 -total
+ 86.63%    4.667      1 Template:CEF_functions
+ 66.16%    3.564      1 Template:Added_feature/item
+ 15.31%    0.825      1 Template:R
+ 14.16%    0.763      2 Template:Current_Stable_Version
+ 12.38%    0.667      2 Template:Next_Stable_Version
+ 12.06%    0.650      1 Template:CEF_events
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:12792-0!canonical and timestamp 20220727211848 and revision id 69034. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Tutorial_CEF&amp;oldid=69034">https://wiki.multitheftauto.com/index.php?title=PT-BR/Tutorial_CEF&amp;oldid=69034</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="../Category_Changes_in_1.5.html" title="Category:Changes in 1.5.9">Changes in 1.5.9</a></li><li><a href="../Category_Tutorials.html" title="Category:Tutorials">Tutorials</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=PT-BR%2FTutorial+CEF" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=PT-BR%2FTutorial+CEF" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Tutorial_CEF.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:PT-BR/Tutorial_CEF&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Tutorial_CEF.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Tutorial_CEF&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Tutorial_CEF&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/PT-BR/Tutorial_CEF.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/PT-BR/Tutorial_CEF.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Tutorial_CEF&amp;oldid=69034" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=PT-BR/Tutorial_CEF&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=CEF_Tutorial" title="CEF Tutorial – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 February 2021, at 22:03.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.023","ppvisitednodes":{"value":155,"limit":1000000},"postexpandincludesize":{"value":2958,"limit":2097152},"templateargumentsize":{"value":81,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1774,"limit":5000000},"timingprofile":["100.00%    5.387      1 -total"," 86.63%    4.667      1 Template:CEF_functions"," 66.16%    3.564      1 Template:Added_feature/item"," 15.31%    0.825      1 Template:R"," 14.16%    0.763      2 Template:Current_Stable_Version"," 12.38%    0.667      2 Template:Next_Stable_Version"," 12.06%    0.650      1 Template:CEF_events"]},"cachereport":{"timestamp":"20220727211848","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":77});});</script>
+</body>
+</html>

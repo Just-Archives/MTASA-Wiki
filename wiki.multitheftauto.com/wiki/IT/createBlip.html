@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>IT/createBlip - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"cc7e7ae5560ee61ba6b42818","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"IT/createBlip","wgTitle":"IT/createBlip","wgCurRevisionId":26570,"wgRevisionId":26570,"wgArticleId":5772,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["IT/Cambiamenti nella 1.0","IT/Pagine italiane","IT/funzioni server","IT/funzioni client","IT/Cambiamenti nella DP3","IT/Cambiamenti nella 1.1"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"IT/createBlip","wgRelevantArticleId":5772,"wgIsProbablyEditable":false,
+"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='both' data-subcaption='Funzioni client e server'>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-IT_createBlip rootpage-IT_createBlip skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">IT/createBlip</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div style="border:1px dashed blue;background-color:#E2E2E2;font-family:courier new, courier;padding-left:10px;margin-bottom:20px;"><strong style="color:blue;">«</strong> Torna alla <a href="Pagina_principale.html" title="IT/Pagina principale">Pagina principale italiana <span style="color:green;">▇</span><span style="color:white;">▇</span><span style="color:red;">▇</span></a>.</div>
+<p><!--HC-->
+</p><p>Questa funzione crea un <a href="Elemento.html" title="IT/Elemento">elemento</a> <a href="Elemento/Blip.html" title="IT/Elemento/Blip">segnalino</a>, che viene mostrato come un icona nel radar del client.
+</p>
+<h2><span class="mw-headline" id="Sintassi">Sintassi</span></h2>
+<!-- BEGIN SECTION |1|server|Server|--><div class="serverHeader" onclick="expandSection(1);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander1">Click to collapse [-]</div>Server</div><div style="display:;" class="serverContent" id="section1">
+<pre class="prettyprint lang-lua">blip createBlip ( float x, float y, float z, [int icon=0, int size=2, int r=255, int g=0, int b=0, int a=255, 
+int ordering=0 *, float visibleDistance=99999.0, visibleTo = getRootElement()] )
+</pre> 
+<h3><span class="mw-headline" id="Argomenti_richiesti">Argomenti richiesti</span></h3>
+<ul><li><b>x:</b> La posizione x del segnalino, nelle coordinate del mondo.</li>
+<li><b>y:</b> La posizione y del segnalino, nelle coordinate del mondo.</li>
+<li><b>z:</b> La posizione z del segnalino, nelle coordinate del mondo.</li></ul>
+<h3><span class="mw-headline" id="Argomenti_opzionali">Argomenti opzionali</span></h3>
+<div style="margin-left:20px;border-left:groove 5px black;padding-left:5px;"><b>NOTA:</b> Quando usi argomenti opzionali, devi fornire tutti gli altri argomenti prima di quello che vuoi utilizzare. Per altre informazioni consulta la pagina <a href="Argomenti_opzionali.html" title="IT/Argomenti opzionali">Argomenti opzionali</a>.</div>
+<ul><li><b>icon:</b> L'icona del segnalino del radar. Valori validi sono:</li></ul>
+<ul><li><b>0:</b> Nessuna [predefinito]</li>
+<li><b>1:</b> Bordo <a href="../File_Blipid1.html" class="image"><img alt="Blipid1.jpg" src="https://wiki.multitheftauto.com/images/c/c3/Blipid1.jpg" decoding="async" width="16" height="16" /></a> <i>Nota: colore bianco di default</i></li>
+<li><b>2:</b> Centro <a href="../File_Blipid2-2.html" class="image"><img alt="Blipid2.jpg" src="https://wiki.multitheftauto.com/images/f/fa/Blipid2.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>3:</b> Posizione mappa <a href="../File_Blipid3-2.html" class="image"><img alt="Blipid3.jpg" src="https://wiki.multitheftauto.com/images/8/85/Blipid3.jpg" decoding="async" width="32" height="32" /></a></li>
+<li><b>4:</b> Nord <a href="../File_Blipid4-2.html" class="image"><img alt="Blipid4.jpg" src="https://wiki.multitheftauto.com/images/c/c5/Blipid4.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>5:</b> Aeroporto <a href="../File_Blipid5.html" class="image"><img alt="Blipid5.jpg" src="https://wiki.multitheftauto.com/images/9/9b/Blipid5.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>6:</b> Pistola <a href="../File_Blipid6.html" class="image"><img alt="Blipid6.jpg" src="https://wiki.multitheftauto.com/images/6/68/Blipid6.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>7:</b> Barbiere <a href="../File_Blipid7.html" class="image"><img alt="Blipid7.jpg" src="https://wiki.multitheftauto.com/images/5/5f/Blipid7.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>8:</b> Big Smoke <a href="../File_Blipid8.html" class="image"><img alt="Blipid8.jpg" src="https://wiki.multitheftauto.com/images/9/99/Blipid8.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>9:</b> Porto <a href="../File_Blipid9.html" class="image"><img alt="Blipid9.jpg" src="https://wiki.multitheftauto.com/images/f/fa/Blipid9.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>10:</b> Burgershot <a href="../File_Blipid10.html" class="image"><img alt="Blipid10.jpg" src="https://wiki.multitheftauto.com/images/c/cb/Blipid10.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>11:</b> Bulldozer <a href="../File_Blipid11.html" class="image"><img alt="Blipid11.jpg" src="https://wiki.multitheftauto.com/images/1/1d/Blipid11.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>12:</b> Catilina <a href="../File_Blipid12.html" class="image"><img alt="Blipid12.jpg" src="https://wiki.multitheftauto.com/images/d/d1/Blipid12.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>13:</b> Cesar <a href="../File_Blipid13.html" class="image"><img alt="Blipid13.jpg" src="https://wiki.multitheftauto.com/images/0/04/Blipid13.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>14:</b> Chicken <a href="../File_Blipid14.html" class="image"><img alt="Blipid14.jpg" src="https://wiki.multitheftauto.com/images/d/dd/Blipid14.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>15:</b> Cj <a href="../File_Blipid15.html" class="image"><img alt="Blipid15.jpg" src="https://wiki.multitheftauto.com/images/b/b7/Blipid15.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>16:</b> Crash <a href="../File_Blipid16.html" class="image"><img alt="Blipid16.jpg" src="https://wiki.multitheftauto.com/images/8/89/Blipid16.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>17:</b> Tavola <a href="../File_Blipid17.html" class="image"><img alt="Blipid17.jpg" src="https://wiki.multitheftauto.com/images/4/4f/Blipid17.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>18:</b> Emmet <a href="../File_Blipid18.html" class="image"><img alt="Blipid18.jpg" src="https://wiki.multitheftauto.com/images/6/6e/Blipid18.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>19:</b> Attacco nemico <a href="../File_Blipid19.html" class="image"><img alt="Blipid19.jpg" src="https://wiki.multitheftauto.com/images/d/d1/Blipid19.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>20:</b> Fuoco <a href="../File_Blipid20.html" class="image"><img alt="Blipid20.jpg" src="https://wiki.multitheftauto.com/images/2/26/Blipid20.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>21:</b> Fidanzata <a href="../File_Blipid21.html" class="image"><img alt="Blipid21.jpg" src="https://wiki.multitheftauto.com/images/b/b0/Blipid21.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>22:</b> Ospedale <a href="../File_Blipid22.html" class="image"><img alt="Blipid22.jpg" src="https://wiki.multitheftauto.com/images/b/bd/Blipid22.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>23:</b> Loco <a href="../File_Blipid23.html" class="image"><img alt="Blipid23.jpg" src="https://wiki.multitheftauto.com/images/0/0b/Blipid23.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>24:</b> Maddog <a href="../File_Blipid24.html" class="image"><img alt="Blipid24.jpg" src="https://wiki.multitheftauto.com/images/d/d3/Blipid24.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>25:</b> Mafia <a href="../File_Blipid25.html" class="image"><img alt="Blipid25.jpg" src="https://wiki.multitheftauto.com/images/8/82/Blipid25.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>26:</b> Mcstrap <a href="../File_Blipid26.html" class="image"><img alt="Blipid26.jpg" src="https://wiki.multitheftauto.com/images/3/30/Blipid26.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>27:</b> Garage di modifica <a href="../File_Blipid27.html" class="image"><img alt="Blipid27.jpg" src="https://wiki.multitheftauto.com/images/3/3b/Blipid27.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>28:</b> Ogloc <a href="../File_Blipid28.html" class="image"><img alt="Blipid28.jpg" src="https://wiki.multitheftauto.com/images/5/50/Blipid28.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>29:</b> Pizza <a href="../File_Blipid29.html" class="image"><img alt="Blipid29.jpg" src="https://wiki.multitheftauto.com/images/7/7e/Blipid29.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>30:</b> Polizia <a href="../File_Blipid30.html" class="image"><img alt="Blipid30.jpg" src="https://wiki.multitheftauto.com/images/7/7e/Blipid30.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>31:</b> Proprietà verde <a href="../File_Blipid31.html" class="image"><img alt="Blipid31.jpg" src="https://wiki.multitheftauto.com/images/0/0d/Blipid31.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>32:</b> Proprietà rossa <a href="../File_Blipid32.html" class="image"><img alt="Blipid32.jpg" src="https://wiki.multitheftauto.com/images/d/d9/Blipid32.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>33:</b> Gara <a href="../File_Blipid33.html" class="image"><img alt="Blipid33.jpg" src="https://wiki.multitheftauto.com/images/d/d6/Blipid33.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>34:</b> Ryder <a href="../File_Blipid34.html" class="image"><img alt="Blipid34.jpg" src="https://wiki.multitheftauto.com/images/1/16/Blipid34.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>35:</b> Salvataggio <a href="../File_Blipid35.html" class="image"><img alt="Blipid35.jpg" src="https://wiki.multitheftauto.com/images/d/db/Blipid35.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>36:</b> Scuola <a href="../File_Blipid36.html" class="image"><img alt="Blipid36.jpg" src="https://wiki.multitheftauto.com/images/d/dd/Blipid36.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>37:</b> Mistero <a href="../File_Blipid37.html" class="image"><img alt="Blipid37.jpg" src="https://wiki.multitheftauto.com/images/a/a5/Blipid37.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>38:</b> Sweet <a href="../File_Blipid38.html" class="image"><img alt="Blipid38.jpg" src="https://wiki.multitheftauto.com/images/3/3e/Blipid38.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>39:</b> Tattuaggi <a href="../File_Blipid39.html" class="image"><img alt="Blipid39.jpg" src="https://wiki.multitheftauto.com/images/5/57/Blipid39.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>40:</b> Truth <a href="../File_Blipid40.html" class="image"><img alt="Blipid40.jpg" src="https://wiki.multitheftauto.com/images/0/07/Blipid40.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>41:</b> Obiettivo <a href="../File_Blipid41-2.html" class="image"><img alt="Blipid41.jpg" src="https://wiki.multitheftauto.com/images/a/ae/Blipid41.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>42:</b> Toreno <a href="../File_Blipid42.html" class="image"><img alt="Blipid42.jpg" src="https://wiki.multitheftauto.com/images/6/68/Blipid42.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>43:</b> Triadi <a href="../File_Blipid43.html" class="image"><img alt="Blipid43.jpg" src="https://wiki.multitheftauto.com/images/1/13/Blipid43.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>44:</b> Casino Triadi <a href="../File_Blipid44.html" class="image"><img alt="Blipid44.jpg" src="https://wiki.multitheftauto.com/images/f/fb/Blipid44.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>45:</b> Vestiti <a href="../File_Blipid45.html" class="image"><img alt="Blipid45.jpg" src="https://wiki.multitheftauto.com/images/6/62/Blipid45.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>46:</b> Woozie <a href="../File_Blipid46.html" class="image"><img alt="Blipid46.jpg" src="https://wiki.multitheftauto.com/images/6/6d/Blipid46.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>47:</b> Zero <a href="../File_Blipid47.html" class="image"><img alt="Blipid47.jpg" src="https://wiki.multitheftauto.com/images/d/d0/Blipid47.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>48:</b> Discoteca (appuntamento) <a href="../File_Blipid48-2.html" class="image"><img alt="Blipid48.jpg" src="https://wiki.multitheftauto.com/images/b/b2/Blipid48.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>49:</b> Bar (appuntamento) <a href="../File_Blipid49.html" class="image"><img alt="Blipid49.jpg" src="https://wiki.multitheftauto.com/images/a/a0/Blipid49.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>50:</b> Ristorante (appuntamento) <a href="../File_Blipid50.html" class="image"><img alt="Blipid50.jpg" src="https://wiki.multitheftauto.com/images/a/ae/Blipid50.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>51:</b> Camion <a href="../File_Blipid51.html" class="image"><img alt="Blipid51.jpg" src="https://wiki.multitheftauto.com/images/a/ab/Blipid51.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>52:</b> Soldi <a href="../File_Blipid52.html" class="image"><img alt="Blipid52.jpg" src="https://wiki.multitheftauto.com/images/7/7a/Blipid52.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>53:</b> Bandiera <a href="../File_Blipid53.html" class="image"><img alt="Blipid53.jpg" src="https://wiki.multitheftauto.com/images/8/8e/Blipid53.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>54:</b> Palestra <a href="../File_Blipid54.html" class="image"><img alt="Blipid54.jpg" src="https://wiki.multitheftauto.com/images/6/64/Blipid54.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>55:</b> Luce di pista <a href="../File_Blipid56.html" class="image"><img alt="Blipid56.jpg" src="https://wiki.multitheftauto.com/images/d/dc/Blipid56.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>57:</b> Pista d'aeroporto <a href="../File_Blipid57.html" class="image"><img alt="Blipid57.jpg" src="https://wiki.multitheftauto.com/images/7/73/Blipid57.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>58:</b> Gang azzurro <a href="../File_Blipid58.html" class="image"><img alt="Blipid58.jpg" src="https://wiki.multitheftauto.com/images/3/30/Blipid58.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>59:</b> Gang viola <a href="../File_Blipid59.html" class="image"><img alt="Blipid59.jpg" src="https://wiki.multitheftauto.com/images/9/9e/Blipid59.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>60:</b> Gang giallo <a href="../File_Blipid60.html" class="image"><img alt="Blipid60.jpg" src="https://wiki.multitheftauto.com/images/1/15/Blipid60.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>61:</b> Gang blu <a href="../File_Blipid61.html" class="image"><img alt="Blipid61.jpg" src="https://wiki.multitheftauto.com/images/e/ec/Blipid61.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>62:</b> Gang verde <a href="../File_Blipid62.html" class="image"><img alt="Blipid62.jpg" src="https://wiki.multitheftauto.com/images/1/13/Blipid62.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>63:</b> Spray <a href="../File_Blipid63.html" class="image"><img alt="Blipid63.jpg" src="https://wiki.multitheftauto.com/images/d/d6/Blipid63.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>size:</b> La grandezza del segnalino del radar. Di default è 2.</li>
+<li><b>r:</b> La quantità di colore rosso nel colore del segnalino (0 - 255). Applicabile solo all'icona <i>nessuna</i>. Di default è 255.</li>
+<li><b>g:</b> La quantità di colore verde nel colore del segnalino (0 - 255). Applicabile solo all'icona <i>nessuna</i>. Di default è 0.</li>
+<li><b>b:</b> La quantità di colore blu nel colore del segnalino (0 - 255). Applicabile solo all'icona <i>nessuna</i>. Di default è 0.</li>
+<li><b>a:</b> L'opacità del segnalino (0 - 255). Di default è 255.</li></ul>
+<ul><li><b>ordering:</b> Questo definisce l'ordinamento del segnalino nello Z-Level (-32768 - 32767). Di default è 0.</li>
+<li><b>visibleDistance:</b> La distanza massima dalla telecamera alla quale il segnalino è ancora visibile</li></ul>
+<ul><li><b>visibleTo:</b> Quali elementi possono vedere il segnalino. Di default è visibile a tutti. Vedere <a href="Visibility.html" title="IT/Visibility">Visibilità</a>.</li></ul>
+</div><!-- END SECTION |1|-->
+<!-- BEGIN SECTION |2|client|Client|--><div class="clientHeader" onclick="expandSection(2);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander2">Click to collapse [-]</div>Client</div><div style="display:;" class="clientContent" id="section2">
+<pre class="prettyprint lang-lua">blip createBlip ( float x, float y, float z, [int icon=0, int size=2, int r=255, int g=0, int b=0, int a=255, 
+int ordering=0, float visibleDistance ] )
+</pre> 
+<h3><span class="mw-headline" id="Argomenti_richiesti">Argomenti richiesti</span></h3>
+<ul><li><b>x:</b> La posizione x del segnalino, nelle coordinate del mondo.</li>
+<li><b>y:</b> La posizione y del segnalino, nelle coordinate del mondo.</li>
+<li><b>z:</b> La posizione z del segnalino, nelle coordinate del mondo.</li></ul>
+<h3><span class="mw-headline" id="Argomenti_opzionali">Argomenti opzionali</span></h3>
+<ul><li><b>0:</b> Nessuna [predefinito]</li>
+<li><b>1:</b> Bordo <a href="../File_Blipid1.html" class="image"><img alt="Blipid1.jpg" src="https://wiki.multitheftauto.com/images/c/c3/Blipid1.jpg" decoding="async" width="16" height="16" /></a> <i>Nota: colore bianco di default</i></li>
+<li><b>2:</b> Centro <a href="../File_Blipid2-2.html" class="image"><img alt="Blipid2.jpg" src="https://wiki.multitheftauto.com/images/f/fa/Blipid2.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>3:</b> Posizione mappa <a href="../File_Blipid3-2.html" class="image"><img alt="Blipid3.jpg" src="https://wiki.multitheftauto.com/images/8/85/Blipid3.jpg" decoding="async" width="32" height="32" /></a></li>
+<li><b>4:</b> Nord <a href="../File_Blipid4-2.html" class="image"><img alt="Blipid4.jpg" src="https://wiki.multitheftauto.com/images/c/c5/Blipid4.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>5:</b> Aeroporto <a href="../File_Blipid5.html" class="image"><img alt="Blipid5.jpg" src="https://wiki.multitheftauto.com/images/9/9b/Blipid5.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>6:</b> Pistola <a href="../File_Blipid6.html" class="image"><img alt="Blipid6.jpg" src="https://wiki.multitheftauto.com/images/6/68/Blipid6.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>7:</b> Barbiere <a href="../File_Blipid7.html" class="image"><img alt="Blipid7.jpg" src="https://wiki.multitheftauto.com/images/5/5f/Blipid7.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>8:</b> Big Smoke <a href="../File_Blipid8.html" class="image"><img alt="Blipid8.jpg" src="https://wiki.multitheftauto.com/images/9/99/Blipid8.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>9:</b> Porto <a href="../File_Blipid9.html" class="image"><img alt="Blipid9.jpg" src="https://wiki.multitheftauto.com/images/f/fa/Blipid9.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>10:</b> Burgershot <a href="../File_Blipid10.html" class="image"><img alt="Blipid10.jpg" src="https://wiki.multitheftauto.com/images/c/cb/Blipid10.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>11:</b> Bulldozer <a href="../File_Blipid11.html" class="image"><img alt="Blipid11.jpg" src="https://wiki.multitheftauto.com/images/1/1d/Blipid11.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>12:</b> Catilina <a href="../File_Blipid12.html" class="image"><img alt="Blipid12.jpg" src="https://wiki.multitheftauto.com/images/d/d1/Blipid12.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>13:</b> Cesar <a href="../File_Blipid13.html" class="image"><img alt="Blipid13.jpg" src="https://wiki.multitheftauto.com/images/0/04/Blipid13.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>14:</b> Chicken <a href="../File_Blipid14.html" class="image"><img alt="Blipid14.jpg" src="https://wiki.multitheftauto.com/images/d/dd/Blipid14.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>15:</b> Cj <a href="../File_Blipid15.html" class="image"><img alt="Blipid15.jpg" src="https://wiki.multitheftauto.com/images/b/b7/Blipid15.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>16:</b> Crash <a href="../File_Blipid16.html" class="image"><img alt="Blipid16.jpg" src="https://wiki.multitheftauto.com/images/8/89/Blipid16.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>17:</b> Tavola <a href="../File_Blipid17.html" class="image"><img alt="Blipid17.jpg" src="https://wiki.multitheftauto.com/images/4/4f/Blipid17.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>18:</b> Emmet <a href="../File_Blipid18.html" class="image"><img alt="Blipid18.jpg" src="https://wiki.multitheftauto.com/images/6/6e/Blipid18.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>19:</b> Attacco nemico <a href="../File_Blipid19.html" class="image"><img alt="Blipid19.jpg" src="https://wiki.multitheftauto.com/images/d/d1/Blipid19.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>20:</b> Fuoco <a href="../File_Blipid20.html" class="image"><img alt="Blipid20.jpg" src="https://wiki.multitheftauto.com/images/2/26/Blipid20.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>21:</b> Fidanzata <a href="../File_Blipid21.html" class="image"><img alt="Blipid21.jpg" src="https://wiki.multitheftauto.com/images/b/b0/Blipid21.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>22:</b> Ospedale <a href="../File_Blipid22.html" class="image"><img alt="Blipid22.jpg" src="https://wiki.multitheftauto.com/images/b/bd/Blipid22.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>23:</b> Loco <a href="../File_Blipid23.html" class="image"><img alt="Blipid23.jpg" src="https://wiki.multitheftauto.com/images/0/0b/Blipid23.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>24:</b> Maddog <a href="../File_Blipid24.html" class="image"><img alt="Blipid24.jpg" src="https://wiki.multitheftauto.com/images/d/d3/Blipid24.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>25:</b> Mafia <a href="../File_Blipid25.html" class="image"><img alt="Blipid25.jpg" src="https://wiki.multitheftauto.com/images/8/82/Blipid25.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>26:</b> Mcstrap <a href="../File_Blipid26.html" class="image"><img alt="Blipid26.jpg" src="https://wiki.multitheftauto.com/images/3/30/Blipid26.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>27:</b> Garage di modifica <a href="../File_Blipid27.html" class="image"><img alt="Blipid27.jpg" src="https://wiki.multitheftauto.com/images/3/3b/Blipid27.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>28:</b> Ogloc <a href="../File_Blipid28.html" class="image"><img alt="Blipid28.jpg" src="https://wiki.multitheftauto.com/images/5/50/Blipid28.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>29:</b> Pizza <a href="../File_Blipid29.html" class="image"><img alt="Blipid29.jpg" src="https://wiki.multitheftauto.com/images/7/7e/Blipid29.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>30:</b> Polizia <a href="../File_Blipid30.html" class="image"><img alt="Blipid30.jpg" src="https://wiki.multitheftauto.com/images/7/7e/Blipid30.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>31:</b> Proprietà verde <a href="../File_Blipid31.html" class="image"><img alt="Blipid31.jpg" src="https://wiki.multitheftauto.com/images/0/0d/Blipid31.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>32:</b> Proprietà rossa <a href="../File_Blipid32.html" class="image"><img alt="Blipid32.jpg" src="https://wiki.multitheftauto.com/images/d/d9/Blipid32.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>33:</b> Gara <a href="../File_Blipid33.html" class="image"><img alt="Blipid33.jpg" src="https://wiki.multitheftauto.com/images/d/d6/Blipid33.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>34:</b> Ryder <a href="../File_Blipid34.html" class="image"><img alt="Blipid34.jpg" src="https://wiki.multitheftauto.com/images/1/16/Blipid34.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>35:</b> Salvataggio <a href="../File_Blipid35.html" class="image"><img alt="Blipid35.jpg" src="https://wiki.multitheftauto.com/images/d/db/Blipid35.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>36:</b> Scuola <a href="../File_Blipid36.html" class="image"><img alt="Blipid36.jpg" src="https://wiki.multitheftauto.com/images/d/dd/Blipid36.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>37:</b> Mistero <a href="../File_Blipid37.html" class="image"><img alt="Blipid37.jpg" src="https://wiki.multitheftauto.com/images/a/a5/Blipid37.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>38:</b> Sweet <a href="../File_Blipid38.html" class="image"><img alt="Blipid38.jpg" src="https://wiki.multitheftauto.com/images/3/3e/Blipid38.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>39:</b> Tattuaggi <a href="../File_Blipid39.html" class="image"><img alt="Blipid39.jpg" src="https://wiki.multitheftauto.com/images/5/57/Blipid39.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>40:</b> Truth <a href="../File_Blipid40.html" class="image"><img alt="Blipid40.jpg" src="https://wiki.multitheftauto.com/images/0/07/Blipid40.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>41:</b> Obiettivo <a href="../File_Blipid41-2.html" class="image"><img alt="Blipid41.jpg" src="https://wiki.multitheftauto.com/images/a/ae/Blipid41.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>42:</b> Toreno <a href="../File_Blipid42.html" class="image"><img alt="Blipid42.jpg" src="https://wiki.multitheftauto.com/images/6/68/Blipid42.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>43:</b> Triadi <a href="../File_Blipid43.html" class="image"><img alt="Blipid43.jpg" src="https://wiki.multitheftauto.com/images/1/13/Blipid43.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>44:</b> Casino Triadi <a href="../File_Blipid44.html" class="image"><img alt="Blipid44.jpg" src="https://wiki.multitheftauto.com/images/f/fb/Blipid44.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>45:</b> Vestiti <a href="../File_Blipid45.html" class="image"><img alt="Blipid45.jpg" src="https://wiki.multitheftauto.com/images/6/62/Blipid45.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>46:</b> Woozie <a href="../File_Blipid46.html" class="image"><img alt="Blipid46.jpg" src="https://wiki.multitheftauto.com/images/6/6d/Blipid46.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>47:</b> Zero <a href="../File_Blipid47.html" class="image"><img alt="Blipid47.jpg" src="https://wiki.multitheftauto.com/images/d/d0/Blipid47.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>48:</b> Discoteca (appuntamento) <a href="../File_Blipid48-2.html" class="image"><img alt="Blipid48.jpg" src="https://wiki.multitheftauto.com/images/b/b2/Blipid48.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>49:</b> Bar (appuntamento) <a href="../File_Blipid49.html" class="image"><img alt="Blipid49.jpg" src="https://wiki.multitheftauto.com/images/a/a0/Blipid49.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>50:</b> Ristorante (appuntamento) <a href="../File_Blipid50.html" class="image"><img alt="Blipid50.jpg" src="https://wiki.multitheftauto.com/images/a/ae/Blipid50.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>51:</b> Camion <a href="../File_Blipid51.html" class="image"><img alt="Blipid51.jpg" src="https://wiki.multitheftauto.com/images/a/ab/Blipid51.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>52:</b> Soldi <a href="../File_Blipid52.html" class="image"><img alt="Blipid52.jpg" src="https://wiki.multitheftauto.com/images/7/7a/Blipid52.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>53:</b> Bandiera <a href="../File_Blipid53.html" class="image"><img alt="Blipid53.jpg" src="https://wiki.multitheftauto.com/images/8/8e/Blipid53.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>54:</b> Palestra <a href="../File_Blipid54.html" class="image"><img alt="Blipid54.jpg" src="https://wiki.multitheftauto.com/images/6/64/Blipid54.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>55:</b> Luce di pista <a href="../File_Blipid56.html" class="image"><img alt="Blipid56.jpg" src="https://wiki.multitheftauto.com/images/d/dc/Blipid56.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>57:</b> Pista d'aeroporto <a href="../File_Blipid57.html" class="image"><img alt="Blipid57.jpg" src="https://wiki.multitheftauto.com/images/7/73/Blipid57.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>58:</b> Gang azzurro <a href="../File_Blipid58.html" class="image"><img alt="Blipid58.jpg" src="https://wiki.multitheftauto.com/images/3/30/Blipid58.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>59:</b> Gang viola <a href="../File_Blipid59.html" class="image"><img alt="Blipid59.jpg" src="https://wiki.multitheftauto.com/images/9/9e/Blipid59.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>60:</b> Gang giallo <a href="../File_Blipid60.html" class="image"><img alt="Blipid60.jpg" src="https://wiki.multitheftauto.com/images/1/15/Blipid60.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>61:</b> Gang blu <a href="../File_Blipid61.html" class="image"><img alt="Blipid61.jpg" src="https://wiki.multitheftauto.com/images/e/ec/Blipid61.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>62:</b> Gang verde <a href="../File_Blipid62.html" class="image"><img alt="Blipid62.jpg" src="https://wiki.multitheftauto.com/images/1/13/Blipid62.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>63:</b> Spray <a href="../File_Blipid63.html" class="image"><img alt="Blipid63.jpg" src="https://wiki.multitheftauto.com/images/d/d6/Blipid63.jpg" decoding="async" width="16" height="16" /></a></li>
+<li><b>size:</b> La grandezza del segnalino del radar. Di default è 2.</li>
+<li><b>r:</b> La quantità di colore rosso nel colore del segnalino (0 - 255). Applicabile solo all'icona <i>nessuna</i>. Di default è 255.</li>
+<li><b>g:</b> La quantità di colore verde nel colore del segnalino (0 - 255). Applicabile solo all'icona <i>nessuna</i>. Di default è 0.</li>
+<li><b>b:</b> La quantità di colore blu nel colore del segnalino (0 - 255). Applicabile solo all'icona <i>nessuna</i>. Di default è 0.</li>
+<li><b>a:</b> L'opacità del segnalino (0 - 255). Di default è 255.</li></ul>
+<ul><li><b>ordering:</b> Questo definisce l'ordinamento del segnalino nello Z-Level (-32768 - 32767). Di default è 0.</li>
+<li><b>visibleDistance:</b> La distanza massima dalla telecamera alla quale il segnalino è ancora visibile</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Valori_restituiti">Valori restituiti</span></h2>
+<p>Restituisce l'<a href="Elemento.html" title="IT/Elemento">elemento</a> <a href="Elemento/Blip.html" title="IT/Elemento/Blip">segnalino</a> se è stato creato con successo, altrimenti restituisce <i>false</i>.
+</p>
+<h2><span class="mw-headline" id="Esempio">Esempio</span></h2>
+<p>&lt;section name="Server" class="server" show="true"&gt;
+<b>Esempio 1:</b> Questo esempio crea un segnalino nel radar nella posizione di un giocatore a caso e fa in modo che sia visibile solo a quel giocatore.
+</p>
+<pre class="prettyprint lang-lua">-- Scegli un giocatore casuale
+myPlayer = getRandomPlayer ()
+-- Recupera la posizione del giocatore e conservala nelle variabili x, y e z
+x,y,z = getElementPosition ( myPlayer )
+-- Creare un segnalino nel radar nella posizione del giocatore, con l'icona del 'dollaro' e visibile solo a quel giocatore
+myBlip = createBlip ( x, y, z, 51, 0, 0, 0, 255, myPlayer )
+</pre>
+<p><b>Esempio 2:</b> Questo esempio attribuisce un segnalino ad un giocatore. È possibile collegare un segnalino ad un elemento semplicemente impostandolo come genitore di questo elemento.
+&lt;syntaxhighlight lang="lua"&gt;
+-- Scegli un giocatore casuale
+myPlayer = getRandomPlayer ()
+-- Creare un segnalino nel radar in mezzo alla mappa
+myBlip = createBlip ( 0, 0, 0 )
+-- Fai diventare il giocatore il genitore del segnalino, in modo che il segnalino segue il giocatore
+setElementParent ( myBlip, myPlayer )
+</p>
+</div><!-- END SECTION |2|-->
+<h2><span class="mw-headline" id="Vedere_anche">Vedere anche</span></h2>
+<ul><li><a class="mw-selflink selflink">createBlip</a></li>
+<li><a href="createBlipAttachedTo.html" title="IT/createBlipAttachedTo">createBlipAttachedTo</a></li>
+<li><a href="getBlipIcon.html" title="IT/getBlipIcon">getBlipIcon</a></li>
+<li><a href="getBlipSize.html" title="IT/getBlipSize">getBlipSize</a></li>
+<li><a href="getBlipColor.html" title="IT/getBlipColor">getBlipColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=IT/setBlipIcon&amp;action=edit&amp;redlink=1" class="new" title="IT/setBlipIcon (page does not exist)">setBlipIcon</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=IT/setBlipSize&amp;action=edit&amp;redlink=1" class="new" title="IT/setBlipSize (page does not exist)">setBlipSize</a></li>
+<li><a href="setBlipColor.html" title="IT/setBlipColor">setBlipColor</a></li></ul>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=IT/getBlipOrdering&amp;action=edit&amp;redlink=1" class="new" title="IT/getBlipOrdering (page does not exist)">getBlipOrdering</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=IT/setBlipOrdering&amp;action=edit&amp;redlink=1" class="new" title="IT/setBlipOrdering (page does not exist)">setBlipOrdering</a></li></ul>
+<p><br />
+</p>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=IT/getBlipVisibleDistance&amp;action=edit&amp;redlink=1" class="new" title="IT/getBlipVisibleDistance (page does not exist)">getBlipVisibleDistance</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=IT/setBlipVisibleDistance&amp;action=edit&amp;redlink=1" class="new" title="IT/setBlipVisibleDistance (page does not exist)">setBlipVisibleDistance</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20220727201721
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.117 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 191/1000000
+Post‐expand include size: 8458/2097152 bytes
+Template argument size: 643/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 27420/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  105.125      1 -total
+  5.23%    5.497      4 Template:IT/Caratteristiche_nuove
+  2.56%    2.689      4 Template:Current_Version
+  1.95%    2.052      2 Template:IT/Segnalini_radar
+  1.80%    1.897      1 Template:IT/MainP
+  1.61%    1.697      1 Template:IT/Funzioni_server_client
+  1.54%    1.624      1 Template:IT/Argomenti_opzionali
+  1.54%    1.615      1 Template:IT/Blip_functions
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5772-0!canonical and timestamp 20220727201720 and revision id 26570. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=IT/createBlip&amp;oldid=26570">https://wiki.multitheftauto.com/index.php?title=IT/createBlip&amp;oldid=26570</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.multitheftauto.com/index.php?title=Category:IT/Cambiamenti_nella_1.0&amp;action=edit&amp;redlink=1" class="new" title="Category:IT/Cambiamenti nella 1.0 (page does not exist)">IT/Cambiamenti nella 1.0</a></li><li><a href="../Category_IT/Pagine_italiane.html" title="Category:IT/Pagine italiane">IT/Pagine italiane</a></li><li><a href="https://wiki.multitheftauto.com/index.php?title=Category:IT/funzioni_server&amp;action=edit&amp;redlink=1" class="new" title="Category:IT/funzioni server (page does not exist)">IT/funzioni server</a></li><li><a href="https://wiki.multitheftauto.com/index.php?title=Category:IT/funzioni_client&amp;action=edit&amp;redlink=1" class="new" title="Category:IT/funzioni client (page does not exist)">IT/funzioni client</a></li><li><a href="../Category_IT/Cambiamenti_nella_DP3.html" title="Category:IT/Cambiamenti nella DP3">IT/Cambiamenti nella DP3</a></li><li><a href="https://wiki.multitheftauto.com/index.php?title=Category:IT/Cambiamenti_nella_1.1&amp;action=edit&amp;redlink=1" class="new" title="Category:IT/Cambiamenti nella 1.1 (page does not exist)">IT/Cambiamenti nella 1.1</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=IT%2FcreateBlip" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=IT%2FcreateBlip" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="createBlip.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:IT/createBlip&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="createBlip.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=IT/createBlip&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=IT/createBlip&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/IT/createBlip.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/IT/createBlip.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=IT/createBlip&amp;oldid=26570" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=IT/createBlip&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 3 August 2011, at 18:40.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.117","walltime":"0.125","ppvisitednodes":{"value":191,"limit":1000000},"postexpandincludesize":{"value":8458,"limit":2097152},"templateargumentsize":{"value":643,"limit":2097152},"expansiondepth":{"value":10,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":27420,"limit":5000000},"timingprofile":["100.00%  105.125      1 -total","  5.23%    5.497      4 Template:IT/Caratteristiche_nuove","  2.56%    2.689      4 Template:Current_Version","  1.95%    2.052      2 Template:IT/Segnalini_radar","  1.80%    1.897      1 Template:IT/MainP","  1.61%    1.697      1 Template:IT/Funzioni_server_client","  1.54%    1.624      1 Template:IT/Argomenti_opzionali","  1.54%    1.615      1 Template:IT/Blip_functions"]},"cachereport":{"timestamp":"20220727201721","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":76});});</script>
+</body>
+</html>

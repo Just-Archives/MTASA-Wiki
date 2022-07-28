@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>AddCommandHandler - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"b1affecb03e7975fa65271f7","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"AddCommandHandler","wgTitle":"AddCommandHandler","wgCurRevisionId":69185,"wgRevisionId":69185,"wgArticleId":1493,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Server functions","Client functions","Changes in 1.5.9"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"AddCommandHandler","wgRelevantArticleId":1493,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={
+"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='both' data-subcaption='Shared function'>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-AddCommandHandler rootpage-AddCommandHandler skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">AddCommandHandler</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--LC-->
+</p>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #FFB2B2; background: transparent; border-left: 25px solid #FFB2B2;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Important Note:</b> Do <b>NOT</b> use the same name for your handler function as the command name, as this can lead to confusion if multiple handler functions are used. Use a name that describes your handler's purpose more specifically.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<p>This function will attach a scripting function (handler) to a console command, so that whenever a player or administrator uses the command the function is called.
+</p><p>Multiple command handlers can be attached to a single command, and they will be called in the order that the handlers were attached. Equally, multiple commands can be handled by a single function, and the <i>commandName</i> parameter used to decide the course of action.
+</p><p>For users, a command is in the format:
+</p><p><i>commandName</i> <i>argument1</i> <i>argument2</i>
+</p><p>This can be triggered from the player's console or directly from the chat box by prefixing the message with a forward slash (<i>/</i>). For server side handlers, the server admin is also able to trigger these directly from the server's console in the same way as they are triggered from a player's console.
+</p>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #d5b5f5; background: transparent; border-left: 25px solid #d5b5f5;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Note:</b> You cannot use "check", "list" or "test" as a command name.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<!-- BEGIN SECTION |1|server|Server|--><div class="serverHeader" onclick="expandSection(1);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander1">Click to collapse [-]</div>Server</div><div style="display:;" class="serverContent" id="section1">
+<pre class="prettyprint lang-lua">bool addCommandHandler ( string commandName, function handlerFunction [, bool restricted = false, bool caseSensitive = true ] )
+</pre> 
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>commandName:</b> This is the name of the command you wish to attach a handler to. This is what must be typed into the console to trigger the function.</li>
+<li><b>handlerFunction:</b> This is the function that you want the command to trigger, which has to be defined before you add the handler. This function can take two parameters, playerSource and commandName, followed by as many parameters as you expect after your command (see below). These are all optional.</li></ul>
+<h3><span class="mw-headline" id="Optional_Arguments">Optional Arguments</span></h3>
+<p><i>NOTE:</i> When using optional arguments, you might need to supply all arguments before the one you wish to use. For more information on optional arguments, see <a href="Optional_arguments-2.html" class="mw-redirect" title="Optional arguments">optional arguments</a>. 
+</p>
+<ul><li><b>restricted:</b> Specify whether or not this command should be restricted by default. Use this on commands that should be inaccessible to everyone as default except special users specified in the ACL (Access Control List). This is to make sure admin commands such as ie. 'punish' won't be available to everyone if a server administrator forgets masking it in ACL. Make sure to add the command to your ACL under the proper group for it to be usefull (i.e &lt;right name="command.killEveryone" access="true"&gt;&lt;/right&gt;). This argument defaults to false if nothing is specified.</li></ul>
+<ul><li><b>caseSensitive:</b> Specifies if the command handler will ignore the case for this command name.</li></ul>
+</div><!-- END SECTION |1|-->
+<p><br />
+</p>
+<!-- BEGIN SECTION |2|client|Client|--><div class="clientHeader" onclick="expandSection(2);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander2">Click to collapse [-]</div>Client</div><div style="display:;" class="clientContent" id="section2">
+<pre class="prettyprint lang-lua">bool addCommandHandler ( string commandName, function handlerFunction [, bool caseSensitive = true ] )
+</pre> 
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>commandName:</b> This is the name of the command you wish to attach a handler to. This is what must be typed into the console to trigger the function.</li>
+<li><b>handlerFunction:</b> This is the function that you want the command to trigger, which has to be defined before you add the handler. This function can take commandName parameter, followed by as many parameters as you expect after your command (see below). These are all optional.</li></ul>
+<h3><span class="mw-headline" id="Optional_Arguments">Optional Arguments</span></h3>
+<p><i>NOTE:</i> When using optional arguments, you might need to supply all arguments before the one you wish to use. For more information on optional arguments, see <a href="Optional_arguments-2.html" class="mw-redirect" title="Optional arguments">optional arguments</a>. 
+</p>
+<ul><li><b>caseSensitive:</b> Specifies if the command handler will ignore the case for this command name.</li></ul>
+</div><!-- END SECTION |2|-->
+<h4><span class="mw-headline" id="Handler_function_parameters">Handler function parameters</span></h4>
+<p>These are the parameters for the handler function that is called when the command is used.
+</p>
+<!-- BEGIN SECTION |3|server|Server|--><div class="serverHeader" onclick="expandSection(3);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander3">Click to collapse [-]</div>Server</div><div style="display:;" class="serverContent" id="section3">
+<pre class="prettyprint lang-lua">player playerSource, string commandName [, string arg1, string arg2, ... ] </pre>
+<ul><li><b>playerSource:</b> The player who triggered the command or the <a href="Element/Console.html" title="Element/Console">server console</a>. If not triggered by a player (e.g. by admin) or server console, this will be <i>false</i>.</li>
+<li><b>commandName:</b> The name of the command triggered. This is useful if multiple commands go through one function.</li>
+<li><b>arg1, arg2, ...:</b> Each word after command name in the original command is passed here in a seperate variable. If there is no value for an argument, its variable will contain <a href="Nil.html" title="Nil">nil</a>. You can deal with a variable number of arguments using the vararg expression, as shown in <b>Server Example 2</b> below.</li></ul>
+</div><!-- END SECTION |3|-->
+<!-- BEGIN SECTION |4|client|Client|--><div class="clientHeader" onclick="expandSection(4);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander4">Click to collapse [-]</div>Client</div><div style="display:;" class="clientContent" id="section4">
+<pre class="prettyprint lang-lua">string commandName [, string arg1, string arg2, ... ] </pre>
+<ul><li><b>commandName:</b> The name of the command triggered. This is useful if multiple commands go through one function.</li>
+<li><b>arg1, arg2, ...:</b> Each word after command name in the original command is passed here in a seperate variable. If there is no value for an argument, its variable will contain <a href="Nil.html" title="Nil">nil</a>. You can deal with a variable number of arguments using the vararg expression, as shown in <b>Server Example 2</b> below.</li></ul>
+</div><!-- END SECTION |4|-->
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<p>Returns <i>true</i> if the command handler was added successfully, <i>false</i> otherwise.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<!-- BEGIN SECTION |5|server|Server|--><div class="serverHeader" onclick="expandSection(5);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander5">Click to collapse [-]</div>Server</div><div style="display:;" class="serverContent" id="section5">
+<p><b>Example 1:</b> This example defines a command handler for the command <i>createmarker</i>. This will create a red marker at the position of the player player who uses it.
+</p>
+<pre class="prettyprint lang-lua">-- Define our function that will handle this command
+function consoleCreateMarker ( playerSource, commandName )
+	-- If a player triggered it (rather than the admin) then
+	if ( playerSource ) then
+		-- Get that player's position
+		local x, y, z = getElementPosition ( playerSource )
+		-- Create a size 2, red checkpoint marker at their position
+		createMarker ( x, y, z, "checkpoint", 2, 255, 0, 0, 255 )
+		-- Output it in his chat box
+		outputChatBox ( "You got a red marker", playerSource )
+	end
+end
+-- Attach the 'consoleCreateMarker' function to the "createmarker" command
+addCommandHandler ( "createmarker", consoleCreateMarker )
+</pre>
+</div><!-- END SECTION |5|-->
+<!-- BEGIN SECTION |6|server|Server|--><div class="serverHeader" onclick="expandSection(6);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander6">Click to expand [+]</div>Server</div><div style="display:none;" class="serverContent" id="section6">
+<p><b>Example 2:</b> This example makes use of Lua's vararg expression to implement a <i>check_parameters</i> command to count the number of parameters passed, merge them all into a single string and output it. This is also shows you how you can use table.concat to merge all the passed arguments. This is particularly useful when you want to read in a sentence of text passed from the user. 
+</p>
+<pre class="prettyprint lang-lua">-- Define our function that will handle this command (which can accept a variable number of arguments after commandName)
+function consoleCheckParameters ( playerSource, commandName, ... )
+	-- If a player, not an admin, triggered it,
+	if playerSource then
+		local arg = {...}
+		-- Get the number of arguments in the arg table (arg table is the same as: {...})
+		local parameterCount = #arg
+		-- Output it to the player's chatbox
+		outputChatBox ( "Number of parameters: " .. parameterCount, playerSource )
+		-- Join them together in a single comma-separated string
+		local stringWithAllParameters = table.concat( arg, ", " )
+		-- Output this parameter list to the player's chatbox
+		outputChatBox ( "Parameters passed: " .. stringWithAllParameters, playerSource )
+	end
+end
+-- Attach the 'consoleCheckParameters' function to the "check_parameters" command
+addCommandHandler ( "check_parameters", consoleCheckParameters )
+</pre>
+</div><!-- END SECTION |6|-->
+<!-- BEGIN SECTION |7|server|Server|--><div class="serverHeader" onclick="expandSection(7);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander7">Click to expand [+]</div>Server</div><div style="display:none;" class="serverContent" id="section7">
+<p><b>Example 3:</b> This example shows using a single function to handle multiple command handlers. This isn't advised for general usage, as it makes code harder to understand, but where multiple command handlers share some logic, it can be a useful way of reducing duplicated code. Generally, it would be preferable to put this shared logic in a separate function instead, as this gives you more control over the flow.
+</p>
+<pre class="prettyprint lang-lua">-- make the function
+function moneyCmd(player, commandName, amount)
+    if getElementData(player, "canUseMoneyFunctions") then -- the shared logic
+        if commandName == "givemoney" then
+            amount  = tonumber(amount)
+            if amount then
+                givePlayerMoney(player, amount)
+            else
+                outputChatBox("[usage] /givemoney [amount]", player)
+            end
+        else if commandName == "takemoney" then
+            amount = tonumber(amount)
+            if amount then
+                takePlayerMoney(player, amount)
+            else
+                outputChatBox("[usage] /takemoney [amount]", player)
+            end
+        end
+    else
+        outputChatBox("You aren't able to use this command", player)
+    end
+end
+ 
+addCommandHandler("givemoney", moneyCmd);
+addCommandHandler("takemoney", moneyCmd);
+</pre>
+</div><!-- END SECTION |7|-->
+<!-- BEGIN SECTION |8|client|Client|--><div class="clientHeader" onclick="expandSection(8);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander8">Click to expand [+]</div>Client</div><div style="display:none;" class="clientContent" id="section8">
+<p><b>Example 1:</b> This example warps the local player to a random nearby location (useful for when a player gets stuck somewhere).
+</p>
+<pre class="prettyprint lang-lua">function escapeMe ( commandName )
+	local x, y, z = getElementPosition ( localPlayer ) --Get player's position
+	setElementPosition ( localPlayer, x+(math.random(-10,10)), y+(math.random(-10,10)), z+(math.random(1,15)) ) --Move a player randomly to a nearby location. X is current x + a number between -10, 10 and so on.
+end    
+addCommandHandler ( "escape", escapeMe ) --When player types "/escape" in chatbox or "escape" in console
+</pre>
+</div><!-- END SECTION |8|-->
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="GetFPSLimit.html" title="GetFPSLimit">getFPSLimit</a></li>
+<li><a href="GetMaxPlayers.html" title="GetMaxPlayers">getMaxPlayers</a></li>
+<li><a href="GetServerHttpPort.html" title="GetServerHttpPort">getServerHttpPort</a></li>
+<li><a href="GetServerName.html" title="GetServerName">getServerName</a></li>
+<li><a href="GetServerPassword.html" title="GetServerPassword">getServerPassword</a></li>
+<li><a href="GetServerPort.html" title="GetServerPort">getServerPort</a></li>
+<li><a href="GetVersion.html" title="GetVersion">getVersion</a></li>
+<li><a href="IsGlitchEnabled.html" title="IsGlitchEnabled">isGlitchEnabled</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20788"><span style="color: #FFFFFF;">r20788</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="IsTransferBoxAlwaysVisible.html" title="IsTransferBoxAlwaysVisible">isTransferBoxAlwaysVisible</a></li>
+<li><a href="IsTransferBoxVisible.html" title="IsTransferBoxVisible">isTransferBoxVisible</a></li></ul>
+</div></div>
+<ul><li><a href="SetFPSLimit.html" title="SetFPSLimit">setFPSLimit</a></li>
+<li><a href="SetGlitchEnabled.html" title="SetGlitchEnabled">setGlitchEnabled</a></li>
+<li><a href="SetMaxPlayers.html" title="SetMaxPlayers">setMaxPlayers</a></li>
+<li><a href="SetServerPassword.html" title="SetServerPassword">setServerPassword</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20788"><span style="color: #FFFFFF;">r20788</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="SetTransferBoxVisible.html" title="SetTransferBoxVisible">setTransferBoxVisible</a></li></ul>
+</div></div>
+<ul><li><a href="Shutdown.html" title="Shutdown">shutdown</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727072146
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.028 seconds
+Real time usage: 0.032 seconds
+Preprocessor visited node count: 332/1000000
+Post‐expand include size: 7526/2097152 bytes
+Template argument size: 1327/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 11313/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.987      1 -total
+ 23.77%    4.989      1 Template:Server_functions
+ 18.97%    3.981      2 Template:Added_feature/item
+ 18.13%    3.804      2 Template:New_feature
+ 13.17%    2.764      1 Template:Important_Note
+ 10.95%    2.298      1 Template:Server_client_function
+  9.42%    1.976      2 Template:MessageBox
+  6.95%    1.458      2 Template:Current_Version
+  6.79%    1.424      1 Template:Note
+  4.40%    0.924      2 Template:OptionalArg
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:1493-0!canonical and timestamp 20220727072146 and revision id 69185. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=AddCommandHandler&amp;oldid=69185">https://wiki.multitheftauto.com/index.php?title=AddCommandHandler&amp;oldid=69185</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="Category_Server_functions.html" title="Category:Server functions">Server functions</a></li><li><a href="Category_Client_functions.html" title="Category:Client functions">Client functions</a></li><li><a href="Category_Changes_in_1.5.html" title="Category:Changes in 1.5.9">Changes in 1.5.9</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=AddCommandHandler" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=AddCommandHandler" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="AddCommandHandler.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:AddCommandHandler&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="AddCommandHandler.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AddCommandHandler&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AddCommandHandler&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/AddCommandHandler.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/AddCommandHandler.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AddCommandHandler&amp;oldid=69185" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AddCommandHandler&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=AR/addCommandHandler" title="addCommandHandler – العربية" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=addCommandHandler" title="addCommandHandler – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/addCommandHandler" title="addCommandHandler – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-pt-br mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=PT-BR/AddCommandHandler" title="AddCommandHandler – português do Brasil" lang="pt-BR" hreflang="pt-BR" class="interlanguage-link-target"><span>Português do Brasil</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 February 2021, at 18:31.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.032","ppvisitednodes":{"value":332,"limit":1000000},"postexpandincludesize":{"value":7526,"limit":2097152},"templateargumentsize":{"value":1327,"limit":2097152},"expansiondepth":{"value":10,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":11313,"limit":5000000},"timingprofile":["100.00%   20.987      1 -total"," 23.77%    4.989      1 Template:Server_functions"," 18.97%    3.981      2 Template:Added_feature/item"," 18.13%    3.804      2 Template:New_feature"," 13.17%    2.764      1 Template:Important_Note"," 10.95%    2.298      1 Template:Server_client_function","  9.42%    1.976      2 Template:MessageBox","  6.95%    1.458      2 Template:Current_Version","  6.79%    1.424      1 Template:Note","  4.40%    0.924      2 Template:OptionalArg"]},"cachereport":{"timestamp":"20220727072146","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":99});});</script>
+</body>
+</html>

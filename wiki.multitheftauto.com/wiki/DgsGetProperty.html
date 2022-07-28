@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>DgsGetProperty - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"304c024beeb8ed9fe3c75cac","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"DgsGetProperty","wgTitle":"DgsGetProperty","wgCurRevisionId":70988,"wgRevisionId":70988,"wgArticleId":9829,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Client functions"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"DgsGetProperty","wgRelevantArticleId":9829,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready",
+"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='client' data-subcaption='Client-side function'>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-DgsGetProperty rootpage-DgsGetProperty skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">DgsGetProperty</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--LC-->
+</p><p>This function gets the value of a specific property of a DGS element. For a list of properties and their meaning, see the <a href="Template_DGSPROPERTIES.html" title="Template:DGSPROPERTIES"> DGS properties page</a>.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<pre class="prettyprint lang-lua">string dgsGetProperty ( element dgsElement, string property )
+</pre>
+<p><u><b>DGS OOP Syntax</b></u> <small><a href="OOP_Introduction.html" title="OOP Introduction">Help! I don't understand this!</a></small>
+</p>
+<dl><dd><b>Method</b>:  <i>DGSElement:getProperty(...)</i></dd>
+<dd><b>Counterpart</b>: <i><a href="DgsSetProperty.html" title="DgsSetProperty">dgsSetProperty</a></i></dd></dl>
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>dgsElement:</b> the DGS element you wish to get a property of.</li>
+<li><b>property:</b> the name of of property you want the value of.</li></ul>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<p>If the function succeeds, it returns a value of the property. An error will occur if failed.
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<p>This example creates a button when the resource starts and defines a console command that toggles it between enabled (clickable) and disabled (not clickable).
+</p>
+<pre class="prettyprint lang-lua">DGS = exports.dgs
+button = DGS:dgsCreateButton(20, 200, 150, 30, "Test", false)
+
+addCommandHandler("togglebtn",function()
+	local currentState = DGS:dgsGetProperty(button, "enabled")
+	DGS:dgsSetProperty(button, "enabled", not currentState)
+end)
+</pre>
+<h1><span class="mw-headline" id="See_Also">See Also</span></h1>
+<h2><span class="mw-headline" id="DGS_Properties"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">DGS Properties</span></span></h2>
+<h3><span class="mw-headline" id="General_Properties"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">General Properties</span></span></h3>
+<ul><li><a href="DGS_General_Basic_Properties.html" title="DGS General Basic Properties">DGS General Basic Properties</a></li></ul>
+<h3><span class="mw-headline" id="Unique_Properties"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Unique Properties</span></span></h3>
+<ul><li><a href="Dgs-dx3dinterface.html" title="Dgs-dx3dinterface">dgs-dx3dinterface</a></li>
+<li><a href="Dgs-dx3dimage.html" title="Dgs-dx3dimage">dgs-dx3dimage</a></li>
+<li><a href="Dgs-dx3dtext.html" title="Dgs-dx3dtext">dgs-dx3dtext</a></li>
+<li><a href="Dgs-dx3dline.html" title="Dgs-dx3dline">dgs-dx3dline</a></li>
+<li><a href="Dgs-dxbutton.html" title="Dgs-dxbutton">dgs-dxbutton</a></li>
+<li><a href="Dgs-dxcheckbox.html" title="Dgs-dxcheckbox">dgs-dxcheckbox</a></li>
+<li><a href="Dgs-dxcombobox.html" title="Dgs-dxcombobox">dgs-dxcombobox</a></li>
+<li><a href="Dgs-dxdetectarea.html" title="Dgs-dxdetectarea">dgs-dxdetectarea</a></li>
+<li><a href="Dgs-dxedit.html" title="Dgs-dxedit">dgs-dxedit</a></li>
+<li><a href="Dgs-dxgridlist.html" title="Dgs-dxgridlist">dgs-dxgridlist</a></li>
+<li><a href="Dgs-dximage.html" title="Dgs-dximage">dgs-dximage</a></li>
+<li><a href="Dgs-dxlabel.html" title="Dgs-dxlabel">dgs-dxlabel</a></li>
+<li><a href="Dgs-dxline.html" title="Dgs-dxline">dgs-dxline</a></li>
+<li><a href="Dgs-dxmemo.html" title="Dgs-dxmemo">dgs-dxmemo</a></li>
+<li><a href="Dgs-dxprogressbar.html" title="Dgs-dxprogressbar">dgs-dxprogressbar</a></li>
+<li><a href="Dgs-dxradiobutton.html" title="Dgs-dxradiobutton">dgs-dxradiobutton</a></li>
+<li><a href="Dgs-dxscrollbar.html" title="Dgs-dxscrollbar">dgs-dxscrollbar</a></li>
+<li><a href="Dgs-dxscrollpane.html" title="Dgs-dxscrollpane">dgs-dxscrollpane</a></li>
+<li><a href="Dgs-dxselector.html" title="Dgs-dxselector">dgs-dxselector</a></li>
+<li><a href="Dgs-dxswitchbutton.html" title="Dgs-dxswitchbutton">dgs-dxswitchbutton</a></li>
+<li><a href="Dgs-dxtabpanel.html" title="Dgs-dxtabpanel">dgs-dxtabpanel</a></li>
+<li><a href="Dgs-dxtab.html" title="Dgs-dxtab">dgs-dxtab</a></li>
+<li><a href="Dgs-dxwindow.html" title="Dgs-dxwindow">dgs-dxwindow</a></li></ul>
+<h2><span class="mw-headline" id="General_Functions"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">General Functions</span></span></h2>
+<ul><li><a href="DgsGetPosition.html" title="DgsGetPosition">dgsGetPosition</a></li>
+<li><a href="DgsSetPosition.html" title="DgsSetPosition">dgsSetPosition</a></li>
+<li><a href="DgsSetParent.html" title="DgsSetParent">dgsSetParent</a></li>
+<li><a href="DgsGetParent.html" title="DgsGetParent">dgsGetParent</a></li>
+<li><a href="DgsGetChild.html" title="DgsGetChild">dgsGetChild</a></li>
+<li><a href="DgsGetChildren.html" title="DgsGetChildren">dgsGetChildren</a></li>
+<li><a href="DgsGetSize.html" title="DgsGetSize">dgsGetSize</a></li>
+<li><a href="DgsSetSize.html" title="DgsSetSize">dgsSetSize</a></li>
+<li><a href="DgsGetType.html" title="DgsGetType">dgsGetType</a></li>
+<li><a href="DgsSetLayer.html" title="DgsSetLayer">dgsSetLayer</a></li>
+<li><a href="DgsGetLayer.html" title="DgsGetLayer">dgsGetLayer</a></li>
+<li><a href="DgsSetCurrentLayerIndex.html" title="DgsSetCurrentLayerIndex">dgsSetCurrentLayerIndex</a></li>
+<li><a href="DgsGetCurrentLayerIndex.html" title="DgsGetCurrentLayerIndex">dgsGetCurrentLayerIndex</a></li>
+<li><a href="DgsGetLayerElements.html" title="DgsGetLayerElements">dgsGetLayerElements</a></li>
+<li><a class="mw-selflink selflink">dgsGetProperty</a></li>
+<li><a href="DgsSetProperty.html" title="DgsSetProperty">dgsSetProperty</a></li>
+<li><a href="DgsSetPropertyInherit.html" title="DgsSetPropertyInherit">dgsSetPropertyInherit</a></li>
+<li><a href="DgsGetProperties.html" title="DgsGetProperties">dgsGetProperties</a></li>
+<li><a href="DgsSetProperties.html" title="DgsSetProperties">dgsSetProperties</a></li>
+<li><a href="DgsGetVisible.html" title="DgsGetVisible">dgsGetVisible</a></li>
+<li><a href="DgsSetVisible.html" title="DgsSetVisible">dgsSetVisible</a></li>
+<li><a href="DgsGetEnabled.html" title="DgsGetEnabled">dgsGetEnabled</a></li>
+<li><a href="DgsSetEnabled.html" title="DgsSetEnabled">dgsSetEnabled</a></li>
+<li><a href="DgsGetPositionAlignment.html" title="DgsGetPositionAlignment">dgsGetPositionAlignment</a></li>
+<li><a href="DgsSetPositionAlignment.html" title="DgsSetPositionAlignment">dgsSetPositionAlignment</a></li>
+<li><a href="DgsGetAlpha.html" title="DgsGetAlpha">dgsGetAlpha</a></li>
+<li><a href="DgsSetAlpha.html" title="DgsSetAlpha">dgsSetAlpha</a></li>
+<li><a href="DgsGetFont.html" title="DgsGetFont">dgsGetFont</a></li>
+<li><a href="DgsSetFont.html" title="DgsSetFont">dgsSetFont</a></li>
+<li><a href="DgsGetText.html" title="DgsGetText">dgsGetText</a></li>
+<li><a href="DgsSetText.html" title="DgsSetText">dgsSetText</a></li>
+<li><a href="DgsGetPostGUI.html" title="DgsGetPostGUI">dgsGetPostGUI</a></li>
+<li><a href="DgsSetPostGUI.html" title="DgsSetPostGUI">dgsSetPostGUI</a></li>
+<li><a href="DgsGetInputEnabled.html" title="DgsGetInputEnabled">dgsGetInputEnabled</a></li>
+<li><a href="DgsSetInputEnabled.html" title="DgsSetInputEnabled">dgsSetInputEnabled</a></li>
+<li><a href="DgsGetInputMode.html" title="DgsGetInputMode">dgsGetInputMode</a></li>
+<li><a href="DgsSetInputMode.html" title="DgsSetInputMode">dgsSetInputMode</a></li>
+<li><a href="DgsAttachToAutoDestroy.html" title="DgsAttachToAutoDestroy">dgsAttachToAutoDestroy</a></li>
+<li><a href="DgsDetachFromAutoDestroy.html" title="DgsDetachFromAutoDestroy">dgsDetachFromAutoDestroy</a></li>
+<li><a href="DgsFocus.html" title="DgsFocus">dgsFocus</a></li>
+<li><a href="DgsBlur.html" title="DgsBlur">dgsBlur</a></li>
+<li><a href="DgsCreateFont.html" title="DgsCreateFont">dgsCreateFont</a></li>
+<li><a href="DgsBringToFront.html" title="DgsBringToFront">dgsBringToFront</a></li>
+<li><a href="DgsMoveToBack.html" title="DgsMoveToBack">dgsMoveToBack</a></li>
+<li><a href="DgsGetScreenSize.html" title="DgsGetScreenSize">dgsGetScreenSize</a></li>
+<li><a href="DgsGetCursorPosition.html" title="DgsGetCursorPosition">dgsGetCursorPosition</a></li>
+<li><a href="DgsGetMouseEnterGUI.html" title="DgsGetMouseEnterGUI">dgsGetMouseEnterGUI</a></li>
+<li><a href="DgsGetMouseLeaveGUI.html" title="DgsGetMouseLeaveGUI">dgsGetMouseLeaveGUI</a></li>
+<li><a href="DgsIsMouseWithinGUI.html" title="DgsIsMouseWithinGUI">dgsIsMouseWithinGUI</a></li>
+<li><a href="DgsSetSystemFont.html" title="DgsSetSystemFont">dgsSetSystemFont</a></li>
+<li><a href="DgsGetSystemFont.html" title="DgsGetSystemFont">dgsGetSystemFont</a></li>
+<li><a href="DgsGetElementsInLayer.html" title="DgsGetElementsInLayer">dgsGetElementsInLayer</a></li>
+<li><a href="DgsGetElementsFromResource.html" title="DgsGetElementsFromResource">dgsGetElementsFromResource</a></li>
+<li><a href="DgsGetFocusedGUI.html" title="DgsGetFocusedGUI">dgsGetFocusedGUI</a></li>
+<li><a href="DgsGetExportedFunctionName.html" title="DgsGetExportedFunctionName">dgsGetExportedFunctionName</a></li>
+<li><a href="DgsImportFunction.html" title="DgsImportFunction">dgsImportFunction</a></li>
+<li><a href="DgsImportOOPClass.html" title="DgsImportOOPClass">dgsImportOOPClass</a></li>
+<li><a href="DgsG2DLoadHooker.html" title="DgsG2DLoadHooker">dgsG2DLoadHooker</a></li>
+<li><a href="DgsSetRenderSetting.html" title="DgsSetRenderSetting">dgsSetRenderSetting</a></li>
+<li><a href="DgsGetRenderSetting.html" title="DgsGetRenderSetting">dgsGetRenderSetting</a></li>
+<li><a href="DgsSimulateClick.html" title="DgsSimulateClick">dgsSimulateClick</a></li>
+<li><a href="DgsGetRootElement.html" title="DgsGetRootElement">dgsGetRootElement</a></li>
+<li><a href="DgsAddMoveHandler.html" title="DgsAddMoveHandler">dgsAddMoveHandler</a></li>
+<li><a href="DgsRemoveMoveHandler.html" title="DgsRemoveMoveHandler">dgsRemoveMoveHandler</a></li>
+<li><a href="DgsIsMoveHandled.html" title="DgsIsMoveHandled">dgsIsMoveHandled</a></li>
+<li><a href="DgsAddSizeHandler.html" title="DgsAddSizeHandler">dgsAddSizeHandler</a></li>
+<li><a href="DgsRemoveSizeHandler.html" title="DgsRemoveSizeHandler">dgsRemoveSizeHandler</a></li>
+<li><a href="DgsIsSizeHandled.html" title="DgsIsSizeHandled">dgsIsSizeHandled</a></li>
+<li><a href="DgsAttachElements.html" title="DgsAttachElements">dgsAttachElements</a></li>
+<li><a href="DgsDetachElements.html" title="DgsDetachElements">dgsDetachElements</a></li>
+<li><a href="DgsElementIsAttached.html" title="DgsElementIsAttached">dgsElementIsAttached</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsAddPropertyListener&amp;action=edit&amp;redlink=1" class="new" title="DgsAddPropertyListener (page does not exist)">dgsAddPropertyListener</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsRemovePropertyListener&amp;action=edit&amp;redlink=1" class="new" title="DgsRemovePropertyListener (page does not exist)">dgsRemovePropertyListener</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGetListenedProperties&amp;action=edit&amp;redlink=1" class="new" title="DgsGetListenedProperties (page does not exist)">dgsGetListenedProperties</a></li>
+<li><a href="DgsSetMultiClickInterval.html" title="DgsSetMultiClickInterval">dgsSetMultiClickInterval</a></li>
+<li><a href="DgsGetMultiClickInterval.html" title="DgsGetMultiClickInterval">dgsGetMultiClickInterval</a></li>
+<li><a href="DgsCenterElement.html" title="DgsCenterElement">dgsCenterElement</a></li>
+<li><a href="DgsSetElementKeeperEnabled.html" title="DgsSetElementKeeperEnabled">dgsSetElementKeeperEnabled</a></li>
+<li><a href="DgsGetElementKeeperEnabled.html" title="DgsGetElementKeeperEnabled">dgsGetElementKeeperEnabled</a></li>
+<li><a href="DgsSetClickingSound.html" title="DgsSetClickingSound">dgsSetClickingSound</a></li>
+<li><a href="DgsGetClickingSound.html" title="DgsGetClickingSound">dgsGetClickingSound</a></li>
+<li><a href="DgsSetClickingSoundVolume.html" title="DgsSetClickingSoundVolume">dgsSetClickingSoundVolume</a></li>
+<li><a href="DgsGetClickingSoundVolume.html" title="DgsGetClickingSoundVolume">dgsGetClickingSoundVolume</a></li></ul>
+<h2><span class="mw-headline" id="General_Events"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">General Events</span></span></h2>
+<ul><li><a href="OnDgsBlur.html" title="OnDgsBlur">onDgsBlur</a></li>
+<li><a href="OnDgsCreate.html" title="OnDgsCreate">onDgsCreate</a></li>
+<li><a href="OnDgsCursorTypeChange.html" title="OnDgsCursorTypeChange">onDgsCursorTypeChange</a></li>
+<li><a href="OnDgsDestroy.html" title="OnDgsDestroy">onDgsDestroy</a></li>
+<li><a href="OnDgsElementRender.html" title="OnDgsElementRender">onDgsElementRender</a></li>
+<li><a href="OnDgsElementMove.html" title="OnDgsElementMove">onDgsElementMove</a></li>
+<li><a href="OnDgsElementSize.html" title="OnDgsElementSize">onDgsElementSize</a></li>
+<li><a href="OnDgsFocus.html" title="OnDgsFocus">onDgsFocus</a></li>
+<li><a href="OnDgsPositionChange.html" title="OnDgsPositionChange">onDgsPositionChange</a></li>
+<li><a href="OnDgsPreRender.html" title="OnDgsPreRender">onDgsPreRender</a></li>
+<li><a href="OnDgsRender.html" title="OnDgsRender">onDgsRender</a></li>
+<li><a href="OnDgsElementScroll.html" title="OnDgsElementScroll">onDgsElementScroll</a></li>
+<li><a href="OnDgsSizeChange.html" title="OnDgsSizeChange">onDgsSizeChange</a></li>
+<li><a href="OnDgsTextChange.html" title="OnDgsTextChange">onDgsTextChange</a></li>
+<li><a href="OnDgsWindowClose.html" title="OnDgsWindowClose">onDgsWindowClose</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=OnDgsPropertyChange&amp;action=edit&amp;redlink=1" class="new" title="OnDgsPropertyChange (page does not exist)">onDgsPropertyChange</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727140619
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.026 seconds
+Real time usage: 0.029 seconds
+Preprocessor visited node count: 89/1000000
+Post‐expand include size: 3352/2097152 bytes
+Template argument size: 72/2097152 bytes
+Highest expansion depth: 5/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 406/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.021      1 -total
+ 24.00%    1.205      1 Template:DGS/OOP
+ 20.33%    1.021      1 Template:Client_function
+ 17.49%    0.878      1 Template:DGSPROPERTIES
+ 15.18%    0.762      1 Template:DGS_General_Functions
+ 14.60%    0.733      1 Template:DGS_Events/General
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:9829-0!canonical and timestamp 20220727140619 and revision id 70988. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=DgsGetProperty&amp;oldid=70988">https://wiki.multitheftauto.com/index.php?title=DgsGetProperty&amp;oldid=70988</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Client_functions.html" title="Category:Client functions">Client functions</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=DgsGetProperty" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=DgsGetProperty" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="DgsGetProperty.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:DgsGetProperty&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="DgsGetProperty.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsGetProperty&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsGetProperty&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/DgsGetProperty.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/DgsGetProperty.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsGetProperty&amp;oldid=70988" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsGetProperty&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 3 May 2021, at 19:37.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.029","ppvisitednodes":{"value":89,"limit":1000000},"postexpandincludesize":{"value":3352,"limit":2097152},"templateargumentsize":{"value":72,"limit":2097152},"expansiondepth":{"value":5,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":406,"limit":5000000},"timingprofile":["100.00%    5.021      1 -total"," 24.00%    1.205      1 Template:DGS/OOP"," 20.33%    1.021      1 Template:Client_function"," 17.49%    0.878      1 Template:DGSPROPERTIES"," 15.18%    0.762      1 Template:DGS_General_Functions"," 14.60%    0.733      1 Template:DGS_Events/General"]},"cachereport":{"timestamp":"20220727140619","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":49});});</script>
+</body>
+</html>

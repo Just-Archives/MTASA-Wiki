@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/Famous crash offsets and their meaning - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"283eb8f5fbd1f46a8b0acc3f","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/Famous_crash_offsets_and_their_meaning","wgTitle":"RU/Famous crash offsets and their meaning","wgCurRevisionId":71420,"wgRevisionId":71420,"wgArticleId":13252,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/Famous_crash_offsets_and_their_meaning","wgRelevantArticleId":13252,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],
+"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_Famous_crash_offsets_and_their_meaning rootpage-RU_Famous_crash_offsets_and_their_meaning skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/Famous crash offsets and their meaning</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><big>Эта вики-страница содержит причины многих известных крашей MTA, с которыми вы можете столкнуться. Используйте CTRL + F чтобы найти соответствующую ошибку</big>
+</p><p><br />
+Пример краша МТА:
+</p>
+<pre class="prettyprint lang-xml">Version = 1.5.6-release-14664.0.000
+Time = Mon Oct  8 12:20:00 2018
+Module = C:\Program Files (x86)\Rockstar Games\GTA San Andreas\gta_sa.exe
+Code = 0xC0000005
+Offset = 0x003C91CC
+
+EAX=0F77A3C8  EBX=0F77A3B8  ECX=0177FAA0  EDX=00139700  ESI=00000000
+EDI=00000001  EBP=0177FC50  ESP=0177FA80  EIP=007C91CC  FLG=00210202
+CS=0023   DS=002B  SS=002B  ES=002B   FS=0053  GS=002B
+</pre>
+<p>(Памятка: всегда используйте значение "Offset" чтобы найти код вылета.)
+</p><p><b>Большинство сбоев MTA вызваны чем-то, что пользователь может решить, потому что это зависит от его системы, выбора сервера или игровых модов.</b>
+Эта страница стремится быть полезной по вышеупомянутой причине; вы будете знать, где искать, когда вы получите определенный тип сбоя.
+</p><p><br />
+Для получения дополнительных советов по решению проблем прокрутите страницу вниз до нижней части этой страницы.
+</p><p><br />
+</p>
+<h2><span id="Module_.3D_gta_sa.exe_.D0.B8.D0.BB.D0.B8_proxy_sa.exe"></span><span class="mw-headline" id="Module_=_gta_sa.exe_или_proxy_sa.exe">Module = gta_sa.exe или proxy_sa.exe</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Код ошибки
+</th>
+<th>Причины
+</th></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x00134134</pre>
+</td>
+<td>Плохая модель или поврежденный GTA3.img. Используйте немодифицированную установку GTA для проверки или удаления серверных модов, попросите владельца сервера идентифицировать и заменить поврежденный мод.
+<p>Примечание для владельцев серверов и разработчиков моделей: если вы откроете аварийный дамп (.dmp) в виде текста с помощью блокнота и выполните поиск по ключевому слову "CEntity_GetBoundRect - Нет коллизии для модели", вы часто можете идентифицировать идентификатор плохой модели.
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x00348CF4</pre>
+</td>
+<td>Вызвано s0beit d3d9.dll
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x003F0C37
+0x003F0BF7
+</pre>
+</td>
+<td>Плохая модель автомобиля. Используйте немодифицированную установку GTA для проверки или удаления серверных модов, попросите владельца сервера идентифицировать и заменить поврежденный мод.
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x003C91CC
+0x003C920C
+</pre>
+</td>
+<td>Закончилась видеопамять. Это может произойти на серверах с неоптимизированными модами и (неисправными) сценариями, которые злоупотребляют видеопамятью, или даже когда у вас есть мощная видеокарта, если материал на сервере крайне неоптимизирован, так что он начинает выходить за пределы GTA. Если у вас мощная видеокарта и больше игроков страдают от этого типа сбоя, сообщите владельцу сервера об этой проблеме, так как это, вероятно, означает, что их сценаристы и дизайнеры не знают, что они делают. Более подробная информация доступна по этим ссылкам на форуме: <a rel="nofollow" class="external text" href="https://forum.mtasa.com/topic/85094-mta-crashing/">здесь</a> и <a rel="nofollow" class="external text" href="https://forum.mtasa.com/topic/127677-c-r-a-s-h-i-n-g/">здесь (примерный случай)</a>
+</td></tr>
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x00357DEC</pre>
+</td>
+<td>Не хватает видеопамяти (вероятно).
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x003F5A3A</pre>
+</td>
+<td>Сбой памяти, как правило, происходит на сильно неоптимизированных серверах. Это может быть результатом либо нехватки видеопамяти, либо достижения технических пределов использования оперативной памяти, но чаще всего это сочетание того и другого.. поэтому он обозначен как "сильно неоптимизированные серверы". Свяжитесь с владельцем сервера и попросите об оптимизации или найдите другие серверы для игры.
+</td></tr>
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x004A1ED4</pre>
+</td>
+<td>Не хватает памяти (ОЗУ).
+</td></tr>
+
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x011630F8
+0x011630FE
+</pre>
+</td>
+<td>Этот сбой является результатом проблем с моделями столкновений. Это может быть связано с неоптимизированными столкновениями, которые ваш компьютер (или технические ограничения MTA, из-за плохих модов сервера) не может обработать, или из-за поврежденных моделей столкновений. Мы все еще многого не знаем обо всех обстоятельствах, связанных с этой катастрофой. Наш первый совет состоял бы в том, чтобы убедиться, что ваша GTA не модифицирована, и в противном случае попросить владельца сервера определить и устранить проблемы с плохими моделями столкновений.
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x00137D6E</pre>
+</td>
+<td>Отсутствует системная память (ОЗУ). Это совпадает с конфликтами при загрузке; риск получить этот сбой высок при подключении к серверу с большим количеством модулей со слабым ПК и небольшим объемом памяти.
+<p>Чтобы устранить эту ошибку, обратите внимание на серверы, на которых вы играете (оптимизация), или приобретите более быстрый компьютер. Подтип "Нехватка памяти": чаще всего это прямой результат нехватки адресного пространства, поэтому обновление до 64-разрядной установки Windows может решить эту проблему.
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x0014F406</pre>
+</td>
+<td>Возможно "Running out of memory": прямой результат нехватки адресного пространства, поэтому обновление до 64-разрядной установки Windows может решить эту проблему.
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x00171A10</pre>
+</td>
+<td>Иногда при подключении к серверу, возможно, это связано с плохими модами сервера.
+</td></tr>
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x000C9F98</pre>
+</td>
+<td>Возможно, плохая модель или текстура (моды на одежду для нескольких скинов, таких как CJ).
+<p>Используйте немодифицированную установку GTA для проверки или добавления серверных модов, попросите владельца сервера идентифицировать и отключить моды на таких скинах или любой ресурс, манипулирующий одеждой или доступом к педиатрии.
+</p>
+</td></tr>
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x00349B7B</pre>
+</td>
+<td>Плохая модель скина. Используйте немодифицированную установку GTA, чтобы проверить или удалить серверные моды, попросите владельца сервера идентифицировать и заменить поврежденный скин-мод.
+<p>Информация для моделистов и владельцев серверов: повреждение в иерархии аниме в конфигурации DDF кожи или костей peds
+</p>
+</td></tr>
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x00165096</pre>
+</td>
+<td>Плохая модель (содержащая поврежденную модель столкновения). Используйте немодифицированную установку GTA для проверки или удаления серверных модов, попросите владельца сервера идентифицировать и заменить поврежденный мод.
+<p>Информация для разработчиков моделей и владельцев серверов: повреждение в одной или нескольких сферах col (или их радиусе) в модели DFF.
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x001D6E6A</pre>
+</td>
+<td>Либо не хватает видеопамяти, либо плохая модель/текстура.
+<p>Информация для моделистов и владельцев серверов: в случае, если виновником является модель, то повреждение находится в структуре модели "предварительно освещенной" (ночные цвета). Попросите своего моделиста воссоздать предварительные данные.
+</p>
+</td></tr>
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x000DFE92
+0x000DFF90
+</pre>
+</td>
+<td>Плохие звуковые моды или неисправный аудиодрайвер/устройство. Используйте немодифицированную установку GTA для проверки или обновления ваших аудиодрайверов.
+<p>Часто известно, что проблема заключается в полном отсутствии или опустошении/повреждении аудиофайлов (например, в \Rockstar Games\GTA San Andreas\audio &gt; SFX или другой подпапке), поэтому вы можете в качестве альтернативы восстановить целевую резервную копию.
+</p><p>Не используйте "сжатые" репаки GTA по этой причине вырезанных аудиофайлов.
+</p>
+</td></tr>
+
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x000CFCD6</pre>
+</td>
+<td>Сбой выделения ресурсов в результате (повторного)подключения к серверам после длительной игровой сессии на сервере с плохой практикой в их сценариях (злоупотребление оперативной памятью и функциями anim).
+<p>Эта авария может быть "исправлена" (предотвращена) MTA в будущем, мы работаем над этим! Это связано с животными в памяти и их очисткой.|-
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x00771848
+</pre>
+</td>
+<td>Сбой из-за проблемы с файлами данных GTA (MTA не удается их открыть, что может означать, что они повреждены/изменены и несовместимы или отсутствуют)
+<p>Используйте немодифицированную установку GTA для проверки
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x001B6B2F
+</pre>
+</td>
+<td>Сбой из-за проблемы с DATA\DEFAULT.DAT или DATA\CARCOLS.DAT в папке установки GTA (может отсутствовать или быть изменен/поврежден).
+<p>Используйте немодифицированную установку GTA для проверки
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x003EC9DA
+</pre>
+</td>
+<td>Сбой, возможно, из-за проблемы с ANIM\PED.IFP в папке установки GTA (может отсутствовать или изменен/поврежден).
+<p>Используйте немодифицированную установку GTA для проверки
+</p>
+</td></tr>
+
+
+<tr>
+<td><pre class="prettyprint lang-lua">0x003F18CF
+0x003F190F
+</pre>
+</td>
+<td>Плохая модель. Используйте немодифицированную установку GTA для проверки или, в случае модов сервера, попросите владельца сервера идентифицировать и заменить поврежденный мод.
+<p>Этот сбой был предотвращен (исправлен MTA), но из-за технических ограничений все равно произойдет для пользователей Windows XP.<br />
+Информация для разработчиков моделей и владельцев серверов: из-за характера повреждения модель представляет риск сбоя, это может произойти в любой момент, находясь поблизости.
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x0019BD39
+</pre>
+</td>
+<td>Плохая модель. Используйте немодифицированную установку GTA для проверки или, в случае модов сервера, попросите владельца сервера идентифицировать и заменить поврежденный мод.
+<p>Этот сбой обычно происходит, когда вы стреляете из оружия, в то время как поврежденная модель передается в потоковом режиме (физически поблизости).
+</p>
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x000C9691
+</pre>
+</td>
+<td>Плохая или отсутствующая модель автомобиля. Обычно это происходит, когда вы удалили модель со своего GTA3.img, не восстановив оригинал или не заменив его другой моделью. Или когда DFF вообще не является допустимым файлом модели. Восстановите GTA3.img или используйте немодифицированную установку GTA для проверки, и если это не сработает, попросите владельца сервера идентифицировать и заменить поврежденный мод, поскольку он также может быть плохой моделью (или хитрым сценарием, который, скажите им это: имеет дело с типами транспортных средств, вариантами, обновлениями и т. Д., Неправильным способом).
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x0000F67C
+0x0000F663
+</pre>
+</td>
+<td>Пользовательские модели, которые не работают с объемными тенями. Исправьте модели или отключите объемные тени в Настройках-&gt;Видео.
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x00423FD0</pre>
+</td>
+<td>Плохие моды для GTA или поврежденный GTA3.img. Переустановите GTA (с чистой и оригинальной версией), чтобы решить эту проблему. Примечание: известен сбой для распространенных пиратских копий и торрентов GTA из-за отсутствия, плохих или поврежденных файлов .data,. col и .ipl (предустановленные моды). MTA поддерживает только оригинальную, законно приобретенную версию GTA.
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x000A2CF3</pre>
+</td>
+<td>Поврежден, отсутствует или изменен файл GTA San Andreas\models &gt; "'effects.fxp". Если восстановление этого файла в исходное состояние не исправит сбой, используйте немодифицированную GTA, так как это также может быть связано с соответствующими файлами данных GTA (теми, которые связаны с эффектами).
+</td></tr>
+<tr>
+<td><pre class="prettyprint lang-lua">0x001A49D4
+</pre>
+</td>
+<td>Плохой мод (пользовательский player.img в GTA San Andreas\модели). Восстановите файл player.img в исходное состояние или используйте немодифицированную GTA.
+<p>Примечание.этот сбой также может быть вызван, когда на вашем экране на сервере, на котором вы играете, появляется игрок с моделью CJ (или одеждой CJ). Ваш пользовательский плеер.img не справится с этим и приведет к сбою.
+</p>
+</td></tr></tbody></table>
+<p><br />
+</p>
+<h2><span id=".D0.A3.D1.81.D1.82.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5_.D1.81.D0.B1.D0.BE.D0.B5.D0.B2_.D0.B8.D0.B7-.D0.B7.D0.B0_.D0.BD.D0.B5.D1.85.D0.B2.D0.B0.D1.82.D0.BA.D0.B8_.D0.BF.D0.B0.D0.BC.D1.8F.D1.82.D0.B8"></span><span class="mw-headline" id="Устранение_сбоев_из-за_нехватки_памяти">Устранение сбоев из-за нехватки памяти</span></h2>
+<p>Если вы испытываете сбои, которые, согласно таблице распространенных сбоев, связаны с каким-либо недостатком памяти, мы советуем вам;
+</p><p>- Обратите внимание на тип серверов, на которых вы играете, особенно в сочетании с мощностью вашего компьютера. В MTA есть много раздутых серверов с большим количеством модов, которые требуют лучшего от вашего компьютера, а также могут злоупотреблять памятью с помощью неэффективных сценариев, помимо пользовательских модов (или даже при их отсутствии).
+</p><p>Мы могли бы написать книгу о реальной причине (которая заключается в том, что на таких серверах есть плохие скриптеры или те, которые не знают, что такое оптимизация, и что они добавляют все, включая раздутые модели и текстуры, не просматривая их), но мы не будем делать этого здесь.
+</p><p>Если у вас медленный компьютер или компьютер более старшего поколения, мы советуем вам избегать определенных "модных" серверов с огромными загрузками ресурсов и тому подобным.
+</p><p>- Установите 64-разрядную версию Windows, а не x86 (32-разрядную)
+</p><p><br />
+"Если вы все еще хотите играть на серверах, которые могут легко взять верх над вашей системой, тогда;"'
+</p><p>- Обновите аппаратное обеспечение вашего ПК для повышения производительности; рассмотрите возможность замены видеокарты на видеокарту, подходящую для игр, или добавления дополнительной системной памяти (ОЗУ). Переустановка Windows иногда также может помочь, если ваша ОС в целом работает медленно и не в хорошем состоянии. В качестве альтернативы выполните некоторые действия по обслуживанию (проконсультируйтесь с кем-нибудь с техническим опытом или начните с обновления драйверов и запуска различных очистителей мусора и известных инструментов оптимизации производительности ПК).
+</p><p>- Следуйте инструкциям, перечисленным на <a rel="nofollow" class="external text" href="https://forum.mtasa.com/topic/78081-32-bit-windows-crashing/">https://forum.mtasa.com/topic/78081-32-bit-windows-crashing/</a>
+</p><p>- Удалите все моды из вашей установки GTA (предпочтительно переустановите), потому что моды могут занимать видеопамять и оперативную память, достаточную для того, чтобы вызвать высокое использование памяти и последующие сбои.
+Кроме того, вам определенно следует попробовать уменьшить потоковую память, перейдя в Настройки-&gt;Дополнительно-&gt;Потоковая память-&gt; и установив ее на минимальное значение.
+</p><p>Помните, что GTA-старая игра, и MTA отдает много власти в руки сценаристов (чтобы испортить отсутствие оптимизации). Даже если у вас большой объем оперативной памяти (например, 8 ГБ, 16 ГБ), вы не можете ожидать, что все это будет использоваться.. старые игры имеют технические ограничения и ограниченное адресное пространство. Серверные сценаристы могут делать действительно классные и безумно реалистичные вещи, используя гораздо меньше 3,6 ГБ оперативной памяти (абсолютный технический предел в SA), но только до тех пор, пока у них есть сценаристы и модельеры/дизайнеры, которые знают об оптимизации. Строго взято, никакого сервера, каким бы модным или красивым он ни был.. должно потребоваться использовать более 2 ГБ оперативной памяти. Большинство приличных серверов в любом случае используют от 800 МБ до 1,6 ГБ. Если вы хотите узнать больше об этой теме или являетесь владельцем сервера, который хочет осознать свои ошибки, пожалуйста, присоединяйтесь к MTA discord по адресу <a rel="nofollow" class="external free" href="https://discord.gg/mtasa">https://discord.gg/mtasa</a> и перейдите на канал #general, затем откройте прикрепленный пост этого канала о проблемах экосистемы оптимизации (автор Dutchman101).
+</p><p>Пожалуйста, обратите внимание, что в общем случае ""любой сбой"" с кодом исключения ""0xE06D7363 "" (в модуле MTA, а не gta_sa.exe как и на этой вики-странице) также является проблемой, связанной с памятью, и возвращается к злоупотреблению памятью серверами и модами, описанными выше.
+</p>
+<h2><span id=".D0.A3.D1.81.D1.82.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5_.D1.81.D0.B1.D0.BE.D0.B5.D0.B2.2C_.D1.81.D0.B2.D1.8F.D0.B7.D0.B0.D0.BD.D0.BD.D1.8B.D1.85_.D1.81_.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D1.82.D0.B5.D0.BB.D1.8C.D1.81.D0.BA.D0.B8.D0.BC.D0.B8_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D1.8F.D0.BC.D0.B8"></span><span class="mw-headline" id="Устранение_сбоев,_связанных_с_пользовательскими_моделями">Устранение сбоев, связанных с пользовательскими моделями</span></h2>
+<p>Если у вас возникают сбои, которые, согласно таблице распространенных сбоев, связаны с поврежденными пользовательскими моделями, мы советуем вам переустановить GTA из исходного источника игры (DVD или Steam, поэтому никаких предварительно модифицированных репаков) или восстановить резервные копии целевых файлов, если вы понимаете, какая (тип) модель может вызвать сбой.
+</p><p>В случае, если вы испытываете сбои только во время игры на определенном сервере, высока вероятность того, что сервер загружает пользовательские модели серверов, и тогда мы рекомендуем вам связаться с владельцем сервера, чтобы он мог изучить и потенциально идентифицировать и заменить поврежденную модель, чтобы остановить сбои. Пока они не предпримут успешных действий, на этом сервере вы можете попытаться избежать физического столкновения с модом, который, по вашему мнению, приведет к сбою (например, не создавать указанное транспортное средство или использовать указанный скин).
+Позвольте нам напомнить вам о возможности того, что плохая модель находится в вашем GTA3.img, но по совпадению вы никогда физически не приближаетесь к этой модели на других серверах, и сервер, на котором вы больше всего зависаете, вынуждает вас использовать этот идентификатор модели (например, как регулярно используемый автомобиль или скин); поэтому нельзя исключать, что это, возможно, все еще ваш клиентский мод, несмотря на то, что вы зависаете только на одном сервере, и стоит, по крайней мере, переустановить GTA, чтобы попробовать его.
+</p><p>Если вы являетесь владельцем сервера и не хотели бы отказываться от своей любимой (поврежденной) модели, то вы можете попросить опытного моделиста попытаться исправить повреждение, изменив/изменив его.
+Альтернатива сбою многих игроков, потенциально приводящая к потере игроков на вашем сервере, в любом случае не подходит. По этой причине, внимательно следить за тенденциями игроков, сообщающих (или кричащих) о том, что они потерпели крушение, и следить за ними, чтобы получить подробную информацию о крушении (чтобы попытаться сопоставить их с моделями крушений из таблицы на этой вики-странице), может быть хорошей идеей.
+</p><p>Добавление обновляемых компонентов (с именем "ug_upgradename") за пределами chassis_dummy приведет к сбоям, как только в транспортном средстве появится соответствующий компонент обновления.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727214817
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.009 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 149/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1855/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:13252-0!canonical and timestamp 20220727214817 and revision id 71420. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/Famous_crash_offsets_and_their_meaning&amp;oldid=71420">https://wiki.multitheftauto.com/index.php?title=RU/Famous_crash_offsets_and_their_meaning&amp;oldid=71420</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FFamous+crash+offsets+and+their+meaning" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FFamous+crash+offsets+and+their+meaning" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Famous_crash_offsets_and_their_meaning.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:RU/Famous_crash_offsets_and_their_meaning&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Famous_crash_offsets_and_their_meaning.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Famous_crash_offsets_and_their_meaning&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Famous_crash_offsets_and_their_meaning&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/RU/Famous_crash_offsets_and_their_meaning.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/RU/Famous_crash_offsets_and_their_meaning.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Famous_crash_offsets_and_their_meaning&amp;oldid=71420" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Famous_crash_offsets_and_their_meaning&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Famous_crash_offsets_and_their_meaning" title="Famous crash offsets and their meaning – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 28 June 2021, at 23:56.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.009","walltime":"0.010","ppvisitednodes":{"value":149,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1855,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727214817","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":62});});</script>
+</body>
+</html>

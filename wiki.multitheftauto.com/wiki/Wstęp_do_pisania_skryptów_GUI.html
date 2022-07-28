@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Wstęp do pisania skryptów GUI - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"1ee7258254a603a17a798c2c","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Wstęp_do_pisania_skryptów_GUI","wgTitle":"Wstęp do pisania skryptów GUI","wgCurRevisionId":73424,"wgRevisionId":73424,"wgArticleId":12602,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Wstęp_do_pisania_skryptów_GUI","wgRelevantArticleId":12602,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":
+"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Wstęp_do_pisania_skryptów_GUI rootpage-Wstęp_do_pisania_skryptów_GUI skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Wstęp do pisania skryptów GUI</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>Jedną z ważnych funkcji MTA:SA jest możliwość stworzenia elementów GUI (graficznego interfejsu użytkownika). GUI składa się z okien, przycisków, pól edycji, pól wyboru i wiele innych. Mogą być wyświetlane, gdy użytkownik jest w grze, i używane jako punkty wejścia i wyjścia zamiast tradycyjnych poleceń.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File_AdminGUI.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/2/2f/AdminGUI.png/300px-AdminGUI.png" decoding="async" width="300" height="240" class="thumbimage" srcset="/images/thumb/2/2f/AdminGUI.png/450px-AdminGUI.png 1.5x, /images/thumb/2/2f/AdminGUI.png/600px-AdminGUI.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_AdminGUI.html" class="internal" title="Enlarge"></a></div>Graficzny interfejs administracyjny</div></div></div>
+<h2><span class="mw-headline" id="Tworzenie_okna_logowania">Tworzenie okna logowania</span></h2>
+<p>W tym samouczku utworzymy proste okno logowania z dwoma polami wprowadzania danych i przyciskiem. Okno pojawia się, gdy gracz dołącza do gry, a po kliknięciu przycisku gracz zostaje zrespawnowany (odrodzony). Ten tutorial będzie kontynuacją trybu gry, który stworzyliśmy w <a href="Wst%c4%99p_do_pisania_skrypt%c3%b3w.html" title="Wstęp do pisania skryptów">Wstępie do pisania skryptów</a> <i>(Jeśli korzystałeś/aś z naszego <a href="Wst%c4%99p_do_pisania_skrypt%c3%b3w.html" title="Wstęp do pisania skryptów">Wstępu do pisania skryptów</a>, będziesz musiał usunąć lub skomentować wiersz <a href="PL/spawnPlayer.html" title="PL/spawnPlayer">spawnPlayer</a> w funkcji "joinHandler" w swoim kodzie, ponieważ zastąpimy go alternatywnym rozwiązaniem poprzez interfejs graficzny)</i>. Weźmiemy także pod uwagę skrypty po stronie klienta.
+</p>
+<h3><span class="mw-headline" id="Rysowanie">Rysowanie</span></h3>
+<p>Cały interfejs musi być utworzony po stronie klienta. Dobrą praktyką jest również przechowywanie wszystkich skryptów klienta w oddzielnym folderze.
+</p><p>Przejdź do katalogu /TwójSerwerMTA/mods/deathmatch/resources/MójZasób/, i stwórz folder o nazwie "klient". W folderze /klient/, stwórz plik tekstowy i nazwij go: <b>gui.lua</b>.
+</p><p>W tym pliku napiszemy funkcję rysującą okno. Aby utworzyć okno, użyjemy funkcji <a href="GuiCreateWindow.html" title="GuiCreateWindow">guiCreateWindow</a>:
+</p>
+<pre class="prettyprint lang-lua">function stworzPanelLogowania()
+	-- zdefiniuj pozycje X i Y naszego okna
+	local X = 0.375
+	local Y = 0.375
+	-- zdefiniuj szerokość i wysokość naszego okna
+	local szerokosc = 0.25
+	local wysokosc = 0.25
+	-- utwórz okno i zapisz jego wartość w zmiennej o nazwie 'oknoLogin'
+	-- możesz kliknąć nazwę funkcji, aby przeczytać jej dokumentację
+	oknoLogin = guiCreateWindow(X, Y, szerokosc, wysokosc, "Zaloguj sie", true)
+end
+</pre>
+<h3><span id="Warto.C5.9Bci_wzgl.C4.99dne_i_absolutne"></span><span class="mw-headline" id="Wartości_względne_i_absolutne">Wartości względne i absolutne</span></h3>
+<p>Zauważ, że ostatni argument przekazany do funkcji <a href="GuiCreateWindow.html" title="GuiCreateWindow">guiCreateWindow</a> w powyższym przykładzie to <i>true</i> (prawda). Oznacza to, że współrzędne i wymiary okna są <b>względne</b>, co oznacza, że stanowią <i>procent</i> całkowitego rozmiaru ekranu. Oznacza to, że jeśli najdalsza pozycja lewej strony ekranu to 0, a skrajna prawa pozycja prawej strony - 1 to pozycja X o wartości 0,5 oznaczałaby środek ekranu. Podobnie, jeśli górna część ekranu to 0, a dolna to 1, pozycja Y o wartości 0,2 odpowiadałaby 20% długości ekranu. Te same zasady dotyczą zarówno szerokości, jak i wysokości (przy wartości szerokości wynoszącej 0,5, co oznacza, że okno będzie o połowę mniejsze niż szerokość ekranu).
+</p><p>Alternatywą dla używania wartości względnych jest użycie wartości <b>bezwzględnej</b> (przekazanie wartości <i>false</i> (fałsz) zamiast <i>true</i> do guiCreateWindow). Wartości bezwzględne są obliczane jako całkowita liczba pikseli z lewego górnego rogu elementu nadrzędnego (jeśli nie określono elementu nadrzędnego elementu GUI, nadrzędnym jest sam ekran). Jeśli przyjmiemy rozdzielczość ekranu 1920x1200, najdalsza lewa strona ekranu to 0 pikseli, a skrajna prawa to 1920 pikseli, pozycja X równa 960 będzie reprezentować środek ekranu. Podobnie, jeśli górna część ekranu ma 0 pikseli, a dolna 1200, pozycja Y o wartości 20 będzie równa 20 pikseli w dół od góry ekranu. Te same zasady dotyczą zarówno szerokości, jak i wysokości (przy wartości szerokość równej 50, co oznacza, że okno będzie miało szerokość 50 pikseli). <i>Możesz użyć <a href="GuiGetScreenSize.html" title="GuiGetScreenSize">guiGetScreenSize</a> i trochę matematyki, aby obliczyć pewne pozycje bezwzględne.</i>
+</p><p>Różnice między stosowaniem wartości względnych i bezwzględnych są dość proste; Graficzny interfejs użytkownika utworzony przy użyciu wartości bezwzględnych zawsze będzie posiadał dokładnie taki sam rozmiar i położenie pikseli, podczas gdy interfejs GUI utworzony przy użyciu wartości względnych będzie zawsze stanowić procent rozmiaru ekranu.
+</p><p>Wartości bezwzględne są ogólnie łatwiejsze do utrzymania podczas ręcznej edycji kodu, jednak wybór typu zależy od sytuacji, w której go używasz.
+</p><p>Na potrzeby tego wprowadzenia będziemy używać wartości względnych.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727211854
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.005 seconds
+Real time usage: 0.005 seconds
+Preprocessor visited node count: 20/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 473/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:12602-0!canonical and timestamp 20220727211854 and revision id 73424. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Wst%c4%99p_do_pisania_skrypt%c3%b3w_GUI&amp;oldid=73424">https://wiki.multitheftauto.com/index.php?title=Wstęp_do_pisania_skryptów_GUI&amp;oldid=73424</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Wst%C4%99p+do+pisania+skrypt%C3%B3w+GUI" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Wst%C4%99p+do+pisania+skrypt%C3%B3w+GUI" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Wst%c4%99p_do_pisania_skrypt%c3%b3w_GUI.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:Wst%C4%99p_do_pisania_skrypt%C3%B3w_GUI&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Wst%c4%99p_do_pisania_skrypt%c3%b3w_GUI.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Wst%C4%99p_do_pisania_skrypt%C3%B3w_GUI&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Wst%C4%99p_do_pisania_skrypt%C3%B3w_GUI&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Wst%c4%99p_do_pisania_skrypt%c3%b3w_GUI.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Wst%c4%99p_do_pisania_skrypt%c3%b3w_GUI.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Wst%C4%99p_do_pisania_skrypt%C3%B3w_GUI&amp;oldid=73424" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Wst%C4%99p_do_pisania_skrypt%C3%B3w_GUI&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 January 2022, at 12:09.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.005","walltime":"0.005","ppvisitednodes":{"value":20,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":473,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727211854","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":58});});</script>
+</body>
+</html>

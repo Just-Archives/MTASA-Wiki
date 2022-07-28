@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/Writing Gamemodes - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"036f4c7c36245597a71d92de","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/Writing_Gamemodes","wgTitle":"RU/Writing Gamemodes","wgCurRevisionId":47202,"wgRevisionId":47202,"wgArticleId":4471,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/Writing_Gamemodes","wgRelevantArticleId":4471,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready",
+"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_Writing_Gamemodes rootpage-RU_Writing_Gamemodes skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/Writing Gamemodes</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>Это руководство попробует в общих чертах обрисовать процесс написания правильного игрового режима (мода). Если вы только что начали программировать в MTA, то вам, может быть, для начала захочется взглянуть на другие руководства по скриптингу: они располагаются на <a href="../%d0%93%d0%bb%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f_%d1%81%d1%82%d1%80%d0%b0%d0%bd%d0%b8%d1%86%d0%b0.html" title="Главная страница">Главной странице</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Вступление"><span class="tocnumber">1</span> <span class="toctext">Вступление</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Что_значит_&quot;правильный_мод&quot;?"><span class="tocnumber">2</span> <span class="toctext">Что значит "правильный мод"?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Map-файлы"><span class="tocnumber">2.1</span> <span class="toctext">Map-файлы</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Пример"><span class="tocnumber">2.1.1</span> <span class="toctext">Пример</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Пример_получения_информации_из_.map-файла"><span class="tocnumber">2.1.2</span> <span class="toctext">Пример получения информации из .map-файла</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Map_manager"><span class="tocnumber">3</span> <span class="toctext">Map manager</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Как_использовать_mapmanager"><span class="tocnumber">3.1</span> <span class="toctext">Как использовать mapmanager</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Пример_2"><span class="tocnumber">3.1.1</span> <span class="toctext">Пример</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Делаем_карты_совместимыми"><span class="tocnumber">3.2</span> <span class="toctext">Делаем карты совместимыми</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Что_вам_также_следует_сделать"><span class="tocnumber">4</span> <span class="toctext">Что вам также следует сделать</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Helpmanager"><span class="tocnumber">4.1</span> <span class="toctext">Helpmanager</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Scoreboard"><span class="tocnumber">4.2</span> <span class="toctext">Scoreboard</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Map_cycler"><span class="tocnumber">4.3</span> <span class="toctext">Map cycler</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span id=".D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"></span><span class="mw-headline" id="Вступление">Вступление</span></h2>
+<p>Мод - ресурс, который при старте берет под контроль весь игровой процесс. Это может подразумевать сообщение игрокам о том, что им следует делать, респавн игроков, создание команд, объявление того, что игрокам нужно делать для победы или получения очков, и многое другое. Примеры - Race и Deathmatch. 
+</p>
+<h2><span id=".D0.A7.D1.82.D0.BE_.D0.B7.D0.BD.D0.B0.D1.87.D0.B8.D1.82_.22.D0.BF.D1.80.D0.B0.D0.B2.D0.B8.D0.BB.D1.8C.D0.BD.D1.8B.D0.B9_.D0.BC.D0.BE.D0.B4.22.3F"></span><span class="mw-headline" id="Что_значит_&quot;правильный_мод&quot;?">Что значит "правильный мод"?</span></h2>
+<p>Говоря простым языком, правильный мод - это такой, который полноценно использует MTA'шную .map-файловую систему. Это значит, что код мода не несет в себе никаких фиксированных специфических картам данных, таких как позиции игроков или машин. Вместо этого, мод должен мочь загружать .map-файлы, которые как раз именно это и содержат. Таким образом мод сможет иметь множество карт; люди же смогут создавать .map-файлы для мода с помощью MTA'шного редактора карт, который намного более удобен для данных целей, нежели программирование.
+</p><p>Очевидным примером "правильного мода" служит Race. Он поддерживает созданные пользователями карт с кучей возможностей, кроющимися внутри .map-файла. А для изменения точек респавна, объектов и т.д. пользователю не нужно редактировать сам мод.
+</p>
+<h3><span id="Map-.D1.84.D0.B0.D0.B9.D0.BB.D1.8B"></span><span class="mw-headline" id="Map-файлы">Map-файлы</span></h3>
+<p>Map-файлы по существу являются XML-документами с расширением .map. Они определяют внутриигровую среду одного или более конкретных модов. Они не предполагают изменения правил игры, которые, в свою очередь, зависят от мода.
+</p><p>Каждый элемент карты соответствует узлу в .map-файле. Для обыденных вещей типа точек респана, объектов и транспортных средств имеется стандартный синтаксис; как бы то ни было, для "особой", специфической моду информации вам понадобится придумывать свой собственный.
+</p>
+<h4><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80"></span><span class="mw-headline" id="Пример">Пример</span></h4>
+<p>В качестве примера возьмем мод Capture the Flag. Карте для данного мода нужны обязательно обозначенные точки респавна и местоположения флагов, а уже потом объекты и транспортные средства. Упрощенный файл карты может выглядеть как-то так:
+</p>
+<pre class="prettyprint lang-xml">&lt;map&gt;
+    &lt;spawnpoint id="spawnpoint1" posX="1959.5487060547" posY="-1714.4613037109" posZ="877.25219726563" rot="63.350006103516" model="0"/&gt;
+    &lt;pickup id="Armor 1" posX="1911.083984375" posY="-1658.8798828125" posZ="885.40216064453" type="armor" health="50" respawn="60000"/&gt;
+    &lt;flag posX="1959.5487060547" posY="-1714.4613037109" posZ="877.25219726563" team="blue" /&gt;
+    ...
+&lt;/map&gt;
+</pre>
+<p>Здесь вы можете видеть два MTA-элемента - точку респавна и пикап. Но что более важно, этот .map имеет собственный узел "flag", который определяет позицию и цвет флага. Точка респавна и пикап могут регулироваться существующими извне ресурсами, когда собственные элементы должны быть обработаны самим модом.
+</p><p>Суммируя, мы хотим массового притока мапперов, как это было в MTA:Race. Пользователем не нужно прикасаться к самому скрипту мода вообще.
+</p>
+<h4><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80_.D0.BF.D0.BE.D0.BB.D1.83.D1.87.D0.B5.D0.BD.D0.B8.D1.8F_.D0.B8.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D0.B8_.D0.B8.D0.B7_.map-.D1.84.D0.B0.D0.B9.D0.BB.D0.B0"></span><span class="mw-headline" id="Пример_получения_информации_из_.map-файла">Пример получения информации из .map-файла</span></h4>
+<p>Как сказано выше, вашему моду нужно извлечь собственные элементы, указанные в map-файле, и обрабатывать их. Это достаточно просто, что и показано ниже.
+</p>
+<pre class="prettyprint lang-lua">-- извлекает таблицу со всеми элементами типа flag
+local flagElements = getElementsByType ( "flag" )
+-- просматриваем их
+for key, value in pairs(flagElements) do
+	-- получаем нашу информацию
+	local posX = getElementData ( value, "posX" )
+	local posY = getElementData ( value, "posY" )
+	local posZ = getElementData ( value, "posZ" )
+	local team = getElementData ( value, "team" )
+	-- создаем объект, сославшись на позицию флага
+	createObject ( 1337, posX, posY, posZ )
+	-- выводим команду, для которой мы создали базу
+	outputChatBox ( "База для команды " .. team .. " создана" )
+end
+</pre>
+<p>Функция <a href="../GetElementsByType.html" title="GetElementsByType">getElementsByType</a> возвращает таблицу всех элементов определенного типа (тип соответствует названию узла в .map-файле). Это работает и для своих собственных, и для встроенных в MTA типов (вроде "vehicle" или "player").
+<a href="../GetElementData.html" title="GetElementData">getElementData</a> может быть использована для извлечения xml-атрибутов, заданных в .map-файле.
+В данном простом примере на месте флага создается объект и в чат выводится сообщение. На самом деле, вам, конечно, понадобится проделать большее во время загрузки карты, а в данном случае - установить колшейпы (collision shapes) для обнаружения игроков, берущих флаг.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Map_manager">Map manager</span></h2>
+<p>После прочтения секции выше должно быть понятно, что мод всегда должен состоять из двух частей:
+</p>
+<ul><li>Ресурса-мода, который (почти) всегда остается неизменным</li>
+<li>Множества различных ресурсов-карт, которые дают моду специфичную картам информацию</li></ul>
+<p>Сейчас вместо написания загрузчика карт для кадого мода в отдельности, можно воспользоваться <a href="Map_manager.html" class="mw-redirect" title="RU/Map manager">map manger</a>, который предоставляет функции для загрузки модов и карт. Проще говоря, когда вы вводите соответствующую команду (например, 'gamemode ctf ctf-italy'), он стартанет оба ресурса: и 'ctf', и 'ctf-italy', а одновременно с тем еще и вызовет срабатывание события (<a href="https://wiki.multitheftauto.com/index.php?title=OnGamemodeMapStart&amp;action=edit&amp;redlink=1" class="new" title="OnGamemodeMapStart (page does not exist)">onGamemodeMapStart</a>), говорящее ресурсу 'ctf' о произошедшей загрузке карты. Ресурс 'ctf' затем сможет получить доступ к информации, которую содержит 'ctf-italy', начать спавнить игроков и т.д.
+</p>
+<h3><span id=".D0.9A.D0.B0.D0.BA_.D0.B8.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D1.82.D1.8C_mapmanager"></span><span class="mw-headline" id="Как_использовать_mapmanager">Как использовать mapmanager</span></h3>
+<p>Чтобы воспользоваться услугами mapmanager'а, ваш ресурс-мод должен быть для начала соответствующе отмечен. А именно, вам нужно будет установить атрибут "type" тегу &lt;info&gt; внутри meta.xml на значение "gamemode". Также вы можете установить атрибут "name" на "дружелюбное название" (типа "Capture the flag"), который будет показываться в ASE вместо названия ресурса.
+</p>
+<pre class="prettyprint lang-xml">&lt;!-- meta.xml в моде "cowcatapult" --&gt;
+&lt;meta&gt;
+    &lt;info type="gamemode" name="Cow catapulting 2.0"/&gt;
+&lt;/meta&gt;
+</pre>
+<p>Если ваш мод будет загружать собственные карты, вам следует добавить обработчики для
+</p>
+<ul><li>onGamemodeMapStart</li>
+<li>onGamemodeMapStop (если необходима какая-либо выгрузка)</li></ul>
+<p>Они срабатывают, когда карта вашего мода стартует или останавливается, и передают ресурс-карту в качестве параметра.
+С функциями-обработчиками, прикрепленными к данным событиям, вы можете извлекать всю нужную вам из map- и конфигурационных файлов ресурса информацию.
+</p>
+<h4><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80_2"></span><span class="mw-headline" id="Пример_2">Пример</span></h4>
+<pre class="prettyprint lang-lua">function startCtfMap( startedMap ) -- startedMap содержит указатель на ресурс-карту
+    local mapRoot = getResourceRootElement( startedMap )        -- получаем root (корневой) узел запущенной карты
+    local flagElements = getElementsByType ( "flag" , mapRoot ) -- получаем все флаги карты и сохраняем их в таблице
+    -- продолжаем загружать информацию как в примере выше
+    -- спавним игроков и т.д.
+end
+addEventHandler("onGamemodeMapStart", getRootElement(), startCtfMap)
+</pre>
+<h3><span id=".D0.94.D0.B5.D0.BB.D0.B0.D0.B5.D0.BC_.D0.BA.D0.B0.D1.80.D1.82.D1.8B_.D1.81.D0.BE.D0.B2.D0.BC.D0.B5.D1.81.D1.82.D0.B8.D0.BC.D1.8B.D0.BC.D0.B8"></span><span class="mw-headline" id="Делаем_карты_совместимыми">Делаем карты совместимыми</span></h3>
+<p>Карты - отдельные ресурсы. Так сделано чтобы для создания собственной карты и впомине не требовалось никакого редактирования ресурса-мода, а также это позволяет вам с картой упаковывать специфичные ей конфигурационные файлы/скрипты.
+</p><p>Чтобы сделать карту совместимой с вашим модом, откройте meta.xml ее ресурса и затем отметьте его: атрибут "type" должен быть установлен на "map", а атрибут "gamemodes" должен быть списком из разделенных запятой названий ресурсов-модов (без пробелов), с которыми данная карта работает.
+</p>
+<pre class="prettyprint lang-xml">&lt;!--meta.xml карты--&gt;
+&lt;meta&gt;
+    &lt;info type="map" gamemodes="cowcatapult,assault,tdm"/&gt;
+&lt;/meta&gt;
+</pre>
+<p>Когда вы уже все настроили, администраторы смогут использовать данные две команды для запуска/остановки модов:
+/gamemode названиеМода [названиеКарты] (опциональный параметр позволяет выбрать начальную карту, по умолчанию ее нет)
+/changemap названиеКарты [названиеМода] (опциональный параметр указывает мод, с которым запускать карту, по умолчанию она запустится на текущем)
+</p><p>На самом деле <a href="Map_manager.html" class="mw-redirect" title="RU/Map manager">map manager</a> экспортирует несколько больше функций ограниченного доступа, которые вам знать необязательно, но они могут оказаться полезными.
+</p>
+<h2><span id=".D0.A7.D1.82.D0.BE_.D0.B2.D0.B0.D0.BC_.D1.82.D0.B0.D0.BA.D0.B6.D0.B5_.D1.81.D0.BB.D0.B5.D0.B4.D1.83.D0.B5.D1.82_.D1.81.D0.B4.D0.B5.D0.BB.D0.B0.D1.82.D1.8C"></span><span class="mw-headline" id="Что_вам_также_следует_сделать">Что вам также следует сделать</span></h2>
+<p>Есть несколько других ресурсов, которые следует использовать модам (или хотя бы быть с ними совместимыми).
+</p>
+<h3><span class="mw-headline" id="Helpmanager">Helpmanager</span></h3>
+<p>Helpmanager предназначен быть стандартным интерфейсом для предоставления игроку помощи. Если вы используете helpmanager для отображения справки по своему моду, каждый игрок, использовавший helpmanager ранее (напр. на других модах) незамедлительно поймет, как ему до него добраться. Он также отображает справку по различным запущенным ресурсам в одном окне, если нужно.
+</p><p>По сути имеются два способа использования helpmanager:
+</p>
+<ul><li>Предоставить простой текст, объясняющий как использовать ваш мод</li>
+<li>Запросить GUI-элемент helpmanager'а, который будет отображаться в своей собственной вкладке окна helpmanager и позволит вам добавлять в него любые GUI-элементы. Этот способ рекомендуется модам, которым нужно отображать усложненную справку, и которым вследствие этого нужен свой собственный GUI.</li></ul>
+<p>Прочитайте страницу helpmanager для получения подробностей по воплощению.
+</p>
+<h3><span class="mw-headline" id="Scoreboard">Scoreboard</span></h3>
+<p>Scoreboard отображает игроков, находящихся в данный момент на севрере, и их команды. Добавляйте в него свои собственные колонки для предоставления специфичной карте информации. Например, колонка 'points' (очки) в моде 'ctf' означает очки игрока, которые он заработал через убийства и захват флага. Как всегда, для подробностей смотрите страницу помощи самого ресурса scoreboard.
+</p>
+<h3><span class="mw-headline" id="Map_cycler">Map cycler</span></h3>
+<p>Map cycler контролирует, какие моды и карты играются на сервере. Вы можете указать, например, сколько раз подряд можно будет сыграть определенную карту, пока ее не сменит следующая. Чтобы его задействовать, вам понадобится сообщать map cycler'у о том, когда действие мода закончено (напр. по окончании раунда).
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220726233236
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.009 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 70/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2282/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:4471-0!canonical and timestamp 20220726233236 and revision id 47202. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/Writing_Gamemodes&amp;oldid=47202">https://wiki.multitheftauto.com/index.php?title=RU/Writing_Gamemodes&amp;oldid=47202</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FWriting+Gamemodes" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FWriting+Gamemodes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Writing_Gamemodes.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="mw-list-item"><a href="../Talk_RU/Writing_Gamemodes.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Writing_Gamemodes.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Writing_Gamemodes&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Writing_Gamemodes&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/RU/Writing_Gamemodes.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/RU/Writing_Gamemodes.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Writing_Gamemodes&amp;oldid=47202" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Writing_Gamemodes&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Writing_Gamemodes" title="Writing Gamemodes – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-it mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=IT/Scrivere_una_gamemode" title="Scrivere una gamemode – italiano" lang="it" hreflang="it" class="interlanguage-link-target"><span>Italiano</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 1 April 2016, at 03:06.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.009","walltime":"0.009","ppvisitednodes":{"value":70,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2282,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220726233236","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":53});});</script>
+</body>
+</html>

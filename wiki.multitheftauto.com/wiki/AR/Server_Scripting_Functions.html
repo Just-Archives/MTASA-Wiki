@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>AR/Server Scripting Functions - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"f72f2e80e06e9d289fe8223b","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"AR/Server_Scripting_Functions","wgTitle":"AR/Server Scripting Functions","wgCurRevisionId":69895,"wgRevisionId":69895,"wgArticleId":6698,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"AR/Server_Scripting_Functions","wgRelevantArticleId":6698,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='server' data-subcaption=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-AR_Server_Scripting_Functions rootpage-AR_Server_Scripting_Functions skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">AR/Server Scripting Functions</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+</p>
+<div style="background: #CEDFF2; border: 3px solid #CEDFF2;">
+<i>المساهمون&#160;:</i> هل قمت بإنشاء صفحة ولكنها ليست في هذه القائمة؟ حائر؟ <b>أقرا&#160;: <a href="../Adding_Pages_to_Categories_and_Templates.html" class="mw-redirect" title="Adding Pages to Categories and Templates">إضافة صفحات إلى الفئات والقوالب</a></b></div>
+<p>تحتوي هذه الصفحة جميع الوظائف الخاصة بـ "<b>سيرفر سايد</b>" الذي تم توفيرها كـ وظائف أصلية .
+</p><p>لمزيد من الوظائف , توجه إلى <a href="../Useful_Functions.html" title="Useful Functions">صفحة الوظائف المفيدة</a> , التي لم يتم إدراجها كـ وظائف أصلية .
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#وظائف_الحساب"><span class="tocnumber">1</span> <span class="toctext">وظائف الحساب</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#وظائف_اسل"><span class="tocnumber">2</span> <span class="toctext">وظائف اسل</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#وظائف_الحظر"><span class="tocnumber">3</span> <span class="toctext">وظائف الحظر</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#وظائف_الصوت"><span class="tocnumber">4</span> <span class="toctext">وظائف الصوت</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#وظائف_علامات_الخريطة"><span class="tocnumber">5</span> <span class="toctext">وظائف علامات الخريطة</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#وظائف_الكاميرا"><span class="tocnumber">6</span> <span class="toctext">وظائف الكاميرا</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#وظائف_كوال_شيب"><span class="tocnumber">7</span> <span class="toctext">وظائف كوال شيب</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#الملابس_و_وظائف_الجسم"><span class="tocnumber">8</span> <span class="toctext">الملابس و وظائف الجسم</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#وظائف_المؤشر_الماوس"><span class="tocnumber">9</span> <span class="toctext">وظائف المؤشر الماوس</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#وظائف_العناصر"><span class="tocnumber">10</span> <span class="toctext">وظائف العناصر</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#وظائف_الحدث"><span class="tocnumber">11</span> <span class="toctext">وظائف الحدث</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#وظائف_انفجار"><span class="tocnumber">12</span> <span class="toctext">وظائف انفجار</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#وظائف_ملف"><span class="tocnumber">13</span> <span class="toctext">وظائف ملف</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#HTTP_وظائف_بروتوكول"><span class="tocnumber">14</span> <span class="toctext">HTTP وظائف بروتوكول</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#وظائف_الأدخال"><span class="tocnumber">15</span> <span class="toctext">وظائف الأدخال</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#وظائف_خريطة"><span class="tocnumber">16</span> <span class="toctext">وظائف خريطة</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Module_functions"><span class="tocnumber">17</span> <span class="toctext">Module functions</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#وظائف_الأوبجكت"><span class="tocnumber">18</span> <span class="toctext">وظائف الأوبجكت</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#وظائف_الشخصية_الوههمية"><span class="tocnumber">19</span> <span class="toctext">وظائف الشخصية الوههمية</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#وظائف_الدعم"><span class="tocnumber">20</span> <span class="toctext">وظائف الدعم</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#وظائف_الاعب"><span class="tocnumber">21</span> <span class="toctext">وظائف الاعب</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#وظائف_مناطق_الرادار"><span class="tocnumber">22</span> <span class="toctext">وظائف مناطق الرادار</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#وظائف_الموارد"><span class="tocnumber">23</span> <span class="toctext">وظائف الموارد</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#وظائف_السريال_/_الرقم_التسلسلي"><span class="tocnumber">24</span> <span class="toctext">وظائف السريال / الرقم التسلسلي</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#&quot;وظائف_الخادم_&quot;السيرفر"><span class="tocnumber">25</span> <span class="toctext">"وظائف الخادم "السيرفر</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#registryوطائف_إعدادات_الـ"><span class="tocnumber">26</span> <span class="toctext">registryوطائف إعدادات الـ</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#وظائف_SQL"><span class="tocnumber">27</span> <span class="toctext">وظائف SQL</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#وظائف_فريق"><span class="tocnumber">28</span> <span class="toctext">وظائف فريق</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#وظائف_النص"><span class="tocnumber">29</span> <span class="toctext">وظائف النص</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#الوظائف_ذات_المنفعة"><span class="tocnumber">30</span> <span class="toctext">الوظائف ذات المنفعة</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#وظائف_السيارة"><span class="tocnumber">31</span> <span class="toctext">وظائف السيارة</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#وظائف_العالم"><span class="tocnumber">32</span> <span class="toctext">وظائف العالم</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#وظائف_سلاح"><span class="tocnumber">33</span> <span class="toctext">وظائف سلاح</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#وظائف_العالم_2"><span class="tocnumber">34</span> <span class="toctext">وظائف العالم</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#وظائف_XML"><span class="tocnumber">35</span> <span class="toctext">وظائف XML</span></a></li>
+</ul>
+</div>
+
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.AD.D8.B3.D8.A7.D8.A8"></span><span class="mw-headline" id="وظائف_الحساب">وظائف الحساب</span></h2>
+<ul><li><a href="addAccount.html" title="AR/addAccount">addAccount</a></li>
+<li><a href="copyAccountData.html" title="AR/copyAccountData">copyAccountData</a></li>
+<li><a href="getAccount.html" title="AR/getAccount">getAccount</a></li>
+<li><a href="getAccountData.html" title="AR/getAccountData">getAccountData</a></li>
+<li><a href="getAccountName.html" title="AR/getAccountName">getAccountName</a></li>
+<li><a href="getAccountPlayer.html" title="AR/getAccountPlayer">getAccountPlayer</a></li>
+<li><a href="getPlayerAccount.html" title="AR/getPlayerAccount">getPlayerAccount</a></li>
+<li><a href="getAccounts.html" title="AR/getAccounts">getAccounts</a></li>
+<li><a href="isGuestAccount.html" title="AR/isGuestAccount">isGuestAccount</a></li>
+<li><a href="logIn.html" title="AR/logIn">logIn</a></li>
+<li><a href="logOut.html" title="AR/logOut">logOut</a></li>
+<li><a href="removeAccount.html" title="AR/removeAccount">removeAccount</a></li>
+<li><a href="setAccountData.html" title="AR/setAccountData">setAccountData</a></li>
+<li><a href="setAccountPassword.html" title="AR/setAccountPassword">setAccountPassword</a></li>
+<li><a href="getAllAccountData.html" title="AR/getAllAccountData">getAllAccountData</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D8.B3.D9.84"></span><span class="mw-headline" id="وظائف_اسل">وظائف اسل</span></h2>
+<ul><li><a href="aclCreate.html" title="AR/aclCreate">aclCreate</a></li>
+<li><a href="aclCreateGroup.html" title="AR/aclCreateGroup">aclCreateGroup</a></li>
+<li><a href="aclDestroy.html" title="AR/aclDestroy">aclDestroy</a></li>
+<li><a href="aclDestroyGroup.html" title="AR/aclDestroyGroup">aclDestroyGroup</a></li>
+<li><a href="aclGet.html" title="AR/aclGet">aclGet</a></li>
+<li><a href="aclGetGroup.html" title="AR/aclGetGroup">aclGetGroup</a></li>
+<li><a href="aclGetName.html" title="AR/aclGetName">aclGetName</a></li>
+<li><a href="aclGetRight.html" title="AR/aclGetRight">aclGetRight</a></li>
+<li><a href="aclGroupList.html" title="AR/aclGroupList">aclGroupList</a></li>
+<li><a href="aclGroupAddACL.html" title="AR/aclGroupAddACL">aclGroupAddACL</a></li>
+<li><a href="aclGroupAddObject.html" title="AR/aclGroupAddObject">aclGroupAddObject</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclGroupGetName&amp;action=edit&amp;redlink=1" class="new" title="AR/aclGroupGetName (page does not exist)">aclGroupGetName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclGroupListACL&amp;action=edit&amp;redlink=1" class="new" title="AR/aclGroupListACL (page does not exist)">aclGroupListACL</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclGroupListObjects&amp;action=edit&amp;redlink=1" class="new" title="AR/aclGroupListObjects (page does not exist)">aclGroupListObjects</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclGroupRemoveACL&amp;action=edit&amp;redlink=1" class="new" title="AR/aclGroupRemoveACL (page does not exist)">aclGroupRemoveACL</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclGroupRemoveObject&amp;action=edit&amp;redlink=1" class="new" title="AR/aclGroupRemoveObject (page does not exist)">aclGroupRemoveObject</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclList&amp;action=edit&amp;redlink=1" class="new" title="AR/aclList (page does not exist)">aclList</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclListRights&amp;action=edit&amp;redlink=1" class="new" title="AR/aclListRights (page does not exist)">aclListRights</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclReload&amp;action=edit&amp;redlink=1" class="new" title="AR/aclReload (page does not exist)">aclReload</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclRemoveRight&amp;action=edit&amp;redlink=1" class="new" title="AR/aclRemoveRight (page does not exist)">aclRemoveRight</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclSave&amp;action=edit&amp;redlink=1" class="new" title="AR/aclSave (page does not exist)">aclSave</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/aclSetRight&amp;action=edit&amp;redlink=1" class="new" title="AR/aclSetRight (page does not exist)">aclSetRight</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/hasObjectPermissionTo&amp;action=edit&amp;redlink=1" class="new" title="AR/hasObjectPermissionTo (page does not exist)">hasObjectPermissionTo</a></li></ul>
+<ul><li><a href="isObjectInACLGroup.html" title="AR/isObjectInACLGroup">isObjectInACLGroup</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.AD.D8.B8.D8.B1"></span><span class="mw-headline" id="وظائف_الحظر">وظائف الحظر</span></h2>
+<ul><li><a href="banPlayer.html" title="AR/banPlayer">banPlayer</a></li>
+<li><a href="kickPlayer.html" title="AR/kickPlayer">kickPlayer</a></li>
+<li><a href="addBan.html" title="AR/addBan">addBan</a></li>
+<li><a href="getBanAdmin.html" title="AR/getBanAdmin">getBanAdmin</a></li>
+<li><a href="getBanIP.html" title="AR/getBanIP">getBanIP</a></li>
+<li><a href="getBanNick.html" title="AR/getBanNick">getBanNick</a></li>
+<li><a href="getBanReason.html" title="AR/getBanReason">getBanReason</a></li>
+<li><a href="getBans.html" title="AR/getBans">getBans</a></li>
+<li><a href="getBanSerial.html" title="AR/getBanSerial">getBanSerial</a></li>
+<li><a href="getBanTime.html" title="AR/getBanTime">getBanTime</a></li>
+<li><a href="getBanUsername.html" title="AR/getBanUsername">getBanUsername</a></li>
+<li><a href="getUnbanTime.html" title="AR/getUnbanTime">getUnbanTime</a></li>
+<li><a href="removeBan.html" title="AR/removeBan">removeBan</a></li></ul>
+<ul><li><a href="reloadBans.html" title="AR/reloadBans">reloadBans</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B5.D9.88.D8.AA"></span><span class="mw-headline" id="وظائف_الصوت">وظائف الصوت</span></h2>
+<p>ه
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.B9.D9.84.D8.A7.D9.85.D8.A7.D8.AA_.D8.A7.D9.84.D8.AE.D8.B1.D9.8A.D8.B7.D8.A9"></span><span class="mw-headline" id="وظائف_علامات_الخريطة">وظائف علامات الخريطة</span></h2>
+<ul><li><a href="createBlip.html" title="AR/createBlip">createBlip</a></li>
+<li><a href="createBlipAttachedTo.html" title="AR/createBlipAttachedTo">createBlipAttachedTo</a></li>
+<li><a href="getBlipColor.html" title="AR/getBlipColor">getBlipColor</a></li>
+<li><a href="getBlipIcon.html" title="AR/getBlipIcon">getBlipIcon</a></li>
+<li><a href="getBlipSize.html" title="AR/getBlipSize">getBlipSize</a></li>
+<li><a href="setBlipColor.html" title="AR/setBlipColor">setBlipColor</a></li>
+<li><a href="setBlipIcon.html" title="AR/setBlipIcon">setBlipIcon</a></li>
+<li><a href="setBlipSize.html" title="AR/setBlipSize">setBlipSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getBlipOrdering&amp;action=edit&amp;redlink=1" class="new" title="AR/getBlipOrdering (page does not exist)">getBlipOrdering</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setBlipOrdering&amp;action=edit&amp;redlink=1" class="new" title="AR/setBlipOrdering (page does not exist)">setBlipOrdering</a></li></ul>
+<ul><li><a href="getBlipVisibleDistance.html" title="AR/getBlipVisibleDistance">getBlipVisibleDistance</a></li>
+<li><a href="setBlipVisibleDistance.html" title="AR/setBlipVisibleDistance">setBlipVisibleDistance</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D9.83.D8.A7.D9.85.D9.8A.D8.B1.D8.A7"></span><span class="mw-headline" id="وظائف_الكاميرا">وظائف الكاميرا</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/camera_fuctions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/camera fuctions (page does not exist)">Template:AR/camera fuctions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D9.83.D9.88.D8.A7.D9.84_.D8.B4.D9.8A.D8.A8"></span><span class="mw-headline" id="وظائف_كوال_شيب">وظائف كوال شيب</span></h2>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; font-weight: bold; padding: 4px 8px">ADDED/UPDATED IN VERSION 1.5.7 <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20397"><span style="color: #FFFFFF;">r20397</span></a>:</div><div style="padding: 4px 8px">
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/addColPolygonPoint&amp;action=edit&amp;redlink=1" class="new" title="AR/addColPolygonPoint (page does not exist)">addColPolygonPoint</a></li></ul>
+ </div></div>
+<ul><li><a href="createColCircle.html" title="AR/createColCircle">createColCircle</a></li>
+<li><a href="createColCuboid.html" title="AR/createColCuboid">createColCuboid</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/createColPolygon&amp;action=edit&amp;redlink=1" class="new" title="AR/createColPolygon (page does not exist)">createColPolygon</a></li>
+<li><a href="createColRectangle.html" title="AR/createColRectangle">createColRectangle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/createColSphere&amp;action=edit&amp;redlink=1" class="new" title="AR/createColSphere (page does not exist)">createColSphere</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/createColTube&amp;action=edit&amp;redlink=1" class="new" title="AR/createColTube (page does not exist)">createColTube</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; font-weight: bold; padding: 4px 8px">ADDED/UPDATED IN VERSION 1.5.7 <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20397"><span style="color: #FFFFFF;">r20397</span></a>:</div><div style="padding: 4px 8px">
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getColPolygonPoints&amp;action=edit&amp;redlink=1" class="new" title="AR/getColPolygonPoints (page does not exist)">getColPolygonPoints</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getColPolygonPointPosition&amp;action=edit&amp;redlink=1" class="new" title="AR/getColPolygonPointPosition (page does not exist)">getColPolygonPointPosition</a></li></ul>
+ </div></div>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getColShapeType&amp;action=edit&amp;redlink=1" class="new" title="AR/getColShapeType (page does not exist)">getColShapeType</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; font-weight: bold; padding: 4px 8px">ADDED/UPDATED IN VERSION 1.5.7 <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20397"><span style="color: #FFFFFF;">r20397</span></a>:</div><div style="padding: 4px 8px">
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getColShapeRadius&amp;action=edit&amp;redlink=1" class="new" title="AR/getColShapeRadius (page does not exist)">getColShapeRadius</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getColShapeSize&amp;action=edit&amp;redlink=1" class="new" title="AR/getColShapeSize (page does not exist)">getColShapeSize</a></li></ul>
+ </div></div>
+<ul><li><a href="getElementColShape.html" title="AR/getElementColShape">getElementColShape</a></li>
+<li><a href="getElementsWithinColShape.html" title="AR/getElementsWithinColShape">getElementsWithinColShape</a></li>
+<li><a href="isElementWithinColShape.html" title="AR/isElementWithinColShape">isElementWithinColShape</a></li></ul>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isInsideColShape&amp;action=edit&amp;redlink=1" class="new" title="AR/isInsideColShape (page does not exist)">isInsideColShape</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; font-weight: bold; padding: 4px 8px">ADDED/UPDATED IN VERSION 1.5.7 <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20397"><span style="color: #FFFFFF;">r20397</span></a>:</div><div style="padding: 4px 8px">
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/removeColPolygonPoint&amp;action=edit&amp;redlink=1" class="new" title="AR/removeColPolygonPoint (page does not exist)">removeColPolygonPoint</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setColPolygonPointPosition&amp;action=edit&amp;redlink=1" class="new" title="AR/setColPolygonPointPosition (page does not exist)">setColPolygonPointPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setColShapeRadius&amp;action=edit&amp;redlink=1" class="new" title="AR/setColShapeRadius (page does not exist)">setColShapeRadius</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setColShapeSize&amp;action=edit&amp;redlink=1" class="new" title="AR/setColShapeSize (page does not exist)">setColShapeSize</a></li></ul>
+ </div></div>
+<p><br />
+</p>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.84.D8.A7.D8.A8.D8.B3_.D9.88_.D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.AC.D8.B3.D9.85"></span><span class="mw-headline" id="الملابس_و_وظائف_الجسم">الملابس و وظائف الجسم</span></h2>
+<ul><li><a href="addPedClothes.html" title="AR/addPedClothes">addPedClothes</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getBodyPartName&amp;action=edit&amp;redlink=1" class="new" title="AR/getBodyPartName (page does not exist)">getBodyPartName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getClothesByTypeIndex&amp;action=edit&amp;redlink=1" class="new" title="AR/getClothesByTypeIndex (page does not exist)">getClothesByTypeIndex</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getClothesTypeName&amp;action=edit&amp;redlink=1" class="new" title="AR/getClothesTypeName (page does not exist)">getClothesTypeName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPedClothes&amp;action=edit&amp;redlink=1" class="new" title="AR/getPedClothes (page does not exist)">getPedClothes</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getTypeIndexFromClothes&amp;action=edit&amp;redlink=1" class="new" title="AR/getTypeIndexFromClothes (page does not exist)">getTypeIndexFromClothes</a></li>
+<li><a href="removePedClothes.html" title="AR/removePedClothes">removePedClothes</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D9.85.D8.A4.D8.B4.D8.B1_.D8.A7.D9.84.D9.85.D8.A7.D9.88.D8.B3"></span><span class="mw-headline" id="وظائف_المؤشر_الماوس">وظائف المؤشر الماوس</span></h2>
+<ul><li><a href="isCursorShowing.html" title="AR/isCursorShowing">isCursorShowing</a></li>
+<li><a href="showCursor.html" title="AR/showCursor">showCursor</a></li></ul>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B9.D9.86.D8.A7.D8.B5.D8.B1"></span><span class="mw-headline" id="وظائف_العناصر">وظائف العناصر</span></h2>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/clearElementVisibleTo&amp;action=edit&amp;redlink=1" class="new" title="AR/clearElementVisibleTo (page does not exist)">clearElementVisibleTo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/cloneElement&amp;action=edit&amp;redlink=1" class="new" title="AR/cloneElement (page does not exist)">cloneElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/createElement&amp;action=edit&amp;redlink=1" class="new" title="AR/createElement (page does not exist)">createElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/destroyElement&amp;action=edit&amp;redlink=1" class="new" title="AR/destroyElement (page does not exist)">destroyElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getAllElementData&amp;action=edit&amp;redlink=1" class="new" title="AR/getAllElementData (page does not exist)">getAllElementData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getAttachedElements&amp;action=edit&amp;redlink=1" class="new" title="AR/getAttachedElements (page does not exist)">getAttachedElements</a></li>
+<li><a href="getElementAlpha.html" title="AR/getElementAlpha">getElementAlpha</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementAttachedOffsets&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementAttachedOffsets (page does not exist)">getElementAttachedOffsets</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementCollisionsEnabled&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementCollisionsEnabled (page does not exist)">getElementCollisionsEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementAttachedTo&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementAttachedTo (page does not exist)">getElementAttachedTo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementByID&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementByID (page does not exist)">getElementByID</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementByIndex&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementByIndex (page does not exist)">getElementByIndex</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementChild&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementChild (page does not exist)">getElementChild</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementChildren&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementChildren (page does not exist)">getElementChildren</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementChildrenCount&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementChildrenCount (page does not exist)">getElementChildrenCount</a></li>
+<li><a href="getElementColShape.html" title="AR/getElementColShape">getElementColShape</a></li>
+<li><a href="getElementData.html" title="AR/getElementData">getElementData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementDimension&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementDimension (page does not exist)">getElementDimension</a></li>
+<li><a href="getElementHealth.html" title="AR/getElementHealth">getElementHealth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementID&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementID (page does not exist)">getElementID</a></li>
+<li><a href="getElementInterior.html" title="AR/getElementInterior">getElementInterior</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementParent&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementParent (page does not exist)">getElementParent</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementPosition&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementPosition (page does not exist)">getElementPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementRotation&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementRotation (page does not exist)">getElementRotation</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementsByType&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementsByType (page does not exist)">getElementsByType</a></li>
+<li><a href="getElementsWithinColShape.html" title="AR/getElementsWithinColShape">getElementsWithinColShape</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementType&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementType (page does not exist)">getElementType</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementVelocity&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementVelocity (page does not exist)">getElementVelocity</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementZoneName&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementZoneName (page does not exist)">getElementZoneName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getRootElement&amp;action=edit&amp;redlink=1" class="new" title="AR/getRootElement (page does not exist)">getRootElement</a></li>
+<li><a href="isElement.html" title="AR/isElement">isElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isElementAttached&amp;action=edit&amp;redlink=1" class="new" title="AR/isElementAttached (page does not exist)">isElementAttached</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isElementCallPropagationEnabled&amp;action=edit&amp;redlink=1" class="new" title="AR/isElementCallPropagationEnabled (page does not exist)">isElementCallPropagationEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isElementDoubleSided&amp;action=edit&amp;redlink=1" class="new" title="AR/isElementDoubleSided (page does not exist)">isElementDoubleSided</a></li>
+<li><a href="isElementFrozen.html" title="AR/isElementFrozen">isElementFrozen</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isElementVisibleTo&amp;action=edit&amp;redlink=1" class="new" title="AR/isElementVisibleTo (page does not exist)">isElementVisibleTo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isElementWaitingForGroundToLoad&amp;action=edit&amp;redlink=1" class="new" title="AR/isElementWaitingForGroundToLoad (page does not exist)">isElementWaitingForGroundToLoad</a></li>
+<li><a href="isElementWithinColShape.html" title="AR/isElementWithinColShape">isElementWithinColShape</a></li>
+<li><a href="removeElementData.html" title="AR/removeElementData">removeElementData</a></li>
+<li><a href="setElementAlpha.html" title="AR/setElementAlpha">setElementAlpha</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementCallPropagationEnabled&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementCallPropagationEnabled (page does not exist)">setElementCallPropagationEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementCollisionsEnabled&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementCollisionsEnabled (page does not exist)">setElementCollisionsEnabled</a></li>
+<li><a href="setElementData.html" title="AR/setElementData">setElementData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementDoubleSided&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementDoubleSided (page does not exist)">setElementDoubleSided</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementDimension&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementDimension (page does not exist)">setElementDimension</a></li>
+<li><a href="setElementFrozen.html" title="AR/setElementFrozen">setElementFrozen</a></li>
+<li><a href="setElementHealth.html" title="AR/setElementHealth">setElementHealth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementID&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementID (page does not exist)">setElementID</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementInterior&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementInterior (page does not exist)">setElementInterior</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementParent&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementParent (page does not exist)">setElementParent</a></li>
+<li><a href="setElementPosition.html" title="AR/setElementPosition">setElementPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementSyncer&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementSyncer (page does not exist)">setElementSyncer</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementRotation&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementRotation (page does not exist)">setElementRotation</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementVelocity&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementVelocity (page does not exist)">setElementVelocity</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementVisibleTo&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementVisibleTo (page does not exist)">setElementVisibleTo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/attachElements&amp;action=edit&amp;redlink=1" class="new" title="AR/attachElements (page does not exist)">attachElements</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/detachElements&amp;action=edit&amp;redlink=1" class="new" title="AR/detachElements (page does not exist)">detachElements</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementModel&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementModel (page does not exist)">getElementModel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getElementSyncer&amp;action=edit&amp;redlink=1" class="new" title="AR/getElementSyncer (page does not exist)">getElementSyncer</a></li>
+<li><a href="isElementInWater.html" title="AR/isElementInWater">isElementInWater</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementAttachedOffsets&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementAttachedOffsets (page does not exist)">setElementAttachedOffsets</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setElementModel&amp;action=edit&amp;redlink=1" class="new" title="AR/setElementModel (page does not exist)">setElementModel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setLowLODElement&amp;action=edit&amp;redlink=1" class="new" title="AR/setLowLODElement (page does not exist)">setLowLODElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getLowLODElement&amp;action=edit&amp;redlink=1" class="new" title="AR/getLowLODElement (page does not exist)">getLowLODElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isElementLowLOD&amp;action=edit&amp;redlink=1" class="new" title="AR/isElementLowLOD (page does not exist)">isElementLowLOD</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.AD.D8.AF.D8.AB"></span><span class="mw-headline" id="وظائف_الحدث">وظائف الحدث</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Event_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Event functions (page does not exist)">Template:AR/Event functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.86.D9.81.D8.AC.D8.A7.D8.B1"></span><span class="mw-headline" id="وظائف_انفجار">وظائف انفجار</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Explosion_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Explosion functions (page does not exist)">Template:AR/Explosion functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D9.85.D9.84.D9.81"></span><span class="mw-headline" id="وظائف_ملف">وظائف ملف</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/File_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/File functions (page does not exist)">Template:AR/File functions</a>
+</p>
+<h2><span id="HTTP_.D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A8.D8.B1.D9.88.D8.AA.D9.88.D9.83.D9.88.D9.84"></span><span class="mw-headline" id="HTTP_وظائف_بروتوكول">HTTP وظائف بروتوكول</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/HTTP_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/HTTP functions (page does not exist)">Template:AR/HTTP functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.A3.D8.AF.D8.AE.D8.A7.D9.84"></span><span class="mw-headline" id="وظائف_الأدخال">وظائف الأدخال</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Input_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Input functions (page does not exist)">Template:AR/Input functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.AE.D8.B1.D9.8A.D8.B7.D8.A9"></span><span class="mw-headline" id="وظائف_خريطة">وظائف خريطة</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Map_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Map functions (page does not exist)">Template:AR/Map functions</a>
+</p>
+<h2><span class="mw-headline" id="Module_functions">Module functions</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Module_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Module functions (page does not exist)">Template:AR/Module functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.A3.D9.88.D8.A8.D8.AC.D9.83.D8.AA"></span><span class="mw-headline" id="وظائف_الأوبجكت">وظائف الأوبجكت</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Object_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Object functions (page does not exist)">Template:AR/Object functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B4.D8.AE.D8.B5.D9.8A.D8.A9_.D8.A7.D9.84.D9.88.D9.87.D9.87.D9.85.D9.8A.D8.A9"></span><span class="mw-headline" id="وظائف_الشخصية_الوههمية">وظائف الشخصية الوههمية</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Ped_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Ped functions (page does not exist)">Template:AR/Ped functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.AF.D8.B9.D9.85"></span><span class="mw-headline" id="وظائف_الدعم">وظائف الدعم</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Pickup_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Pickup functions (page does not exist)">Template:AR/Pickup functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.A7.D8.B9.D8.A8"></span><span class="mw-headline" id="وظائف_الاعب">وظائف الاعب</span></h2>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/forcePlayerMap&amp;action=edit&amp;redlink=1" class="new" title="AR/forcePlayerMap (page does not exist)">forcePlayerMap</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getAlivePlayers&amp;action=edit&amp;redlink=1" class="new" title="AR/getAlivePlayers (page does not exist)">getAlivePlayers</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getDeadPlayers&amp;action=edit&amp;redlink=1" class="new" title="AR/getDeadPlayers (page does not exist)">getDeadPlayers</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPlayerAnnounceValue&amp;action=edit&amp;redlink=1" class="new" title="AR/getPlayerAnnounceValue (page does not exist)">getPlayerAnnounceValue</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPlayerBlurLevel&amp;action=edit&amp;redlink=1" class="new" title="AR/getPlayerBlurLevel (page does not exist)">getPlayerBlurLevel</a></li>
+<li><a href="getPlayerCount.html" title="AR/getPlayerCount">getPlayerCount</a></li>
+<li><a href="getPlayerMoney.html" title="AR/getPlayerMoney">getPlayerMoney</a></li>
+<li><a href="getPlayerNametagColor.html" title="AR/getPlayerNametagColor">getPlayerNametagColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPlayerNametagText&amp;action=edit&amp;redlink=1" class="new" title="AR/getPlayerNametagText (page does not exist)">getPlayerNametagText</a></li>
+<li><a href="getPlayerPing.html" title="AR/getPlayerPing">getPlayerPing</a></li>
+<li><a href="getPlayerSerial.html" title="AR/getPlayerSerial">getPlayerSerial</a></li>
+<li><a href="getPlayerTeam.html" title="AR/getPlayerTeam">getPlayerTeam</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPlayerVersion&amp;action=edit&amp;redlink=1" class="new" title="AR/getPlayerVersion (page does not exist)">getPlayerVersion</a></li>
+<li><a href="getPlayerWantedLevel.html" title="AR/getPlayerWantedLevel">getPlayerWantedLevel</a></li>
+<li><a href="getRandomPlayer.html" title="AR/getRandomPlayer">getRandomPlayer</a></li>
+<li><a href="givePlayerMoney.html" title="AR/givePlayerMoney">givePlayerMoney</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isPlayerMapForced&amp;action=edit&amp;redlink=1" class="new" title="AR/isPlayerMapForced (page does not exist)">isPlayerMapForced</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isPlayerMuted&amp;action=edit&amp;redlink=1" class="new" title="AR/isPlayerMuted (page does not exist)">isPlayerMuted</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isPlayerNametagShowing&amp;action=edit&amp;redlink=1" class="new" title="AR/isPlayerNametagShowing (page does not exist)">isPlayerNametagShowing</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerAnnounceValue&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerAnnounceValue (page does not exist)">setPlayerAnnounceValue</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerBlurLevel&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerBlurLevel (page does not exist)">setPlayerBlurLevel</a></li>
+<li><a href="setPlayerMoney.html" title="AR/setPlayerMoney">setPlayerMoney</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerMuted&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerMuted (page does not exist)">setPlayerMuted</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerNametagColor&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerNametagColor (page does not exist)">setPlayerNametagColor</a></li>
+<li><a href="setPlayerNametagShowing.html" title="AR/setPlayerNametagShowing">setPlayerNametagShowing</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerNametagText&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerNametagText (page does not exist)">setPlayerNametagText</a></li>
+<li><a href="setPlayerTeam.html" title="AR/setPlayerTeam">setPlayerTeam</a></li>
+<li><a href="setPlayerWantedLevel.html" title="AR/setPlayerWantedLevel">setPlayerWantedLevel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/showPlayerHudComponent&amp;action=edit&amp;redlink=1" class="new" title="AR/showPlayerHudComponent (page does not exist)">showPlayerHudComponent</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/spawnPlayer&amp;action=edit&amp;redlink=1" class="new" title="AR/spawnPlayer (page does not exist)">spawnPlayer</a></li>
+<li><a href="takePlayerMoney.html" title="AR/takePlayerMoney">takePlayerMoney</a></li>
+<li><a href="getPlayerFromName.html" title="AR/getPlayerFromName">getPlayerFromName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPlayerIP&amp;action=edit&amp;redlink=1" class="new" title="AR/getPlayerIP (page does not exist)">getPlayerIP</a></li>
+<li><a href="getPlayerName.html" title="AR/getPlayerName">getPlayerName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/redirectPlayer&amp;action=edit&amp;redlink=1" class="new" title="AR/redirectPlayer (page does not exist)">redirectPlayer</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerName&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerName (page does not exist)">setPlayerName</a></li></ul>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/getPlayerIdleTime&amp;action=edit&amp;redlink=1" class="new" title="AR/getPlayerIdleTime (page does not exist)">getPlayerIdleTime</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/resendPlayerModInfo&amp;action=edit&amp;redlink=1" class="new" title="AR/resendPlayerModInfo (page does not exist)">resendPlayerModInfo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/isVoiceEnabled&amp;action=edit&amp;redlink=1" class="new" title="AR/isVoiceEnabled (page does not exist)">isVoiceEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerVoiceBroadcastTo&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerVoiceBroadcastTo (page does not exist)">setPlayerVoiceBroadcastTo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=AR/setPlayerVoiceIgnoreFrom&amp;action=edit&amp;redlink=1" class="new" title="AR/setPlayerVoiceIgnoreFrom (page does not exist)">setPlayerVoiceIgnoreFrom</a></li></ul>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=AR/takePlayerScreenShot&amp;action=edit&amp;redlink=1" class="new" title="AR/takePlayerScreenShot (page does not exist)">takePlayerScreenShot</a></li></ul>
+<p><br />
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D9.85.D9.86.D8.A7.D8.B7.D9.82_.D8.A7.D9.84.D8.B1.D8.A7.D8.AF.D8.A7.D8.B1"></span><span class="mw-headline" id="وظائف_مناطق_الرادار">وظائف مناطق الرادار</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Radar_area_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Radar area functions (page does not exist)">Template:AR/Radar area functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D9.85.D9.88.D8.A7.D8.B1.D8.AF"></span><span class="mw-headline" id="وظائف_الموارد">وظائف الموارد</span></h2>
+<p>هذي الوظيفه تقوم بنسخ المود
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B3.D8.B1.D9.8A.D8.A7.D9.84_.2F_.D8.A7.D9.84.D8.B1.D9.82.D9.85_.D8.A7.D9.84.D8.AA.D8.B3.D9.84.D8.B3.D9.84.D9.8A"></span><span class="mw-headline" id="وظائف_السريال_/_الرقم_التسلسلي">وظائف السريال / الرقم التسلسلي</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Serial_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Serial functions (page does not exist)">Template:AR/Serial functions</a>
+</p>
+<h2><span id=".22.D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.AE.D8.A7.D8.AF.D9.85_.22.D8.A7.D9.84.D8.B3.D9.8A.D8.B1.D9.81.D8.B1"></span><span class="mw-headline" id="&quot;وظائف_الخادم_&quot;السيرفر">"وظائف الخادم "السيرفر</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Server_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Server functions (page does not exist)">Template:AR/Server functions</a>
+</p>
+<h2><span id="registry.D9.88.D8.B7.D8.A7.D8.A6.D9.81_.D8.A5.D8.B9.D8.AF.D8.A7.D8.AF.D8.A7.D8.AA_.D8.A7.D9.84.D9.80"></span><span class="mw-headline" id="registryوطائف_إعدادات_الـ">registryوطائف إعدادات الـ</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Settings_registry_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Settings registry functions (page does not exist)">Template:AR/Settings registry functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_SQL"></span><span class="mw-headline" id="وظائف_SQL">وظائف SQL</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/SQL_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/SQL functions (page does not exist)">Template:AR/SQL functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D9.81.D8.B1.D9.8A.D9.82"></span><span class="mw-headline" id="وظائف_فريق">وظائف فريق</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Team_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Team functions (page does not exist)">Template:AR/Team functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D9.86.D8.B5"></span><span class="mw-headline" id="وظائف_النص">وظائف النص</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Text_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Text functions (page does not exist)">Template:AR/Text functions</a>
+</p>
+<h2><span id=".D8.A7.D9.84.D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.B0.D8.A7.D8.AA_.D8.A7.D9.84.D9.85.D9.86.D9.81.D8.B9.D8.A9"></span><span class="mw-headline" id="الوظائف_ذات_المنفعة">الوظائف ذات المنفعة</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Utility_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Utility functions (page does not exist)">Template:AR/Utility functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B3.D9.8A.D8.A7.D8.B1.D8.A9"></span><span class="mw-headline" id="وظائف_السيارة">وظائف السيارة</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Vehicle_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Vehicle functions (page does not exist)">Template:AR/Vehicle functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B9.D8.A7.D9.84.D9.85"></span><span class="mw-headline" id="وظائف_العالم">وظائف العالم</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Water_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Water functions (page does not exist)">Template:AR/Water functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.B3.D9.84.D8.A7.D8.AD"></span><span class="mw-headline" id="وظائف_سلاح">وظائف سلاح</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/Weapon_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/Weapon functions (page does not exist)">Template:AR/Weapon functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_.D8.A7.D9.84.D8.B9.D8.A7.D9.84.D9.85_2"></span><span class="mw-headline" id="وظائف_العالم_2">وظائف العالم</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/World_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/World functions (page does not exist)">Template:AR/World functions</a>
+</p>
+<h2><span id=".D9.88.D8.B8.D8.A7.D8.A6.D9.81_XML"></span><span class="mw-headline" id="وظائف_XML">وظائف XML</span></h2>
+<p><a href="https://wiki.multitheftauto.com/index.php?title=Template:AR/XML_functions&amp;action=edit&amp;redlink=1" class="new" title="Template:AR/XML functions (page does not exist)">Template:AR/XML functions</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727213603
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.069 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 619/1000000
+Post‐expand include size: 18250/2097152 bytes
+Template argument size: 1351/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 9/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   35.232      1 -total
+ 17.72%    6.242     12 Template:New_items
+ 11.64%    4.100      1 Template:AR/Collision_shape_functions
+  7.88%    2.777      1 Template:AR/ACL_functions
+  7.65%    2.696      1 Template:AR/Account_functions
+  7.55%    2.659     12 Template:Current_Version
+  6.33%    2.232      1 Template:AR/Adding_Pages_to_Categories_and_Templates
+  5.80%    2.045      1 Template:AR/Player_functions
+  4.35%    1.531      1 Template:AR/Cursor_functions
+  4.02%    1.415      1 Template:AR/وظائف_الصوت
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:6698-0!canonical and timestamp 20220727213603 and revision id 69895. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions&amp;oldid=69895">https://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions&amp;oldid=69895</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=AR%2FServer+Scripting+Functions" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=AR%2FServer+Scripting+Functions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Server_Scripting_Functions.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:AR/Server_Scripting_Functions&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Server_Scripting_Functions.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/AR/Server_Scripting_Functions.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/AR/Server_Scripting_Functions.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions&amp;oldid=69895" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Server_Scripting_Functions" title="Server Scripting Functions – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/Server_Scripting_Functions" title="Server Scripting Functions – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Server_Scripting_Functions" title="Server Scripting Functions – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=DE/Server-Seitige_Scripting_Funktionen" title="Server-Seitige Scripting Funktionen – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-es mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=ES/Funciones_del_Server" title="Funciones del Server – español" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-pl mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=PL/Server_Scripting_Functions" title="Server Scripting Functions – polski" lang="pl" hreflang="pl" class="interlanguage-link-target"><span>Polski</span></a></li><li class="interlanguage-link interwiki-pt-br mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=PT-BR/Fun%C3%A7%C3%B5es_de_Scripting_do_Servidor" title="Funções de Scripting do Servidor – português do Brasil" lang="pt-BR" hreflang="pt-BR" class="interlanguage-link-target"><span>Português do Brasil</span></a></li><li class="interlanguage-link interwiki-tr mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=TR/Server_Scripting_Functions" title="Server Scripting Functions – Türkçe" lang="tr" hreflang="tr" class="interlanguage-link-target"><span>Türkçe</span></a></li><li class="interlanguage-link interwiki-ar mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=AR/Server_Scripting_Functions" title="Server Scripting Functions – العربية" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-zh-cn mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=ZH-CN/Server_Scripting_Functions" title="Server Scripting Functions – 中文（中国大陆）" lang="zh-Hans-CN" hreflang="zh-Hans-CN" class="interlanguage-link-target"><span>中文（中国大陆）</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 11 April 2021, at 16:12.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.069","walltime":"0.080","ppvisitednodes":{"value":619,"limit":1000000},"postexpandincludesize":{"value":18250,"limit":2097152},"templateargumentsize":{"value":1351,"limit":2097152},"expansiondepth":{"value":10,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9,"limit":5000000},"timingprofile":["100.00%   35.232      1 -total"," 17.72%    6.242     12 Template:New_items"," 11.64%    4.100      1 Template:AR/Collision_shape_functions","  7.88%    2.777      1 Template:AR/ACL_functions","  7.65%    2.696      1 Template:AR/Account_functions","  7.55%    2.659     12 Template:Current_Version","  6.33%    2.232      1 Template:AR/Adding_Pages_to_Categories_and_Templates","  5.80%    2.045      1 Template:AR/Player_functions","  4.35%    1.531      1 Template:AR/Cursor_functions","  4.02%    1.415      1 Template:AR/وظائف_الصوت"]},"cachereport":{"timestamp":"20220727213603","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":154});});</script>
+</body>
+</html>

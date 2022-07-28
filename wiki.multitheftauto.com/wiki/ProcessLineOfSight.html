@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>ProcessLineOfSight - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e26adec2e1fefc5e308accfc","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ProcessLineOfSight","wgTitle":"ProcessLineOfSight","wgCurRevisionId":66965,"wgRevisionId":66965,"wgArticleId":2501,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Client functions","Changes in 1.5.9"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ProcessLineOfSight","wgRelevantArticleId":2501,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":
+"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='client' data-subcaption='Client-side function'>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ProcessLineOfSight rootpage-ProcessLineOfSight skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">ProcessLineOfSight</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--LC-->
+</p><p>This function casts a ray between two points in the world, and tells you information about the point that was hit, if any. The two positions <b>must</b> be within the local player's draw distance as the collision data is not loaded outside this area, and the call will just fail as if the ray didn't hit.
+</p><p>This function is relatively expensive to call, so over use of this in scripts may have a detrimental effect on performance.
+</p><p>This function is useful for checking for collisions and for editor-style scripts. If you wish to find what element is positioned at a particular point on the screen, use this function combined with <a href="GetWorldFromScreenPosition.html" title="GetWorldFromScreenPosition">getWorldFromScreenPosition</a>. If you wish to just know if something is hit, and don't care about what or where was hit, use <a href="IsLineOfSightClear.html" title="IsLineOfSightClear">isLineOfSightClear</a>.
+</p><p><br />
+</p>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #d5b5f5; background: transparent; border-left: 25px solid #d5b5f5;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Note:</b> Due to a bug, shootThroughStuff argument does currently check for seeThroughStuff!
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #d5b5f5; background: transparent; border-left: 25px solid #d5b5f5;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Note:</b> Due to a bug, seeThroughStuff argument has no effect. It mistakenly checks for "shootThrough" surfaces and will always behave as if the argument is set to FALSE (It will never hit).
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<p>Return values labelled for ease of reference.
+</p>
+<pre class="prettyprint lang-lua">bool               -- hit
+float float float  -- hitX, hitY, hitZ
+element            -- hitElement
+float float float  -- normalX, normalY, normalZ
+int                -- material
+float              -- lighting
+int                -- piece
+int                -- worldModelID
+float float float  -- worldModelPositionX,Y,Z
+float float float  -- worldModelRotationX,Y,Z
+int                -- worldLODModelID
+                  processLineOfSight ( float startX, float startY, float startZ, 
+                                       float endX, float endY, float endZ, 
+                                       [ bool checkBuildings = true, 
+                                       bool checkVehicles = true, 
+                                       bool checkPlayers = true, 
+                                       bool checkObjects = true, 
+                                       bool checkDummies = true, 
+                                       bool seeThroughStuff = false, 
+                                       bool ignoreSomeObjectsForCamera = false, 
+                                       bool shootThroughStuff = false, 
+                                       element ignoredElement = nil,
+                                       bool includeWorldModelInformation = false,
+                                       bool bIncludeCarTyres ] )
+</pre> 
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>startX:</b> The start <i>x</i> position</li>
+<li><b>startY:</b> The start <i>y</i> position</li>
+<li><b>startZ:</b> The start <i>z</i> position</li>
+<li><b>endX:</b> The end <i>x</i> position</li>
+<li><b>endY:</b> The end <i>y</i> position</li>
+<li><b>endZ:</b> The end <i>z</i> position</li></ul>
+<h3><span class="mw-headline" id="Optional_Arguments">Optional Arguments</span></h3>
+<p><i>NOTE:</i> When using optional arguments, you might need to supply all arguments before the one you wish to use. For more information on optional arguments, see <a href="Optional_arguments-2.html" class="mw-redirect" title="Optional arguments">optional arguments</a>. 
+</p>
+<ul><li><b>checkBuildings:</b> Allow the line of sight to be blocked by GTA's internally placed buildings, i.e. the world map.</li>
+<li><b>checkVehicles:</b> Allow the line of sight to be blocked by <a href="Vehicle.html" class="mw-redirect" title="Vehicle">vehicles</a>.</li>
+<li><b>checkPlayers:</b> Allow the line of sight to be blocked by <a href="Player.html" class="mw-redirect" title="Player">players</a>.</li>
+<li><b>checkObjects:</b> Allow the line of sight to be blocked by <a href="Object.html" class="mw-redirect" title="Object">objects</a>.</li>
+<li><b>checkDummies:</b> Allow the line of sight to be blocked by GTA's internal dummies.  These are not used in the current MTA version so this argument can be set to <i>false</i>.</li>
+<li><b>seeThroughStuff:</b> Allow the line of sight <b>pass through</b> collision materials that have this flag enabled (By default material IDs 52, 55 and 66 which are some fences that you can shoot throug but still walk on them).</li>
+<li><b>ignoreSomeObjectsForCamera:</b> Allow the line of sight to <b>pass through</b> objects that have (K) property enabled in "object.dat" data file. (i.e. Most dynamic objects like boxes or barrels)</li>
+<li><b>shootThroughStuff:</b> Allow the line of sight to <b>pass through</b> collision materials that have this flag enabled (By default material IDs 28, 29, 31, 32, 33, 74, 75, 76, 77, 78, 79, 96, 97, 98, 99, 100 which are exclusively sand / beach or underwater objects).</li>
+<li><b>ignoredElement:</b> Allow the line of sight to <b>pass through</b> a certain specified element. This is usually set to the object you are tracing from so it does not interfere with the results.</li>
+<li><b>includeWorldModelInformation&#160;:</b> Include the results of hitting a world model.</li>
+<li><b>bIncludeCarTyres&#160;:</b> Includes car tyre hits.</li></ul>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<ul><li><b>hit:</b> <i>true</i> if there is a collision, <i>false</i> otherwise</li></ul>
+<p>The other values are only filled if there is a collision, they contain <i>nil</i> otherwise
+</p>
+<ul><li><b>hitX, hitY, hitZ:</b> collision position</li>
+<li><b>hitElement:</b> the MTA element hit if any, <i>nil</i> otherwise</li>
+<li><b>normalX, normalY, normalZ:</b> the normal of the surface hit</li>
+<li><b>material:</b> an integer representing the <a href="Material_IDs.html" title="Material IDs">GTASA material ID</a> of the surface hit when applicable (world, objects)</li>
+<li><b>lighting:</b> a float between 0 (fully dark) and 1 (bright) representing the amount of light that the hit building surface will transfer to peds or vehicles that are in contact with it. The value can be affected by the game time of day, usually with a lower (darker) value being returned during the night.</li>
+<li><b>piece:</b> an integer representing the part of the element hit if hitElement is a vehicle or a ped/player, <i>0</i> otherwise.
+<ul><li>For a ped/player, piece represents the body part hit:</li></ul></li></ul>
+<div style="border:3px solid red;margin-bottom:3px;padding-left:5px;"><div style="float:right;padding-right:5px;font-weight:bold;"></div>
+<ul><li><b>3:</b> Torso</li>
+<li><b>4:</b> Ass</li>
+<li><b>5:</b> Left Arm</li>
+<li><b>6:</b> Right Arm</li>
+<li><b>7:</b> Left Leg</li>
+<li><b>8:</b> Right Leg</li>
+<li><b>9:</b> Head</li></ul>
+</div>
+<ul><li><ul><li>For vehicles, piece represents the vehicle part hit:</li></ul></li></ul>
+<div style="border:3px solid red;margin-bottom:3px;padding-left:5px;"><div style="float:right;padding-right:5px;font-weight:bold;"></div>
+<ul><li><b>0:</b> Frame</li>
+<li><b>2:</b> Trunk</li>
+<li><b>3:</b> Hood</li>
+<li><b>4:</b> Rear</li>
+<li><b>5:</b> Front left door</li>
+<li><b>6:</b> Front right door</li>
+<li><b>7:</b> Rear left door</li>
+<li><b>8:</b> Rear right door</li>
+<li><b>13:</b> Front Left tyre</li>
+<li><b>14:</b> Front Right tyre</li>
+<li><b>15:</b> Back Left tyre</li>
+<li><b>16:</b> Back Right tyre</li></ul>
+<p>(Other potential IDs haven't been documented yet and might depend on vehicle model)
+</p>
+</div>
+<ul><li><b>worldModelID:</b> If includeWorldModelInformation was set to <i>true</i> and a world model was hit, this will contain the model ID.</li>
+<li><b>worldModelPositionX,Y,Z:</b> If worldModelID is set, this will contain the world model position.</li>
+<li><b>worldModelRotationX,Y,Z:</b> If worldModelID is set, this will contain the world model rotation.</li>
+<li><b>worldLODModelID:</b> If worldModelID is set, this will contain the LOD model ID if applicable.</li></ul>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<p>This example shows how you can tell what position and element the camera is looking at, up to 50 units away.
+</p>
+<pre class="prettyprint lang-lua">local w, h = guiGetScreenSize ()
+local tx, ty, tz = getWorldFromScreenPosition ( w/2, h/2, 50 )
+local px, py, pz = getCameraMatrix()
+hit, x, y, z, elementHit = processLineOfSight ( px, py, pz, tx, ty, tz )
+if hit then
+    outputChatBox ( "Looking at " .. x .. ", " .. y .. ", " ..  z )
+    if elementHit then
+        outputChatBox ( "Hit element " .. getElementType(elementHit) )
+    end
+end
+</pre>
+<p>This example shows how you can get the surface type a vehicle is on. This is useful if you want to do a script to dirt cars over time. Please note that this function doesn't count if the vehicle is streamed in or not, so expect this function to fail or return incorrect values on unloaded vehicles.
+</p>
+<pre class="prettyprint lang-lua">function getSurfaceVehicleIsOn(vehicle)
+    if isElement(vehicle) and (isVehicleOnGround(vehicle) or isElementInWater(vehicle)) then -- Is an element and is touching any surface?
+        local cx, cy, cz = getElementPosition(vehicle) -- Get the position of the vehicle
+        local gz = getGroundPosition(cx, cy, cz) - 0.001 -- Get the Z position of the ground the vehicle is on (-0.001 because of processLineOfSight)
+        local hit, _, _, _, _, _, _, _, surface = processLineOfSight(cx, cy, cz, cx, cy, gz) -- This will get the material of the thing the car is standing on
+        if hit then
+            return surface -- If everything is correct, stop executing this function and return the surface type
+        end
+    end
+    return false -- If something isn't correct, return false
+end
+</pre>
+<h2><span class="mw-headline" id="Changelog">Changelog</span></h2>
+<table cellpadding="4" style="border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<th width="140" style="background-color: #d0d0e0; border-style: solid; border-width: 1px; border-color: #FFF; color:#00000">Version
+</th>
+<th width="500" style="white-space: nowrap; background-color: #d0d0e0; border-style: solid; border-width: 1px; border-color: #FFF">Description
+</th></tr></tbody></table>
+<table cellpadding="4" style="text-align:center; border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<td width="140" style="text-align:center; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF; color:#000000">1.3.0-9.04273
+</td>
+<td width="500" style="text-align:center; white-space: nowrap; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF"><i>bIncludeCarTyres</i> argument added
+</td></tr></tbody></table>
+<table cellpadding="4" style="text-align:center; border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<td width="140" style="text-align:center; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF; color:#000000">1.3.0-9.04273
+</td>
+<td width="500" style="text-align:center; white-space: nowrap; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF"><i>worldModelID</i> return value fixed
+</td></tr></tbody></table>
+<table cellpadding="4" style="text-align:center; border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<td width="140" style="text-align:center; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF; color:#000000">1.3.0-9.04405
+</td>
+<td width="500" style="text-align:center; white-space: nowrap; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF"><i>lighting</i> return value fixed
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="AreTrafficLightsLocked.html" title="AreTrafficLightsLocked">areTrafficLightsLocked</a></li>
+<li><a href="CreateSWATRope.html" title="CreateSWATRope">createSWATRope</a></li>
+<li><a href="GetAircraftMaxHeight.html" title="GetAircraftMaxHeight">getAircraftMaxHeight</a></li>
+<li><a href="GetAircraftMaxVelocity.html" title="GetAircraftMaxVelocity">getAircraftMaxVelocity</a></li>
+<li><a href="GetBirdsEnabled.html" title="GetBirdsEnabled">getBirdsEnabled</a></li>
+<li><a href="GetCloudsEnabled.html" title="GetCloudsEnabled">getCloudsEnabled</a></li>
+<li><a href="GetFarClipDistance.html" title="GetFarClipDistance">getFarClipDistance</a></li>
+<li><a href="GetFogDistance.html" title="GetFogDistance">getFogDistance</a></li>
+<li><a href="GetGameSpeed.html" title="GetGameSpeed">getGameSpeed</a></li>
+<li><a href="GetGarageBoundingBox.html" title="GetGarageBoundingBox">getGarageBoundingBox</a></li>
+<li><a href="GetGaragePosition.html" title="GetGaragePosition">getGaragePosition</a></li>
+<li><a href="GetGarageSize.html" title="GetGarageSize">getGarageSize</a></li>
+<li><a href="GetGravity.html" title="GetGravity">getGravity</a></li>
+<li><a href="GetGroundPosition.html" title="GetGroundPosition">getGroundPosition</a></li>
+<li><a href="GetHeatHaze.html" title="GetHeatHaze">getHeatHaze</a></li>
+<li><a href="GetInteriorFurnitureEnabled.html" title="GetInteriorFurnitureEnabled">getInteriorFurnitureEnabled</a></li>
+<li><a href="GetInteriorSoundsEnabled.html" title="GetInteriorSoundsEnabled">getInteriorSoundsEnabled</a></li>
+<li><a href="GetJetpackMaxHeight.html" title="GetJetpackMaxHeight">getJetpackMaxHeight</a></li>
+<li><a href="GetMinuteDuration.html" title="GetMinuteDuration">getMinuteDuration</a></li>
+<li><a href="GetMoonSize.html" title="GetMoonSize">getMoonSize</a></li>
+<li><a href="GetNearClipDistance.html" title="GetNearClipDistance">getNearClipDistance</a></li>
+<li><a href="GetOcclusionsEnabled.html" title="GetOcclusionsEnabled">getOcclusionsEnabled</a></li>
+<li><a href="GetPedsLODDistance.html" title="GetPedsLODDistance">getPedsLODDistance</a></li>
+<li><a href="GetPlayerBlurLevel.html" title="GetPlayerBlurLevel">getPlayerBlurLevel</a></li>
+<li><a href="GetRainLevel.html" title="GetRainLevel">getRainLevel</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20675"><span style="color: #FFFFFF;">r20675</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="GetRoofPosition.html" title="GetRoofPosition">getRoofPosition</a></li></ul>
+</div></div>
+<ul><li><a href="GetScreenFromWorldPosition.html" title="GetScreenFromWorldPosition">getScreenFromWorldPosition</a></li>
+<li><a href="GetSunColor.html" title="GetSunColor">getSunColor</a></li>
+<li><a href="GetSunSize.html" title="GetSunSize">getSunSize</a></li>
+<li><a href="GetTime.html" title="GetTime">getTime</a></li>
+<li><a href="GetTrafficLightState.html" title="GetTrafficLightState">getTrafficLightState</a></li>
+<li><a href="GetVehiclesLODDistance.html" title="GetVehiclesLODDistance">getVehiclesLODDistance</a></li>
+<li><a href="GetWeather.html" title="GetWeather">getWeather</a></li>
+<li><a href="GetWindVelocity.html" title="GetWindVelocity">getWindVelocity</a></li>
+<li><a href="GetWorldFromScreenPosition.html" title="GetWorldFromScreenPosition">getWorldFromScreenPosition</a></li>
+<li><a href="GetZoneName.html" title="GetZoneName">getZoneName</a></li>
+<li><a href="IsAmbientSoundEnabled.html" title="IsAmbientSoundEnabled">isAmbientSoundEnabled</a></li>
+<li><a href="IsGarageOpen.html" title="IsGarageOpen">isGarageOpen</a></li>
+<li><a href="IsLineOfSightClear.html" title="IsLineOfSightClear">isLineOfSightClear</a></li>
+<li><a href="IsWorldSoundEnabled.html" title="IsWorldSoundEnabled">isWorldSoundEnabled</a></li>
+<li><a href="IsWorldSpecialPropertyEnabled.html" title="IsWorldSpecialPropertyEnabled">isWorldSpecialPropertyEnabled</a></li>
+<li><a class="mw-selflink selflink">processLineOfSight</a></li>
+<li><a href="RemoveWorldModel.html" title="RemoveWorldModel">removeWorldModel</a></li>
+<li><a href="ResetAmbientSounds.html" title="ResetAmbientSounds">resetAmbientSounds</a></li>
+<li><a href="ResetBlurLevel.html" title="ResetBlurLevel">resetBlurLevel</a></li>
+<li><a href="ResetColorFilter.html" title="ResetColorFilter">resetColorFilter</a></li>
+<li><a href="ResetFarClipDistance.html" title="ResetFarClipDistance">resetFarClipDistance</a></li>
+<li><a href="ResetFogDistance.html" title="ResetFogDistance">resetFogDistance</a></li>
+<li><a href="ResetHeatHaze.html" title="ResetHeatHaze">resetHeatHaze</a></li>
+<li><a href="ResetMoonSize.html" title="ResetMoonSize">resetMoonSize</a></li>
+<li><a href="ResetNearClipDistance.html" title="ResetNearClipDistance">resetNearClipDistance</a></li>
+<li><a href="ResetPedsLODDistance.html" title="ResetPedsLODDistance">resetPedsLODDistance</a></li>
+<li><a href="ResetRainLevel.html" title="ResetRainLevel">resetRainLevel</a></li>
+<li><a href="ResetSkyGradient.html" title="ResetSkyGradient">resetSkyGradient</a></li>
+<li><a href="ResetSunColor.html" title="ResetSunColor">resetSunColor</a></li>
+<li><a href="ResetSunSize.html" title="ResetSunSize">resetSunSize</a></li>
+<li><a href="ResetVehiclesLODDistance.html" title="ResetVehiclesLODDistance">resetVehiclesLODDistance</a></li>
+<li><a href="ResetWindVelocity.html" title="ResetWindVelocity">resetWindVelocity</a></li>
+<li><a href="ResetWorldSounds.html" title="ResetWorldSounds">resetWorldSounds</a></li>
+<li><a href="RestoreAllWorldModels.html" title="RestoreAllWorldModels">restoreAllWorldModels</a></li>
+<li><a href="RestoreWorldModel.html" title="RestoreWorldModel">restoreWorldModel</a></li>
+<li><a href="SetAircraftMaxHeight.html" title="SetAircraftMaxHeight">setAircraftMaxHeight</a></li>
+<li><a href="SetAircraftMaxVelocity.html" title="SetAircraftMaxVelocity">setAircraftMaxVelocity</a></li>
+<li><a href="SetAmbientSoundEnabled.html" title="SetAmbientSoundEnabled">setAmbientSoundEnabled</a></li>
+<li><a href="SetBirdsEnabled.html" title="SetBirdsEnabled">setBirdsEnabled</a></li>
+<li><a href="SetCloudsEnabled.html" title="SetCloudsEnabled">setCloudsEnabled</a></li>
+<li><a href="SetColorFilter.html" title="SetColorFilter">setColorFilter</a></li>
+<li><a href="SetFarClipDistance.html" title="SetFarClipDistance">setFarClipDistance</a></li>
+<li><a href="SetFogDistance.html" title="SetFogDistance">setFogDistance</a></li>
+<li><a href="SetGameSpeed.html" title="SetGameSpeed">setGameSpeed</a></li>
+<li><a href="SetGarageOpen.html" title="SetGarageOpen">setGarageOpen</a></li>
+<li><a href="SetGravity.html" title="SetGravity">setGravity</a></li>
+<li><a href="SetHeatHaze.html" title="SetHeatHaze">setHeatHaze</a></li>
+<li><a href="SetInteriorFurnitureEnabled.html" title="SetInteriorFurnitureEnabled">setInteriorFurnitureEnabled</a></li>
+<li><a href="SetInteriorSoundsEnabled.html" title="SetInteriorSoundsEnabled">setInteriorSoundsEnabled</a></li>
+<li><a href="SetJetpackMaxHeight.html" title="SetJetpackMaxHeight">setJetpackMaxHeight</a></li>
+<li><a href="SetMinuteDuration.html" title="SetMinuteDuration">setMinuteDuration</a></li>
+<li><a href="SetMoonSize.html" title="SetMoonSize">setMoonSize</a></li>
+<li><a href="SetNearClipDistance.html" title="SetNearClipDistance">setNearClipDistance</a></li>
+<li><a href="SetOcclusionsEnabled.html" title="SetOcclusionsEnabled">setOcclusionsEnabled</a></li>
+<li><a href="SetPedsLODDistance.html" title="SetPedsLODDistance">setPedsLODDistance</a></li>
+<li><a href="SetPlayerBlurLevel.html" title="SetPlayerBlurLevel">setPlayerBlurLevel</a></li>
+<li><a href="SetRainLevel.html" title="SetRainLevel">setRainLevel</a></li>
+<li><a href="SetSkyGradient.html" title="SetSkyGradient">setSkyGradient</a></li>
+<li><a href="SetSunColor.html" title="SetSunColor">setSunColor</a></li>
+<li><a href="SetSunSize.html" title="SetSunSize">setSunSize</a></li>
+<li><a href="SetTime.html" title="SetTime">setTime</a></li>
+<li><a href="SetTrafficLightsLocked.html" title="SetTrafficLightsLocked">setTrafficLightsLocked</a></li>
+<li><a href="SetTrafficLightState.html" title="SetTrafficLightState">setTrafficLightState</a></li>
+<li><a href="SetVehiclesLODDistance.html" title="SetVehiclesLODDistance">setVehiclesLODDistance</a></li>
+<li><a href="SetWeather.html" title="SetWeather">setWeather</a></li>
+<li><a href="SetWeatherBlended.html" title="SetWeatherBlended">setWeatherBlended</a></li>
+<li><a href="SetWindVelocity.html" title="SetWindVelocity">setWindVelocity</a></li>
+<li><a href="SetWorldSoundEnabled.html" title="SetWorldSoundEnabled">setWorldSoundEnabled</a></li>
+<li><a href="SetWorldSpecialPropertyEnabled.html" title="SetWorldSpecialPropertyEnabled">setWorldSpecialPropertyEnabled</a></li>
+<li><a href="TestLineAgainstWater.html" title="TestLineAgainstWater">testLineAgainstWater</a></li></ul>
+<p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727142408
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.031 seconds
+Real time usage: 0.035 seconds
+Preprocessor visited node count: 217/1000000
+Post‐expand include size: 9432/2097152 bytes
+Template argument size: 1098/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2662/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   11.506      1 -total
+ 35.04%    4.031      1 Template:Client_world_functions
+ 26.96%    3.102      1 Template:Added_feature/item
+ 18.96%    2.181      2 Template:Note
+ 11.11%    1.279      2 Template:MessageBox
+  8.67%    0.998      1 Template:VehicleParts
+  7.74%    0.891      3 Template:ChangelogItem
+  7.11%    0.818      1 Template:Client_function
+  5.94%    0.683      2 Template:Current_Stable_Version
+  5.93%    0.682      1 Template:OptionalArg
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:2501-0!canonical and timestamp 20220727142408 and revision id 66965. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=ProcessLineOfSight&amp;oldid=66965">https://wiki.multitheftauto.com/index.php?title=ProcessLineOfSight&amp;oldid=66965</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="Category_Client_functions.html" title="Category:Client functions">Client functions</a></li><li><a href="Category_Changes_in_1.5.html" title="Category:Changes in 1.5.9">Changes in 1.5.9</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=ProcessLineOfSight" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=ProcessLineOfSight" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="ProcessLineOfSight.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:ProcessLineOfSight&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="ProcessLineOfSight.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ProcessLineOfSight&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ProcessLineOfSight&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/ProcessLineOfSight.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/ProcessLineOfSight.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ProcessLineOfSight&amp;oldid=66965" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=ProcessLineOfSight&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 27 June 2020, at 14:44.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.031","walltime":"0.035","ppvisitednodes":{"value":217,"limit":1000000},"postexpandincludesize":{"value":9432,"limit":2097152},"templateargumentsize":{"value":1098,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2662,"limit":5000000},"timingprofile":["100.00%   11.506      1 -total"," 35.04%    4.031      1 Template:Client_world_functions"," 26.96%    3.102      1 Template:Added_feature/item"," 18.96%    2.181      2 Template:Note"," 11.11%    1.279      2 Template:MessageBox","  8.67%    0.998      1 Template:VehicleParts","  7.74%    0.891      3 Template:ChangelogItem","  7.11%    0.818      1 Template:Client_function","  5.94%    0.683      2 Template:Current_Stable_Version","  5.93%    0.682      1 Template:OptionalArg"]},"cachereport":{"timestamp":"20220727142408","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":74});});</script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/Resource:Scoreboard - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"9ceddc24071076af0410ec77","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/Resource:Scoreboard","wgTitle":"RU/Resource:Scoreboard","wgCurRevisionId":47187,"wgRevisionId":47187,"wgArticleId":4500,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["RU/Resource"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/Resource:Scoreboard","wgRelevantArticleId":4500,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='resource' data-subcaption='Resource'>
+<meta name='removenamespace' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_Resource_Scoreboard rootpage-RU_Resource_Scoreboard skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/Resource:Scoreboard</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--NS-->
+</p><p>DirectX scoreboard (панель игроков) отображает ники, команды, пинги и другие данные подключенных к серверу игроков. У нее также имеется веб-интерфейс на javascript, что позволяет пользоваться ею из браузера. Создана как замена старой <a href="../Resource_OldScoreboard.html" title="Resource:OldScoreboard">scoreboard</a>, созданной <a href="https://wiki.multitheftauto.com/index.php?title=User:Jbeta&amp;action=edit&amp;redlink=1" class="new" title="User:Jbeta (page does not exist)">jbeta</a>.
+</p><p>Наиболее веское различие по сравнению со старым ресурсом - то, что новая панель просмотра игроков создана с полным использованием доустпных в MTA функций прорисовки DirectX.
+При добавлении в нее столбца, для него создается соответсвующее поле element data, так что при добавлении столбца "score", содержимое поля "score" из element data и будет показываться в самой панели для всех игроков и команд.
+</p><p>Панель игроков входит в стандартный пакет поставки сервера.
+</p>
+<h2><span id=".D0.AD.D0.BA.D1.81.D0.BF.D0.BE.D1.80.D1.82.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D1.8B.D0.B5_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8.2F.D1.81.D0.BE.D0.B1.D1.8B.D1.82.D0.B8.D1.8F"></span><span class="mw-headline" id="Экспортированные_функции/события">Экспортированные функции/события</span></h2>
+<!-- BEGIN SECTION |1|server|Server|--><div class="serverHeader" onclick="expandSection(1);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander1">Click to collapse [-]</div>Server</div><div style="display:;" class="serverContent" id="section1">
+<h3><span id=".D0.A4.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8"></span><span class="mw-headline" id="Функции">Функции</span></h3>
+<pre class="prettyprint lang-lua">bool scoreboardAddColumn ( string name, [ element forElement = getRootElement(), int width = 70, string friendlyName = name, int priority = slot after "name" column ] )
+</pre>
+<ul><li><b>name:</b> Имя столбца (также является и именем поля в element data, из которого будет браться информация).</li>
+<li><b>forElement:</b> Игрок, для которого создается столбец.</li>
+<li><b>width:</b> Ширина столбца в пикселях.</li>
+<li><b>friendlyName:</b> Дружелюбное имя столбца (отображается непосредственно в самой панели).</li>
+<li><b>priority:</b> Приоритетный порядок столбца (1-500). Если данный номер по порядку занят, то располагающийся по нему столбец будет сдвинут вперед.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardRemoveColumn ( string name, [ element forElement = getRootElement() ] )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li>
+<li><b>forElement:</b> Игрок, для которого убирается столбец.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardClearColumns ( [ element forElement = getRootElement() ] )
+</pre>
+<ul><li><b>forElement:</b> Игрок, чьи столбцы в scoreboard будут очищены.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardResetColumns ( [ element forElement = getRootElement() ] )
+</pre>
+<ul><li><b>forElement:</b> Игрок, чьи столбцы в scoreboard будут сброшены (останутся только ник и пинг).</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetForced ( bool forced, [ element forElement = getRootElement() ] )
+</pre>
+<ul><li><b>forced:</b> Будет ли scoreboard принудительно открыта.</li>
+<li><b>forElement:</b> Игрок, чья scoreboard будет принудительно открыта.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetSortBy ( string name, [ bool descending = true, element forElement = getRootElement() ] )
+</pre>
+<ul><li><b>name:</b> Имя столбца. Может быть установлено на <i>nil</i> для отключения сортировки.</li>
+<li><b>descending:</b> Использовать порядок сортировки по убыванию.</li>
+<li><b>forElement:</b> Игрок, чья scoreboard будет отсортирована.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">int scoreboardGetColumnPriority ( string name )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li></ul>
+<p><b>Возвращает приоритетный порядок столбца (1-500).</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetColumnPriority ( string name, int priority, [ element forElement = getRootElement() ] )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li>
+<li><b>priority:</b> Приоритетный порядок столбца (1-500). Если данный номер по порядку занят, то располагающийся по нему столбец будет сдвинут вперед.</li>
+<li><b>forElement:</b> Игрок, для которого создается столбец.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">int scoreboardGetColumnCount ()
+</pre>
+<ul><li><i>Аргументов нет.</i></li></ul>
+<p><b>Возвращает количество столбцов в scoreboard.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardForceTeamsVisible( bool enabled )
+</pre>
+<ul><li><b>enabled:</b> Будут ли имена команд всегда видны в scoreboard (настройки пользователя - проигнорированы)?</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardForceTeamsHidden( bool enabled )
+</pre>
+<ul><li><b>enabled:</b> Будут ли имена команд всегда скрыты в scoreboard (настройки пользователя - проигнорированы)?</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool isPrioritySlotFree( int slot )
+</pre>
+<ul><li><b>slot:</b> Приоритетный порядок столбца, который будет проверен.</li></ul>
+<p><b>Проверяет, свободен ли приоритетный порядок столбца по данному номеру.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">int getNextFreePrioritySlot( [ int startAt = 1 ] )
+</pre>
+<ul><li><b>startAt:</b> С какой позиции начинать искать свободные места.</li></ul>
+<p><b>Находит следующий свободный приоритетный порядок столбца.</b>
+<br />
+</p><p><br />
+<b>Заметка:</b> Функции из спика ниже, использующиеся также в ресурсе <a href="../Resource_OldScoreboard.html" title="Resource:OldScoreboard">oldScoreboard</a>, работают и в этом тоже.
+</p>
+<pre class="prettyprint lang-lua">bool addScoreboardColumn ( string columnName, element visibleToElement, int columnPosition, float columnSize )
+bool removeScoreboardColumn ( string columnName )
+bool setPlayerScoreboardForced ( player thePlayer, bool forced )
+bool resetScoreboardColumns ()
+</pre>
+</div><!-- END SECTION |1|-->
+<!-- BEGIN SECTION |2|client|Client|--><div class="clientHeader" onclick="expandSection(2);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander2">Click to collapse [-]</div>Client</div><div style="display:;" class="clientContent" id="section2">
+<h3><span id=".D0.A4.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8"></span><span class="mw-headline" id="Функции">Функции</span></h3>
+<pre class="prettyprint lang-lua">bool scoreboardAddColumn ( string name, [ int width = 70, string friendlyName = name, int priority = slot after "name" column, function textFunction = nil ] )
+</pre>
+<ul><li><b>name:</b> Имя столбца (также является и именем поля в element data, из которого будет браться информация).</li>
+<li><b>width:</b> Ширина столбца в пикселях.</li>
+<li><b>friendlyName:</b> Дружелюбное имя столбца (отображается непосредственно в самой панели).</li>
+<li><b>priority:</b> Приоритетный порядок столбца (1-500). Если данный номер по порядку занят, то располагающийся по нему столбец будет сдвинут вперед.</li>
+<li><b>textFunction:</b> Текст функции, которая будет использоваться для обработки содержания столбца перед его показом. Например, эта функция будет заменять "_" в никах игроков пробелом, если она применена к столбцу "name".</li></ul>
+<pre class="prettyprint lang-lua">function fixName( playerName )
+    return playerName:gsub( "_", " " )
+end
+</pre>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardRemoveColumn ( string name )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardClearColumns ()
+</pre>
+<ul><li><i>Аргументов нет.</i></li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardResetColumns ()
+</pre>
+<ul><li><i>Аргументов нет.</i></li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetForced ( bool forced )
+</pre>
+<ul><li><b>forced:</b> Будет ли scoreboard принудительно открыта.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetColumnTextFunction ( string name, function textFunction )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li>
+<li><b>textFunction:</b> Текст функции, которая будет использоваться для обработки содержания столбца перед его показом. Например, эта функция будет заменять "_" в никах игроков пробелом, если она применена к столбцу "name".</li></ul>
+<pre class="prettyprint lang-lua">function fixName( playerName )
+    return playerName:gsub( "_", " " )
+end
+</pre>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetSortBy ( string name, [ bool descending = true ] )
+</pre>
+<ul><li><b>name:</b> Имя столбца. Может быть установлено на <i>nil</i> для отключения сортировки.</li>
+<li><b>descending:</b> Использовать порядок сортировки по убыванию.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">int scoreboardGetColumnPriority ( string name )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li></ul>
+<p><b>Возвращает приоритетный порядок столбца (1-500).</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">bool scoreboardSetColumnPriority ( string name, int priority )
+</pre>
+<ul><li><b>name:</b> Имя столбца.</li>
+<li><b>priority:</b> Приоритетный порядок столбца (1-500). Если данный номер по порядку занят, то располагающийся по нему столбец будет сдвинут вперед.</li>
+<li><b>forElement:</b> Игрок, для которого создается столбец.</li></ul>
+<p><br />
+</p>
+<pre class="prettyprint lang-lua">int scoreboardGetColumnCount ()
+</pre>
+<ul><li><i>Аргументов нет.</i></li></ul>
+<p><b>Возвращает количество столбцов в scoreboard.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">bool isPrioritySlotFree( int slot )
+</pre>
+<ul><li><b>slot:</b> Приоритетный порядок столбца, который будет проверен.</li></ul>
+<p><b>Проверяет, свободен ли приоритетный порядок столбца по данному номеру.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">int getNextFreePrioritySlot( [ int startAt = 1 ] )
+</pre>
+<ul><li><b>startAt:</b> С какой позиции начинать искать свободные места.</li></ul>
+<p><b>Находит следующий свободный приоритетный порядок столбца.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">int, int scoreboardGetTopCornerPosition ()
+</pre>
+<p><b>Возвращает абсолютную позицию верхнего угла scoreboard, если она на экране, в противном случае - <i>false</i>.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">int, int scoreboardGetSize ()
+</pre>
+<p><b>Возвращает абсолютный размер (ширина, высота) the scoreboard, если она на экране, в противном случае - <i>false</i>.</b>
+<br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">table scoreboardGetSelectedRows ()
+</pre>
+<p><i>Возвращает таблицу со всеми выделенными полями (элемент, который может оказаться либо игроком, либо командой). Может также вернуть пустую таблицу, если таковых нет.</i>
+<br />
+</p><p><br />
+</p><p><b>Заметка:</b> Функции из спика ниже, использующиеся также в ресурсе <a href="https://wiki.multitheftauto.com/index.php?title=OldScoreboard&amp;action=edit&amp;redlink=1" class="new" title="OldScoreboard (page does not exist)">oldScoreboard</a>, работают и в этом тоже.
+</p>
+<pre class="prettyprint lang-lua">bool setScoreboardForced ( bool forced )
+</pre>
+<h3><span id=".D0.A1.D0.BE.D0.B1.D1.8B.D1.82.D0.B8.D1.8F"></span><span class="mw-headline" id="События">События</span></h3>
+<h4><span class="mw-headline" id="onClientPlayerScoreboardClick">onClientPlayerScoreboardClick</span></h4>
+<pre class="prettyprint lang-lua">bool selected, int cursorX, int cursorY
+</pre>
+<ul><li><b>selected:</b> Было ли слудующее поле выделено (<i>true</i>) или нет (<i>false</i>).</li>
+<li><b>cursorX:</b> Абсолютная позиция курсора по оси X.</li>
+<li><b>cursorY:</b> Абсолютная позиция курсора по оси Y.</li></ul>
+<p><b>Срабатывает, когда игрок кликает по полю с командой/игроком левой кнопкой мыши.</b><br />
+<b><i>Source</i> события - элемент, по которому кликнули, может оказаться либо <a href="../Player.html" class="mw-redirect" title="Player">игроком</a>, либо <a href="../Team.html" class="mw-redirect" title="Team">командой</a>.</b>
+</p>
+</div><!-- END SECTION |2|-->
+<p>Вы можете вызывать их и из других ресурсов, используя call()
+</p>
+<pre class="prettyprint lang-lua">call ( getResourceFromName ( "dxscoreboard" ), "scoreboardAddColumn", "Wanted level" )
+
+-- Заметьте, что синтаксис ниже - тоже правильный
+exports.dxscoreboard:scoreboardAddColumn( "Wanted level" )
+</pre>
+<p>Вы можете задавать данные в scoreboard через функцию setElementData:
+</p>
+<pre class="prettyprint lang-lua">-- 3 вставляется в столбец wanted level игрока, если столбец,
+-- названный "Wanted level" был добавлен в scoreboard
+setElementData ( player, "Wanted level", 3 ) 
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20220727220229
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.015 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 174/1000000
+Post‐expand include size: 110/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 15063/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.977      1 Template:RU/Resource_page
+100.00%    0.977      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:4500-0!canonical and timestamp 20220727220229 and revision id 47187. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Scoreboard&amp;oldid=47187">https://wiki.multitheftauto.com/index.php?title=RU/Resource:Scoreboard&amp;oldid=47187</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../Category_RU/Resource.html" title="Category:RU/Resource">RU/Resource</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FResource%3AScoreboard" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FResource%3AScoreboard" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Resource_Scoreboard.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:RU/Resource:Scoreboard&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Resource_Scoreboard.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Scoreboard&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Scoreboard&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/RU/Resource_Scoreboard.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/RU/Resource_Scoreboard.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Scoreboard&amp;oldid=47187" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Scoreboard&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Resource:Scoreboard" title="Resource:Scoreboard – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 1 April 2016, at 03:05.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.015","walltime":"0.016","ppvisitednodes":{"value":174,"limit":1000000},"postexpandincludesize":{"value":110,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":15063,"limit":5000000},"timingprofile":["100.00%    0.977      1 Template:RU/Resource_page","100.00%    0.977      1 -total"]},"cachereport":{"timestamp":"20220727220229","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":86});});</script>
+</body>
+</html>

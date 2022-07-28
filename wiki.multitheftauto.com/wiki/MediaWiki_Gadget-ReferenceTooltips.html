@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>MediaWiki:Gadget-ReferenceTooltips.js - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"5c5bf508da72b7f555ce89c6","wgCSPNonce":false,"wgCanonicalNamespace":"MediaWiki","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":8,"wgPageName":"MediaWiki:Gadget-ReferenceTooltips.js","wgTitle":"Gadget-ReferenceTooltips.js","wgCurRevisionId":73463,"wgRevisionId":73463,"wgArticleId":13452,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"javascript","wgRelevantPageName":"MediaWiki:Gadget-ReferenceTooltips.js","wgRelevantArticleId":13452,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.action.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=mediawiki.action.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-8 ns-subject page-MediaWiki_Gadget-ReferenceTooltips_js rootpage-MediaWiki_Gadget-ReferenceTooltips_js skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">MediaWiki:Gadget-ReferenceTooltips.js</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div id="mw-clearyourcache" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>Note:</strong> After publishing, you may have to bypass your browser's cache to see the changes.
+</p>
+<ul><li><strong>Firefox / Safari:</strong> Hold <em>Shift</em> while clicking <em>Reload</em>, or press either <em>Ctrl-F5</em> or <em>Ctrl-R</em> (<em>⌘-R</em> on a Mac)</li>
+<li><strong>Google Chrome:</strong> Press <em>Ctrl-Shift-R</em> (<em>⌘-Shift-R</em> on a Mac)</li>
+<li><strong>Internet Explorer / Edge:</strong> Hold <em>Ctrl</em> while clicking <em>Refresh</em>, or press <em>Ctrl-F5</em></li>
+<li><strong>Opera:</strong> Press <em>Ctrl-F5</em>.</li></ul>
+</div><pre class="mw-code mw-js" dir="ltr">// See [[mw:Reference Tooltips]]
+// Source https://en.wikipedia.org/wiki/MediaWiki:Gadget-ReferenceTooltips.js
+
+( function () {
+
+// enwiki settings
+var REF_LINK_SELECTOR = '.reference, a[href^="#CITEREF"]',
+	COMMENTED_TEXT_CLASS = 'rt-commentedText',
+	COMMENTED_TEXT_SELECTOR = ( COMMENTED_TEXT_CLASS ? '.' + COMMENTED_TEXT_CLASS + ', ' : '') +
+		'abbr[title]';
+
+mw.messages.set( {
+	'rt-settings': 'Reference Tooltips settings',
+	'rt-enable-footer': 'Enable Reference Tooltips',
+	'rt-settings-title': 'Reference Tooltips',
+	'rt-save': 'Save',
+	'rt-cancel': 'Cancel',
+	'rt-enable': 'Enable',
+	'rt-disable': 'Disable',
+	'rt-activationMethod': 'Tooltip appears when',
+	'rt-hovering': 'hovering',
+	'rt-clicking': 'clicking',
+	'rt-delay': 'Delay before the tooltip appears (in milliseconds)',
+	'rt-tooltipsForComments': 'Show tooltips over &lt;span title="Tooltip example" class="' + ( COMMENTED_TEXT_CLASS || 'rt-commentedText' ) + '" style="border-bottom: 1px dotted; cursor: help;">text with a dotted underline&lt;/span> in Reference Tooltips style (allows to see such tooltips on devices with no mouse support)',
+	'rt-disabledNote': 'You can re-enable Reference Tooltips using a link in the footer of the page.',
+	'rt-done': 'Done',
+	'rt-enabled': 'Reference Tooltips are enabled'
+} );
+
+// "Global" variables
+var SECONDS_IN_A_DAY = 60 * 60 * 24,
+	CLASSES = {
+		FADE_IN_DOWN: 'rt-fade-in-down',
+		FADE_IN_UP: 'rt-fade-in-up',
+		FADE_OUT_DOWN: 'rt-fade-out-down',
+		FADE_OUT_UP: 'rt-fade-out-up'
+	},
+	IS_TOUCHSCREEN = 'ontouchstart' in document.documentElement,
+	// Quite a rough check for mobile browsers, a mix of what is advised at
+	// https://stackoverflow.com/a/24600597 (sends to
+	// https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent)
+	// and https://stackoverflow.com/a/14301832
+	IS_MOBILE = /Mobi|Android/i.test( navigator.userAgent ) ||
+		typeof window.orientation !== 'undefined',
+	CLIENT_NAME = $.client.profile().name,
+	settingsString, settings, enabled, delay, activatedByClick, tooltipsForComments, cursorWaitCss,
+	windowManager,
+	$body = $( document.body ),
+	$window = $( window );
+
+function rt( $content ) {
+	// Popups gadget
+	if ( window.pg ) {
+		return;
+	}
+
+	var teSelector,
+		settingsDialogOpening = false;
+
+	function setSettingsCookie() {
+		mw.cookie.set(
+			'RTsettings',
+			Number( enabled ) + '|' + delay + '|' + Number( activatedByClick ) + '|' +
+				Number( tooltipsForComments ),
+			{ path: '/', expires: 90 * SECONDS_IN_A_DAY, prefix: '' }
+		);
+	}
+
+	function enableRt() {
+		enabled = true;
+		setSettingsCookie();
+		$( '.rt-enableItem' ).remove();
+		rt( $content );
+		mw.notify( mw.msg( 'rt-enabled' ) );
+	}
+
+	function disableRt() {
+		$content.find( teSelector ).removeClass( 'rt-commentedText' ).off( '.rt' );
+		$body.off( '.rt' );
+		$window.off( '.rt' );
+	}
+
+	function addEnableLink() {
+		// #footer-places – Vector
+		// #f-list – Timeless, Monobook, Modern
+		// parent of #footer li – Cologne Blue
+		var $footer = $( '#footer-places, #f-list' );
+		if ( !$footer.length ) {
+			$footer = $( '#footer li' ).parent();
+		}
+		$footer.append(
+			$( '&lt;li>' )
+				.addClass( 'rt-enableItem' )
+				.append(
+					$( '&lt;a>' )
+						.text( mw.msg( 'rt-enable-footer' ) )
+						.attr( 'href', 'javascript:' )
+						.click( function ( e ) {
+							e.preventDefault();
+							enableRt();
+						} )
+			)
+		);
+	}
+
+	function TooltippedElement( $element ) {
+		var tooltip,
+			events,
+			te = this;
+
+		function onStartEvent( e ) {
+			var showRefArgs;
+
+			if ( activatedByClick &amp;&amp; te.type !== 'commentedText' &amp;&amp; e.type !== 'contextmenu' ) {
+				e.preventDefault();
+			}
+			if ( !te.noRef ) {
+				showRefArgs = [ $( this ) ];
+				if ( te.type !== 'supRef' ) {
+					showRefArgs.push( e.pageX, e.pageY );
+				}
+				te.showRef.apply( te, showRefArgs );
+			}
+		}
+
+		function onEndEvent() {
+			if ( !te.noRef ) {
+				te.hideRef();
+			}
+		}
+
+		if ( !$element ) {
+			return;
+		}
+
+		// TooltippedElement.$element and TooltippedElement.$originalElement will be different when
+		// the first is changed after its cloned version is hovered in a tooltip
+		this.$element = $element;
+		this.$originalElement = $element;
+		if ( this.$element.is( REF_LINK_SELECTOR ) ) {
+			if ( this.$element.prop( 'tagName' ) === 'SUP' ) {
+				this.type = 'supRef';
+			} else {
+				this.type = 'harvardRef';
+			}
+		} else {
+			this.type = 'commentedText';
+			this.comment = this.$element.attr( 'title' );
+			if ( !this.comment ) {
+				return;
+			}
+			this.$element.addClass('rt-commentedText');
+		}
+		
+		if ( activatedByClick ) {
+			events = {
+				'click.rt': onStartEvent
+			};
+			// Adds an ability to see tooltips for links
+			if ( this.type === 'commentedText' &amp;&amp;
+				( this.$element.closest( 'a' ).length ||
+					this.$element.has( 'a' ).length
+				)
+			) {
+				events[ 'contextmenu.rt' ] = onStartEvent;
+			}
+		} else {
+			events = {
+				'mouseenter.rt': onStartEvent,
+				'mouseleave.rt': onEndEvent
+			};
+		}
+
+		this.$element.on( events );
+
+		this.hideRef = function ( immediately ) {
+			clearTimeout( te.showTimer );
+
+			if ( this.type === 'commentedText' ) {
+				this.$element.attr( 'title', this.comment );
+			}
+
+			if ( this.tooltip &amp;&amp; this.tooltip.isPresent ) {
+				if ( activatedByClick || immediately ) {
+					this.tooltip.hide();
+				} else {
+					this.hideTimer = setTimeout( function () {
+						te.tooltip.hide();
+					}, 200 );
+				}
+			} else if ( this.$ref &amp;&amp; this.$ref.hasClass( 'rt-target' ) ) {
+				this.$ref.removeClass( 'rt-target' );
+				if ( activatedByClick ) {
+					$body.off( 'click.rt touchstart.rt', this.onBodyClick );
+				}
+			}
+		};
+
+		this.showRef = function ( $element, ePageX, ePageY ) {
+			// Popups gadget
+			if ( window.pg ) {
+				disableRt();
+				return;
+			}
+			
+			if ( this.tooltip &amp;&amp; !this.tooltip.$content.length ) {
+				return;
+			}
+
+			var tooltipInitiallyPresent = this.tooltip &amp;&amp; this.tooltip.isPresent;
+
+			function reallyShow() {
+				var viewportTop, refOffsetTop, teHref;
+
+				if ( !te.$ref &amp;&amp; !te.comment ) {
+					teHref = te.type === 'supRef' ?
+						te.$element.find( 'a' ).attr( 'href' ) :
+						te.$element.attr( 'href' ); // harvardRef
+					te.$ref = teHref &amp;&amp;
+						$( '#' + $.escapeSelector( teHref.slice( 1 ) ) );
+					if ( !te.$ref || !te.$ref.length || !te.$ref.text() ) {
+						te.noRef = true;
+						return;
+					}
+				}
+
+				if ( !tooltipInitiallyPresent &amp;&amp; !te.comment ) {
+					viewportTop = $window.scrollTop();
+					refOffsetTop = te.$ref.offset().top;
+					if ( !activatedByClick &amp;&amp;
+						viewportTop &lt; refOffsetTop &amp;&amp;
+						viewportTop + $window.height() > refOffsetTop + te.$ref.height() &amp;&amp;
+						// There can be gadgets/scripts that make references horizontally scrollable.
+						$window.width() > te.$ref.offset().left + te.$ref.width()
+					) {
+						// Highlight the reference itself
+						te.$ref.addClass( 'rt-target' );
+						return;
+					}
+				}
+
+				if ( !te.tooltip ) {
+					te.tooltip = new Tooltip( te );
+					if ( !te.tooltip.$content.length ) {
+						return;
+					}
+				}
+
+				// If this tooltip is called from inside another tooltip. We can't define it
+				// in the constructor since a ref can be cloned but have the same Tooltip object;
+				// so, Tooltip.parent is a floating value.
+				te.tooltip.parent = te.$element.closest( '.rt-tooltip' ).data( 'tooltip' );
+				if ( te.tooltip.parent &amp;&amp; te.tooltip.parent.disappearing ) {
+					return;
+				}
+
+				te.tooltip.show();
+
+				if ( tooltipInitiallyPresent ) {
+					if ( te.tooltip.$element.hasClass( 'rt-tooltip-above' ) ) {
+						te.tooltip.$element.addClass( CLASSES.FADE_IN_DOWN );
+					} else {
+						te.tooltip.$element.addClass( CLASSES.FADE_IN_UP );
+					}
+					return;
+				}
+
+				te.tooltip.calculatePosition( ePageX, ePageY );
+
+				$window.on( 'resize.rt', te.onWindowResize );
+			}
+
+			// We redefine this.$element here because e.target can be a reference link inside
+			// a reference tooltip, not a link that was initially assigned to this.$element
+			this.$element = $element;
+
+			if ( this.type === 'commentedText' ) {
+				this.$element.attr( 'title', '' );
+			}
+
+			if ( activatedByClick ) {
+				if ( tooltipInitiallyPresent ||
+					( this.$ref &amp;&amp; this.$ref.hasClass( 'rt-target' ) )
+				) {
+					return;
+				} else {
+					setTimeout( function () {
+						$body.on( 'click.rt touchstart.rt', te.onBodyClick );
+					}, 0 );
+				}
+			}
+
+			if ( activatedByClick || tooltipInitiallyPresent ) {
+				reallyShow();
+			} else {
+				this.showTimer = setTimeout( reallyShow, delay );
+			}
+		};
+
+		this.onBodyClick = function ( e ) {
+			if ( !te.tooltip &amp;&amp; !(te.$ref &amp;&amp; te.$ref.hasClass( 'rt-target' )) ) {
+				return;
+			}
+
+			var $current = $( e.target );
+
+			function contextMatchesParameter( parameter ) {
+				return this === parameter;
+			}
+
+			// The last condition is used to determine cases when a clicked tooltip is the current
+			// element's tooltip or one of its descendants
+			while ( $current.length &amp;&amp;
+				( !$current.hasClass( 'rt-tooltip' ) ||
+					!$current.data( 'tooltip' ) ||
+					!$current.data( 'tooltip' ).upToTopParent(
+						contextMatchesParameter, [ te.tooltip ],
+						true
+					)
+				)
+			) {
+				$current = $current.parent();
+			}
+			if ( !$current.length ) {
+				te.hideRef();
+			}
+		};
+
+		this.onWindowResize = function () {
+			te.tooltip.calculatePosition();
+		};
+	}
+
+	function Tooltip( te ) {
+		function openSettingsDialog() {
+			var settingsDialog, settingsWindow;
+
+			if ( cursorWaitCss ) {
+				cursorWaitCss.disabled = true;
+			}
+
+			function SettingsDialog() {
+				SettingsDialog.parent.call( this );
+			}
+			OO.inheritClass( SettingsDialog, OO.ui.ProcessDialog );
+
+			SettingsDialog.static.name = 'settingsDialog';
+			SettingsDialog.static.title = mw.msg( 'rt-settings-title' );
+			SettingsDialog.static.actions = [
+				{
+					modes: 'basic',
+					action: 'save',
+					label: mw.msg( 'rt-save' ),
+					flags: [ 'primary', 'progressive' ]
+				},
+				{
+					modes: 'basic',
+					label: mw.msg( 'rt-cancel' ),
+					flags: 'safe'
+				},
+				{
+					modes: 'disabled',
+					action: 'deactivated',
+					label: mw.msg( 'rt-done' ),
+					flags: [ 'primary', 'progressive' ]
+				}
+			];
+
+			SettingsDialog.prototype.initialize = function () {
+				var dialog = this;
+
+				SettingsDialog.parent.prototype.initialize.apply( this, arguments );
+
+				this.enableOption = new OO.ui.RadioOptionWidget( {
+					label: mw.msg( 'rt-enable' )
+				} );
+				this.disableOption = new OO.ui.RadioOptionWidget( {
+					label: mw.msg( 'rt-disable' )
+				} );
+				this.enableSelect = new OO.ui.RadioSelectWidget( {
+					items: [ this.enableOption, this.disableOption ],
+					classes: [ 'rt-enableSelect' ]
+				} );
+				this.enableSelect.selectItem( this.enableOption );
+				this.enableSelect.on( 'choose', function ( item ) {
+					if ( item === dialog.disableOption ) {
+						dialog.activationMethodSelect.setDisabled( true );
+						dialog.delayInput.setDisabled( true );
+						dialog.tooltipsForCommentsCheckbox.setDisabled( true );
+					} else {
+						dialog.activationMethodSelect.setDisabled( false );
+						dialog.delayInput.setDisabled( dialog.clickOption.isSelected() );
+						dialog.tooltipsForCommentsCheckbox.setDisabled( false );
+					}
+				} );
+
+				this.hoverOption = new OO.ui.RadioOptionWidget( {
+					label: mw.msg( 'rt-hovering' )
+				} );
+				this.clickOption = new OO.ui.RadioOptionWidget( {
+					label: mw.msg( 'rt-clicking' )
+				} );
+				this.activationMethodSelect = new OO.ui.RadioSelectWidget( {
+					items: [ this.hoverOption, this.clickOption ]
+				} );
+				this.activationMethodSelect.selectItem( activatedByClick ?
+					this.clickOption :
+					this.hoverOption
+				);
+				this.activationMethodSelect.on( 'choose', function ( item ) {
+					if ( item === dialog.clickOption ) {
+						dialog.delayInput.setDisabled( true );
+					} else {
+						dialog.delayInput.setDisabled( dialog.clickOption.isSelected() );
+					}
+				} );
+				this.activationMethodField = new OO.ui.FieldLayout( this.activationMethodSelect, {
+					label: mw.msg( 'rt-activationMethod' ),
+					align: 'top'
+				} );
+
+				this.delayInput = new OO.ui.NumberInputWidget( {
+					input: { value: delay },
+					step: 50,
+					min: 0,
+					max: 5000,
+					disabled: activatedByClick,
+					classes: [ 'rt-numberInput' ]
+				} );
+				this.delayField = new OO.ui.FieldLayout( this.delayInput, {
+					label: mw.msg( 'rt-delay' ),
+					align: 'top'
+				} );
+
+				this.tooltipsForCommentsCheckbox = new OO.ui.CheckboxInputWidget( {
+					selected: tooltipsForComments
+				} );
+				this.tooltipsForCommentsField = new OO.ui.FieldLayout(
+					this.tooltipsForCommentsCheckbox,
+					{
+						label: new OO.ui.HtmlSnippet( mw.msg( 'rt-tooltipsForComments' ) ),
+						align: 'inline',
+						classes: [ 'rt-tooltipsForCommentsField' ]
+					}
+				);
+				new TooltippedElement(
+					this.tooltipsForCommentsField.$element.find(
+						'.' + ( COMMENTED_TEXT_CLASS || 'rt-commentedText' )
+					)
+				);
+
+				this.fieldset = new OO.ui.FieldsetLayout();
+				this.fieldset.addItems( [
+					this.activationMethodField,
+					this.delayField,
+					this.tooltipsForCommentsField
+				] );
+
+				this.panelSettings = new OO.ui.PanelLayout( {
+					padded: true,
+					expanded: false
+				} );
+				this.panelSettings.$element.append(
+					this.enableSelect.$element,
+					$( '&lt;hr>' ).addClass( 'rt-settingsFormSeparator' ),
+					this.fieldset.$element
+				);
+
+				this.panelDisabled = new OO.ui.PanelLayout( {
+					padded: true,
+					expanded: false
+				} );
+				this.panelDisabled.$element.append(
+					$( '&lt;table>' )
+						.addClass( 'rt-disabledHelp' )
+						.append(
+							$( '&lt;tr>' ).append(
+								$( '&lt;td>' ).append(
+									$( '&lt;img>' ).attr( 'src', 'https://wiki.multitheftauto.com/load.php?modules=ext.popups.images&amp;image=footer&amp;format=rasterized&amp;lang=ru&amp;skin=vector&amp;version=0uotisb' )
+								),
+								$( '&lt;td>' )
+									.addClass( 'rt-disabledNote' )
+									.text( mw.msg( 'rt-disabledNote' ) )
+							)
+						)
+				);
+
+				this.stackLayout = new OO.ui.StackLayout( {
+					items: [ this.panelSettings, this.panelDisabled ]
+				} );
+
+				this.$body.append( this.stackLayout.$element );
+			};
+
+			SettingsDialog.prototype.getSetupProcess = function ( data ) {
+				return SettingsDialog.parent.prototype.getSetupProcess.call( this, data )
+					.next( function () {
+						this.stackLayout.setItem( this.panelSettings );
+						this.actions.setMode( 'basic' );
+					}, this );
+			};
+
+			SettingsDialog.prototype.getActionProcess = function ( action ) {
+				var dialog = this;
+
+				if ( action === 'save' ) {
+					return new OO.ui.Process( function () {
+						var newDelay = Number( dialog.delayInput.getValue() );
+
+						enabled = dialog.enableOption.isSelected();
+						if ( newDelay >= 0 &amp;&amp; newDelay &lt;= 5000 ) {
+							delay = newDelay;
+						}
+						activatedByClick = dialog.clickOption.isSelected();
+						tooltipsForComments = dialog.tooltipsForCommentsCheckbox.isSelected();
+
+						setSettingsCookie();
+
+						if ( enabled ) {
+							dialog.close();
+							disableRt();
+							rt( $content );
+						} else {
+							dialog.actions.setMode( 'disabled' );
+							dialog.stackLayout.setItem( dialog.panelDisabled );
+							disableRt();
+							addEnableLink();
+						}
+					} );
+				} else if ( action === 'deactivated' ) {
+					dialog.close();
+				}
+				return SettingsDialog.parent.prototype.getActionProcess.call( this, action );
+			};
+
+			SettingsDialog.prototype.getBodyHeight = function () {
+				return this.stackLayout.getCurrentItem().$element.outerHeight( true );
+			};
+
+			tooltip.upToTopParent( function adjustRightAndHide() {
+				if ( this.isPresent ) {
+					if ( this.$element[ 0 ].style.right ) {
+						this.$element.css(
+							'right',
+							'+=' + ( window.innerWidth - $window.width() )
+						);
+					}
+					this.te.hideRef( true );
+				}
+			} );
+
+			if ( !windowManager ) {
+				windowManager = new OO.ui.WindowManager();
+				$body.append( windowManager.$element );
+			}
+
+			settingsDialog = new SettingsDialog();
+			windowManager.addWindows( [ settingsDialog ] );
+			settingsWindow = windowManager.openWindow( settingsDialog );
+			settingsWindow.opened.then( function () {
+				settingsDialogOpening = false;
+			} );
+			settingsWindow.closed.then( function () {
+				windowManager.clearWindows();
+			} );
+		}
+
+		var tooltip = this;
+
+		// This variable can change: one tooltip can be called from a harvard-style reference link
+		// that is put into different tooltips
+		this.te = te;
+
+		switch ( this.te.type ) {
+			case 'supRef':
+				this.id = 'rt-' + this.te.$originalElement.attr( 'id' );
+				this.$content = this.te.$ref
+					.contents()
+					.filter( function ( i ) {
+						var $this = $( this );
+						return this.nodeType === Node.TEXT_NODE ||
+							!( $this.is( '.mw-cite-backlink' ) ||
+								( i === 0 &amp;&amp;
+									// Template:Cnote, Template:Note
+									( $this.is( 'b' ) ||
+										// Template:Note_label
+										$this.is( 'a' ) &amp;&amp;
+										$this.attr( 'href' ).indexOf( '#ref' ) === 0
+									)
+								)
+							);
+					} )
+					.clone( true );
+				break;
+			case 'harvardRef':
+				this.id = 'rt-' + this.te.$originalElement.closest( 'li' ).attr( 'id' );
+				this.$content = this.te.$ref
+					.clone( true )
+					.removeAttr( 'id' );
+				break;
+			case 'commentedText':
+				this.id = 'rt-' + String( Math.random() ).slice( 2 );
+				this.$content = $( document.createTextNode( this.te.comment ) );
+				break;
+		}
+		if ( !this.$content.length ) {
+			return;
+		}
+
+		this.insideWindow = Boolean( this.te.$element.closest( '.oo-ui-window' ).length );
+
+		this.$element = $( '&lt;div>' )
+			.addClass( 'rt-tooltip' )
+			.attr( 'id', this.id )
+			.attr( 'role', 'tooltip' )
+			.data( 'tooltip', this );
+		if ( this.insideWindow ) {
+			this.$element.addClass( 'rt-tooltip-insideWindow' );
+		}
+
+		// We need the $content interlayer here in order for the settings icon to have correct
+		// margins
+		this.$content = this.$content
+			.wrapAll( '&lt;div>' )
+			.parent()
+			.addClass( 'rt-tooltipContent' )
+			.addClass( 'mw-parser-output' )
+			.appendTo( this.$element );
+
+		if ( !activatedByClick ) {
+			this.$element
+				.mouseenter( function () {
+					if ( !tooltip.disappearing ) {
+						tooltip.upToTopParent( function () {
+							this.show();
+						} );
+					}
+				} )
+				.mouseleave( function ( e ) {
+					// https://stackoverflow.com/q/47649442 workaround. Relying on relatedTarget
+					// alone has pitfalls: when alt-tabbing, relatedTarget is empty too
+					if ( CLIENT_NAME !== 'chrome' ||
+						( !e.originalEvent ||
+							e.originalEvent.relatedTarget !== null ||
+							!tooltip.clickedTime ||
+							$.now() - tooltip.clickedTime > 50
+						)
+					) {
+						tooltip.upToTopParent( function () {
+							this.te.hideRef();
+						} );
+					}
+				} )
+				.click( function () {
+					tooltip.clickedTime = $.now();
+				} );
+		}
+
+		if ( !this.insideWindow ) {
+			$( '&lt;div>' )
+				.addClass( 'rt-settingsLink' )
+				.attr( 'title', mw.msg( 'rt-settings' ) )
+				.click( function () {
+					if ( settingsDialogOpening ) {
+						return;
+					}
+					settingsDialogOpening = true;
+
+					if ( mw.loader.getState( 'oojs-ui' ) !== 'ready' ) {
+						if ( cursorWaitCss ) {
+							cursorWaitCss.disabled = false;
+						} else {
+							cursorWaitCss = mw.util.addCSS( 'body { cursor: wait; }' );
+						}
+					}
+					mw.loader.using( [ 'oojs', 'oojs-ui' ], openSettingsDialog );
+				} )
+				.prependTo( this.$content );
+		}
+
+		// Tooltip tail element is inside tooltip content element in order for the tooltip
+		// not to disappear when the mouse is above the tail
+		this.$tail = $( '&lt;div>' )
+			.addClass( 'rt-tooltipTail' )
+			.prependTo( this.$element );
+
+		this.disappearing = false;
+
+		this.show = function () {
+			this.disappearing = false;
+			clearTimeout( this.te.hideTimer );
+			clearTimeout( this.te.removeTimer );
+
+			this.$element
+				.removeClass( CLASSES.FADE_OUT_DOWN )
+				.removeClass( CLASSES.FADE_OUT_UP );
+
+			if ( !this.isPresent ) {
+				$body.append( this.$element );
+			}
+
+			this.isPresent = true;
+		};
+
+		this.hide = function () {
+			var tooltip = this;
+
+			tooltip.disappearing = true;
+
+			if ( tooltip.$element.hasClass( 'rt-tooltip-above' ) ) {
+				tooltip.$element
+					.removeClass( CLASSES.FADE_IN_DOWN )
+					.addClass( CLASSES.FADE_OUT_UP );
+			} else {
+				tooltip.$element
+					.removeClass( CLASSES.FADE_IN_UP )
+					.addClass( CLASSES.FADE_OUT_DOWN );
+			}
+
+			tooltip.te.removeTimer = setTimeout( function () {
+				if ( tooltip.isPresent ) {
+					tooltip.$element.detach();
+					
+					tooltip.$tail.css( 'left', '' );
+
+					if ( activatedByClick ) {
+						$body.off( 'click.rt touchstart.rt', tooltip.te.onBodyClick );
+					}
+					$window.off( 'resize.rt', tooltip.te.onWindowResize );
+
+					tooltip.isPresent = false;
+				}
+			}, 200 );
+		};
+
+		this.calculatePosition = function ( ePageX, ePageY ) {
+			var teElement, teOffsets, teOffset, tooltipTailOffsetX, tooltipTailLeft,
+				offsetYCorrection = 0;
+
+			this.$tail.css( 'left', '' );
+
+			teElement = this.te.$element.get( 0 );
+			if ( ePageX !== undefined ) {
+				tooltipTailOffsetX = ePageX;
+				teOffsets = teElement.getClientRects &amp;&amp;
+					teElement.getClientRects() ||
+					teElement.getBoundingClientRect();
+				if ( teOffsets.length > 1 ) {
+					for (var i = teOffsets.length - 1; i >= 0; i--) {
+						if ( ePageY >= Math.round( $window.scrollTop() + teOffsets[i].top ) &amp;&amp;
+							ePageY &lt;= Math.round(
+								$window.scrollTop() + teOffsets[i].top + teOffsets[i].height
+							)
+						) {
+							teOffset = teOffsets[i];
+						}
+					}
+				}
+			}
+
+			if ( !teOffset ) {
+				teOffset = teElement.getClientRects &amp;&amp;
+					teElement.getClientRects()[0] ||
+					teElement.getBoundingClientRect();
+			}
+			teOffset = {
+				top: $window.scrollTop() + teOffset.top,
+				left: $window.scrollLeft() + teOffset.left,
+				width: teOffset.width,
+				height: teOffset.height
+			};
+			if ( !tooltipTailOffsetX ) {
+				tooltipTailOffsetX = ( teOffset.left * 2 + teOffset.width ) / 2;
+			}
+			if ( CLIENT_NAME === 'msie' &amp;&amp; this.te.type === 'supRef' ) {
+				offsetYCorrection = -Number(
+					this.te.$element.parent().css( 'font-size' ).replace( 'px', '' )
+				) / 2;
+			}
+			this.$element.css( {
+				top: teOffset.top - this.$element.outerHeight() - 7 + offsetYCorrection,
+				left: tooltipTailOffsetX - 20,
+				right: ''
+			} );
+
+			// Is it squished against the right side of the page?
+			if ( this.$element.offset().left + this.$element.outerWidth() > $window.width() - 1 ) {
+				this.$element.css( {
+					left: '',
+					right: 0
+				} );
+				tooltipTailLeft = tooltipTailOffsetX - this.$element.offset().left - 5;
+			}
+
+			// Is a part of it above the top of the screen?
+			if ( teOffset.top &lt; this.$element.outerHeight() + $window.scrollTop() + 6 ) {
+				this.$element
+					.removeClass( 'rt-tooltip-above' )
+					.addClass( 'rt-tooltip-below' )
+					.addClass( CLASSES.FADE_IN_UP )
+					.css( {
+						top: teOffset.top + teOffset.height + 9 + offsetYCorrection
+					} );
+				if ( tooltipTailLeft ) {
+					this.$tail.css( 'left', ( tooltipTailLeft + 12 ) + 'px' );
+				}
+			} else {
+				this.$element
+					.removeClass( 'rt-tooltip-below' )
+					.addClass( 'rt-tooltip-above' )
+					.addClass( CLASSES.FADE_IN_DOWN )
+					// A fix for cases when a tooltip shown once is then wrongly positioned when it
+					// is shown again after a window resize. We just repeat what is above.
+					.css( {
+						top: teOffset.top - this.$element.outerHeight() - 7 + offsetYCorrection
+					} );
+				if ( tooltipTailLeft ) {
+					// 12 is the tail element width/height
+					this.$tail.css( 'left', tooltipTailLeft + 'px' );
+				}
+			}
+		};
+
+		// Run some function for all the tooltips up to the top one in a tree. Its context will be
+		// the tooltip, while its parameters may be passed to Tooltip.upToTopParent as an array
+		// in the second parameter. If the third parameter passed to ToolTip.upToTopParent is true,
+		// the execution stops when the function in question returns true for the first time,
+		// and ToolTip.upToTopParent returns true as well.
+		this.upToTopParent = function ( func, parameters, stopAtTrue ) {
+			var returnValue,
+				currentTooltip = this;
+
+			do {
+				returnValue = func.apply( currentTooltip, parameters );
+				if ( stopAtTrue &amp;&amp; returnValue ) {
+					break;
+				}
+			} while ( currentTooltip = currentTooltip.parent );
+
+			if ( stopAtTrue ) {
+				return returnValue;
+			}
+		};
+	}
+
+	if ( !enabled ) {
+		addEnableLink();
+		return;
+	}
+
+	teSelector = REF_LINK_SELECTOR;
+	if ( tooltipsForComments ) {
+		teSelector += ', ' + COMMENTED_TEXT_SELECTOR;
+	}
+	$content.find( teSelector ).each( function () {
+		new TooltippedElement( $( this ) );
+	} );
+}
+
+settingsString = mw.cookie.get( 'RTsettings', '' );
+if ( settingsString ) {
+	settings = settingsString.split( '|' );
+	enabled = Boolean( Number( settings[ 0 ] ) );
+	delay = Number( settings[ 1 ] );
+	activatedByClick = Boolean( Number( settings[ 2 ] ) );
+	// The forth value was added later, so we provide for a default value. See comments below
+	// for why we use "IS_TOUCHSCREEN &amp;&amp; IS_MOBILE".
+	tooltipsForComments = settings[ 3 ] === undefined ?
+		IS_TOUCHSCREEN &amp;&amp; IS_MOBILE :
+		Boolean( Number( settings[ 3 ] ) );
+} else {
+	enabled = true;
+	delay = 200;
+	// Since the mobile browser check is error-prone, adding IS_MOBILE condition here would probably
+	// leave cases where a user interacting with the browser using touches doesn't know how to call
+	// a tooltip in order to switch to activation by click. Some touch-supporting laptop users
+	// interacting by touch (though probably not the most popular use case) would not be happy too.
+	activatedByClick = IS_TOUCHSCREEN;
+	// Arguably we shouldn't convert native tooltips into gadget tooltips for devices that have
+	// mouse support, even if they have touchscreens (there are laptops with touchscreens).
+	// IS_TOUCHSCREEN check here is for reliability, since the mobile check is prone to false
+	// positives.
+	tooltipsForComments = IS_TOUCHSCREEN &amp;&amp; IS_MOBILE;
+}
+
+mw.hook( 'wikipage.content' ).add( rt );
+
+}() );
+</pre>
+
+<!-- 
+NewPP limit report
+Cached time: 20220727215120
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.012 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 2/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 1/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;oldid=73463">https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;oldid=73463</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=MediaWiki%3AGadget-ReferenceTooltips.js" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=MediaWiki%3AGadget-ReferenceTooltips.js" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-mediawiki" class="selected mw-list-item"><a href="MediaWiki_Gadget-ReferenceTooltips.html" title="View the system message [c]" accesskey="c"><span>Message</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki_talk:Gadget-ReferenceTooltips.js&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="MediaWiki_Gadget-ReferenceTooltips.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/MediaWiki_Gadget-ReferenceTooltips.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/MediaWiki_Gadget-ReferenceTooltips.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;oldid=73463" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 January 2022, at 22:15.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.002","walltime":"0.002","ppvisitednodes":{"value":2,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":1,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727215120","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":78});});</script>
+</body>
+</html>

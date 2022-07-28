@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JavaSDK - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"0d425cf4ac9439608439d34c","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaSDK","wgTitle":"JavaSDK","wgCurRevisionId":49265,"wgRevisionId":49265,"wgArticleId":6532,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Scripting Concepts"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"JavaSDK","wgRelevantArticleId":6532,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JavaSDK rootpage-JavaSDK skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">JavaSDK</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>This SDK allows you to call exported MTA functions from Java over HTTP.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Getting_Started"><span class="tocnumber">1</span> <span class="toctext">Getting Started</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Classes"><span class="tocnumber">2</span> <span class="toctext">Classes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#com.mtasa.elements.Resource"><span class="tocnumber">2.1</span> <span class="toctext">com.mtasa.elements.Resource</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#com.mtasa.elements.Element"><span class="tocnumber">2.2</span> <span class="toctext">com.mtasa.elements.Element</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#com.mtasa.elements.Ped_extends_Element"><span class="tocnumber">2.3</span> <span class="toctext">com.mtasa.elements.Ped extends Element</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#com.mtasa.elements.Player_extends_Ped"><span class="tocnumber">2.4</span> <span class="toctext">com.mtasa.elements.Player extends Ped</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#com.mtasa.elements.Blip_extends_Element"><span class="tocnumber">2.5</span> <span class="toctext">com.mtasa.elements.Blip extends Element</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#com.mtasa.elements.CollisionShape_extends_Element"><span class="tocnumber">2.6</span> <span class="toctext">com.mtasa.elements.CollisionShape extends Element</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#com.mtasa.elements.GTAObject_extends_Element"><span class="tocnumber">2.7</span> <span class="toctext">com.mtasa.elements.GTAObject extends Element</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#com.mtasa.elements.Pickup_extends_Element"><span class="tocnumber">2.8</span> <span class="toctext">com.mtasa.elements.Pickup extends Element</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#com.mtasa.elements.RadarArea_extends_Element"><span class="tocnumber">2.9</span> <span class="toctext">com.mtasa.elements.RadarArea extends Element</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#com.mtasa.elements.Team_extends_Element"><span class="tocnumber">2.10</span> <span class="toctext">com.mtasa.elements.Team extends Element</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#com.mtasa.elements.Vehicle_extends_Element"><span class="tocnumber">2.11</span> <span class="toctext">com.mtasa.elements.Vehicle extends Element</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#com.mtasa.functions.ElementFuncs"><span class="tocnumber">2.12</span> <span class="toctext">com.mtasa.functions.ElementFuncs</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#com.mtasa.functions.Output"><span class="tocnumber">2.13</span> <span class="toctext">com.mtasa.functions.Output</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#com.mtasa.functions.PlayerFuncs"><span class="tocnumber">2.14</span> <span class="toctext">com.mtasa.functions.PlayerFuncs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#com.mtasa.LuaArgs_extends_java.util.List"><span class="tocnumber">3</span> <span class="toctext">com.mtasa.LuaArgs extends java.util.List</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#com.mtasa.MTA"><span class="tocnumber">4</span> <span class="toctext">com.mtasa.MTA</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#com.mtasa.InputEvent(_Interface_)"><span class="tocnumber">5</span> <span class="toctext">com.mtasa.InputEvent( Interface )</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#com.mtasa.MTAException_extends_Exception"><span class="tocnumber">6</span> <span class="toctext">com.mtasa.MTAException extends Exception</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Examples"><span class="tocnumber">7</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#More_complex_example"><span class="tocnumber">8</span> <span class="toctext">More complex example</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Caveats"><span class="tocnumber">9</span> <span class="toctext">Caveats</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Download"><span class="tocnumber">10</span> <span class="toctext">Download</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Contact"><span class="tocnumber">11</span> <span class="toctext">Contact</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Getting_Started">Getting Started</span></h2>
+<p>To use it, you need to add library to your class-path.
+It's included in the zip file below.
+</p><p>To get started, copy modules/ml_sockets into your modules folder.And load that.
+After that, copy resources/jsdk into your resources folder.And start that.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Classes">Classes</span></h2>
+<h3><span class="mw-headline" id="com.mtasa.elements.Resource">com.mtasa.elements.Resource</span></h3>
+<pre class="prettyprint lang-java5">public String getName();
+public com.mtasa.MTA getServer();
+public void setServer(com.mtasa.MTA newServer);
+public String getResourceInfo(String attr);
+public boolean setResourceInfo(String attr, String newVal);
+public boolean stopResource();
+public boolean startResource();
+public com.mtasa.LuaArgs call(String functionName,LuaArgs parameters);
+public String toString();
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Element">com.mtasa.elements.Element</span></h3>
+<pre class="prettyprint lang-java5">public String getType();
+public boolean is_a(Class&lt;?&gt; compareElement);
+public boolean clearElementVisibleTo(Element visibleTo);
+public Element cloneElement();
+public boolean destroyElement();
+public Point3D getElementPosition();
+public boolean setElementPosition(double x,double y,double z);
+public boolean setElementPosition(Point3D points);
+public Point3D getElementRotation();
+public boolean setElementRotation(double x,double y,double z);
+public boolean setElementRotation(Point3D points);
+public int getElementAlpha();
+public boolean setElementAlpha(int alpha);
+public float getElementHealth();
+public boolean setElementHealth(float health);
+public int getElementModel();
+public boolean setElementModel(int model);
+public int getElementInterior();
+public boolean setElementInterior(int interior);
+public int getElementDimension();
+public boolean setElementDimension(int dimension);
+public Point3D getElementVelocity();
+public boolean setElementVelocity(double x,double y,double z);
+public boolean setElementVelocity(Point3D points);
+public boolean isElementVisibleTo(Element element);
+public boolean setElementVisibleTo(Element element,boolean visible);
+public boolean isElementFrozen();
+public boolean setElementFrozen(boolean frozen);
+public String getElementID();
+public boolean setElementID(String new_id);
+public String getElementData(String data_name);
+public boolean setElementData(String data_name,String newVal);
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Ped_extends_Element">com.mtasa.elements.Ped extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Cloth Types
+public static final int CLOTH_SHIRT = 0;
+public static final int CLOTH_HEAD = 1;
+public static final int CLOTH_TROUSERS = 2;
+public static final int CLOTH_SHOES = 3;
+public static final int CLOTH_TATTOOS_LEFT_UPPER_ARM = 4;
+public static final int CLOTH_TATTOOS_LEFT_LOWER_ARM = 5;
+public static final int CLOTH_TATTOOS_RIGHT_UPPER_ARM = 6;
+public static final int CLOTH_TATTOOS_RIGHT_LOWER_ARM = 7;
+public static final int CLOTH_TATTOOS_BACK = 8;
+public static final int CLOTH_TATTOOS_LEFT_CHEST = 9;
+public static final int CLOTH_TATTOOS_RIGHT_CHEST = 10;
+public static final int CLOTH_TATTOOS_STOMACH = 11;
+public static final int CLOTH_TATTOOS_LOWER_BACK = 12;
+public static final int CLOTH_NECKLACE = 13;
+public static final int CLOTH_WATCH = 14;
+public static final int CLOTH_GLASSES = 15;
+public static final int CLOTH_HAT = 16;
+public static final int CLOTH_EXTRA = 17;
+
+// Fighting Styles
+public static final int STYLE_STANDARD = 4;
+public static final int STYLE_BOXING = 5;
+public static final int STYLE_KUNG_FU = 6;
+public static final int STYLE_KNEE_HEAD = 7;
+public static final int STYLE_GRAB_KICK = 15;
+public static final int STYLE_ELBOWS = 16;
+
+// Ped stats
+public static final int PROGRESS_MADE = 0;
+public static final int TOTAL_PROGRESS = 1;
+public static final int LONGEST_BASKETBALL = 2;
+
+public static final int DIST_FOOT = 3;
+public static final int DIST_CAR = 4;
+public static final int DIST_BIKE = 5;
+public static final int DIST_BOAT = 6;
+public static final int DIST_GOLF_CART = 7;
+public static final int DIST_HELICOPTOR = 8;
+public static final int DIST_PLANE = 9;
+public static final int LONGEST_WHEELIE_DIST = 10;
+public static final int LONGEST_STOPPIE_DIST = 11;
+public static final int LONGEST_2WHEEL_DIST = 12;
+
+public static final int WEAPON_BUDGET = 13;
+public static final int FASHION_BUDGET = 14;
+public static final int PROPERTY_BUDGET = 15;
+public static final int SPRAYING_BUDGET = 16;
+
+public static final int LONGEST_WHEELIE_TIME = 17;
+public static final int LONGEST_STOPPIE_TIME = 18;
+public static final int LONGEST_2WHEEL_TIME = 19;
+public static final int FOOD_BUDGET = 20;
+
+public static final int FAT = 21;
+public static final int STAMINA = 22;
+public static final int BODY_MUSCLE = 23;
+public static final int MAX_HEALTH = 24;
+public static final int SEX_APPEAL = 25;
+
+public static final int DIST_SWIMMING = 26;
+public static final int DIST_CYCLE = 27;
+public static final int DIST_TREADMILL = 28;
+public static final int DIST_EXCERSISE_BIKE = 29;
+public static final int TATTOO_BUDGET = 30;
+public static final int HAIRDRESSING_BUDGET = 31;
+public static final int PROSTITUTE_BUDGET = 33;
+
+public static final int MONEY_SPENT_GAMBLING = 35;
+public static final int MONEY_MADE_PIMPING = 36;
+public static final int MONEY_WON_GAMBLING = 37;
+public static final int BIGGEST_GAMBLING_WIN = 38;
+public static final int BIGGEST_GAMBLING_LOSS = 39;
+public static final int LARGEST_BURGLARY_SWAG = 40;
+public static final int MONEY_MADE_BURGLARY = 41;
+public static final int LONGEST_TREADMILL_TIME = 44;
+public static final int LONGEST_EXCERSISE_BIKE_TIME = 45;
+public static final int HEAVIEST_WEIGHT_BENCH_PRESS = 46;
+public static final int HEAVIEST_WEIGHT_DUMBELLS = 47;
+public static final int BEST_TIME_HOTRING = 48;
+public static final int BEST_TIME_BMX = 49;
+public static final int LONGEST_CHASE_TIME = 51;
+public static final int LAST_CHASE_TIME = 52;
+public static final int WAGE_BILL = 53;
+public static final int STRIP_CLUB_BUDGET = 54;
+public static final int CAR_MOD_BUDGET = 55;
+public static final int TIME_SPENT_SHOPPING = 56;
+public static final int TOTAL_SHOPPING_BUDGET = 62;
+public static final int TIME_SPENT_UNDERWATER = 63;
+
+public static final int RESPECT_TOTAL = 64;
+public static final int RESPECT_GIRLFRIEND = 65;
+public static final int RESPECT_CLOTHES = 66;
+public static final int RESPECT_FITNESS = 67;
+public static final int RESPECT = 68;
+
+public static final int WEAPONTYPE_PISTOL_SKILL = 69;
+public static final int WEAPONTYPE_PISTOL_SILENCED_SKILL = 70;
+public static final int WEAPONTYPE_DESERT_EAGLE_SKILL = 71;
+public static final int WEAPONTYPE_SHOTGUN_SKILL = 72;
+public static final int WEAPONTYPE_SAWNOFF_SHOTGUN_SKILL = 73;
+public static final int WEAPONTYPE_SPAS12_SHOTGUN_SKILL = 74;
+public static final int WEAPONTYPE_MICRO_UZI_SKILL = 75;
+public static final int WEAPONTYPE_MP5_SKILL = 76;
+public static final int WEAPONTYPE_AK47_SKILL = 77;
+public static final int WEAPONTYPE_M4_SKILL = 78;
+public static final int WEAPONTYPE_SNIPERRIFLE_SKILL = 79;
+public static final int SEX_APPEAL_CLOTHES = 80;
+public static final int GAMBLING = 81;
+
+public static final int PEOPLE_KILLED_BY_OTHERS = 120;
+public static final int PEOPLE_KILLED_BY_PLAYER = 121;
+public static final int CARS_DESTROYED = 122;
+public static final int BOATS_DESTROYED = 123;
+public static final int HELICOPTORS_DESTROYED = 124;
+public static final int PROPERTY_DESTROYED = 125;
+public static final int ROUNDS_FIRED = 126;
+public static final int EXPLOSIVES_USED = 127;
+public static final int BULLETS_HIT = 128;
+public static final int TYRES_POPPED = 129;
+public static final int HEADS_POPPED = 130;
+public static final int WANTED_STARS_ATTAINED = 131;
+public static final int WANTED_STARS_EVADED = 132;
+public static final int TIMES_ARRESTED = 133;
+public static final int DAYS_PASSED = 134;
+public static final int TIMES_DIED = 135;
+public static final int TIMES_SAVED = 136;
+public static final int TIMES_CHEATED = 137;
+public static final int SPRAYINGS = 138;
+public static final int MAX_JUMP_DISTANCE = 139;
+public static final int MAX_JUMP_HEIGHT = 140;
+public static final int MAX_JUMP_FLIPS = 141;
+public static final int MAX_JUMP_SPINS = 142;
+public static final int BEST_STUNT = 143;
+public static final int UNIQUE_JUMPS_FOUND = 144;
+public static final int UNIQUE_JUMPS_DONE = 145;
+public static final int MISSIONS_ATTEMPTED = 146;
+public static final int MISSIONS_PASSED = 147;
+public static final int TOTAL_MISSIONS = 148;
+public static final int TAXI_MONEY_MADE = 149;
+public static final int PASSENGERS_DELIVERED_IN_TAXI = 150;
+public static final int LIVES_SAVED = 151;
+public static final int CRIMINALS_CAUGHT = 152;
+public static final int FIRES_EXTINGUISHED = 153;
+public static final int PIZZAS_DELIVERED = 154;
+public static final int ASSASSINATIONS = 155;
+public static final int LATEST_DANCE_SCORE = 156;
+public static final int VIGILANTE_LEVEL = 157;
+public static final int AMBULANCE_LEVEL = 158;
+public static final int FIREFIGHTER_LEVEL = 159;
+public static final int DRIVING_SKILL = 160;
+public static final int TRUCK_MISSIONS_PASSED = 161;
+public static final int TRUCK_MONEY_MADE = 162;
+public static final int RECRUITED_GANG_MEMBERS_KILLED = 163;
+public static final int ARMOUR = 164;
+public static final int ENERGY = 165;
+public static final int PHOTOS_TAKEN = 166;
+public static final int KILL_FRENZIES_ATTEMPTED = 167;
+public static final int KILL_FRENZIES_PASSED = 168;
+public static final int FLIGHT_TIME = 169;
+public static final int TIMES_DROWNED = 170;
+public static final int NUM_GIRLS_PIMPED = 171;
+public static final int BEST_POSITION_HOTRING = 172;
+public static final int FLIGHT_TIME_JETPACK = 173;
+public static final int SHOOTING_RANGE_SCORE = 174;
+public static final int VALET_CARS_PARKED = 175;
+public static final int KILLS_SINCE_LAST_CHECKPOINT = 176;
+public static final int TOTAL_LEGITIMATE_KILLS = 177;
+public static final int BLOODRING_KILLS = 178;
+public static final int BLOODRING_TIME = 179;
+public static final int NO_MORE_HURRICANES = 180;
+public static final int CITIES_PASSED = 181;
+public static final int POLICE_BRIBES = 182;
+public static final int CARS_STOLEN = 183;
+public static final int CURRENT_GIRLFRIENDS = 184;
+public static final int BAD_DATES = 185;
+public static final int GIRLS_DATED = 186;
+public static final int TIMES_SCORED_WITH_GIRL = 187;
+public static final int DATES = 188;
+public static final int GIRLS_DUMPED = 189;
+public static final int TIMES_VISITED_PROSTITUTE = 190;
+public static final int HOUSES_BURGLED = 191;
+public static final int SAFES_CRACKED = 192;
+public static final int STOLEN_ITEMS_SOLD = 194;
+public static final int EIGHT_BALLS_IN_POOL = 195;
+public static final int WINS_IN_POOL = 196;
+public static final int LOSSES_IN_POOL = 197;
+public static final int VISITS_TO_GYM = 198;
+public static final int MEALS_EATEN = 200;
+public static final int UNDERWATER_STAMINA = 225;
+public static final int BIKE_SKILL = 229;
+public static final int CYCLE_SKILL = 230;
+// Functions:
+public boolean addPedClothes(String texture,String model, int type);
+public boolean doesPedHaveJetPack();
+public String[] getPedClothes(int clothesType);
+public int getPedFightingStyle();
+public boolean setPedFightingStyle(int style);
+public float getPedGravity();
+public boolean setPedGravity(float style);
+public int getPedSkin();
+public boolean setPedSkin(int skin);
+public float getPedRotation();
+public boolean setPedRotation(float rot);
+public boolean givePedJetpack();
+public boolean removePedJetpack();
+public Vehicle getPedOccupiedVehicle();
+public float getPedStat(int stat);
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Player_extends_Ped">com.mtasa.elements.Player extends Ped</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+All Ped Functions;
+public String getPlayerName();
+public String getPlayerName(boolean removecolorcodes);
+public String getPlayerIP();
+public String getPlayerSerial();
+public int getPlayerMoney();
+public int getPlayerPing();
+public Team getPlayerTeam();
+public int getPlayerWantedLevel();
+public boolean givePlayerMoney(int money);
+public boolean isPlayerMuted();
+public boolean setPlayerMoney(int money);
+public boolean setPlayerMuted(boolean muted);
+public boolean setPlayerTeam(Team team);
+public boolean spawnPlayer(double x,double y,double z);
+public boolean spawnPlayer(Point3D p);
+public boolean spawnPlayer(Point3D point,double rot,int skin,int interior,int dimension,Team team);
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Blip_extends_Element">com.mtasa.elements.Blip extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.CollisionShape_extends_Element">com.mtasa.elements.CollisionShape extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.GTAObject_extends_Element">com.mtasa.elements.GTAObject extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Pickup_extends_Element">com.mtasa.elements.Pickup extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.RadarArea_extends_Element">com.mtasa.elements.RadarArea extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Team_extends_Element">com.mtasa.elements.Team extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.elements.Vehicle_extends_Element">com.mtasa.elements.Vehicle extends Element</span></h3>
+<pre class="prettyprint lang-java5">All Element Functions;
+// Functions will be added soon..
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.functions.ElementFuncs">com.mtasa.functions.ElementFuncs</span></h3>
+<pre class="prettyprint lang-java5">public MTA getServer();
+public void setServer(MTA server);
+public static String type_to_string(Class&lt;? extends Element&gt; type);
+public &lt;E extends Element&gt; E[] getElementsByType(Class&lt;E&gt; type);
+public Object[] getElementsByType(String type);
+public Element createElement(String type);
+public Element getElementByID(String id);
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.functions.Output">com.mtasa.functions.Output</span></h3>
+<pre class="prettyprint lang-java5">public static final int LEVEL_CUSTOM = 0;
+public static final int LEVEL_ERROR = 1;
+public static final int LEVEL_WARNING = 2;
+public static final int LEVEL_INFO = 3;
+
+// Functions:
+
+public MTA getServer();
+public void setServer(MTA server);
+public boolean outputChatBox(Object message);
+public boolean outputChatBox(Object message,Element toElement);
+public boolean outputChatBox(Object message,Element toElement,int r,int g,int b);
+public boolean outputChatBox(Object message,Element toElement,int r,int g,int b,boolean colorcoded);
+public boolean outputConsole(Object message);
+public boolean outputConsole(Object message,Element toElement);
+public boolean outputDebugString(Object message);
+public boolean outputDebugString(Object message,int dlevel);
+public boolean outputDebugString(Object message,int dlevel,int r,int g,int b);
+public boolean outputServerLog(Object message);
+</pre>
+<h3><span class="mw-headline" id="com.mtasa.functions.PlayerFuncs">com.mtasa.functions.PlayerFuncs</span></h3>
+<pre class="prettyprint lang-java5">public MTA getServer();
+public void setServer(MTA server);
+public Player getPlayerFromName(String name);
+public Player getPlayerFromNamePart(String name);
+public Player[] getAlivePlayers();
+public Player[] getDeadPlayers();
+public Player getRandomPlayer();
+public int getPlayerCount()
+</pre>
+<h2><span class="mw-headline" id="com.mtasa.LuaArgs_extends_java.util.List">com.mtasa.LuaArgs extends java.util.List</span></h2>
+<pre class="prettyprint lang-java5">All list functions.So, you can use in generic for.
+public MTA getServer();
+public void setServer(MTA server);
+public Element parseElement(int index);
+public Player parsePlayer(int index);
+public Pickup parsePickup(int index);
+public Ped parsePed(int index);
+public Blip parseBlip(int index);
+public CollisionShape parseCollisionShape(int index);
+public GTAObject parseGTAObject(int index);
+public RadarArea parseRadarArea(int index);
+public Team parseTeam(int index);
+public Vehicle parseVehicle(int index)&#160;;
+public Resource parseResource(int index)&#160;;
+public String parseString(int index);
+public Boolean parseBoolean(int index);
+public Double parseDouble(int index);
+public Float parseFloat(int index);
+public Integer parseInt (int index);
+public String toJson();
+public void loadFromJSON(String json);
+public Object[] jsonToObject(String json);
+public static String toJson(Object o);
+public static Object[] fromJson(String j);
+public Object get(int index);
+</pre>
+<h2><span class="mw-headline" id="com.mtasa.MTA">com.mtasa.MTA</span></h2>
+<pre class="prettyprint lang-java5">public Output out;
+public Element rootElement;
+public PlayerFuncs players;
+public ElementFuncs elements;
+public static final String RESOURCE = "jsdk"; // JavaSDK Resource Name.
+
+// Functions;
+public void sockOpen(); // Port will used in callJava (Changed)
+public Element parseElement(Object o);
+public Resource parseResource(Object o);
+public void sockClose();
+public int getSocketPort();
+public LuaArgs call(String resource,String function,LuaArgs args); // Function must be exported and given http="true"
+public LuaArgs callFunction(String function,LuaArgs args); // This is for calling server-side functions.(etc:getElementByType)
+public LuaArgs luaArg(Object i); // This is for only 1 parameter arguments.
+// callJava Functions;
+public void addInputEvent(InputEvent e); // Only usable with callJava and sockOpen
+public void removeInputEvent(InputEvent e); // Only usable with callJava and sockOpen
+public void clearInputEvent(); // Only usable with callJava and sockOpen
+public ArrayList&lt;InputEvent&gt; getInputEvents(InputEvent e); // Only usable with callJava and sockOpen
+
+// Getter-Setter;
+public void setHost(String host);
+public String getHost();
+public void setPort(int port);
+public int getPort();
+public void setUsername(String username);
+public String getUsername();
+public void setPassword(String password);
+public String getPassword();
+public String getCharset();
+public void setCharset(String charset);
+</pre>
+<h2><span id="com.mtasa.InputEvent.28_Interface_.29"></span><span class="mw-headline" id="com.mtasa.InputEvent(_Interface_)">com.mtasa.InputEvent( Interface )</span></h2>
+<pre class="prettyprint lang-java5">public void onAction(LuaArgs args, String input) throws MTAException
+</pre>
+<h2><span class="mw-headline" id="com.mtasa.MTAException_extends_Exception">com.mtasa.MTAException extends Exception</span></h2>
+<pre class="prettyprint lang-java5">All exception functions;
+</pre>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre class="prettyprint lang-java">MTA server = new MTA("localhost",22005,"admin","12345"); // Sweet, we are creating a new instance and connection.
+</pre>
+<pre class="prettyprint lang-java">/* Example 1: */
+Player[] players = server.elements.getElementsByType(Player.class); // ElementFuncs deployed in server.elements&#160;:)
+server.out.outputChatBox("There are "+players.length+" players",server.rootElement,180,25,25,false); // You don't need getRootElement(), it's deployed in server.rootElement variable.
+LuaArgs ret = server.call("rcon","getThisResource",null); // We are calling getThisResource in rcon bot.It's exported&#160;:)
+Resource thisRes = ret.parseResource(0); // Now, we parsed argument to Resource object.
+Player playerRancho = server.players.getPlayerFromName("Rancho"); // We're getting player named Rancho, if he has a colorcode. We must add this 
+if (playerRancho&#160;!= null){ // If playerRancho exists
+	server.out.outputChatBox("&lt;PM&gt; JavaSDK: #0055FFHello Sweety",playerRancho,255,255,255,true);
+}else{ // else
+	server.out.outputDebugString("There is no named player RANCHO!");
+}
+</pre>
+<pre class="prettyprint lang-java">/* Example 2&#160;: */
+Ped[] peds = server.elements.getElementsByType(Ped.class); // We deployed Peds in the peds variable.
+for (Ped ped: peds){ // Generic for, (foreach)
+	if (ped.doesPedHaveJetPack()) // If ped has a jetpack
+		ped.removePedJetpack(); // remove him jetpack
+	else // else
+		ped.givePedJetpack(); // give him jetpack 
+}
+</pre>
+<pre class="prettyprint lang-java">/* Example 3: */
+Element[] myElements = server.elements.getElementsByType("myElement"); // Now we get elements by the string type
+// To do&#160;:)
+</pre>
+<pre class="prettyprint lang-java">/* Example 4: for callJava */
+server.sockOpen(); // callJava open ports
+server.addInputEvent(new InputEvent(){
+	@Override
+	public void onAction(LuaArgs args, String input) throws MTAException{
+		String event = args.parseString(0); // Argumant 1&#160;:) It's not default argument&#160;:)
+		if (event.equals("onMyCall")){
+			System.out.println("onMyCall: "+args.parseString(1));
+		}
+	}
+});
+// lua file:
+for k,v in ipairs(exports.jsdk:getConnections()) do
+    exports.jsdk:callJava(v,"onMyCall","Hello");
+end
+</pre>
+<pre class="prettyprint lang-java">/* Example 5: is_a */
+Player playerRancho = server.players.getPlayerFromName("Rancho"); // We're getting player named Rancho, if he has a colorcode. We must add this 
+
+if (playerRancho&#160;!= null){ // If playerRancho exists
+	LuaArgs myCallbackargs = new LuaArgs(server); // create new instance
+	myCallbackargs.add(playerRancho); // add a new argument
+	myCallbackargs.add("How are u?"); // add a new argument
+	LuaArgs ret = server.call("rcon","returnElement",myCallbackargs); // call the howAre function into rcon resource, and send the 2 parameter&#160;:) myCallbackargs
+	for (Object o: ret){ // generic for returns
+		Element e = (Element)o;
+		server.out.outputServerLog("Returned value is a player?: "+o.is_a(Player.class));
+	}
+}else{ // else
+	server.out.outputDebugString("There is no named player RANCHO!");
+} 
+</pre>
+<ul><li><a rel="nofollow" class="external text" href="http://forum.mtasa.com/viewtopic.php?f=148&amp;t=46367">For more examples / tutorials</a></li></ul>
+<h2><span class="mw-headline" id="More_complex_example">More complex example</span></h2>
+<p><a href="File_ExamplaSDK.html" class="image"><img alt="ExamplaSDK.png" src="https://wiki.multitheftauto.com/images/7/7a/ExamplaSDK.png" decoding="async" width="1033" height="795" /></a>
+</p>
+<h2><span class="mw-headline" id="Caveats">Caveats</span></h2>
+<ul><li>You cannot currently compare two Resource or Element objects that you expect to be identical - you need to do a "deep compare", comparing either the "id" fields or the "name" fields.</li>
+<li>The zip contains src, and javadoc</li></ul>
+<h2><span class="mw-headline" id="Download">Download</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://rapidshare.com/files/3674532513/JavaSDK.zip">Download Version 0.2</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.solidfiles.com/d/7713c8510b/">Download Version 0.1</a></li></ul>
+<h2><span class="mw-headline" id="Contact">Contact</span></h2>
+<p>If you have any questions/suggestions you can contact author on MTA forum.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://forum.mtasa.com/memberlist.php?mode=viewprofile&amp;u=51246">Skyline (laserlaser)</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727102331
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.011 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 196/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 19887/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:6532-0!canonical and timestamp 20220727102331 and revision id 49265. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=JavaSDK&amp;oldid=49265">https://wiki.multitheftauto.com/index.php?title=JavaSDK&amp;oldid=49265</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Scripting_Concepts.html" title="Category:Scripting Concepts">Scripting Concepts</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=JavaSDK" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=JavaSDK" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="JavaSDK.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:JavaSDK&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="JavaSDK.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=JavaSDK&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=JavaSDK&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/JavaSDK.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/JavaSDK.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=JavaSDK&amp;oldid=49265" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=JavaSDK&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 23 September 2016, at 20:47.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.011","walltime":"0.011","ppvisitednodes":{"value":196,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":19887,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727102331","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":47});});</script>
+</body>
+</html>

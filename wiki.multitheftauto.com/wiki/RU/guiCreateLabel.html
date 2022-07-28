@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/guiCreateLabel - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"3ddd35827fb4a2c5b1faa5e3","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/guiCreateLabel","wgTitle":"RU/guiCreateLabel","wgCurRevisionId":46251,"wgRevisionId":46251,"wgArticleId":8483,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Client functions"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/guiCreateLabel","wgRelevantArticleId":8483,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":
+"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='client' data-subcaption='Client-side function'>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_guiCreateLabel rootpage-RU_guiCreateLabel skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/guiCreateLabel</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--LC-->
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:130px;"><a href="../File_Gui-label.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/8/85/Gui-label.png" decoding="async" width="128" height="81" class="thumbimage" /></a>  <div class="thumbcaption">Пример метки.</div></div></div>
+<table><tbody><tr><td valign="top" height="100">
+<p>Эта функция создает новую текстовую метку. Метка является просто текстом, без возможности редактирования её пользователем. Если вы хотите установить больший текст, измените шрифт.
+</p>
+</td></tr></tbody></table>
+<h2><span id=".D0.A1.D0.B8.D0.BD.D1.82.D0.B0.D0.BA.D1.81.D0.B8.D1.81"></span><span class="mw-headline" id="Синтаксис">Синтаксис</span></h2>
+<pre class="prettyprint lang-lua">element guiCreateLabel ( float x, float y, float width, float height, string text, bool relative, [element parent = nil] )
+</pre> 
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>x:</b> A float of the 2D x position of the GUI label on a player's screen.  This is affected by the <i>relative</i> argument.</li>
+<li><b>y:</b> A float of the 2D y position of the GUI label on a player's screen. This is affected by the <i>relative</i> argument.</li>
+<li><b>width:</b> A float of the width of the GUI label. This is affected by the <i>relative</i> argument.</li>
+<li><b>height:</b> A float of the height of the GUI label. This is affected by the <i>relative</i> argument.</li>
+<li><b>text:</b> A string of the text that will be displayed by the label.</li>
+<li><b>relative:</b> This is whether sizes and positioning are relative.  If this is <i>true</i>, then all x,y,width,height floats must be between 0 and 1, representing sizes relative to the parent.</li></ul>
+<h3><span id=".D0.9E.D0.B1.D1.8F.D0.B7.D0.B0.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.B0.D1.80.D0.B3.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D1.8B"></span><span class="mw-headline" id="Обязательные_аргументы">Обязательные аргументы</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:271px;"><a href="../File_Gui-window.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/b/b1/Gui-window.png" decoding="async" width="269" height="265" class="thumbimage" /></a>  <div class="thumbcaption">Пример окна.</div></div></div>
+<ul><li><b>x:</b> Позиция метки по оси X на экране игрока. Зависит от аргумента <i>relative</i>.</li>
+<li><b>y:</b> Позиция метки по оси Y на экране игрока. Зависит от аргумента <i>relative</i>.</li>
+<li><b>width:</b> Ширина метки. Зависит от аргумента <i>relative</i>.</li>
+<li><b>height:</b> Высота метки. Зависит от аргумента <i>relative</i>.</li>
+<li><b>titleBarText:</b> Строка с текстом который будет выведен как метка.</li>
+<li><b>relative:</b> Определяет, относительны ли позиция и размер. Если указано <i>true</i>, то значения аргументов <i>x, y, width</i> и <i>height</i> должны быть между 0 и 1, относительны к размеру родителя.</li></ul>
+<h3><span id=".D0.9D.D0.B5.D0.BE.D0.B1.D1.8F.D0.B7.D0.B0.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.BF.D0.B0.D1.80.D0.B0.D0.BC.D0.B5.D1.82.D1.80.D1.8B"></span><span class="mw-headline" id="Необязательные_параметры">Необязательные параметры</span></h3>
+<p><i>NOTE:</i> When using optional arguments, you might need to supply all arguments before the one you wish to use. For more information on optional arguments, see <a href="../Optional_arguments-2.html" class="mw-redirect" title="Optional arguments">optional arguments</a>. 
+</p>
+<ul><li><b>parent:</b> Родительский элемент к которому будет прикреплена.  If the <i>relative</i> argument is true, sizes and positioning will be made relative to this parent. If the <i>relative</i> argument is false, positioning will be the number of offset pixels from the parent's origin. If no parent is passed, the parent will become the screen - causing positioning and sizing according to screen positioning.</li></ul>
+<h3><span id=".D0.92.D0.BE.D0.B7.D0.B2.D1.80.D0.B0.D1.89.D0.B0.D0.B5.D1.82"></span><span class="mw-headline" id="Возвращает">Возвращает</span></h3>
+<p>Возвращает <a href="../GUI_widgets.html" title="GUI widgets">элемент</a> в случае успешного создания, <i>false</i> в противном случае.
+</p>
+<h2><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80"></span><span class="mw-headline" id="Пример">Пример</span></h2>
+<p><b>Example 1:</b> This example creates a information window and adds two tabs to a "tabPanel" tabpanel, and adds some gui labels to each tab.
+</p>
+<pre class="prettyprint lang-lua">local myWindow = guiCreateWindow ( 0, 0, 0.5, 0.4, "Information", true )--create a window which has "Information" in the title bar.
+local tabPanel = guiCreateTabPanel ( 0, 0.1, 1, 1, true, myWindow ) --create a tab panel which fills the whole window
+local tabMap = guiCreateTab( "Map Information", tabPanel ) -- create a tab named "Map Information" on 'tabPanel'
+local tabHelp = guiCreateTab( "Help", tabPanel ) -- create another tab named "Help" on 'tabPanel'
+
+-- adds a label (text) to each tab
+guiCreateLabel(0.02,0.04,0.94,0.2,"This is information about the current map",true,tabMap)
+guiCreateLabel(0.02,0.04,0.94,0.92,"This is help text.",true,tabHelp)
+</pre>
+<p><b>Example 2:</b> This example creates a label.  When an element is clicked, the label displays in the position of the element telling you what kind of element you have clicked.  It hides after 5 seconds.
+</p>
+<pre class="prettyprint lang-lua">local myLabel = guiCreateLabel  ( 0, 0, 1, 1, "", true )
+
+function addLabelOnClick ( button, state, absoluteX, absoluteY, worldX, worldY, worldZ, clickedElement )
+        --if an element was clicked on screen
+        if ( clickedElement ) then
+                --retreive the element type
+                local elementType = getElementType ( clickedElement )
+                --change the label text to that element type
+                guiSetText ( myLabel, elementType )
+                --and place it in the position of where the element is
+                guiSetPosition ( myLabel, absoluteX, absoluteY, false )
+                --hide the text by passing an empty string 5 seconds later
+                setTimer ( guiSetText, 5000, 1, myLabel, "" )
+        end
+end
+addEventHandler ( "onClientClick", getRootElement(), addLabelOnClick )
+</pre>
+<h2><span id=".D0.A1.D0.BC.D0.BE.D1.82.D1.80.D0.B8.D1.82.D0.B5_.D1.82.D0.B0.D0.BA.D0.B6.D0.B5"></span><span class="mw-headline" id="Смотрите_также">Смотрите также</span></h2>
+<h3><span id=".D0.9E.D0.B1.D1.89.D0.B8.D0.B5_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8"></span><span class="mw-headline" id="Общие_функции">Общие функции</span></h3>
+<ul><li><a href="guiBringToFront.html" title="RU/guiBringToFront">guiBringToFront</a></li>
+<li><a href="getChatboxLayout.html" title="RU/getChatboxLayout">getChatboxLayout</a></li>
+<li><a href="guiCreateFont.html" title="RU/guiCreateFont">guiCreateFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiBlur&amp;action=edit&amp;redlink=1" class="new" title="RU/guiBlur (page does not exist)">guiBlur</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiFocus&amp;action=edit&amp;redlink=1" class="new" title="RU/guiFocus (page does not exist)">guiFocus</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetAlpha&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetAlpha (page does not exist)">guiGetAlpha</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetCursorType&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetCursorType (page does not exist)">guiGetCursorType</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetEnabled&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetEnabled (page does not exist)">guiGetEnabled</a></li>
+<li><a href="guiGetFont.html" title="RU/guiGetFont">guiGetFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetInputEnabled&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetInputEnabled (page does not exist)">guiGetInputEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetInputMode&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetInputMode (page does not exist)">guiGetInputMode</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetPosition (page does not exist)">guiGetPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetProperties&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetProperties (page does not exist)">guiGetProperties</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetProperty&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetProperty (page does not exist)">guiGetProperty</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetScreenSize&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetScreenSize (page does not exist)">guiGetScreenSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetSize&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetSize (page does not exist)">guiGetSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetText&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetText (page does not exist)">guiGetText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetVisible&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetVisible (page does not exist)">guiGetVisible</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMoveToBack&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMoveToBack (page does not exist)">guiMoveToBack</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetAlpha&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetAlpha (page does not exist)">guiSetAlpha</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetEnabled&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetEnabled (page does not exist)">guiSetEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetFont&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetFont (page does not exist)">guiSetFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetInputEnabled&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetInputEnabled (page does not exist)">guiSetInputEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetInputMode&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetInputMode (page does not exist)">guiSetInputMode</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetPosition (page does not exist)">guiSetPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetProperty&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetProperty (page does not exist)">guiSetProperty</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetSize&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetSize (page does not exist)">guiSetSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetText&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetText (page does not exist)">guiSetText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetVisible&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetVisible (page does not exist)">guiSetVisible</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isChatBoxInputActive&amp;action=edit&amp;redlink=1" class="new" title="RU/isChatBoxInputActive (page does not exist)">isChatBoxInputActive</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isConsoleActive&amp;action=edit&amp;redlink=1" class="new" title="RU/isConsoleActive (page does not exist)">isConsoleActive</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isDebugViewActive&amp;action=edit&amp;redlink=1" class="new" title="RU/isDebugViewActive (page does not exist)">isDebugViewActive</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isMainMenuActive&amp;action=edit&amp;redlink=1" class="new" title="RU/isMainMenuActive (page does not exist)">isMainMenuActive</a></li>
+<li><a href="isMTAWindowActive.html" title="RU/isMTAWindowActive">isMTAWindowActive</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/isTransferBoxActive&amp;action=edit&amp;redlink=1" class="new" title="RU/isTransferBoxActive (page does not exist)">isTransferBoxActive</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/setDebugViewActive&amp;action=edit&amp;redlink=1" class="new" title="RU/setDebugViewActive (page does not exist)">setDebugViewActive</a></li></ul>
+<h3><span id=".D0.91.D1.80.D0.B0.D1.83.D0.B7.D0.B5.D1.80.D1.8B"></span><span class="mw-headline" id="Браузеры">Браузеры</span></h3>
+<ul><li><a href="guiCreateBrowser.html" title="RU/guiCreateBrowser">guiCreateBrowser</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetBrowser&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetBrowser (page does not exist)">guiGetBrowser</a></li></ul>
+<h3><span id=".D0.9A.D0.BD.D0.BE.D0.BF.D0.BA.D0.B8"></span><span class="mw-headline" id="Кнопки">Кнопки</span></h3>
+<ul><li><a href="guiCreateButton.html" title="RU/guiCreateButton">guiCreateButton</a></li></ul>
+<h3><span id=".D0.A4.D0.BB.D0.B0.D0.B6.D0.BA.D0.B8"></span><span class="mw-headline" id="Флажки">Флажки</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCheckBoxGetSelected&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCheckBoxGetSelected (page does not exist)">guiCheckBoxGetSelected</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCheckBoxSetSelected&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCheckBoxSetSelected (page does not exist)">guiCheckBoxSetSelected</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateCheckBox&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateCheckBox (page does not exist)">guiCreateCheckBox</a></li></ul>
+<h3><span id=".D0.A1.D0.BF.D0.B8.D1.81.D0.BA.D0.B8"></span><span class="mw-headline" id="Списки">Списки</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateComboBox&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateComboBox (page does not exist)">guiCreateComboBox</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxAddItem&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxAddItem (page does not exist)">guiComboBoxAddItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxClear&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxClear (page does not exist)">guiComboBoxClear</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxGetItemCount&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxGetItemCount (page does not exist)">guiComboBoxGetItemCount</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxGetItemText&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxGetItemText (page does not exist)">guiComboBoxGetItemText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxGetSelected&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxGetSelected (page does not exist)">guiComboBoxGetSelected</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxIsOpen&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxIsOpen (page does not exist)">guiComboBoxIsOpen</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxRemoveItem&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxRemoveItem (page does not exist)">guiComboBoxRemoveItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxSetItemText&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxSetItemText (page does not exist)">guiComboBoxSetItemText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxSetOpen&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxSetOpen (page does not exist)">guiComboBoxSetOpen</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiComboBoxSetSelected&amp;action=edit&amp;redlink=1" class="new" title="RU/guiComboBoxSetSelected (page does not exist)">guiComboBoxSetSelected</a></li></ul>
+<h3><span id=".D0.A0.D0.B5.D0.B4.D0.B0.D0.BA.D1.82.D0.B8.D1.80.D1.83.D0.B5.D0.BC.D1.8B.D0.B5_.D0.BF.D0.BE.D0.BB.D1.8F"></span><span class="mw-headline" id="Редактируемые_поля">Редактируемые поля</span></h3>
+<ul><li><a href="guiCreateEdit.html" title="RU/guiCreateEdit">guiCreateEdit</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiEditGetCaretIndex&amp;action=edit&amp;redlink=1" class="new" title="RU/guiEditGetCaretIndex (page does not exist)">guiEditGetCaretIndex</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiEditGetMaxLength&amp;action=edit&amp;redlink=1" class="new" title="RU/guiEditGetMaxLength (page does not exist)">guiEditGetMaxLength</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiEditIsMasked&amp;action=edit&amp;redlink=1" class="new" title="RU/guiEditIsMasked (page does not exist)">guiEditIsMasked</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiEditIsReadOnly&amp;action=edit&amp;redlink=1" class="new" title="RU/guiEditIsReadOnly (page does not exist)">guiEditIsReadOnly</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiEditSetCaretIndex&amp;action=edit&amp;redlink=1" class="new" title="RU/guiEditSetCaretIndex (page does not exist)">guiEditSetCaretIndex</a></li>
+<li><a href="guiEditSetMasked.html" title="RU/guiEditSetMasked">guiEditSetMasked</a></li>
+<li><a href="guiEditSetMaxLength.html" title="RU/guiEditSetMaxLength">guiEditSetMaxLength</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiEditSetReadOnly&amp;action=edit&amp;redlink=1" class="new" title="RU/guiEditSetReadOnly (page does not exist)">guiEditSetReadOnly</a></li></ul>
+<h3><span id=".D0.A2.D0.B0.D0.B1.D0.BB.D0.B8.D1.86.D1.8B"></span><span class="mw-headline" id="Таблицы">Таблицы</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateGridList&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateGridList (page does not exist)">guiCreateGridList</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListAddColumn&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListAddColumn (page does not exist)">guiGridListAddColumn</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListAddRow&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListAddRow (page does not exist)">guiGridListAddRow</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListAutoSizeColumn&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListAutoSizeColumn (page does not exist)">guiGridListAutoSizeColumn</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListClear&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListClear (page does not exist)">guiGridListClear</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetColumnCount&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetColumnCount (page does not exist)">guiGridListGetColumnCount</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetColumnTitle&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetColumnTitle (page does not exist)">guiGridListGetColumnTitle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetColumnWidth&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetColumnWidth (page does not exist)">guiGridListGetColumnWidth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetHorizontalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetHorizontalScrollPosition (page does not exist)">guiGridListGetHorizontalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetItemColor&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetItemColor (page does not exist)">guiGridListGetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetItemData&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetItemData (page does not exist)">guiGridListGetItemData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetItemText&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetItemText (page does not exist)">guiGridListGetItemText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetRowCount&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetRowCount (page does not exist)">guiGridListGetRowCount</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetSelectedCount&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetSelectedCount (page does not exist)">guiGridListGetSelectedCount</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetSelectedItem&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetSelectedItem (page does not exist)">guiGridListGetSelectedItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetSelectedItems&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetSelectedItems (page does not exist)">guiGridListGetSelectedItems</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetSelectionMode&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetSelectionMode (page does not exist)">guiGridListGetSelectionMode</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListIsSortingEnabled&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListIsSortingEnabled (page does not exist)">guiGridListIsSortingEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListGetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListGetVerticalScrollPosition (page does not exist)">guiGridListGetVerticalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListInsertRowAfter&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListInsertRowAfter (page does not exist)">guiGridListInsertRowAfter</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListRemoveColumn&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListRemoveColumn (page does not exist)">guiGridListRemoveColumn</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListRemoveRow&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListRemoveRow (page does not exist)">guiGridListRemoveRow</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetColumnTitle&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetColumnTitle (page does not exist)">guiGridListSetColumnTitle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetColumnWidth&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetColumnWidth (page does not exist)">guiGridListSetColumnWidth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetHorizontalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetHorizontalScrollPosition (page does not exist)">guiGridListSetHorizontalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetItemColor&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetItemColor (page does not exist)">guiGridListSetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetItemData&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetItemData (page does not exist)">guiGridListSetItemData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetItemText&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetItemText (page does not exist)">guiGridListSetItemText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetScrollBars&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetScrollBars (page does not exist)">guiGridListSetScrollBars</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetSelectedItem&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetSelectedItem (page does not exist)">guiGridListSetSelectedItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetSelectionMode&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetSelectionMode (page does not exist)">guiGridListSetSelectionMode</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetSortingEnabled&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetSortingEnabled (page does not exist)">guiGridListSetSortingEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGridListSetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGridListSetVerticalScrollPosition (page does not exist)">guiGridListSetVerticalScrollPosition</a></li></ul>
+<h3><span id=".D0.9F.D0.B0.D0.BC.D1.8F.D1.82.D0.BA.D0.B8"></span><span class="mw-headline" id="Памятки">Памятки</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateMemo&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateMemo (page does not exist)">guiCreateMemo</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMemoGetCaretIndex&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMemoGetCaretIndex (page does not exist)">guiMemoGetCaretIndex</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMemoGetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMemoGetVerticalScrollPosition (page does not exist)">guiMemoGetVerticalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMemoSetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMemoSetVerticalScrollPosition (page does not exist)">guiMemoSetVerticalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMemoIsReadOnly&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMemoIsReadOnly (page does not exist)">guiMemoIsReadOnly</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMemoSetCaretIndex&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMemoSetCaretIndex (page does not exist)">guiMemoSetCaretIndex</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiMemoSetReadOnly&amp;action=edit&amp;redlink=1" class="new" title="RU/guiMemoSetReadOnly (page does not exist)">guiMemoSetReadOnly</a></li></ul>
+<h3><span id=".D0.98.D0.BD.D0.B4.D0.B8.D0.BA.D0.B0.D1.82.D0.BE.D1.80.D1.8B"></span><span class="mw-headline" id="Индикаторы">Индикаторы</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateProgressBar&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateProgressBar (page does not exist)">guiCreateProgressBar</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiProgressBarGetProgress&amp;action=edit&amp;redlink=1" class="new" title="RU/guiProgressBarGetProgress (page does not exist)">guiProgressBarGetProgress</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiProgressBarSetProgress&amp;action=edit&amp;redlink=1" class="new" title="RU/guiProgressBarSetProgress (page does not exist)">guiProgressBarSetProgress</a></li></ul>
+<h3><span id=".D0.9F.D0.B5.D1.80.D0.B5.D0.BA.D0.BB.D1.8E.D1.87.D0.B0.D1.82.D0.B5.D0.BB.D0.B8"></span><span class="mw-headline" id="Переключатели">Переключатели</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateRadioButton&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateRadioButton (page does not exist)">guiCreateRadioButton</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiRadioButtonGetSelected&amp;action=edit&amp;redlink=1" class="new" title="RU/guiRadioButtonGetSelected (page does not exist)">guiRadioButtonGetSelected</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiRadioButtonSetSelected&amp;action=edit&amp;redlink=1" class="new" title="RU/guiRadioButtonSetSelected (page does not exist)">guiRadioButtonSetSelected</a></li></ul>
+<h3><span id=".D0.9F.D0.BE.D0.BB.D0.BE.D1.81.D1.8B_.D0.BF.D1.80.D0.BE.D0.BA.D1.80.D1.83.D1.82.D0.BA.D0.B8"></span><span class="mw-headline" id="Полосы_прокрутки">Полосы прокрутки</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateScrollBar&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateScrollBar (page does not exist)">guiCreateScrollBar</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollBarGetScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollBarGetScrollPosition (page does not exist)">guiScrollBarGetScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollBarSetScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollBarSetScrollPosition (page does not exist)">guiScrollBarSetScrollPosition</a></li></ul>
+<h3><span id=".D0.9F.D0.B0.D0.BD.D0.B5.D0.BB.D0.B8_.D0.BF.D1.80.D0.BE.D0.BA.D1.80.D1.83.D1.82.D0.BA.D0.B8"></span><span class="mw-headline" id="Панели_прокрутки">Панели прокрутки</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateScrollPane&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateScrollPane (page does not exist)">guiCreateScrollPane</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollPaneGetHorizontalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollPaneGetHorizontalScrollPosition (page does not exist)">guiScrollPaneGetHorizontalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollPaneGetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollPaneGetVerticalScrollPosition (page does not exist)">guiScrollPaneGetVerticalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollPaneSetHorizontalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollPaneSetHorizontalScrollPosition (page does not exist)">guiScrollPaneSetHorizontalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollPaneSetScrollBars&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollPaneSetScrollBars (page does not exist)">guiScrollPaneSetScrollBars</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiScrollPaneSetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="RU/guiScrollPaneSetVerticalScrollPosition (page does not exist)">guiScrollPaneSetVerticalScrollPosition</a></li></ul>
+<h3><span id=".D0.A1.D1.82.D0.B0.D1.82.D0.B8.D1.87.D0.B5.D1.81.D0.BA.D0.B8.D0.B5_.D0.B8.D0.B7.D0.BE.D0.B1.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F"></span><span class="mw-headline" id="Статические_изображения">Статические изображения</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateStaticImage&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateStaticImage (page does not exist)">guiCreateStaticImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiStaticImageGetNativeSize&amp;action=edit&amp;redlink=1" class="new" title="RU/guiStaticImageGetNativeSize (page does not exist)">guiStaticImageGetNativeSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiStaticImageLoadImage&amp;action=edit&amp;redlink=1" class="new" title="RU/guiStaticImageLoadImage (page does not exist)">guiStaticImageLoadImage</a></li></ul>
+<h3><span id=".D0.9F.D0.B0.D0.BD.D0.B5.D0.BB.D0.B8_.D0.B2.D0.BA.D0.BB.D0.B0.D0.B4.D0.BE.D0.BA"></span><span class="mw-headline" id="Панели_вкладок">Панели вкладок</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateTabPanel&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateTabPanel (page does not exist)">guiCreateTabPanel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiGetSelectedTab&amp;action=edit&amp;redlink=1" class="new" title="RU/guiGetSelectedTab (page does not exist)">guiGetSelectedTab</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiSetSelectedTab&amp;action=edit&amp;redlink=1" class="new" title="RU/guiSetSelectedTab (page does not exist)">guiSetSelectedTab</a></li></ul>
+<h3><span id=".D0.92.D0.BA.D0.BB.D0.B0.D0.B4.D0.BA.D0.B8"></span><span class="mw-headline" id="Вкладки">Вкладки</span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateTab&amp;action=edit&amp;redlink=1" class="new" title="RU/guiCreateTab (page does not exist)">guiCreateTab</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiDeleteTab&amp;action=edit&amp;redlink=1" class="new" title="RU/guiDeleteTab (page does not exist)">guiDeleteTab</a></li></ul>
+<h3><span id=".D0.A2.D0.B5.D0.BA.D1.81.D1.82.D0.BE.D0.B2.D1.8B.D0.B5_.D0.BC.D0.B5.D1.82.D0.BA.D0.B8"></span><span class="mw-headline" id="Текстовые_метки">Текстовые метки</span></h3>
+<ul><li><a class="mw-selflink selflink">guiCreateLabel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiLabelGetColor&amp;action=edit&amp;redlink=1" class="new" title="RU/guiLabelGetColor (page does not exist)">guiLabelGetColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiLabelGetFontHeight&amp;action=edit&amp;redlink=1" class="new" title="RU/guiLabelGetFontHeight (page does not exist)">guiLabelGetFontHeight</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiLabelGetTextExtent&amp;action=edit&amp;redlink=1" class="new" title="RU/guiLabelGetTextExtent (page does not exist)">guiLabelGetTextExtent</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiLabelSetColor&amp;action=edit&amp;redlink=1" class="new" title="RU/guiLabelSetColor (page does not exist)">guiLabelSetColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiLabelSetHorizontalAlign&amp;action=edit&amp;redlink=1" class="new" title="RU/guiLabelSetHorizontalAlign (page does not exist)">guiLabelSetHorizontalAlign</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiLabelSetVerticalAlign&amp;action=edit&amp;redlink=1" class="new" title="RU/guiLabelSetVerticalAlign (page does not exist)">guiLabelSetVerticalAlign</a></li></ul>
+<h3><span id=".D0.9E.D0.BA.D0.BD.D0.B0"></span><span class="mw-headline" id="Окна">Окна</span></h3>
+<ul><li><a href="guiCreateWindow.html" title="RU/guiCreateWindow">guiCreateWindow</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiWindowIsMovable&amp;action=edit&amp;redlink=1" class="new" title="RU/guiWindowIsMovable (page does not exist)">guiWindowIsMovable</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiWindowIsSizable&amp;action=edit&amp;redlink=1" class="new" title="RU/guiWindowIsSizable (page does not exist)">guiWindowIsSizable</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiWindowSetMovable&amp;action=edit&amp;redlink=1" class="new" title="RU/guiWindowSetMovable (page does not exist)">guiWindowSetMovable</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiWindowSetSizable&amp;action=edit&amp;redlink=1" class="new" title="RU/guiWindowSetSizable (page does not exist)">guiWindowSetSizable</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727220919
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.031 seconds
+Real time usage: 0.034 seconds
+Preprocessor visited node count: 73/1000000
+Post‐expand include size: 8223/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1760/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.692      1 -total
+ 37.44%    1.382      1 Template:Client_function
+ 30.44%    1.124      1 Template:RU/GUI_functions
+ 23.73%    0.876      1 Template:OptionalArg
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:8483-0!canonical and timestamp 20220727220919 and revision id 46251. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateLabel&amp;oldid=46251">https://wiki.multitheftauto.com/index.php?title=RU/guiCreateLabel&amp;oldid=46251</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../Category_Client_functions.html" title="Category:Client functions">Client functions</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FguiCreateLabel" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FguiCreateLabel" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="guiCreateLabel.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:RU/guiCreateLabel&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="guiCreateLabel.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateLabel&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateLabel&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/RU/guiCreateLabel.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/RU/guiCreateLabel.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateLabel&amp;oldid=46251" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/guiCreateLabel&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=guiCreateLabel" title="guiCreateLabel – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 December 2015, at 17:43.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.031","walltime":"0.034","ppvisitednodes":{"value":73,"limit":1000000},"postexpandincludesize":{"value":8223,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1760,"limit":5000000},"timingprofile":["100.00%    3.692      1 -total"," 37.44%    1.382      1 Template:Client_function"," 30.44%    1.124      1 Template:RU/GUI_functions"," 23.73%    0.876      1 Template:OptionalArg"]},"cachereport":{"timestamp":"20220727220919","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":110});});</script>
+</body>
+</html>

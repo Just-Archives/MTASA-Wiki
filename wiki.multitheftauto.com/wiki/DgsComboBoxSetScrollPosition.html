@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>DgsComboBoxSetScrollPosition - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"6e24eab498b4c108c40c5d67","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"DgsComboBoxSetScrollPosition","wgTitle":"DgsComboBoxSetScrollPosition","wgCurRevisionId":55397,"wgRevisionId":55397,"wgArticleId":10045,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Client functions"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"DgsComboBoxSetScrollPosition","wgRelevantArticleId":10045,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={
+"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='client' data-subcaption='Client-side function'>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-DgsComboBoxSetScrollPosition rootpage-DgsComboBoxSetScrollPosition skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">DgsComboBoxSetScrollPosition</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--LC-->
+</p><p>This function set scroll position of dgs combo box.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<pre class="prettyprint lang-lua">bool dgsComboBoxSetScrollPosition( element comboBox [, float vertical = nil ] )
+</pre>
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>comboBox:</b> The dgs combo box element to set.</li></ul>
+<h3><span class="mw-headline" id="Optional_Arguments">Optional Arguments</span></h3>
+<ul><li><b>vertical:</b> The vertical scroll bar position. If set to nil, nothing will happen ( remain the position ).</li></ul>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<p>Returns <i>true</i> if succeed, <i>false</i> otherwise.
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<pre class="prettyprint lang-lua">DGS = exports.dgs
+
+local comboBox= DGS:dgsCreateComboBox ( 0.45, 0.45, 0.15, 0.15,"test", true ) 
+for i=1,100 do
+    DGS:dgsComboBoxAddItem(comboBox, i)
+end
+DGS:dgsComboBoxSetScrollPosition(comboBox,50)
+</pre>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="DgsGetPosition.html" title="DgsGetPosition">dgsGetPosition</a></li>
+<li><a href="DgsSetPosition.html" title="DgsSetPosition">dgsSetPosition</a></li>
+<li><a href="DgsSetParent.html" title="DgsSetParent">dgsSetParent</a></li>
+<li><a href="DgsGetParent.html" title="DgsGetParent">dgsGetParent</a></li>
+<li><a href="DgsGetChild.html" title="DgsGetChild">dgsGetChild</a></li>
+<li><a href="DgsGetChildren.html" title="DgsGetChildren">dgsGetChildren</a></li>
+<li><a href="DgsGetSize.html" title="DgsGetSize">dgsGetSize</a></li>
+<li><a href="DgsSetSize.html" title="DgsSetSize">dgsSetSize</a></li>
+<li><a href="DgsGetType.html" title="DgsGetType">dgsGetType</a></li>
+<li><a href="DgsSetLayer.html" title="DgsSetLayer">dgsSetLayer</a></li>
+<li><a href="DgsGetLayer.html" title="DgsGetLayer">dgsGetLayer</a></li>
+<li><a href="DgsSetCurrentLayerIndex.html" title="DgsSetCurrentLayerIndex">dgsSetCurrentLayerIndex</a></li>
+<li><a href="DgsGetCurrentLayerIndex.html" title="DgsGetCurrentLayerIndex">dgsGetCurrentLayerIndex</a></li>
+<li><a href="DgsGetLayerElements.html" title="DgsGetLayerElements">dgsGetLayerElements</a></li>
+<li><a href="DgsGetProperty.html" title="DgsGetProperty">dgsGetProperty</a></li>
+<li><a href="DgsSetProperty.html" title="DgsSetProperty">dgsSetProperty</a></li>
+<li><a href="DgsSetPropertyInherit.html" title="DgsSetPropertyInherit">dgsSetPropertyInherit</a></li>
+<li><a href="DgsGetProperties.html" title="DgsGetProperties">dgsGetProperties</a></li>
+<li><a href="DgsSetProperties.html" title="DgsSetProperties">dgsSetProperties</a></li>
+<li><a href="DgsGetVisible.html" title="DgsGetVisible">dgsGetVisible</a></li>
+<li><a href="DgsSetVisible.html" title="DgsSetVisible">dgsSetVisible</a></li>
+<li><a href="DgsGetEnabled.html" title="DgsGetEnabled">dgsGetEnabled</a></li>
+<li><a href="DgsSetEnabled.html" title="DgsSetEnabled">dgsSetEnabled</a></li>
+<li><a href="DgsGetPositionAlignment.html" title="DgsGetPositionAlignment">dgsGetPositionAlignment</a></li>
+<li><a href="DgsSetPositionAlignment.html" title="DgsSetPositionAlignment">dgsSetPositionAlignment</a></li>
+<li><a href="DgsGetAlpha.html" title="DgsGetAlpha">dgsGetAlpha</a></li>
+<li><a href="DgsSetAlpha.html" title="DgsSetAlpha">dgsSetAlpha</a></li>
+<li><a href="DgsGetFont.html" title="DgsGetFont">dgsGetFont</a></li>
+<li><a href="DgsSetFont.html" title="DgsSetFont">dgsSetFont</a></li>
+<li><a href="DgsGetText.html" title="DgsGetText">dgsGetText</a></li>
+<li><a href="DgsSetText.html" title="DgsSetText">dgsSetText</a></li>
+<li><a href="DgsGetPostGUI.html" title="DgsGetPostGUI">dgsGetPostGUI</a></li>
+<li><a href="DgsSetPostGUI.html" title="DgsSetPostGUI">dgsSetPostGUI</a></li>
+<li><a href="DgsGetInputEnabled.html" title="DgsGetInputEnabled">dgsGetInputEnabled</a></li>
+<li><a href="DgsSetInputEnabled.html" title="DgsSetInputEnabled">dgsSetInputEnabled</a></li>
+<li><a href="DgsGetInputMode.html" title="DgsGetInputMode">dgsGetInputMode</a></li>
+<li><a href="DgsSetInputMode.html" title="DgsSetInputMode">dgsSetInputMode</a></li>
+<li><a href="DgsAttachToAutoDestroy.html" title="DgsAttachToAutoDestroy">dgsAttachToAutoDestroy</a></li>
+<li><a href="DgsDetachFromAutoDestroy.html" title="DgsDetachFromAutoDestroy">dgsDetachFromAutoDestroy</a></li>
+<li><a href="DgsFocus.html" title="DgsFocus">dgsFocus</a></li>
+<li><a href="DgsBlur.html" title="DgsBlur">dgsBlur</a></li>
+<li><a href="DgsCreateFont.html" title="DgsCreateFont">dgsCreateFont</a></li>
+<li><a href="DgsBringToFront.html" title="DgsBringToFront">dgsBringToFront</a></li>
+<li><a href="DgsMoveToBack.html" title="DgsMoveToBack">dgsMoveToBack</a></li>
+<li><a href="DgsGetScreenSize.html" title="DgsGetScreenSize">dgsGetScreenSize</a></li>
+<li><a href="DgsGetCursorPosition.html" title="DgsGetCursorPosition">dgsGetCursorPosition</a></li>
+<li><a href="DgsGetMouseEnterGUI.html" title="DgsGetMouseEnterGUI">dgsGetMouseEnterGUI</a></li>
+<li><a href="DgsGetMouseLeaveGUI.html" title="DgsGetMouseLeaveGUI">dgsGetMouseLeaveGUI</a></li>
+<li><a href="DgsIsMouseWithinGUI.html" title="DgsIsMouseWithinGUI">dgsIsMouseWithinGUI</a></li>
+<li><a href="DgsSetSystemFont.html" title="DgsSetSystemFont">dgsSetSystemFont</a></li>
+<li><a href="DgsGetSystemFont.html" title="DgsGetSystemFont">dgsGetSystemFont</a></li>
+<li><a href="DgsGetElementsInLayer.html" title="DgsGetElementsInLayer">dgsGetElementsInLayer</a></li>
+<li><a href="DgsGetElementsFromResource.html" title="DgsGetElementsFromResource">dgsGetElementsFromResource</a></li>
+<li><a href="DgsGetFocusedGUI.html" title="DgsGetFocusedGUI">dgsGetFocusedGUI</a></li>
+<li><a href="DgsGetExportedFunctionName.html" title="DgsGetExportedFunctionName">dgsGetExportedFunctionName</a></li>
+<li><a href="DgsImportFunction.html" title="DgsImportFunction">dgsImportFunction</a></li>
+<li><a href="DgsImportOOPClass.html" title="DgsImportOOPClass">dgsImportOOPClass</a></li>
+<li><a href="DgsG2DLoadHooker.html" title="DgsG2DLoadHooker">dgsG2DLoadHooker</a></li>
+<li><a href="DgsSetRenderSetting.html" title="DgsSetRenderSetting">dgsSetRenderSetting</a></li>
+<li><a href="DgsGetRenderSetting.html" title="DgsGetRenderSetting">dgsGetRenderSetting</a></li>
+<li><a href="DgsSimulateClick.html" title="DgsSimulateClick">dgsSimulateClick</a></li>
+<li><a href="DgsGetRootElement.html" title="DgsGetRootElement">dgsGetRootElement</a></li>
+<li><a href="DgsAddMoveHandler.html" title="DgsAddMoveHandler">dgsAddMoveHandler</a></li>
+<li><a href="DgsRemoveMoveHandler.html" title="DgsRemoveMoveHandler">dgsRemoveMoveHandler</a></li>
+<li><a href="DgsIsMoveHandled.html" title="DgsIsMoveHandled">dgsIsMoveHandled</a></li>
+<li><a href="DgsAddSizeHandler.html" title="DgsAddSizeHandler">dgsAddSizeHandler</a></li>
+<li><a href="DgsRemoveSizeHandler.html" title="DgsRemoveSizeHandler">dgsRemoveSizeHandler</a></li>
+<li><a href="DgsIsSizeHandled.html" title="DgsIsSizeHandled">dgsIsSizeHandled</a></li>
+<li><a href="DgsAttachElements.html" title="DgsAttachElements">dgsAttachElements</a></li>
+<li><a href="DgsDetachElements.html" title="DgsDetachElements">dgsDetachElements</a></li>
+<li><a href="DgsElementIsAttached.html" title="DgsElementIsAttached">dgsElementIsAttached</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsAddPropertyListener&amp;action=edit&amp;redlink=1" class="new" title="DgsAddPropertyListener (page does not exist)">dgsAddPropertyListener</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsRemovePropertyListener&amp;action=edit&amp;redlink=1" class="new" title="DgsRemovePropertyListener (page does not exist)">dgsRemovePropertyListener</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGetListenedProperties&amp;action=edit&amp;redlink=1" class="new" title="DgsGetListenedProperties (page does not exist)">dgsGetListenedProperties</a></li>
+<li><a href="DgsSetMultiClickInterval.html" title="DgsSetMultiClickInterval">dgsSetMultiClickInterval</a></li>
+<li><a href="DgsGetMultiClickInterval.html" title="DgsGetMultiClickInterval">dgsGetMultiClickInterval</a></li>
+<li><a href="DgsCenterElement.html" title="DgsCenterElement">dgsCenterElement</a></li>
+<li><a href="DgsSetElementKeeperEnabled.html" title="DgsSetElementKeeperEnabled">dgsSetElementKeeperEnabled</a></li>
+<li><a href="DgsGetElementKeeperEnabled.html" title="DgsGetElementKeeperEnabled">dgsGetElementKeeperEnabled</a></li>
+<li><a href="DgsSetClickingSound.html" title="DgsSetClickingSound">dgsSetClickingSound</a></li>
+<li><a href="DgsGetClickingSound.html" title="DgsGetClickingSound">dgsGetClickingSound</a></li>
+<li><a href="DgsSetClickingSoundVolume.html" title="DgsSetClickingSoundVolume">dgsSetClickingSoundVolume</a></li>
+<li><a href="DgsGetClickingSoundVolume.html" title="DgsGetClickingSoundVolume">dgsGetClickingSoundVolume</a></li></ul>
+<h2><span class="mw-headline" id="Custom_Cursor_Functions"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Custom Cursor Functions</span></span></h2>
+<ul><li><a href="DgsSetCustomCursorEnabled.html" title="DgsSetCustomCursorEnabled">dgsSetCustomCursorEnabled</a></li>
+<li><a href="DgsGetCustomCursorEnabled.html" title="DgsGetCustomCursorEnabled">dgsGetCustomCursorEnabled</a></li>
+<li><a href="DgsSetCustomCursorImage.html" title="DgsSetCustomCursorImage">dgsSetCustomCursorImage</a></li>
+<li><a href="DgsGetCustomCursorImage.html" title="DgsGetCustomCursorImage">dgsGetCustomCursorImage</a></li>
+<li><a href="DgsSetCustomCursorSize.html" title="DgsSetCustomCursorSize">dgsSetCustomCursorSize</a></li>
+<li><a href="DgsGetCustomCursorSize.html" title="DgsGetCustomCursorSize">dgsGetCustomCursorSize</a></li>
+<li><a href="DgsGetCustomCursorType.html" title="DgsGetCustomCursorType">dgsGetCustomCursorType</a></li>
+<li><a href="DgsSetCustomCursorColor.html" title="DgsSetCustomCursorColor">dgsSetCustomCursorColor</a></li>
+<li><a href="DgsGetCustomCursorColor.html" title="DgsGetCustomCursorColor">dgsGetCustomCursorColor</a></li></ul>
+<h2><span class="mw-headline" id="Multi_Language_Supports"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;"><a href="DGS_Multilingual.html" title="DGS Multilingual">Multi Language Supports</a></span></span></h2>
+<ul><li><a href="DgsTranslationTableExists.html" title="DgsTranslationTableExists">dgsTranslationTableExists</a></li>
+<li><a href="DgsSetTranslationTable.html" title="DgsSetTranslationTable">dgsSetTranslationTable</a></li>
+<li><a href="DgsAttachToTranslation.html" title="DgsAttachToTranslation">dgsAttachToTranslation</a></li>
+<li><a href="DgsDetachFromTranslation.html" title="DgsDetachFromTranslation">dgsDetachFromTranslation</a></li>
+<li><a href="DgsSetAttachTranslation.html" title="DgsSetAttachTranslation">dgsSetAttachTranslation</a></li>
+<li><a href="DgsGetTranslationName.html" title="DgsGetTranslationName">dgsGetTranslationName</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsTranslationAddPropertyListener&amp;action=edit&amp;redlink=1" class="new" title="DgsTranslationAddPropertyListener (page does not exist)">dgsTranslationAddPropertyListener</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsTranslationRemovePropertyListener&amp;action=edit&amp;redlink=1" class="new" title="DgsTranslationRemovePropertyListener (page does not exist)">dgsTranslationRemovePropertyListener</a></li></ul>
+<h2><span class="mw-headline" id="Animation"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Animation</span></span></h2>
+<ul><li><a href="DgsAnimTo.html" title="DgsAnimTo">dgsAnimTo</a></li>
+<li><a href="DgsIsAniming.html" title="DgsIsAniming">dgsIsAniming</a></li>
+<li><a href="DgsStopAniming.html" title="DgsStopAniming">dgsStopAniming</a></li>
+<li><a href="DgsMoveTo.html" title="DgsMoveTo">dgsMoveTo</a></li>
+<li><a href="DgsIsMoving.html" title="DgsIsMoving">dgsIsMoving</a></li>
+<li><a href="DgsStopMoving.html" title="DgsStopMoving">dgsStopMoving</a></li>
+<li><a href="DgsSizeTo.html" title="DgsSizeTo">dgsSizeTo</a></li>
+<li><a href="DgsIsSizing.html" title="DgsIsSizing">dgsIsSizing</a></li>
+<li><a href="DgsStopSizing.html" title="DgsStopSizing">dgsStopSizing</a></li>
+<li><a href="DgsAlphaTo.html" title="DgsAlphaTo">dgsAlphaTo</a></li>
+<li><a href="DgsIsAlphaing.html" title="DgsIsAlphaing">dgsIsAlphaing</a></li>
+<li><a href="DgsStopAlphaing.html" title="DgsStopAlphaing">dgsStopAlphaing</a></li>
+<li><a href="DgsAddEasingFunction.html" title="DgsAddEasingFunction">dgsAddEasingFunction</a></li>
+<li><a href="DgsRemoveEasingFunction.html" title="DgsRemoveEasingFunction">dgsRemoveEasingFunction</a></li>
+<li><a href="DgsEasingFunctionExists.html" title="DgsEasingFunctionExists">dgsEasingFunctionExists</a></li></ul>
+<h2><span class="mw-headline" id="3D_Element"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">3D Element</span></span></h2>
+<ul><li><a href="Dgs3DGetPosition.html" title="Dgs3DGetPosition">dgs3DGetPosition</a></li>
+<li><a href="Dgs3DSetPosition.html" title="Dgs3DSetPosition">dgs3DSetPosition</a></li>
+<li><a href="Dgs3DGetInterior.html" title="Dgs3DGetInterior">dgs3DGetInterior</a></li>
+<li><a href="Dgs3DSetInterior.html" title="Dgs3DSetInterior">dgs3DSetInterior</a></li>
+<li><a href="Dgs3DSetDimension.html" title="Dgs3DSetDimension">dgs3DSetDimension</a></li>
+<li><a href="Dgs3DGetDimension.html" title="Dgs3DGetDimension">dgs3DGetDimension</a></li></ul>
+<h2><span class="mw-headline" id="3D_Interface"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">3D Interface</span></span></h2>
+<ul><li><a href="DgsCreate3DInterface.html" title="DgsCreate3DInterface">dgsCreate3DInterface</a></li>
+<li><a href="Dgs3DInterfaceGetBlendMode.html" title="Dgs3DInterfaceGetBlendMode">dgs3DInterfaceGetBlendMode</a></li>
+<li><a href="Dgs3DInterfaceSetBlendMode.html" title="Dgs3DInterfaceSetBlendMode">dgs3DInterfaceSetBlendMode</a></li>
+<li><a href="Dgs3DInterfaceGetFaceTo.html" title="Dgs3DInterfaceGetFaceTo">dgs3DInterfaceGetFaceTo</a></li>
+<li><a href="Dgs3DInterfaceSetFaceTo.html" title="Dgs3DInterfaceSetFaceTo">dgs3DInterfaceSetFaceTo</a></li>
+<li><a href="Dgs3DInterfaceGetResolution.html" title="Dgs3DInterfaceGetResolution">dgs3DInterfaceGetResolution</a></li>
+<li><a href="Dgs3DInterfaceSetResolution.html" title="Dgs3DInterfaceSetResolution">dgs3DInterfaceSetResolution</a></li>
+<li><a href="Dgs3DInterfaceSetRoll.html" title="Dgs3DInterfaceSetRoll">dgs3DInterfaceSetRoll</a></li>
+<li><a href="Dgs3DInterfaceGetRoll.html" title="Dgs3DInterfaceGetRoll">dgs3DInterfaceGetRoll</a></li>
+<li><a href="Dgs3DInterfaceGetSize.html" title="Dgs3DInterfaceGetSize">dgs3DInterfaceGetSize</a></li>
+<li><a href="Dgs3DInterfaceSetSize.html" title="Dgs3DInterfaceSetSize">dgs3DInterfaceSetSize</a></li>
+<li><a href="Dgs3DInterfaceIsAttached.html" title="Dgs3DInterfaceIsAttached">dgs3DInterfaceIsAttached</a></li>
+<li><a href="Dgs3DInterfaceAttachToElement.html" title="Dgs3DInterfaceAttachToElement">dgs3DInterfaceAttachToElement</a></li>
+<li><a href="Dgs3DInterfaceDetachFromElement.html" title="Dgs3DInterfaceDetachFromElement">dgs3DInterfaceDetachFromElement</a></li>
+<li><a href="Dgs3DInterfaceSetAttachedOffsets.html" title="Dgs3DInterfaceSetAttachedOffsets">dgs3DInterfaceSetAttachedOffsets</a></li>
+<li><a href="Dgs3DInterfaceGetAttachedOffsets.html" title="Dgs3DInterfaceGetAttachedOffsets">dgs3DInterfaceGetAttachedOffsets</a></li></ul>
+<h2><span class="mw-headline" id="3D_Line"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">3D Line</span></span></h2>
+<ul><li><a href="DgsCreate3DLine.html" title="DgsCreate3DLine">dgsCreate3DLine</a></li>
+<li><a href="Dgs3DLineAddItem.html" title="Dgs3DLineAddItem">dgs3DLineAddItem</a></li>
+<li><a href="Dgs3DLineRemoveItem.html" title="Dgs3DLineRemoveItem">dgs3DLineRemoveItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineSetItemPosition&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineSetItemPosition (page does not exist)">dgs3DLineSetItemPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineGetItemPosition&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineGetItemPosition (page does not exist)">dgs3DLineGetItemPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineSetItemWidth&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineSetItemWidth (page does not exist)">dgs3DLineSetItemWidth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineGetItemWidth&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineGetItemWidth (page does not exist)">dgs3DLineGetItemWidth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineSetItemColor&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineSetItemColor (page does not exist)">dgs3DLineSetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineGetItemColor&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineGetItemColor (page does not exist)">dgs3DLineGetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineAttachToElement&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineAttachToElement (page does not exist)">dgs3DLineAttachToElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineIsAttached&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineIsAttached (page does not exist)">dgs3DLineIsAttached</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineDetachFromElement&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineDetachFromElement (page does not exist)">dgs3DLineDetachFromElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineSetAttachedOffsets&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineSetAttachedOffsets (page does not exist)">dgs3DLineSetAttachedOffsets</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineGetAttachedOffsets&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineGetAttachedOffsets (page does not exist)">dgs3DLineGetAttachedOffsets</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineSetRotation&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineSetRotation (page does not exist)">dgs3DLineSetRotation</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DLineGetRotation&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DLineGetRotation (page does not exist)">dgs3DLineGetRotation</a></li></ul>
+<h2><span class="mw-headline" id="3D_Image"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">3D Image</span></span></h2>
+<ul><li><a href="DgsCreate3DImage.html" title="DgsCreate3DImage">dgsCreate3DImage</a></li>
+<li><a href="Dgs3DImageSetSize.html" title="Dgs3DImageSetSize">dgs3DImageSetSize</a></li>
+<li><a href="Dgs3DImageGetSize.html" title="Dgs3DImageGetSize">dgs3DImageGetSize</a></li>
+<li><a href="Dgs3DImageSetImage.html" title="Dgs3DImageSetImage">dgs3DImageSetImage</a></li>
+<li><a href="Dgs3DImageGetImage.html" title="Dgs3DImageGetImage">dgs3DImageGetImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DImageAttachToElement&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DImageAttachToElement (page does not exist)">dgs3DImageAttachToElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DImageIsAttached&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DImageIsAttached (page does not exist)">dgs3DImageIsAttached</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DImageDetachFromElement&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DImageDetachFromElement (page does not exist)">dgs3DImageDetachFromElement</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DImageSetAttachedOffsets&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DImageSetAttachedOffsets (page does not exist)">dgs3DImageSetAttachedOffsets</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=Dgs3DImageGetAttachedOffsets&amp;action=edit&amp;redlink=1" class="new" title="Dgs3DImageGetAttachedOffsets (page does not exist)">dgs3DImageGetAttachedOffsets</a></li>
+<li><a href="Dgs3DImageGetNativeSize.html" title="Dgs3DImageGetNativeSize">dgs3DImageGetNativeSize</a></li>
+<li><a href="Dgs3DImageSetUVPosition.html" title="Dgs3DImageSetUVPosition">dgs3DImageSetUVPosition</a></li>
+<li><a href="Dgs3DImageGetUVPosition.html" title="Dgs3DImageGetUVPosition">dgs3DImageGetUVPosition</a></li>
+<li><a href="Dgs3DImageSetUVSize.html" title="Dgs3DImageSetUVSize">dgs3DImageSetUVSize</a></li>
+<li><a href="Dgs3DImageGetUVSize.html" title="Dgs3DImageGetUVSize">dgs3DImageGetUVSize</a></li></ul>
+<h2><span class="mw-headline" id="3D_Text"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">3D Text</span></span></h2>
+<ul><li><a href="DgsCreate3DText.html" title="DgsCreate3DText">dgsCreate3DText</a></li>
+<li><a href="Dgs3DTextIsAttached.html" title="Dgs3DTextIsAttached">dgs3DTextIsAttached</a></li>
+<li><a href="Dgs3DTextAttachToElement.html" title="Dgs3DTextAttachToElement">dgs3DTextAttachToElement</a></li>
+<li><a href="Dgs3DTextDetachFromElement.html" title="Dgs3DTextDetachFromElement">dgs3DTextDetachFromElement</a></li>
+<li><a href="Dgs3DTextSetAttachedOffsets.html" title="Dgs3DTextSetAttachedOffsets">dgs3DTextSetAttachedOffsets</a></li>
+<li><a href="Dgs3DTextGetAttachedOffsets.html" title="Dgs3DTextGetAttachedOffsets">dgs3DTextGetAttachedOffsets</a></li></ul>
+<h2><span class="mw-headline" id="Browser"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Browser</span></span></h2>
+<ul><li><a href="DgsCreateBrowser.html" title="DgsCreateBrowser">dgsCreateBrowser</a></li></ul>
+<h2><span class="mw-headline" id="Button"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Button</span></span></h2>
+<ul><li><a href="DgsCreateButton.html" title="DgsCreateButton">dgsCreateButton</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsButtonGetTextExtent&amp;action=edit&amp;redlink=1" class="new" title="DgsButtonGetTextExtent (page does not exist)">dgsButtonGetTextExtent</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsButtonGetFontHeight&amp;action=edit&amp;redlink=1" class="new" title="DgsButtonGetFontHeight (page does not exist)">dgsButtonGetFontHeight</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsButtonGetTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsButtonGetTextSize (page does not exist)">dgsButtonGetTextSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsButtonMakeForm&amp;action=edit&amp;redlink=1" class="new" title="DgsButtonMakeForm (page does not exist)">dgsButtonMakeForm</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsButtonRemoveForm&amp;action=edit&amp;redlink=1" class="new" title="DgsButtonRemoveForm (page does not exist)">dgsButtonRemoveForm</a></li></ul>
+<h2><span class="mw-headline" id="Check_Box"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Check Box</span></span></h2>
+<ul><li><a href="DgsCreateCheckBox.html" title="DgsCreateCheckBox">dgsCreateCheckBox</a></li>
+<li><a href="DgsCheckBoxGetSelected.html" title="DgsCheckBoxGetSelected">dgsCheckBoxGetSelected</a></li>
+<li><a href="DgsCheckBoxSetSelected.html" title="DgsCheckBoxSetSelected">dgsCheckBoxSetSelected</a></li>
+<li><a href="DgsCheckBoxSetHorizontalAlign.html" title="DgsCheckBoxSetHorizontalAlign">dgsCheckBoxSetHorizontalAlign</a></li>
+<li><a href="DgsCheckBoxGetHorizontalAlign.html" title="DgsCheckBoxGetHorizontalAlign">dgsCheckBoxGetHorizontalAlign</a></li>
+<li><a href="DgsCheckBoxSetVerticalAlign.html" title="DgsCheckBoxSetVerticalAlign">dgsCheckBoxSetVerticalAlign</a></li>
+<li><a href="DgsCheckBoxGetVerticalAlign.html" title="DgsCheckBoxGetVerticalAlign">dgsCheckBoxGetVerticalAlign</a></li></ul>
+<h2><span class="mw-headline" id="Combo_Box"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Combo Box</span></span></h2>
+<ul><li><a href="DgsCreateComboBox.html" title="DgsCreateComboBox">dgsCreateComboBox</a></li>
+<li><a href="DgsComboBoxAddItem.html" title="DgsComboBoxAddItem">dgsComboBoxAddItem</a></li>
+<li><a href="DgsComboBoxRemoveItem.html" title="DgsComboBoxRemoveItem">dgsComboBoxRemoveItem</a></li>
+<li><a href="DgsComboBoxSetItemText.html" title="DgsComboBoxSetItemText">dgsComboBoxSetItemText</a></li>
+<li><a href="DgsComboBoxGetItemText.html" title="DgsComboBoxGetItemText">dgsComboBoxGetItemText</a></li>
+<li><a href="DgsComboBoxSetItemData.html" title="DgsComboBoxSetItemData">dgsComboBoxSetItemData</a></li>
+<li><a href="DgsComboBoxGetItemData.html" title="DgsComboBoxGetItemData">dgsComboBoxGetItemData</a></li>
+<li><a href="DgsComboBoxGetItemCount.html" title="DgsComboBoxGetItemCount">dgsComboBoxGetItemCount</a></li>
+<li><a href="DgsComboBoxClear.html" title="DgsComboBoxClear">dgsComboBoxClear</a></li>
+<li><a href="DgsComboBoxSetSelectedItem.html" title="DgsComboBoxSetSelectedItem">dgsComboBoxSetSelectedItem</a></li>
+<li><a href="DgsComboBoxGetSelectedItem.html" title="DgsComboBoxGetSelectedItem">dgsComboBoxGetSelectedItem</a></li>
+<li><a href="DgsComboBoxSetItemColor.html" title="DgsComboBoxSetItemColor">dgsComboBoxSetItemColor</a></li>
+<li><a href="DgsComboBoxGetItemColor.html" title="DgsComboBoxGetItemColor">dgsComboBoxGetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetItemImage&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxSetItemImage (page does not exist)">dgsComboBoxSetItemImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxGetItemImage&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxGetItemImage (page does not exist)">dgsComboBoxGetItemImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxRemoveItemImage&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxRemoveItemImage (page does not exist)">dgsComboBoxRemoveItemImage</a></li>
+<li><a href="DgsComboBoxSetItemFont.html" title="DgsComboBoxSetItemFont">dgsComboBoxSetItemFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxGetItemFont&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxGetItemFont (page does not exist)">dgsComboBoxGetItemFont</a></li>
+<li><a href="DgsComboBoxGetState.html" title="DgsComboBoxGetState">dgsComboBoxGetState</a></li>
+<li><a href="DgsComboBoxSetState.html" title="DgsComboBoxSetState">dgsComboBoxSetState</a></li>
+<li><a href="DgsComboBoxGetBoxHeight.html" title="DgsComboBoxGetBoxHeight">dgsComboBoxGetBoxHeight</a></li>
+<li><a href="DgsComboBoxSetBoxHeight.html" title="DgsComboBoxSetBoxHeight">dgsComboBoxSetBoxHeight</a></li>
+<li><a href="DgsComboBoxSetViewCount.html" title="DgsComboBoxSetViewCount">dgsComboBoxSetViewCount</a></li>
+<li><a href="DgsComboBoxGetViewCount.html" title="DgsComboBoxGetViewCount">dgsComboBoxGetViewCount</a></li>
+<li><a href="DgsComboBoxGetScrollBar.html" title="DgsComboBoxGetScrollBar">dgsComboBoxGetScrollBar</a></li>
+<li><a class="mw-selflink selflink">dgsComboBoxSetScrollPosition</a></li>
+<li><a href="DgsComboBoxGetScrollPosition.html" title="DgsComboBoxGetScrollPosition">dgsComboBoxGetScrollPosition</a></li>
+<li><a href="DgsComboBoxSetCaptionText.html" title="DgsComboBoxSetCaptionText">dgsComboBoxSetCaptionText</a></li>
+<li><a href="DgsComboBoxGetCaptionText.html" title="DgsComboBoxGetCaptionText">dgsComboBoxGetCaptionText</a></li>
+<li><a href="DgsComboBoxSetEditEnabled.html" title="DgsComboBoxSetEditEnabled">dgsComboBoxSetEditEnabled</a></li>
+<li><a href="DgsComboBoxGetEditEnabled.html" title="DgsComboBoxGetEditEnabled">dgsComboBoxGetEditEnabled</a></li>
+<li><a href="DgsComboBoxGetText.html" title="DgsComboBoxGetText">dgsComboBoxGetText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetSortFunction&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxSetSortFunction (page does not exist)">dgsComboBoxSetSortFunction</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxGetSortFunction&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxGetSortFunction (page does not exist)">dgsComboBoxGetSortFunction</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetSortFunction&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxSetSortFunction (page does not exist)">dgsComboBoxSetSortFunction</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSort&amp;action=edit&amp;redlink=1" class="new" title="DgsComboBoxSort (page does not exist)">dgsComboBoxSort</a></li></ul>
+<h2><span class="mw-headline" id="Custom_Renderer"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Custom Renderer</span></span></h2>
+<ul><li><a href="DgsCreateCustomRenderer.html" title="DgsCreateCustomRenderer">dgsCreateCustomRenderer</a></li>
+<li><a href="DgsCustomRendererSetFunction.html" title="DgsCustomRendererSetFunction">dgsCustomRendererSetFunction</a></li></ul>
+<h2><span class="mw-headline" id="Edit"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Edit</span></span></h2>
+<ul><li><a href="DgsCreateEdit.html" title="DgsCreateEdit">dgsCreateEdit</a></li>
+<li><a href="DgsEditMoveCaret.html" title="DgsEditMoveCaret">dgsEditMoveCaret</a></li>
+<li><a href="DgsEditGetCaretPosition.html" title="DgsEditGetCaretPosition">dgsEditGetCaretPosition</a></li>
+<li><a href="DgsEditSetCaretPosition.html" title="DgsEditSetCaretPosition">dgsEditSetCaretPosition</a></li>
+<li><a href="DgsEditSetCaretStyle.html" title="DgsEditSetCaretStyle">dgsEditSetCaretStyle</a></li>
+<li><a href="DgsEditGetCaretStyle.html" title="DgsEditGetCaretStyle">dgsEditGetCaretStyle</a></li>
+<li><a href="DgsEditSetTextFilter.html" title="DgsEditSetTextFilter">dgsEditSetTextFilter</a></li>
+<li><a href="DgsEditGetMaxLength.html" title="DgsEditGetMaxLength">dgsEditGetMaxLength</a></li>
+<li><a href="DgsEditSetMaxLength.html" title="DgsEditSetMaxLength">dgsEditSetMaxLength</a></li>
+<li><a href="DgsEditSetReadOnly.html" title="DgsEditSetReadOnly">dgsEditSetReadOnly</a></li>
+<li><a href="DgsEditGetReadOnly.html" title="DgsEditGetReadOnly">dgsEditGetReadOnly</a></li>
+<li><a href="DgsEditSetMasked.html" title="DgsEditSetMasked">dgsEditSetMasked</a></li>
+<li><a href="DgsEditGetMasked.html" title="DgsEditGetMasked">dgsEditGetMasked</a></li>
+<li><a href="DgsEditSetUnderlined.html" title="DgsEditSetUnderlined">dgsEditSetUnderlined</a></li>
+<li><a href="DgsEditGetUnderlined.html" title="DgsEditGetUnderlined">dgsEditGetUnderlined</a></li>
+<li><a href="DgsEditSetHorizontalAlign.html" title="DgsEditSetHorizontalAlign">dgsEditSetHorizontalAlign</a></li>
+<li><a href="DgsEditSetVerticalAlign.html" title="DgsEditSetVerticalAlign">dgsEditSetVerticalAlign</a></li>
+<li><a href="DgsEditGetHorizontalAlign.html" title="DgsEditGetHorizontalAlign">dgsEditGetHorizontalAlign</a></li>
+<li><a href="DgsEditGetVerticalAlign.html" title="DgsEditGetVerticalAlign">dgsEditGetVerticalAlign</a></li>
+<li><a href="DgsEditSetAlignment.html" title="DgsEditSetAlignment">dgsEditSetAlignment</a></li>
+<li><a href="DgsEditGetAlignment.html" title="DgsEditGetAlignment">dgsEditGetAlignment</a></li>
+<li><a href="DgsEditInsertText.html" title="DgsEditInsertText">dgsEditInsertText</a></li>
+<li><a href="DgsEditDeleteText.html" title="DgsEditDeleteText">dgsEditDeleteText</a></li>
+<li><a href="DgsEditGetPartOfText.html" title="DgsEditGetPartOfText">dgsEditGetPartOfText</a></li>
+<li><a href="DgsEditClearText.html" title="DgsEditClearText">dgsEditClearText</a></li>
+<li><a href="DgsEditReplaceText.html" title="DgsEditReplaceText">dgsEditReplaceText</a></li>
+<li><a href="DgsEditSetTypingSound.html" title="DgsEditSetTypingSound">dgsEditSetTypingSound</a></li>
+<li><a href="DgsEditGetTypingSound.html" title="DgsEditGetTypingSound">dgsEditGetTypingSound</a></li>
+<li><a href="DgsEditSetTypingSoundVolume.html" title="DgsEditSetTypingSoundVolume">dgsEditSetTypingSoundVolume</a></li>
+<li><a href="DgsEditGetTypingSoundVolume.html" title="DgsEditGetTypingSoundVolume">dgsEditGetTypingSoundVolume</a></li>
+<li><a href="DgsEditSetPlaceHolder.html" title="DgsEditSetPlaceHolder">dgsEditSetPlaceHolder</a></li>
+<li><a href="DgsEditGetPlaceHolder.html" title="DgsEditGetPlaceHolder">dgsEditGetPlaceHolder</a></li>
+<li><a href="DgsEditAddAutoComplete.html" title="DgsEditAddAutoComplete">dgsEditAddAutoComplete</a></li>
+<li><a href="DgsEditRemoveAutoComplete.html" title="DgsEditRemoveAutoComplete">dgsEditRemoveAutoComplete</a></li>
+<li><a href="DgsEditSetAutoComplete.html" title="DgsEditSetAutoComplete">dgsEditSetAutoComplete</a></li>
+<li><a href="DgsEditGetAutoComplete.html" title="DgsEditGetAutoComplete">dgsEditGetAutoComplete</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsEditAutoCompleteAddParameterFunction&amp;action=edit&amp;redlink=1" class="new" title="DgsEditAutoCompleteAddParameterFunction (page does not exist)">dgsEditAutoCompleteAddParameterFunction</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsEditAutoCompleteRemoveParameterFunction&amp;action=edit&amp;redlink=1" class="new" title="DgsEditAutoCompleteRemoveParameterFunction (page does not exist)">dgsEditAutoCompleteRemoveParameterFunction</a></li></ul>
+<h2><span class="mw-headline" id="Detect_Area"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Detect Area</span></span></h2>
+<ul><li><a href="DgsCreateDetectArea.html" title="DgsCreateDetectArea">dgsCreateDetectArea</a></li>
+<li><a href="DgsGetDetectArea.html" title="DgsGetDetectArea">dgsGetDetectArea</a></li>
+<li><a href="DgsApplyDetectArea.html" title="DgsApplyDetectArea">dgsApplyDetectArea</a></li>
+<li><a href="DgsRemoveDetectArea.html" title="DgsRemoveDetectArea">dgsRemoveDetectArea</a></li>
+<li><a href="DgsDetectAreaSetFunction.html" title="DgsDetectAreaSetFunction">dgsDetectAreaSetFunction</a></li>
+<li><a href="DgsDetectAreaSetDebugModeEnabled.html" title="DgsDetectAreaSetDebugModeEnabled">dgsDetectAreaSetDebugModeEnabled</a></li>
+<li><a href="DgsDetectAreaGetDebugModeEnabled.html" title="DgsDetectAreaGetDebugModeEnabled">dgsDetectAreaGetDebugModeEnabled</a></li></ul>
+<h2><span id="Drag.27N_Drop"></span><span class="mw-headline" id="Drag'N_Drop"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Drag'N Drop</span></span></h2>
+<ul><li><a href="DgsSendDragNDropData.html" title="DgsSendDragNDropData">dgsSendDragNDropData</a></li>
+<li><a href="DgsRetrieveDragNDropData.html" title="DgsRetrieveDragNDropData">dgsRetrieveDragNDropData</a></li>
+<li><a href="DgsIsDragNDropData.html" title="DgsIsDragNDropData">dgsIsDragNDropData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsAddDragHandler&amp;action=edit&amp;redlink=1" class="new" title="DgsAddDragHandler (page does not exist)">dgsAddDragHandler</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsRemoveDragHandler&amp;action=edit&amp;redlink=1" class="new" title="DgsRemoveDragHandler (page does not exist)">dgsRemoveDragHandler</a></li></ul>
+<h2><span class="mw-headline" id="Grid_List"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Grid List</span></span></h2>
+<ul><li><a href="DgsCreateGridList.html" title="DgsCreateGridList">dgsCreateGridList</a></li>
+<li><a href="DgsGridListClear.html" title="DgsGridListClear">dgsGridListClear</a></li>
+<li><a href="DgsGridListGetScrollBar.html" title="DgsGridListGetScrollBar">dgsGridListGetScrollBar</a></li>
+<li><a href="DgsGridListSetScrollPosition.html" title="DgsGridListSetScrollPosition">dgsGridListSetScrollPosition</a></li>
+<li><a href="DgsGridListGetScrollPosition.html" title="DgsGridListGetScrollPosition">dgsGridListGetScrollPosition</a></li>
+<li><a href="DgsGridListScrollTo.html" title="DgsGridListScrollTo">dgsGridListScrollTo</a></li>
+<li><a href="DgsGridListSetHorizontalScrollPosition.html" title="DgsGridListSetHorizontalScrollPosition">dgsGridListSetHorizontalScrollPosition</a></li>
+<li><a href="DgsGridListGetHorizontalScrollPosition.html" title="DgsGridListGetHorizontalScrollPosition">dgsGridListGetHorizontalScrollPosition</a></li>
+<li><a href="DgsGridListSetVerticalScrollPosition.html" title="DgsGridListSetVerticalScrollPosition">dgsGridListSetVerticalScrollPosition</a></li>
+<li><a href="DgsGridListGetVerticalScrollPosition.html" title="DgsGridListGetVerticalScrollPosition">dgsGridListGetVerticalScrollPosition</a></li>
+<li><a href="DgsGridListResetScrollBarPosition.html" title="DgsGridListResetScrollBarPosition">dgsGridListResetScrollBarPosition</a></li>
+<li><a href="DgsGridListSetColumnRelative.html" title="DgsGridListSetColumnRelative">dgsGridListSetColumnRelative</a></li>
+<li><a href="DgsGridListGetColumnRelative.html" title="DgsGridListGetColumnRelative">dgsGridListGetColumnRelative</a></li>
+<li><a href="DgsGridListAddColumn.html" title="DgsGridListAddColumn">dgsGridListAddColumn</a></li>
+<li><a href="DgsGridListRemoveColumn.html" title="DgsGridListRemoveColumn">dgsGridListRemoveColumn</a></li>
+<li><a href="DgsGridListClearColumn.html" title="DgsGridListClearColumn">dgsGridListClearColumn</a></li>
+<li><a href="DgsGridListGetColumnCount.html" title="DgsGridListGetColumnCount">dgsGridListGetColumnCount</a></li>
+<li><a href="DgsGridListGetColumnAllWidth.html" title="DgsGridListGetColumnAllWidth">dgsGridListGetColumnAllWidth</a></li>
+<li><a href="DgsGridListGetColumnHeight.html" title="DgsGridListGetColumnHeight">dgsGridListGetColumnHeight</a></li>
+<li><a href="DgsGridListSetColumnHeight.html" title="DgsGridListSetColumnHeight">dgsGridListSetColumnHeight</a></li>
+<li><a href="DgsGridListGetColumnWidth.html" title="DgsGridListGetColumnWidth">dgsGridListGetColumnWidth</a></li>
+<li><a href="DgsGridListSetColumnWidth.html" title="DgsGridListSetColumnWidth">dgsGridListSetColumnWidth</a></li>
+<li><a href="DgsGridListAutoSizeColumn.html" title="DgsGridListAutoSizeColumn">dgsGridListAutoSizeColumn</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetColumnTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetColumnTextSize (page does not exist)">dgsGridListGetColumnTextSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetColumnTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetColumnTextSize (page does not exist)">dgsGridListSetColumnTextSize</a></li>
+<li><a href="DgsGridListGetColumnTitle.html" title="DgsGridListGetColumnTitle">dgsGridListGetColumnTitle</a></li>
+<li><a href="DgsGridListSetColumnTitle.html" title="DgsGridListSetColumnTitle">dgsGridListSetColumnTitle</a></li>
+<li><a href="DgsGridListGetColumnFont.html" title="DgsGridListGetColumnFont">dgsGridListGetColumnFont</a></li>
+<li><a href="DgsGridListSetColumnFont.html" title="DgsGridListSetColumnFont">dgsGridListSetColumnFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetColumnAlignment&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetColumnAlignment (page does not exist)">dgsGridListGetColumnAlignment</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetColumnAlignment&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetColumnAlignment (page does not exist)">dgsGridListSetColumnAlignment</a></li>
+<li><a href="DgsGridListSetSortColumn.html" title="DgsGridListSetSortColumn">dgsGridListSetSortColumn</a></li>
+<li><a href="DgsGridListGetSortColumn.html" title="DgsGridListGetSortColumn">dgsGridListGetSortColumn</a></li>
+<li><a href="DgsGridListGetEnterColumn.html" title="DgsGridListGetEnterColumn">dgsGridListGetEnterColumn</a></li>
+<li><a href="DgsGridListAddRow.html" title="DgsGridListAddRow">dgsGridListAddRow</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListAddRows&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListAddRows (page does not exist)">dgsGridListAddRows</a></li>
+<li><a href="DgsGridListRemoveRow.html" title="DgsGridListRemoveRow">dgsGridListRemoveRow</a></li>
+<li><a href="DgsGridListClearRow.html" title="DgsGridListClearRow">dgsGridListClearRow</a></li>
+<li><a href="DgsGridListGetRowCount.html" title="DgsGridListGetRowCount">dgsGridListGetRowCount</a></li>
+<li><a href="DgsGridListGetRowBackGroundImage.html" title="DgsGridListGetRowBackGroundImage">dgsGridListGetRowBackGroundImage</a></li>
+<li><a href="DgsGridListSetRowBackGroundImage.html" title="DgsGridListSetRowBackGroundImage">dgsGridListSetRowBackGroundImage</a></li>
+<li><a href="DgsGridListSetRowBackGroundColor.html" title="DgsGridListSetRowBackGroundColor">dgsGridListSetRowBackGroundColor</a></li>
+<li><a href="DgsGridListGetRowBackGroundColor.html" title="DgsGridListGetRowBackGroundColor">dgsGridListGetRowBackGroundColor</a></li>
+<li><a href="DgsGridListSetRowAsSection.html" title="DgsGridListSetRowAsSection">dgsGridListSetRowAsSection</a></li>
+<li><a href="DgsGridListGetRowSelectable.html" title="DgsGridListGetRowSelectable">dgsGridListGetRowSelectable</a></li>
+<li><a href="DgsGridListSetRowSelectable.html" title="DgsGridListSetRowSelectable">dgsGridListSetRowSelectable</a></li>
+<li><a href="DgsGridListGetRowHoverable.html" title="DgsGridListGetRowHoverable">dgsGridListGetRowHoverable</a></li>
+<li><a href="DgsGridListSetRowHoverable.html" title="DgsGridListSetRowHoverable">dgsGridListSetRowHoverable</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetItemAlignment&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetItemAlignment (page does not exist)">dgsGridListGetItemAlignment</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetItemAlignment&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetItemAlignment (page does not exist)">dgsGridListSetItemAlignment</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetItemTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetItemTextSize (page does not exist)">dgsGridListSetItemTextSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetItemTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetItemTextSize (page does not exist)">dgsGridListGetItemTextSize</a></li>
+<li><a href="DgsGridListSetItemColor.html" title="DgsGridListSetItemColor">dgsGridListSetItemColor</a></li>
+<li><a href="DgsGridListGetItemColor.html" title="DgsGridListGetItemColor">dgsGridListGetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetItemTextOffset&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetItemTextOffset (page does not exist)">dgsGridListSetItemTextOffset</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetItemTextOffset&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetItemTextOffset (page does not exist)">dgsGridListGetItemTextOffset</a></li>
+<li><a href="DgsGridListSetItemText.html" title="DgsGridListSetItemText">dgsGridListSetItemText</a></li>
+<li><a href="DgsGridListGetItemText.html" title="DgsGridListGetItemText">dgsGridListGetItemText</a></li>
+<li><a href="DgsGridListSetItemFont.html" title="DgsGridListSetItemFont">dgsGridListSetItemFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetItemFont&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetItemFont (page does not exist)">dgsGridListGetItemFont</a></li>
+<li><a href="DgsGridListSetItemData.html" title="DgsGridListSetItemData">dgsGridListSetItemData</a></li>
+<li><a href="DgsGridListGetItemData.html" title="DgsGridListGetItemData">dgsGridListGetItemData</a></li>
+<li><a href="DgsGridListSetItemImage.html" title="DgsGridListSetItemImage">dgsGridListSetItemImage</a></li>
+<li><a href="DgsGridListGetItemImage.html" title="DgsGridListGetItemImage">dgsGridListGetItemImage</a></li>
+<li><a href="DgsGridListRemoveItemImage.html" title="DgsGridListRemoveItemImage">dgsGridListRemoveItemImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetItemBackGroundColorTemplate&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetItemBackGroundColorTemplate (page does not exist)">dgsGridListSetItemBackGroundColorTemplate</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetItemBackGroundImage&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetItemBackGroundImage (page does not exist)">dgsGridListSetItemBackGroundImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetItemBackGroundImage&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetItemBackGroundImage (page does not exist)">dgsGridListGetItemBackGroundImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListSetItemBackGroundColor&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListSetItemBackGroundColor (page does not exist)">dgsGridListSetItemBackGroundColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGridListGetItemBackGroundColor&amp;action=edit&amp;redlink=1" class="new" title="DgsGridListGetItemBackGroundColor (page does not exist)">dgsGridListGetItemBackGroundColor</a></li>
+<li><a href="DgsGridListSelectItem.html" title="DgsGridListSelectItem">dgsGridListSelectItem</a></li>
+<li><a href="DgsGridListItemIsSelected.html" title="DgsGridListItemIsSelected">dgsGridListItemIsSelected</a></li>
+<li><a href="DgsGridListGetSelectedCount.html" title="DgsGridListGetSelectedCount">dgsGridListGetSelectedCount</a></li>
+<li><a href="DgsGridListGetPreselectedItem.html" title="DgsGridListGetPreselectedItem">dgsGridListGetPreselectedItem</a></li>
+<li><a href="DgsGridListGetSelectedItem.html" title="DgsGridListGetSelectedItem">dgsGridListGetSelectedItem</a></li>
+<li><a href="DgsGridListSetSelectedItem.html" title="DgsGridListSetSelectedItem">dgsGridListSetSelectedItem</a></li>
+<li><a href="DgsGridListGetSelectedItems.html" title="DgsGridListGetSelectedItems">dgsGridListGetSelectedItems</a></li>
+<li><a href="DgsGridListSetSelectedItems.html" title="DgsGridListSetSelectedItems">dgsGridListSetSelectedItems</a></li>
+<li><a href="DgsGridListGetItemSelectable.html" title="DgsGridListGetItemSelectable">dgsGridListGetItemSelectable</a></li>
+<li><a href="DgsGridListSetItemSelectable.html" title="DgsGridListSetItemSelectable">dgsGridListSetItemSelectable</a></li>
+<li><a href="DgsGridListGetItemHoverable.html" title="DgsGridListGetItemHoverable">dgsGridListGetItemHoverable</a></li>
+<li><a href="DgsGridListSetItemHoverable.html" title="DgsGridListSetItemHoverable">dgsGridListSetItemHoverable</a></li>
+<li><a href="DgsGridListSetSelectionMode.html" title="DgsGridListSetSelectionMode">dgsGridListSetSelectionMode</a></li>
+<li><a href="DgsGridListGetSelectionMode.html" title="DgsGridListGetSelectionMode">dgsGridListGetSelectionMode</a></li>
+<li><a href="DgsGridListSetNavigationEnabled.html" title="DgsGridListSetNavigationEnabled">dgsGridListSetNavigationEnabled</a></li>
+<li><a href="DgsGridListGetNavigationEnabled.html" title="DgsGridListGetNavigationEnabled">dgsGridListGetNavigationEnabled</a></li>
+<li><a href="DgsGridListSetMultiSelectionEnabled.html" title="DgsGridListSetMultiSelectionEnabled">dgsGridListSetMultiSelectionEnabled</a></li>
+<li><a href="DgsGridListGetMultiSelectionEnabled.html" title="DgsGridListGetMultiSelectionEnabled">dgsGridListGetMultiSelectionEnabled</a></li>
+<li><a href="DgsGridListSetAutoSortEnabled.html" title="DgsGridListSetAutoSortEnabled">dgsGridListSetAutoSortEnabled</a></li>
+<li><a href="DgsGridListGetAutoSortEnabled.html" title="DgsGridListGetAutoSortEnabled">dgsGridListGetAutoSortEnabled</a></li>
+<li><a href="DgsGridListSetSortFunction.html" title="DgsGridListSetSortFunction">dgsGridListSetSortFunction</a></li>
+<li><a href="DgsGridListSetSortEnabled.html" title="DgsGridListSetSortEnabled">dgsGridListSetSortEnabled</a></li>
+<li><a href="DgsGridListGetSortEnabled.html" title="DgsGridListGetSortEnabled">dgsGridListGetSortEnabled</a></li>
+<li><a href="DgsGridListSort.html" title="DgsGridListSort">dgsGridListSort</a></li>
+<li><a href="DgsAttachToGridList.html" title="DgsAttachToGridList">dgsAttachToGridList</a></li>
+<li><a href="DgsDetachFromGridList.html" title="DgsDetachFromGridList">dgsDetachFromGridList</a></li></ul>
+<h2><span class="mw-headline" id="Image"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Image</span></span></h2>
+<ul><li><a href="DgsCreateImage.html" title="DgsCreateImage">dgsCreateImage</a></li>
+<li><a href="DgsImageSetImage.html" title="DgsImageSetImage">dgsImageSetImage</a></li>
+<li><a href="DgsImageGetImage.html" title="DgsImageGetImage">dgsImageGetImage</a></li>
+<li><a href="DgsImageSetUVSize.html" title="DgsImageSetUVSize">dgsImageSetUVSize</a></li>
+<li><a href="DgsImageGetUVSize.html" title="DgsImageGetUVSize">dgsImageGetUVSize</a></li>
+<li><a href="DgsImageSetUVPosition.html" title="DgsImageSetUVPosition">dgsImageSetUVPosition</a></li>
+<li><a href="DgsImageGetUVPosition.html" title="DgsImageGetUVPosition">dgsImageGetUVPosition</a></li>
+<li><a href="DgsImageGetNativeSize.html" title="DgsImageGetNativeSize">dgsImageGetNativeSize</a></li></ul>
+<h2><span class="mw-headline" id="Memo"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Memo</span></span></h2>
+<ul><li><a href="DgsCreateMemo.html" title="DgsCreateMemo">dgsCreateMemo</a></li>
+<li><a href="DgsMemoMoveCaret.html" title="DgsMemoMoveCaret">dgsMemoMoveCaret</a></li>
+<li><a href="DgsMemoSeekPosition.html" title="DgsMemoSeekPosition">dgsMemoSeekPosition</a></li>
+<li><a href="DgsMemoGetScrollBar.html" title="DgsMemoGetScrollBar">dgsMemoGetScrollBar</a></li>
+<li><a href="DgsMemoSetScrollPosition.html" title="DgsMemoSetScrollPosition">dgsMemoSetScrollPosition</a></li>
+<li><a href="DgsMemoGetScrollPosition.html" title="DgsMemoGetScrollPosition">dgsMemoGetScrollPosition</a></li>
+<li><a href="DgsMemoSetHorizontalScrollPosition.html" title="DgsMemoSetHorizontalScrollPosition">dgsMemoSetHorizontalScrollPosition</a></li>
+<li><a href="DgsMemoGetHorizontalScrollPosition.html" title="DgsMemoGetHorizontalScrollPosition">dgsMemoGetHorizontalScrollPosition</a></li>
+<li><a href="DgsMemoSetVerticalScrollPosition.html" title="DgsMemoSetVerticalScrollPosition">dgsMemoSetVerticalScrollPosition</a></li>
+<li><a href="DgsMemoGetVerticalScrollPosition.html" title="DgsMemoGetVerticalScrollPosition">dgsMemoGetVerticalScrollPosition</a></li>
+<li><a href="DgsMemoSetCaretPosition.html" title="DgsMemoSetCaretPosition">dgsMemoSetCaretPosition</a></li>
+<li><a href="DgsMemoGetCaretPosition.html" title="DgsMemoGetCaretPosition">dgsMemoGetCaretPosition</a></li>
+<li><a href="DgsMemoSetCaretStyle.html" title="DgsMemoSetCaretStyle">dgsMemoSetCaretStyle</a></li>
+<li><a href="DgsMemoGetCaretStyle.html" title="DgsMemoGetCaretStyle">dgsMemoGetCaretStyle</a></li>
+<li><a href="DgsMemoSetReadOnly.html" title="DgsMemoSetReadOnly">dgsMemoSetReadOnly</a></li>
+<li><a href="DgsMemoGetReadOnly.html" title="DgsMemoGetReadOnly">dgsMemoGetReadOnly</a></li>
+<li><a href="DgsMemoGetPartOfText.html" title="DgsMemoGetPartOfText">dgsMemoGetPartOfText</a></li>
+<li><a href="DgsMemoAppendText.html" title="DgsMemoAppendText">dgsMemoAppendText</a></li>
+<li><a href="DgsMemoDeleteText.html" title="DgsMemoDeleteText">dgsMemoDeleteText</a></li>
+<li><a href="DgsMemoInsertText.html" title="DgsMemoInsertText">dgsMemoInsertText</a></li>
+<li><a href="DgsMemoClearText.html" title="DgsMemoClearText">dgsMemoClearText</a></li>
+<li><a href="DgsMemoGetTextBoundingBox.html" title="DgsMemoGetTextBoundingBox">dgsMemoGetTextBoundingBox</a></li>
+<li><a href="DgsMemoSetTypingSound.html" title="DgsMemoSetTypingSound">dgsMemoSetTypingSound</a></li>
+<li><a href="DgsMemoGetTypingSound.html" title="DgsMemoGetTypingSound">dgsMemoGetTypingSound</a></li>
+<li><a href="DgsMemoSetTypingSoundVolume.html" title="DgsMemoSetTypingSoundVolume">dgsMemoSetTypingSoundVolume</a></li>
+<li><a href="DgsMemoGetTypingSoundVolume.html" title="DgsMemoGetTypingSoundVolume">dgsMemoGetTypingSoundVolume</a></li>
+<li><a href="DgsMemoGetLineCount.html" title="DgsMemoGetLineCount">dgsMemoGetLineCount</a></li>
+<li><a href="DgsMemoSetWordWrapState.html" title="DgsMemoSetWordWrapState">dgsMemoSetWordWrapState</a></li>
+<li><a href="DgsMemoGetWordWrapState.html" title="DgsMemoGetWordWrapState">dgsMemoGetWordWrapState</a></li>
+<li><a href="DgsMemoSetScrollBarState.html" title="DgsMemoSetScrollBarState">dgsMemoSetScrollBarState</a></li>
+<li><a href="DgsMemoGetScrollBarState.html" title="DgsMemoGetScrollBarState">dgsMemoGetScrollBarState</a></li>
+<li><a href="DgsMemoSetMaxLength.html" title="DgsMemoSetMaxLength">dgsMemoSetMaxLength</a></li>
+<li><a href="DgsMemoGetMaxLength.html" title="DgsMemoGetMaxLength">dgsMemoGetMaxLength</a></li></ul>
+<h2><span class="mw-headline" id="Label"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Label</span></span></h2>
+<ul><li><a href="DgsCreateLabel.html" title="DgsCreateLabel">dgsCreateLabel</a></li>
+<li><a href="DgsLabelSetColor.html" title="DgsLabelSetColor">dgsLabelSetColor</a></li>
+<li><a href="DgsLabelGetColor.html" title="DgsLabelGetColor">dgsLabelGetColor</a></li>
+<li><a href="DgsLabelSetHorizontalAlign.html" title="DgsLabelSetHorizontalAlign">dgsLabelSetHorizontalAlign</a></li>
+<li><a href="DgsLabelGetHorizontalAlign.html" title="DgsLabelGetHorizontalAlign">dgsLabelGetHorizontalAlign</a></li>
+<li><a href="DgsLabelSetVerticalAlign.html" title="DgsLabelSetVerticalAlign">dgsLabelSetVerticalAlign</a></li>
+<li><a href="DgsLabelGetVerticalAlign.html" title="DgsLabelGetVerticalAlign">dgsLabelGetVerticalAlign</a></li>
+<li><a href="DgsLabelGetTextExtent.html" title="DgsLabelGetTextExtent">dgsLabelGetTextExtent</a></li>
+<li><a href="DgsLabelGetFontHeight.html" title="DgsLabelGetFontHeight">dgsLabelGetFontHeight</a></li>
+<li><a href="DgsLabelGetTextSize.html" title="DgsLabelGetTextSize">dgsLabelGetTextSize</a></li></ul>
+<h2><span class="mw-headline" id="Layout"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Layout</span></span></h2>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCreateLayout&amp;action=edit&amp;redlink=1" class="new" title="DgsCreateLayout (page does not exist)">dgsCreateLayout</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsLayoutAddItem&amp;action=edit&amp;redlink=1" class="new" title="DgsLayoutAddItem (page does not exist)">dgsLayoutAddItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsLayoutRemoveItem&amp;action=edit&amp;redlink=1" class="new" title="DgsLayoutRemoveItem (page does not exist)">dgsLayoutRemoveItem</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsLayoutGetItemIndex&amp;action=edit&amp;redlink=1" class="new" title="DgsLayoutGetItemIndex (page does not exist)">dgsLayoutGetItemIndex</a></li></ul>
+<h2><span class="mw-headline" id="Line"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Line</span></span></h2>
+<ul><li><a href="DgsCreateLine.html" title="DgsCreateLine">dgsCreateLine</a></li>
+<li><a href="DgsLineAddItem.html" title="DgsLineAddItem">dgsLineAddItem</a></li>
+<li><a href="DgsLineRemoveItem.html" title="DgsLineRemoveItem">dgsLineRemoveItem</a></li>
+<li><a href="DgsLineSetItemPosition.html" title="DgsLineSetItemPosition">dgsLineSetItemPosition</a></li>
+<li><a href="DgsLineGetItemPosition.html" title="DgsLineGetItemPosition">dgsLineGetItemPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsLineSetItemWidth&amp;action=edit&amp;redlink=1" class="new" title="DgsLineSetItemWidth (page does not exist)">dgsLineSetItemWidth</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsLineGetItemWidth&amp;action=edit&amp;redlink=1" class="new" title="DgsLineGetItemWidth (page does not exist)">dgsLineGetItemWidth</a></li>
+<li><a href="DgsLineSetItemColor.html" title="DgsLineSetItemColor">dgsLineSetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsLineGetItemColor&amp;action=edit&amp;redlink=1" class="new" title="DgsLineGetItemColor (page does not exist)">dgsLineGetItemColor</a></li></ul>
+<h2><span class="mw-headline" id="Progress_Bar"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Progress Bar</span></span></h2>
+<ul><li><a href="DgsCreateProgressBar.html" title="DgsCreateProgressBar">dgsCreateProgressBar</a></li>
+<li><a href="DgsProgressBarGetProgress.html" title="DgsProgressBarGetProgress">dgsProgressBarGetProgress</a></li>
+<li><a href="DgsProgressBarSetProgress.html" title="DgsProgressBarSetProgress">dgsProgressBarSetProgress</a></li>
+<li><a href="DgsProgressBarGetMode.html" title="DgsProgressBarGetMode">dgsProgressBarGetMode</a></li>
+<li><a href="DgsProgressBarSetMode.html" title="DgsProgressBarSetMode">dgsProgressBarSetMode</a></li>
+<li><a href="DgsProgressBarGetStyle.html" title="DgsProgressBarGetStyle">dgsProgressBarGetStyle</a></li>
+<li><a href="DgsProgressBarSetStyle.html" title="DgsProgressBarSetStyle">dgsProgressBarSetStyle</a></li></ul>
+<h2><span class="mw-headline" id="Radio_Button"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Radio Button</span></span></h2>
+<ul><li><a href="DgsCreateRadioButton.html" title="DgsCreateRadioButton">dgsCreateRadioButton</a></li>
+<li><a href="DgsRadioButtonGetSelected.html" title="DgsRadioButtonGetSelected">dgsRadioButtonGetSelected</a></li>
+<li><a href="DgsRadioButtonSetSelected.html" title="DgsRadioButtonSetSelected">dgsRadioButtonSetSelected</a></li>
+<li><a href="DgsRadioButtonSetHorizontalAlign.html" title="DgsRadioButtonSetHorizontalAlign">dgsRadioButtonSetHorizontalAlign</a></li>
+<li><a href="DgsRadioButtonGetHorizontalAlign.html" title="DgsRadioButtonGetHorizontalAlign">dgsRadioButtonGetHorizontalAlign</a></li>
+<li><a href="DgsRadioButtonSetVerticalAlign.html" title="DgsRadioButtonSetVerticalAlign">dgsRadioButtonSetVerticalAlign</a></li>
+<li><a href="DgsRadioButtonGetVerticalAlign.html" title="DgsRadioButtonGetVerticalAlign">dgsRadioButtonGetVerticalAlign</a></li></ul>
+<h2><span class="mw-headline" id="Scale_Pane"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Scale Pane</span></span></h2>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCreateScalePane&amp;action=edit&amp;redlink=1" class="new" title="DgsCreateScalePane (page does not exist)">dgsCreateScalePane</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneGetScrollBar&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneGetScrollBar (page does not exist)">dgsScalePaneGetScrollBar</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneSetScrollBarState&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneSetScrollBarState (page does not exist)">dgsScalePaneSetScrollBarState</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneGetScrollBarState&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneGetScrollBarState (page does not exist)">dgsScalePaneGetScrollBarState</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneSetScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneSetScrollPosition (page does not exist)">dgsScalePaneSetScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneGetScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneGetScrollPosition (page does not exist)">dgsScalePaneGetScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneSetHorizontalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneSetHorizontalScrollPosition (page does not exist)">dgsScalePaneSetHorizontalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneGetHorizontalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneGetHorizontalScrollPosition (page does not exist)">dgsScalePaneGetHorizontalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneSetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneSetVerticalScrollPosition (page does not exist)">dgsScalePaneSetVerticalScrollPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScalePaneGetVerticalScrollPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScalePaneGetVerticalScrollPosition (page does not exist)">dgsScalePaneGetVerticalScrollPosition</a></li></ul>
+<h2><span class="mw-headline" id="Scroll_Bar"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Scroll Bar</span></span></h2>
+<ul><li><a href="DgsCreateScrollBar.html" title="DgsCreateScrollBar">dgsCreateScrollBar</a></li>
+<li><a href="DgsScrollBarSetScrollPosition.html" title="DgsScrollBarSetScrollPosition">dgsScrollBarSetScrollPosition</a></li>
+<li><a href="DgsScrollBarGetScrollPosition.html" title="DgsScrollBarGetScrollPosition">dgsScrollBarGetScrollPosition</a></li>
+<li><a href="DgsScrollBarSetCursorLength.html" title="DgsScrollBarSetCursorLength">dgsScrollBarSetCursorLength</a></li>
+<li><a href="DgsScrollBarGetCursorLength.html" title="DgsScrollBarGetCursorLength">dgsScrollBarGetCursorLength</a></li>
+<li><a href="DgsScrollBarSetGrades.html" title="DgsScrollBarSetGrades">dgsScrollBarSetGrades</a></li>
+<li><a href="DgsScrollBarGetGrades.html" title="DgsScrollBarGetGrades">dgsScrollBarGetGrades</a></li>
+<li><a href="DgsScrollBarSetLocked.html" title="DgsScrollBarSetLocked">dgsScrollBarSetLocked</a></li>
+<li><a href="DgsScrollBarGetLocked.html" title="DgsScrollBarGetLocked">dgsScrollBarGetLocked</a></li>
+<li><a href="DgsScrollBarSetCursorWidth.html" title="DgsScrollBarSetCursorWidth">dgsScrollBarSetCursorWidth</a></li>
+<li><a href="DgsScrollBarGetCursorWidth.html" title="DgsScrollBarGetCursorWidth">dgsScrollBarGetCursorWidth</a></li>
+<li><a href="DgsScrollBarSetTroughWidth.html" title="DgsScrollBarSetTroughWidth">dgsScrollBarSetTroughWidth</a></li>
+<li><a href="DgsScrollBarGetTroughWidth.html" title="DgsScrollBarGetTroughWidth">dgsScrollBarGetTroughWidth</a></li>
+<li><a href="DgsScrollBarSetArrowSize.html" title="DgsScrollBarSetArrowSize">dgsScrollBarSetArrowSize</a></li>
+<li><a href="DgsScrollBarGetArrowSize.html" title="DgsScrollBarGetArrowSize">dgsScrollBarGetArrowSize</a></li></ul>
+<h2><span class="mw-headline" id="Scroll_Pane"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Scroll Pane</span></span></h2>
+<ul><li><a href="DgsCreateScrollPane.html" title="DgsCreateScrollPane">dgsCreateScrollPane</a></li>
+<li><a href="DgsScrollPaneGetScrollBar.html" title="DgsScrollPaneGetScrollBar">dgsScrollPaneGetScrollBar</a></li>
+<li><a href="DgsScrollPaneSetScrollPosition.html" title="DgsScrollPaneSetScrollPosition">dgsScrollPaneSetScrollPosition</a></li>
+<li><a href="DgsScrollPaneGetScrollPosition.html" title="DgsScrollPaneGetScrollPosition">dgsScrollPaneGetScrollPosition</a></li>
+<li><a href="DgsScrollPaneSetHorizontalScrollPosition.html" title="DgsScrollPaneSetHorizontalScrollPosition">dgsScrollPaneSetHorizontalScrollPosition</a></li>
+<li><a href="DgsScrollPaneGetHorizontalScrollPosition.html" title="DgsScrollPaneGetHorizontalScrollPosition">dgsScrollPaneGetHorizontalScrollPosition</a></li>
+<li><a href="DgsScrollPaneSetVerticalScrollPosition.html" title="DgsScrollPaneSetVerticalScrollPosition">dgsScrollPaneSetVerticalScrollPosition</a></li>
+<li><a href="DgsScrollPaneGetVerticalScrollPosition.html" title="DgsScrollPaneGetVerticalScrollPosition">dgsScrollPaneGetVerticalScrollPosition</a></li>
+<li><a href="DgsScrollPaneSetScrollBarState.html" title="DgsScrollPaneSetScrollBarState">dgsScrollPaneSetScrollBarState</a></li>
+<li><a href="DgsScrollPaneGetScrollBarState.html" title="DgsScrollPaneGetScrollBarState">dgsScrollPaneGetScrollBarState</a></li></ul>
+<h2><span class="mw-headline" id="Selector"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Selector</span></span></h2>
+<ul><li><a href="DgsCreateSelector.html" title="DgsCreateSelector">dgsCreateSelector</a></li>
+<li><a href="DgsSelectorAddItem.html" title="DgsSelectorAddItem">dgsSelectorAddItem</a></li>
+<li><a href="DgsSelectorRemoveItem.html" title="DgsSelectorRemoveItem">dgsSelectorRemoveItem</a></li>
+<li><a href="DgsSelectorClear.html" title="DgsSelectorClear">dgsSelectorClear</a></li>
+<li><a href="DgsSelectorSetSelectedItem.html" title="DgsSelectorSetSelectedItem">dgsSelectorSetSelectedItem</a></li>
+<li><a href="DgsSelectorGetSelectedItem.html" title="DgsSelectorGetSelectedItem">dgsSelectorGetSelectedItem</a></li>
+<li><a href="DgsSelectorGetItemText.html" title="DgsSelectorGetItemText">dgsSelectorGetItemText</a></li>
+<li><a href="DgsSelectorSetItemText.html" title="DgsSelectorSetItemText">dgsSelectorSetItemText</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorSetItemData&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorSetItemData (page does not exist)">dgsSelectorSetItemData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorGetItemData&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorGetItemData (page does not exist)">dgsSelectorGetItemData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorSetItemColor&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorSetItemColor (page does not exist)">dgsSelectorSetItemColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorGetItemColor&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorGetItemColor (page does not exist)">dgsSelectorGetItemColor</a></li>
+<li><a href="DgsSelectorSetItemFont.html" title="DgsSelectorSetItemFont">dgsSelectorSetItemFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorGetItemFont&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorGetItemFont (page does not exist)">dgsSelectorGetItemFont</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorSetItemTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorSetItemTextSize (page does not exist)">dgsSelectorSetItemTextSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorGetItemTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorGetItemTextSize (page does not exist)">dgsSelectorGetItemTextSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorSetItemAlignment&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorSetItemAlignment (page does not exist)">dgsSelectorSetItemAlignment</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorGetItemAlignment&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorGetItemAlignment (page does not exist)">dgsSelectorGetItemAlignment</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorSetItemImage&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorSetItemImage (page does not exist)">dgsSelectorSetItemImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorGetItemImage&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorGetItemImage (page does not exist)">dgsSelectorGetItemImage</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsSelectorRemoveItemImage&amp;action=edit&amp;redlink=1" class="new" title="DgsSelectorRemoveItemImage (page does not exist)">dgsSelectorRemoveItemImage</a></li></ul>
+<h2><span class="mw-headline" id="Style"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Style</span></span></h2>
+<ul><li><a href="DgsAddStyle.html" title="DgsAddStyle">dgsAddStyle</a></li>
+<li><a href="DgsLoadStyle.html" title="DgsLoadStyle">dgsLoadStyle</a></li>
+<li><a href="DgsUnloadStyle.html" title="DgsUnloadStyle">dgsUnloadStyle</a></li>
+<li><a href="DgsSetStyle.html" title="DgsSetStyle">dgsSetStyle</a></li>
+<li><a href="DgsGetStyle.html" title="DgsGetStyle">dgsGetStyle</a></li>
+<li><a href="DgsGetLoadedStyleList.html" title="DgsGetLoadedStyleList">dgsGetLoadedStyleList</a></li>
+<li><a href="DgsGetAddedStyleList.html" title="DgsGetAddedStyleList">dgsGetAddedStyleList</a></li>
+<li><a href="DgsGetValueFromStyle.html" title="DgsGetValueFromStyle">dgsGetValueFromStyle</a></li></ul>
+<h2><span class="mw-headline" id="Switch_Button"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Switch Button</span></span></h2>
+<ul><li><a href="DgsCreateSwitchButton.html" title="DgsCreateSwitchButton">dgsCreateSwitchButton</a></li>
+<li><a href="DgsSwitchButtonGetState.html" title="DgsSwitchButtonGetState">dgsSwitchButtonGetState</a></li>
+<li><a href="DgsSwitchButtonSetState.html" title="DgsSwitchButtonSetState">dgsSwitchButtonSetState</a></li>
+<li><a href="DgsSwitchButtonSetText.html" title="DgsSwitchButtonSetText">dgsSwitchButtonSetText</a></li>
+<li><a href="DgsSwitchButtonGetText.html" title="DgsSwitchButtonGetText">dgsSwitchButtonGetText</a></li></ul>
+<h2><span class="mw-headline" id="Tab_Panel"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Tab Panel</span></span></h2>
+<ul><li><a href="DgsCreateTabPanel.html" title="DgsCreateTabPanel">dgsCreateTabPanel</a></li>
+<li><a href="DgsCreateTab.html" title="DgsCreateTab">dgsCreateTab</a></li>
+<li><a href="DgsGetSelectedTab.html" title="DgsGetSelectedTab">dgsGetSelectedTab</a></li>
+<li><a href="DgsSetSelectedTab.html" title="DgsSetSelectedTab">dgsSetSelectedTab</a></li>
+<li><a href="DgsTabPanelGetTabFromID.html" title="DgsTabPanelGetTabFromID">dgsTabPanelGetTabFromID</a></li>
+<li><a href="DgsTabPanelMoveTab.html" title="DgsTabPanelMoveTab">dgsTabPanelMoveTab</a></li>
+<li><a href="DgsTabPanelGetTabID.html" title="DgsTabPanelGetTabID">dgsTabPanelGetTabID</a></li>
+<li><a href="DgsDeleteTab.html" title="DgsDeleteTab">dgsDeleteTab</a></li></ul>
+<h2><span class="mw-headline" id="Window"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Window</span></span></h2>
+<ul><li><a href="DgsCreateWindow.html" title="DgsCreateWindow">dgsCreateWindow</a></li>
+<li><a href="DgsWindowSetSizable.html" title="DgsWindowSetSizable">dgsWindowSetSizable</a></li>
+<li><a href="DgsWindowSetMovable.html" title="DgsWindowSetMovable">dgsWindowSetMovable</a></li>
+<li><a href="DgsWindowGetSizable.html" title="DgsWindowGetSizable">dgsWindowGetSizable</a></li>
+<li><a href="DgsWindowGetMovable.html" title="DgsWindowGetMovable">dgsWindowGetMovable</a></li>
+<li><a href="DgsCloseWindow.html" title="DgsCloseWindow">dgsCloseWindow</a></li>
+<li><a href="DgsWindowSetCloseButtonEnabled.html" title="DgsWindowSetCloseButtonEnabled">dgsWindowSetCloseButtonEnabled</a></li>
+<li><a href="DgsWindowGetCloseButtonEnabled.html" title="DgsWindowGetCloseButtonEnabled">dgsWindowGetCloseButtonEnabled</a></li>
+<li><a href="DgsWindowSetCloseButtonSize.html" title="DgsWindowSetCloseButtonSize">dgsWindowSetCloseButtonSize</a></li>
+<li><a href="DgsWindowGetCloseButtonSize.html" title="DgsWindowGetCloseButtonSize">dgsWindowGetCloseButtonSize</a></li>
+<li><a href="DgsWindowGetCloseButton.html" title="DgsWindowGetCloseButton">dgsWindowGetCloseButton</a></li>
+<li><a href="DgsWindowSetHorizontalAlign.html" title="DgsWindowSetHorizontalAlign">dgsWindowSetHorizontalAlign</a></li>
+<li><a href="DgsWindowSetVerticalAlign.html" title="DgsWindowSetVerticalAlign">dgsWindowSetVerticalAlign</a></li>
+<li><a href="DgsWindowGetHorizontalAlign.html" title="DgsWindowGetHorizontalAlign">dgsWindowGetHorizontalAlign</a></li>
+<li><a href="DgsWindowGetVerticalAlign.html" title="DgsWindowGetVerticalAlign">dgsWindowGetVerticalAlign</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsWindowGetTextExtent&amp;action=edit&amp;redlink=1" class="new" title="DgsWindowGetTextExtent (page does not exist)">dgsWindowGetTextExtent</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsWindowGetFontHeight&amp;action=edit&amp;redlink=1" class="new" title="DgsWindowGetFontHeight (page does not exist)">dgsWindowGetFontHeight</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsWindowGetTextSize&amp;action=edit&amp;redlink=1" class="new" title="DgsWindowGetTextSize (page does not exist)">dgsWindowGetTextSize</a></li></ul>
+<h2><span class="mw-headline" id="Plugin"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Plugin</span></span></h2>
+<h3><span class="mw-headline" id="Blur_Box"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Blur Box</span></span></h3>
+<ul><li><a href="DgsCreateBlurBox.html" title="DgsCreateBlurBox">dgsCreateBlurBox</a></li>
+<li><a href="DgsBlurBoxSetTexture.html" title="DgsBlurBoxSetTexture">dgsBlurBoxSetTexture</a></li>
+<li><a href="DgsBlurBoxGetTexture.html" title="DgsBlurBoxGetTexture">dgsBlurBoxGetTexture</a></li>
+<li><a href="DgsBlurBoxSetResolution.html" title="DgsBlurBoxSetResolution">dgsBlurBoxSetResolution</a></li>
+<li><a href="DgsBlurBoxSetIntensity.html" title="DgsBlurBoxSetIntensity">dgsBlurBoxSetIntensity</a></li>
+<li><a href="DgsBlurBoxSetLevel.html" title="DgsBlurBoxSetLevel">dgsBlurBoxSetLevel</a></li>
+<li><a href="DgsBlurBoxGetResolution.html" title="DgsBlurBoxGetResolution">dgsBlurBoxGetResolution</a></li>
+<li><a href="DgsBlurBoxGetLevel.html" title="DgsBlurBoxGetLevel">dgsBlurBoxGetLevel</a></li>
+<li><a href="DgsBlurBoxGetIntensity.html" title="DgsBlurBoxGetIntensity">dgsBlurBoxGetIntensity</a></li>
+<li><a href="DgsBlurBoxSetFilter.html" title="DgsBlurBoxSetFilter">dgsBlurBoxSetFilter</a></li></ul>
+<h3><span class="mw-headline" id="Canvas"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Canvas</span></span></h3>
+<ul><li><a href="DgsCreateCanvas.html" title="DgsCreateCanvas">dgsCreateCanvas</a></li></ul>
+<h3><span class="mw-headline" id="Chart"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Chart</span></span></h3>
+<ul><li><a href="DgsCreateChart.html" title="DgsCreateChart">dgsCreateChart</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartAddDataset&amp;action=edit&amp;redlink=1" class="new" title="DgsChartAddDataset (page does not exist)">dgsChartAddDataset</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartRemoveDataset&amp;action=edit&amp;redlink=1" class="new" title="DgsChartRemoveDataset (page does not exist)">dgsChartRemoveDataset</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartSetLabels&amp;action=edit&amp;redlink=1" class="new" title="DgsChartSetLabels (page does not exist)">dgsChartSetLabels</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartDatasetSetStyle&amp;action=edit&amp;redlink=1" class="new" title="DgsChartDatasetSetStyle (page does not exist)">dgsChartDatasetSetStyle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartDatasetSetLabel&amp;action=edit&amp;redlink=1" class="new" title="DgsChartDatasetSetLabel (page does not exist)">dgsChartDatasetSetLabel</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartDatasetSetData&amp;action=edit&amp;redlink=1" class="new" title="DgsChartDatasetSetData (page does not exist)">dgsChartDatasetSetData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartDatasetAddData&amp;action=edit&amp;redlink=1" class="new" title="DgsChartDatasetAddData (page does not exist)">dgsChartDatasetAddData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartDatasetRemoveData&amp;action=edit&amp;redlink=1" class="new" title="DgsChartDatasetRemoveData (page does not exist)">dgsChartDatasetRemoveData</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsChartDatasetClearData&amp;action=edit&amp;redlink=1" class="new" title="DgsChartDatasetClearData (page does not exist)">dgsChartDatasetClearData</a></li></ul>
+<h3><span class="mw-headline" id="Circle"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Circle</span></span></h3>
+<ul><li><a href="DgsCreateCircle.html" title="DgsCreateCircle">dgsCreateCircle</a></li>
+<li><a href="DgsCircleSetRadius.html" title="DgsCircleSetRadius">dgsCircleSetRadius</a></li>
+<li><a href="DgsCircleGetRadius.html" title="DgsCircleGetRadius">dgsCircleGetRadius</a></li>
+<li><a href="DgsCircleSetTexture.html" title="DgsCircleSetTexture">dgsCircleSetTexture</a></li>
+<li><a href="DgsCircleGetTexture.html" title="DgsCircleGetTexture">dgsCircleGetTexture</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleSetColor&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleSetColor (page does not exist)">dgsCircleSetColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleGetColor&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleGetColor (page does not exist)">dgsCircleGetColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleSetColorOverwritten&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleSetColorOverwritten (page does not exist)">dgsCircleSetColorOverwritten</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleGetColorOverwritten&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleGetColorOverwritten (page does not exist)">dgsCircleGetColorOverwritten</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleSetDirection&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleSetDirection (page does not exist)">dgsCircleSetDirection</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleGetDirection&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleGetDirection (page does not exist)">dgsCircleGetDirection</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleSetAngle&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleSetAngle (page does not exist)">dgsCircleSetAngle</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleGetAngle&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleGetAngle (page does not exist)">dgsCircleGetAngle</a></li>
+<li><a href="DgsCircleSetTextureRotation.html" title="DgsCircleSetTextureRotation">dgsCircleSetTextureRotation</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCircleGetTextureRotation&amp;action=edit&amp;redlink=1" class="new" title="DgsCircleGetTextureRotation (page does not exist)">dgsCircleGetTextureRotation</a></li></ul>
+<h3><span class="mw-headline" id="Color_Picker"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Color Picker</span></span></h3>
+<ul><li><a href="DgsCreateColorPicker.html" title="DgsCreateColorPicker">dgsCreateColorPicker</a></li>
+<li><a href="DgsColorPickerSetColor.html" title="DgsColorPickerSetColor">dgsColorPickerSetColor</a></li>
+<li><a href="DgsColorPickerGetColor.html" title="DgsColorPickerGetColor">dgsColorPickerGetColor</a></li>
+<li><a href="DgsBindToColorPicker.html" title="DgsBindToColorPicker">dgsBindToColorPicker</a></li>
+<li><a href="DgsUnbindFromColorPicker.html" title="DgsUnbindFromColorPicker">dgsUnbindFromColorPicker</a></li>
+<li><a href="DgsColorPickerCreateComponentSelector.html" title="DgsColorPickerCreateComponentSelector">dgsColorPickerCreateComponentSelector</a></li>
+<li><a href="DgsColorPickerGetComponentSelectorValue.html" title="DgsColorPickerGetComponentSelectorValue">dgsColorPickerGetComponentSelectorValue</a></li>
+<li><a href="DgsColorPickerSetComponentSelectorValue.html" title="DgsColorPickerSetComponentSelectorValue">dgsColorPickerSetComponentSelectorValue</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsColorPickerGetComponentSelectorMask&amp;action=edit&amp;redlink=1" class="new" title="DgsColorPickerGetComponentSelectorMask (page does not exist)">dgsColorPickerGetComponentSelectorMask</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsColorPickerSetComponentSelectorMask&amp;action=edit&amp;redlink=1" class="new" title="DgsColorPickerSetComponentSelectorMask (page does not exist)">dgsColorPickerSetComponentSelectorMask</a></li></ul>
+<h3><span class="mw-headline" id="Effect_3D"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Effect 3D</span></span></h3>
+<ul><li><a href="DgsCreateEffect3D.html" title="DgsCreateEffect3D">dgsCreateEffect3D</a></li>
+<li><a href="DgsEffect3DApplyToScrollPane.html" title="DgsEffect3DApplyToScrollPane">dgsEffect3DApplyToScrollPane</a></li>
+<li><a href="DgsEffect3DRemoveFromScrollPane.html" title="DgsEffect3DRemoveFromScrollPane">dgsEffect3DRemoveFromScrollPane</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsEffect3DSetRotationFactor&amp;action=edit&amp;redlink=1" class="new" title="DgsEffect3DSetRotationFactor (page does not exist)">dgsEffect3DSetRotationFactor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsEffect3DGetRotationFactor&amp;action=edit&amp;redlink=1" class="new" title="DgsEffect3DGetRotationFactor (page does not exist)">dgsEffect3DGetRotationFactor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsEffect3DSetAlwaysEnabled&amp;action=edit&amp;redlink=1" class="new" title="DgsEffect3DSetAlwaysEnabled (page does not exist)">dgsEffect3DSetAlwaysEnabled</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsEffect3DGetAlwaysEnabled&amp;action=edit&amp;redlink=1" class="new" title="DgsEffect3DGetAlwaysEnabled (page does not exist)">dgsEffect3DGetAlwaysEnabled</a></li></ul>
+<h3><span class="mw-headline" id="Gradient"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Gradient</span></span></h3>
+<ul><li><a href="DgsCreateGradient.html" title="DgsCreateGradient">dgsCreateGradient</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGradientSetColor&amp;action=edit&amp;redlink=1" class="new" title="DgsGradientSetColor (page does not exist)">dgsGradientSetColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGradientGetColor&amp;action=edit&amp;redlink=1" class="new" title="DgsGradientGetColor (page does not exist)">dgsGradientGetColor</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGradientSetRotation&amp;action=edit&amp;redlink=1" class="new" title="DgsGradientSetRotation (page does not exist)">dgsGradientSetRotation</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGradientGetRotation&amp;action=edit&amp;redlink=1" class="new" title="DgsGradientGetRotation (page does not exist)">dgsGradientGetRotation</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGradientSetTexture&amp;action=edit&amp;redlink=1" class="new" title="DgsGradientSetTexture (page does not exist)">dgsGradientSetTexture</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsGradientGetTexture&amp;action=edit&amp;redlink=1" class="new" title="DgsGradientGetTexture (page does not exist)">dgsGradientGetTexture</a></li>
+<li><a href="DgsGradientSetColorOverwritten.html" title="DgsGradientSetColorOverwritten">dgsGradientSetColorOverwritten</a></li>
+<li><a href="DgsGradientGetColorOverwritten.html" title="DgsGradientGetColorOverwritten">dgsGradientGetColorOverwritten</a></li></ul>
+<h3><span class="mw-headline" id="Mask"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Mask</span></span></h3>
+<ul><li><a href="DgsCreateMask.html" title="DgsCreateMask">dgsCreateMask</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsMaskGetSetting&amp;action=edit&amp;redlink=1" class="new" title="DgsMaskGetSetting (page does not exist)">dgsMaskGetSetting</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsMaskSetSetting&amp;action=edit&amp;redlink=1" class="new" title="DgsMaskSetSetting (page does not exist)">dgsMaskSetSetting</a></li>
+<li><a href="DgsMaskGetTexture.html" title="DgsMaskGetTexture">dgsMaskGetTexture</a></li>
+<li><a href="DgsMaskSetTexture.html" title="DgsMaskSetTexture">dgsMaskSetTexture</a></li>
+<li><a href="DgsMaskCenterTexturePosition.html" title="DgsMaskCenterTexturePosition">dgsMaskCenterTexturePosition</a></li>
+<li><a href="DgsMaskAdaptTextureSize.html" title="DgsMaskAdaptTextureSize">dgsMaskAdaptTextureSize</a></li></ul>
+<h3><span class="mw-headline" id="Media_Browser"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Media Browser</span></span></h3>
+<ul><li><a href="DgsCreateMediaBrowser.html" title="DgsCreateMediaBrowser">dgsCreateMediaBrowser</a></li>
+<li><a href="DgsMediaLoadMedia.html" title="DgsMediaLoadMedia">dgsMediaLoadMedia</a></li>
+<li><a href="DgsMediaGetMediaPath.html" title="DgsMediaGetMediaPath">dgsMediaGetMediaPath</a></li>
+<li><a href="DgsMediaClearMedia.html" title="DgsMediaClearMedia">dgsMediaClearMedia</a></li>
+<li><a href="DgsMediaIsStreamMedia.html" title="DgsMediaIsStreamMedia">dgsMediaIsStreamMedia</a></li>
+<li><a href="DgsMediaPlay.html" title="DgsMediaPlay">dgsMediaPlay</a></li>
+<li><a href="DgsMediaPause.html" title="DgsMediaPause">dgsMediaPause</a></li>
+<li><a href="DgsMediaStop.html" title="DgsMediaStop">dgsMediaStop</a></li>
+<li><a href="DgsMediaGetDuration.html" title="DgsMediaGetDuration">dgsMediaGetDuration</a></li>
+<li><a href="DgsMediaGetCurrentPosition.html" title="DgsMediaGetCurrentPosition">dgsMediaGetCurrentPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsMediaSetCurrentPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsMediaSetCurrentPosition (page does not exist)">dgsMediaSetCurrentPosition</a></li>
+<li><a href="DgsMediaGetLooped.html" title="DgsMediaGetLooped">dgsMediaGetLooped</a></li>
+<li><a href="DgsMediaSetLooped.html" title="DgsMediaSetLooped">dgsMediaSetLooped</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsMediaGetSpeed&amp;action=edit&amp;redlink=1" class="new" title="DgsMediaGetSpeed (page does not exist)">dgsMediaGetSpeed</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsMediaSetSpeed&amp;action=edit&amp;redlink=1" class="new" title="DgsMediaSetSpeed (page does not exist)">dgsMediaSetSpeed</a></li></ul>
+<h3><span class="mw-headline" id="Nine_Slice"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Nine Slice</span></span></h3>
+<ul><li><a href="DgsCreateNineSlice.html" title="DgsCreateNineSlice">dgsCreateNineSlice</a></li>
+<li><a href="DgsNineSliceSetGrid.html" title="DgsNineSliceSetGrid">dgsNineSliceSetGrid</a></li>
+<li><a href="DgsNineSliceGetGrid.html" title="DgsNineSliceGetGrid">dgsNineSliceGetGrid</a></li></ul>
+<h3><span class="mw-headline" id="Object_Preview_Supports"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Object Preview Supports</span></span></h3>
+<ul><li><a href="DgsCreateObjectPreviewHandle.html" title="DgsCreateObjectPreviewHandle">dgsCreateObjectPreviewHandle</a></li>
+<li><a href="DgsLocateObjectPreviewResource.html" title="DgsLocateObjectPreviewResource">dgsLocateObjectPreviewResource</a></li>
+<li><a href="DgsAttachObjectPreviewToImage.html" title="DgsAttachObjectPreviewToImage">dgsAttachObjectPreviewToImage</a></li>
+<li><a href="DgsRemoveObjectPreviewFromImage.html" title="DgsRemoveObjectPreviewFromImage">dgsRemoveObjectPreviewFromImage</a></li>
+<li><a href="DgsObjectPreviewGetHandleByID.html" title="DgsObjectPreviewGetHandleByID">dgsObjectPreviewGetHandleByID</a></li>
+<li><a href="DgsConfigureObjectPreview.html" title="DgsConfigureObjectPreview">dgsConfigureObjectPreview</a></li></ul>
+<h3><span class="mw-headline" id="Paste_Handler"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Paste Handler</span></span></h3>
+<ul><li><a href="DgsPasteHandlerSetEnabled.html" title="DgsPasteHandlerSetEnabled">dgsPasteHandlerSetEnabled</a></li>
+<li><a href="DgsPasteHandlerIsEnabled.html" title="DgsPasteHandlerIsEnabled">dgsPasteHandlerIsEnabled</a></li>
+<li><a href="DgsPasteHandlerSetFocused.html" title="DgsPasteHandlerSetFocused">dgsPasteHandlerSetFocused</a></li>
+<li><a href="DgsPasteHandlerIsFocused.html" title="DgsPasteHandlerIsFocused">dgsPasteHandlerIsFocused</a></li></ul>
+<h3><span class="mw-headline" id="QRCode"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">QRCode</span></span></h3>
+<ul><li><a href="DgsRequestQRCode.html" title="DgsRequestQRCode">dgsRequestQRCode</a></li>
+<li><a href="DgsGetQRCodeLoaded.html" title="DgsGetQRCodeLoaded">dgsGetQRCodeLoaded</a></li></ul>
+<h3><span class="mw-headline" id="Remote_Image"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Remote Image</span></span></h3>
+<ul><li><a href="DgsCreateRemoteImage.html" title="DgsCreateRemoteImage">dgsCreateRemoteImage</a></li>
+<li><a href="DgsRemoteImageRequest.html" title="DgsRemoteImageRequest">dgsRemoteImageRequest</a></li>
+<li><a href="DgsRemoteImageAbort.html" title="DgsRemoteImageAbort">dgsRemoteImageAbort</a></li>
+<li><a href="DgsRemoteImageGetTexture.html" title="DgsRemoteImageGetTexture">dgsRemoteImageGetTexture</a></li>
+<li><a href="DgsGetRemoteImageLoadState.html" title="DgsGetRemoteImageLoadState">dgsGetRemoteImageLoadState</a></li></ul>
+<h3><span class="mw-headline" id="Rounded_Rectangle"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Rounded Rectangle</span></span></h3>
+<ul><li><a href="DgsCreateRoundRect.html" title="DgsCreateRoundRect">dgsCreateRoundRect</a></li>
+<li><a href="DgsRoundRectSetTexture.html" title="DgsRoundRectSetTexture">dgsRoundRectSetTexture</a></li>
+<li><a href="DgsRoundRectGetTexture.html" title="DgsRoundRectGetTexture">dgsRoundRectGetTexture</a></li>
+<li><a href="DgsRoundRectSetRadius.html" title="DgsRoundRectSetRadius">dgsRoundRectSetRadius</a></li>
+<li><a href="DgsRoundRectGetRadius.html" title="DgsRoundRectGetRadius">dgsRoundRectGetRadius</a></li>
+<li><a href="DgsRoundRectSetColor.html" title="DgsRoundRectSetColor">dgsRoundRectSetColor</a></li>
+<li><a href="DgsRoundRectGetColor.html" title="DgsRoundRectGetColor">dgsRoundRectGetColor</a></li>
+<li><a href="DgsRoundRectSetColorOverwritten.html" title="DgsRoundRectSetColorOverwritten">dgsRoundRectSetColorOverwritten</a></li>
+<li><a href="DgsRoundRectGetColorOverwritten.html" title="DgsRoundRectGetColorOverwritten">dgsRoundRectGetColorOverwritten</a></li>
+<li><a href="DgsRoundRectSetBorderThickness.html" title="DgsRoundRectSetBorderThickness">dgsRoundRectSetBorderThickness</a></li>
+<li><a href="DgsRoundRectGetBorderThickness.html" title="DgsRoundRectGetBorderThickness">dgsRoundRectGetBorderThickness</a></li>
+<li><a href="DgsRoundRectGetBorderOnly.html" title="DgsRoundRectGetBorderOnly">dgsRoundRectGetBorderOnly</a></li></ul>
+<h3><span class="mw-headline" id="Screen_Source"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">Screen Source</span></span></h3>
+<ul><li><a href="https://wiki.multitheftauto.com/index.php?title=DgsCreateScreenSource&amp;action=edit&amp;redlink=1" class="new" title="DgsCreateScreenSource (page does not exist)">dgsCreateScreenSource</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScreenSourceSetUVPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScreenSourceSetUVPosition (page does not exist)">dgsScreenSourceSetUVPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScreenSourceGetUVPosition&amp;action=edit&amp;redlink=1" class="new" title="DgsScreenSourceGetUVPosition (page does not exist)">dgsScreenSourceGetUVPosition</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScreenSourceSetUVSize&amp;action=edit&amp;redlink=1" class="new" title="DgsScreenSourceSetUVSize (page does not exist)">dgsScreenSourceSetUVSize</a></li>
+<li><a href="https://wiki.multitheftauto.com/index.php?title=DgsScreenSourceGetUVSize&amp;action=edit&amp;redlink=1" class="new" title="DgsScreenSourceGetUVSize (page does not exist)">dgsScreenSourceGetUVSize</a></li></ul>
+<h3><span class="mw-headline" id="SVG"><span style="color:#eb3f00;text-shadow:0.05em 0.05em 0.2em #00000099;">SVG</span></span></h3>
+<ul><li><a href="DgsCreateSVG.html" title="DgsCreateSVG">dgsCreateSVG</a></li>
+<li><a href="DgsSVGGetRawDocument.html" title="DgsSVGGetRawDocument">dgsSVGGetRawDocument</a></li>
+<li><a href="DgsSVGGetDocument.html" title="DgsSVGGetDocument">dgsSVGGetDocument</a></li>
+<li><a href="DgsSVGCreateNode.html" title="DgsSVGCreateNode">dgsSVGCreateNode</a></li>
+<li><a href="DgsSVGDestroyNode.html" title="DgsSVGDestroyNode">dgsSVGDestroyNode</a></li>
+<li><a href="DgsSVGNodeSetAttribute.html" title="DgsSVGNodeSetAttribute">dgsSVGNodeSetAttribute</a></li>
+<li><a href="DgsSVGNodeGetAttribute.html" title="DgsSVGNodeGetAttribute">dgsSVGNodeGetAttribute</a></li>
+<li><a href="DgsSVGNodeSetAttributes.html" title="DgsSVGNodeSetAttributes">dgsSVGNodeSetAttributes</a></li>
+<li><a href="DgsSVGNodeGetAttributes.html" title="DgsSVGNodeGetAttributes">dgsSVGNodeGetAttributes</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727210718
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.142 seconds
+Real time usage: 0.159 seconds
+Preprocessor visited node count: 239/1000000
+Post‐expand include size: 43888/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 383/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   50.047      1 -total
+ 97.53%   48.812      1 Template:DGSFUNCTIONS
+  2.78%    1.393      1 Template:DGS_Animation_Functions
+  2.60%    1.303      1 Template:DGS_Custom_Cursor_Functions
+  2.60%    1.302      1 Template:DGS_Multi_Language_Supports_Functions
+  2.37%    1.187      1 Template:DGS_3D_Element_Functions
+  2.28%    1.139      1 Template:DGS_General_Functions
+  2.24%    1.123      1 Template:DGS_3D_Interface_Functions
+  2.18%    1.091      1 Template:DGS_3D_Image_Functions
+  2.15%    1.074      1 Template:DGS_3D_Line_Functions
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:10045-0!canonical and timestamp 20220727210717 and revision id 55397. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetScrollPosition&amp;oldid=55397">https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetScrollPosition&amp;oldid=55397</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Client_functions.html" title="Category:Client functions">Client functions</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=DgsComboBoxSetScrollPosition" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=DgsComboBoxSetScrollPosition" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="DgsComboBoxSetScrollPosition.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:DgsComboBoxSetScrollPosition&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="DgsComboBoxSetScrollPosition.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetScrollPosition&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetScrollPosition&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/DgsComboBoxSetScrollPosition.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/DgsComboBoxSetScrollPosition.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetScrollPosition&amp;oldid=55397" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=DgsComboBoxSetScrollPosition&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 19 June 2018, at 05:34.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.142","walltime":"0.159","ppvisitednodes":{"value":239,"limit":1000000},"postexpandincludesize":{"value":43888,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":383,"limit":5000000},"timingprofile":["100.00%   50.047      1 -total"," 97.53%   48.812      1 Template:DGSFUNCTIONS","  2.78%    1.393      1 Template:DGS_Animation_Functions","  2.60%    1.303      1 Template:DGS_Custom_Cursor_Functions","  2.60%    1.302      1 Template:DGS_Multi_Language_Supports_Functions","  2.37%    1.187      1 Template:DGS_3D_Element_Functions","  2.28%    1.139      1 Template:DGS_General_Functions","  2.24%    1.123      1 Template:DGS_3D_Interface_Functions","  2.18%    1.091      1 Template:DGS_3D_Image_Functions","  2.15%    1.074      1 Template:DGS_3D_Line_Functions"]},"cachereport":{"timestamp":"20220727210718","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":212});});</script>
+</body>
+</html>

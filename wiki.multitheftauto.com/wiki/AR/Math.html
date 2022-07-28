@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>AR/Math - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"387a73de30aaae14996c0e80","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"AR/Math","wgTitle":"AR/Math","wgCurRevisionId":73365,"wgRevisionId":73365,"wgArticleId":6586,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"AR/Math","wgRelevantArticleId":6586,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading",
+"skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-AR_Math rootpage-AR_Math skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">AR/Math</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><br />
+</p>
+<h2><span class="mw-headline" id="math.abs">math.abs</span></h2>
+<p>تستخدم لتحويل العدد من السالب الي الموجب
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF"></span><span class="mw-headline" id="تركيب_الكود">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.abs(number)
+</pre>
+<h3><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA"></span><span class="mw-headline" id="المفردات">المفردات</span></h3>
+<ul><li><b>number</b> = الرقم الذي تريد ان تحوله الى موجب</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84"></span><span class="mw-headline" id="مثال">مثال</span></h2>
+<!-- BEGIN SECTION |1|both|مثال|--><div class="bothHeader" onclick="expandSection(1);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander1">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section1">
+<p>هذا المثال يقوم بتحويل العدد الى رقم موجب في الردار
+</p>
+<pre class="prettyprint lang-lua">myElegy = createVehicle(562, 1591.596680, -2495.323242, 18.098244) 
+
+local x,y,z = getElementPosition(myElegy)
+
+grX = math.abs(math.random(-30,1)
+grY = math.abs(math.random(-30,1)
+
+areaID = createRadarArea(x,y, grX, grY, 0, 0, 0, 0)</pre></div><!-- END SECTION |1|-->
+<h2><span class="mw-headline" id="math.ceil">math.ceil</span></h2>
+<p>يستخدم لتقريب العدد العشري الى اكبر عدد صحيح
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF_2"></span><span class="mw-headline" id="تركيب_الكود_2">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.ceil(number)
+</pre>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA_2"></span><span class="mw-headline" id="المفردات_2">المفردات</span></h2>
+<ul><li><b>number</b> = الرقم الذي تريد تقريبه الى العدد الصحيح الاكبر</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84_2"></span><span class="mw-headline" id="مثال_2">مثال</span></h2>
+<!-- BEGIN SECTION |2|both|مثال|--><div class="bothHeader" onclick="expandSection(2);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander2">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section2">
+<pre class="prettyprint lang-lua">myElegy = createVehicle(562, 1591.596680, -2495.323242, 18.098244) 
+
+local x,y,z = getElementPosition(myElegy)
+
+grX = math.ceil(math.random(1.235,100.4575))
+grY = math.ceil(math.random(1.235,100.4575))
+
+areaID = createRadarArea(x,y, grX, grY, 0, 0, 0, 0)</pre> </div><!-- END SECTION |2|-->
+<h2><span class="mw-headline" id="math.floor">math.floor</span></h2>
+<p>يستخدم لتقريب العدد العشري وحذف العدد العشري الذي بعد الفاصله
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF_3"></span><span class="mw-headline" id="تركيب_الكود_3">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.floor(number)
+</pre>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA_3"></span><span class="mw-headline" id="المفردات_3">المفردات</span></h2>
+<ul><li><b>number</b> = العدد الذي تريد ان تقربه وتحذف الفاصله</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84_3"></span><span class="mw-headline" id="مثال_3">مثال</span></h2>
+<!-- BEGIN SECTION |3|both|مثال|--><div class="bothHeader" onclick="expandSection(3);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander3">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section3">
+<pre class="prettyprint lang-lua">addCommandHandler('Health', -- امر من اف8
+function(player,_,who) -- وظيفه
+	if who then -- تحقق
+		local ThePlayer = getPlayerFromName(who) -- نحظر اسم اللاعب
+			local Health = math.floor(getElementHealth(ThePlayer)) -- نحظر صحه اللاعب (الدم) مع حذف الارقام بعد الفاصله
+				outputChatBox('* His Health&#160;: '..Health,player,255,255,255,true) -- نخرج نص الى الشات
+		end -- اغلاق
+	end -- اغلاق
+) -- اغلاق
+
+-- By&#160;: The Best</pre> </div><!-- END SECTION |3|-->
+<p><br />
+</p>
+<h2><span class="mw-headline" id="math.round">math.round</span></h2>
+<p>يستخدم للتقريب إما عدد اكبر او اصغر بحيث اذا كان العدد الذي بعد الفاصله 5 او اكبر يقربه الى الاكبر منه,أما اذا كان العدد اصغر من 5 فسوف يحذف الرقم الي بعد الفاصله فقط
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF_4"></span><span class="mw-headline" id="تركيب_الكود_4">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.round(number)
+</pre>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA_4"></span><span class="mw-headline" id="المفردات_4">المفردات</span></h2>
+<ul><li><b>number</b> = العدد الذي تريد تقريبه الى الاكبر او الاصغر</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84_4"></span><span class="mw-headline" id="مثال_4">مثال</span></h2>
+<!-- BEGIN SECTION |4|both|مثال|--><div class="bothHeader" onclick="expandSection(4);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander4">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section4">
+<pre class="prettyprint lang-lua"> -- .ملاحظة&#160;: الكود ما راح يشتغل بدون هذه الوظيفه
+
+function math.round(number, decimals, method)
+    decimals = decimals or 0
+    local factor = 10 ^ decimals
+    if (method == "ceil" or method == "floor") then return math[method](number * factor) / factor
+    else return tonumber(("%."..decimals.."f"):format(number)) end
+end
+
+--&#160;: المثال
+
+local Number = 10.5 -- متغير مع قيمه
+
+addCommandHandler('Round', -- امر من اف8
+function(player) -- وظيفه 
+	outputChatBox('* The Number&#160;: '..math.round(tonumber(Number)),player,255,255,255,true) -- نص في الشات
+	end -- اغلاق
+) -- اغلاق
+
+-- 11 الناتج راح يكون
+
+-- لأن العدد الذي بعد الفاصله 5 او اكبر
+
+-- لو كان العدد 10.4 راح يكون الناتج 10
+
+-- By&#160;: The Best</pre> </div><!-- END SECTION |4|-->
+<h2><span class="mw-headline" id="math.mod">math.mod</span></h2>
+<p>هذا الحدث يستخدم لتحديد باقي القسمة بحيث عند كتابة عددين يقوم الحدث بايجاد باقي القسم بين العدد المقسوم والعدد المقسوم عليه  
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF_5"></span><span class="mw-headline" id="تركيب_الكود_5">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.mod(number)
+</pre>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA_5"></span><span class="mw-headline" id="المفردات_5">المفردات</span></h2>
+<ul><li><b>number</b> = العدد الذي تريد تحديد باقي القسمه له</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84_5"></span><span class="mw-headline" id="مثال_5">مثال</span></h2>
+<!-- BEGIN SECTION |5|both|مثال|--><div class="bothHeader" onclick="expandSection(5);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander5">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section5">
+<pre class="prettyprint lang-lua">-- TODO</pre> </div><!-- END SECTION |5|-->
+<h2><span class="mw-headline" id="math.sqrt">math.sqrt</span></h2>
+<p>تستخدم لحساب الجذر التربيعي للعدد
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF_6"></span><span class="mw-headline" id="تركيب_الكود_6">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.sqrt(number)
+</pre>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA_6"></span><span class="mw-headline" id="المفردات_6">المفردات</span></h2>
+<ul><li><b>number</b> = العدد الذي تريد حساب الجذر التربيعي له</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84_6"></span><span class="mw-headline" id="مثال_6">مثال</span></h2>
+<!-- BEGIN SECTION |6|both|مثال|--><div class="bothHeader" onclick="expandSection(6);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander6">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section6">
+<pre class="prettyprint lang-lua">-- ملاحظة&#160;: الحساب يكون بالجذر التربيعي للعدد
+
+-- مثال --
+
+math.sqrt(100) -- نحدد قيمه الجذر
+10 -- الناتج
+
+-- مثال آخر -- 
+
+math.sqrt(10000) -- نحدد قيمة الجذر
+100 -- الناتج
+
+-- مثال على كود --
+
+-- كلينت 
+
+Health = guiCreateButton(131,163,113,46,"Give me health",false) -- نسوي زر
+addEventHandler("onClientGUIClick",Health, -- اذا ضغط على الزر
+function() -- وظيفة
+triggerServerEvent("Health",localPlayer) -- نرسل الوظيفة للسيرفر
+end,false) -- اغلاق
+
+-- سيرفر
+
+addEvent("Health",true) -- نحظر الوظيفة من الكلينت
+addEventHandler("Health",root, -- نحظر الوظيفة من الكلينت
+function() -- وظيفة
+if (getElementHealth(source) &lt;= 30 ) then -- نتحقق ان دم اللاعب يساوي 30 او اقل
+setElementHealth(source,math.sqrt(10000)) -- اعطاء دم للجذر التربيعي 10000
+      end -- اغلاق
+end) -- اغلاق
+
+-- هنا راح يعطي اللاعب دم على حسب الجذر التربيعي للـ10000
+
+-- الجذر التربيعي لـ10000 = 100
+
+-- By&#160;: The Best</pre> </div><!-- END SECTION |6|-->
+<p><br />
+</p>
+<h2><span class="mw-headline" id="math.pow">math.pow</span></h2>
+<p>تستخدم لحساب الأسس بحيث اذا تم كتابه رقمين يتم ضرب الرقم الاول في الثاني حسب العدد
+</p>
+<h2><span id=".D8.AA.D8.B1.D9.83.D9.8A.D8.A8_.D8.A7.D9.84.D9.83.D9.88.D8.AF_7"></span><span class="mw-headline" id="تركيب_الكود_7">تركيب الكود</span></h2>
+<pre class="prettyprint lang-lua">float/int math.pow(number,number2)
+</pre>
+<h2><span id=".D8.A7.D9.84.D9.85.D9.81.D8.B1.D8.AF.D8.A7.D8.AA_7"></span><span class="mw-headline" id="المفردات_7">المفردات</span></h2>
+<ul><li><b>number</b> = العدد الاول الذي تريد ان تضربه في العدد الثاني</li>
+<li><b>number2</b> = العدد الثاني الذي سيضرب العدد الاول فيه</li></ul>
+<h2><span id=".D9.85.D8.AB.D8.A7.D9.84_7"></span><span class="mw-headline" id="مثال_7">مثال</span></h2>
+<!-- BEGIN SECTION |7|server|مثال|--><div class="serverHeader" onclick="expandSection(7);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander7">Click to collapse [-]</div>مثال</div><div style="display:;" class="serverContent" id="section7">
+<pre class="prettyprint lang-lua">-- عملية الحساب تكون بالضرب
+
+math.pow(9,9) -- نضرب الاسس
+3.8742048 -- الناتج
+
+-- مثال آخر -- 
+
+math.pow(6,7) -- نضرب الاسس
+279936 -- الناتج
+
+-- عملية الضرب كالتالي&#160;:
+
+-- اول مثال الناتج 90
+
+-- نضرب 9 في نفسها 9 مرات&#160;:
+
+-- 9×9×9×9×9×9×9×9×9 = 3.8742048
+
+-- المثال الثاني&#160;:
+
+-- نضرب 6 في نفسها 7 مرات&#160;:
+
+-- 6×6×6×6×6×6×6 = 279936
+
+-- مثال على كود --
+
+addEventHandler("onResourceStart",resourceRoot, -- اذا تم تشغيل السكربت
+function() -- وظيفة
+for _,Player in pairs ( getElementsByType ( "player" ) ) do -- تحديد النوع وهم جميع اللاعبين
+if (getPlayerMoney(Player) &gt;= 50 ) then -- نتحقق ان فلوس اللاعب تساوي 50 او اكثر
+givePlayerMoney(Player,math.pow(9,4)) -- نعطي اللاعب فلوس على حسب ضرب الاسس
+            end -- اغلاق
+      end -- اغلاق
+end) -- اغلاق
+
+-- الفلوس الي راح يعطيها اللاعب هي 6561
+
+-- نتيجه للضرب 9×9×9×9 = 6561
+
+-- By&#160;: The Best</pre> </div><!-- END SECTION |7|-->
+<h2><span class="mw-headline" id="math.random">math.random</span></h2>
+<font color="#006400" size="3"><p align="center"> 
+
+هذه الداله تستخدم لكي تظهر رقم عشوائي بحيث عند كتابة العدد الاول والعدد الثاني يقوم الحدث  باظهار رقم عشوائي بين الرقمين التي ادخلتها
+
+</p></font>
+<p><br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">float/int math.random(number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |8|both|مثال|--><div class="bothHeader" onclick="expandSection(8);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander8">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section8">
+<pre class="prettyprint lang-lua">addEventHandler("onResourceStart",resourceRoot, -- اذا تم تشغيل السكربت
+function() -- وظيفه
+Height = math.random(50,100) -- رقم عشوائي لإرتفاع الماء
+setWaveHeight(Height) -- نربط ارتفاع الماء بالرقم العشوائي
+end) -- اغلاق
+
+-- مثال آخر --
+
+addEventHandler("onResourceStart",resurceRoot, -- اذا تم تشغيل السكربت
+function() -- وظيفه
+for _,Player in ipairs ( getElementType ( "player" ) ) do -- نحدد النوع وهو اللاعب
+if getPlayerMoney ( Player ) &gt;= 100 then --  اذا اللاعب عنده 100 او اكثر 
+givePlayerMoney(Player, math.random(50,100)) -- يعطيه رقم عشوائي مابين 50 و 100
+           end -- اغلاق
+     end -- اغلاق
+end) -- اغلاق
+
+
+-- By&#160;: The Best</pre> </div><!-- END SECTION |8|-->
+<p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<p align="center">___________________________________________________________________</p>
+<h2><span class="mw-headline" id="math.randomseed">math.randomseed</span></h2>
+<font color="#006400" size="3"><p align="center"> 
+
+هذا الحدث يستخدم لكي يظهر رقم عشوائي ثابت بحيث عند كتابة عدد يقوم الحدث  باظهار رقم عشوائي ثابت بين رقمين مثل (100-9999) ولن يتغير هذا 
+الرقم العشوائي ابداً ولتغيره يجب تغير العدد المدخل في البداية
+
+
+
+</p></font>
+<p><br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">float/int math.randomseed(number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |9|both|مثال|--><div class="bothHeader" onclick="expandSection(9);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander9">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section9">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |9|-->
+<p><br />
+</p><p><br />
+</p>
+<p align="center">___________________________________________________________________</p> 
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="math.HexToNumber">math.HexToNumber</span></h2>
+<font color="#006400" size="3"><p align="center"> 
+
+هذا الحدث يستخدم لتحويل الارقام من النظام السادس عشر (Hex) الى النظام العشري (Dec)بحيث عند كتابة عدد Hex يقوم الحدث  بتحويله الى عدد Dec 
+
+معلومة&#160;:
+ارقام Hex هي (0 ، 1 ، 2، 3 ،4 ،5 ، 6، 7 ،8 ، 9 ، F ،E ،D ،C ،B ، A )
+
+ارقام Dec هي (0 ، 1 ، 2، 3 ،4 ،5 ، 6، 7 ،8 ، 9 )
+
+
+
+</p></font>
+<p><br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">float/int math.HexToNumber(number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |10|both|مثال|--><div class="bothHeader" onclick="expandSection(10);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander10">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section10">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |10|-->
+<p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<p align="center">___________________________________________________________________</p>
+<h2><span class="mw-headline" id="math.rad">math.rad</span></h2>
+<font color="#006400" size="3"><p align="center"> 
+
+هذا الحدث يستخدم لتحويل قياس الزاوية من راديان الى درجة بحيث عند كتابة الزاوية بالراديان يعمل الحدث  بتحويله الى درجة
+
+
+
+
+</p><pre class="prettyprint lang-lua">float/int math.rad(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(11);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander11">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section11">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |11|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.HexColorToNumber">math.HexColorToNumber</span></h2></font><font color="#006400" size="3"><p>هذا الحدث يستخدم لتحويل رقم اللون من هيكس الى ديكس بحيث عند كتابة رقم هيكس يعمل الحدث بتحويله الى ديكس
+</p><p><br />
+</p></font><font color="#006400" size="3"><pre class="prettyprint lang-lua">float/int math.HexColorToNumber(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(12);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander12">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section12">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |12|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.deg">math.deg</span></h2></font><font color="#006400" size="3"><p>هذا الحدث يستخدم لتحويل قياس الزاوية من درجة الى راديان بحيث عند كتابة درجة الزاوية يقوم الحدث Math.Rad بتحويله الى راديان
+</p><p>معلومة:
+</p><p>راديان :هي وحدة قياس الزوايا الرسمية المعتمدة ضمن مجموعة الوحدات القياسية المستخدمة في الرياضيات و الفيزياء و تعرف بأنها الزاوية المركزية المتوضعة على مركز الدائرة و التي تحدد قوسا طولها مساوي لنصف قطر الدائرة.
+كيف نحسب الراديان
+للتحويل من راديان إلى درجات نضرب الراديان في 180 ونقسم الحاصل على ( باي ) وللتحويل من الدرجات إلى راديان نضرب الدرجات في ( باي ) ونقسم الحاصل على 180
+</p><p><br />
+</p><p><br />
+</p></font><font color="#006400" size="3"><pre class="prettyprint lang-lua">float/int math.deg(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(13);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander13">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section13">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |13|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.RGBToNumber">math.RGBToNumber</span></h2></font><font color="#006400" size="3"><p>هذا الحدث يستخدم لتحويل رقم الالوان الاساسية الاحمر والاخضر والازرق من Hex الى Dec بحيث عند كتابة ارقام ثلاثة الالوان يعمل الحدث Math.RGBToNumber بتحويله الى Dex
+</p><p><br />
+</p></font><font color="#006400" size="3"><pre class="prettyprint lang-lua">float/int math.RGBToNumber(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(14);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander14">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section14">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |14|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.sin">math.sin</span></h2></font><font color="#006400" size="3"><p>هذا الحدث يستخدم لحساب جيب الزاوية (جا) بحيث عند كتابة قياس الزاوية يعمل الحدث Math.Sin بحساب جيب الزاوية
+</p><p>ملاحظة&#160;: يجب قبل حساب جا تحويل قياس الزاوية الى راديان بالحدث Math.Rad
+</p><p><br />
+</p></font><font color="#006400" size="3"><pre class="prettyprint lang-lua">float/int math.sin(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(15);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander15">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section15">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |15|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.cos">math.cos</span></h2></font><font color="#006400" size="3"><p>هذا الحدث يستخدم لحساب جيب تمام الزاوية (جتا) بحيث عند كتابة قياس الزاوية يعمل الحدث  بحساب جيب الزاوية
+</p><p><br />
+</p><p><br />
+</p></font><font color="#006400" size="3"><pre class="prettyprint lang-lua">float/int math.cos(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(16);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander16">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section16">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |16|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.tan">math.tan</span></h2></font><font color="#006400" size="3"><p>هذا الحدث يستخدم لحساب ظل الزاوية (ظا) بحيث عند كتابة قياس الزاوية يعمل الحدث  بحساب ظل الزاوية
+</p><p><br />
+</p></font><font color="#006400" size="3"><pre class="prettyprint lang-lua">float/int math.tan(number)
+</pre></font><font color="#006400" size="3"><p><br />
+</p></font><font color="#006400" size="3"><div class="bothHeader" onclick="expandSection(17);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander17">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section17">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |17|--></font><font color="#006400" size="3"><h2><span class="mw-headline" id="math.asin">math.asin</span></h2></font><p><font color="#006400" size="3">
+هذا الحدث يستخدم لحساب معكوس جا بحيث عند كتابة العدد يعمل الحدث  بحساب معكوس جا الزاوية</font></p><font color="#006400" size="3"><p class="mw-empty-elt"></p></font>
+<p><br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">float/int math.asin (number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |18|both|مثال|--><div class="bothHeader" onclick="expandSection(18);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander18">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section18">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |18|-->
+<h2><span class="mw-headline" id="math.acos">math.acos</span></h2>
+<font color="#006400" size="3"><p align="center"> 
+
+
+
+
+
+
+هذا الحدث يستخدم لحساب معكوس جتا بحيث عند كتابة العدد يعمل الحدث  بحساب معكوس جتا الزاوية
+
+
+
+
+
+
+</p></font>
+<p><br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">float/int math.acos (number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |19|both|مثال|--><div class="bothHeader" onclick="expandSection(19);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander19">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section19">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |19|-->
+<p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<p align="center">___________________________________________________________________</p> 
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="math.atan">math.atan</span></h2>
+<font color="#006400" size="3"><p align="center"> 
+
+
+
+
+
+
+
+هذا الحدث يستخدم لحساب معكوس ظا بحيث عند كتابة العدد يعمل الحدث  على حساب معكوس ظا الزاوية
+
+
+
+
+
+</p></font>
+<p><br />
+</p><p><br />
+</p>
+<pre class="prettyprint lang-lua">float/int math.atan(number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |20|both|مثال|--><div class="bothHeader" onclick="expandSection(20);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander20">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section20">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |20|-->
+<p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<p align="center">___________________________________________________________________</p> 
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="math.atan2">math.atan2</span></h2>
+<p>هذا الحدث يستخدم لحساب مقسوم معكوس ظا بحيث عند كتابة العدد الاول والثاني يعمل الحدث Math.Atan2 على حساب معكوس ظا (العدد الاول / العدد الثاني)
+</p>
+<pre class="prettyprint lang-lua">float/int math.atan2(number)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |21|both|مثال|--><div class="bothHeader" onclick="expandSection(21);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander21">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section21">
+<pre class="prettyprint lang-lua">--</pre> </div><!-- END SECTION |21|-->
+<h2><span class="mw-headline" id="math.max">math.max</span></h2>
+<pre>هذا الحدث يستخدم لتحديد العدد الاكبر من الاخر بحيث عند كتابة عددين يقوم الحدث 
+بمقارنة العددين وتحديد العدد الاكبر
+</pre>
+<pre class="prettyprint lang-lua">float/int math.max(number1,number2,number...)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |22|both|مثال|--><div class="bothHeader" onclick="expandSection(22);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander22">Click to collapse [-]</div>مثال</div><div style="display:;" class="bothContent" id="section22">
+<pre class="prettyprint lang-lua">math.max(15, -100, 30) -- نحدد القيم المراد الاختيار منها
+30 -- الناتج
+math.max(2.5, -2.5)
+2.5 -- النتاج
+
+ملاحظة&#160;: السالب تكون قيمته صغيرة
+
+-- By The Best</pre> </div><!-- END SECTION |22|-->
+<h2><span class="mw-headline" id="math.min">math.min</span></h2>
+<pre>هذا الحدث يستخدم لتحديد العددالاصغر من الاخر بحيث عند كتابة عددين يقوم الحدث 
+بمقارنة العددين وتحديد العدد الاصغر
+</pre>
+<pre class="prettyprint lang-lua">float/int math.min(number1,number2,number...)
+</pre>
+<p><br />
+</p>
+<!-- BEGIN SECTION |23|server|مثال|--><div class="serverHeader" onclick="expandSection(23);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander23">Click to collapse [-]</div>مثال</div><div style="display:;" class="serverContent" id="section23">
+<pre class="prettyprint lang-lua">addEventHandler("onResourceStart",resourceRoot, -- اذا تم تشغيل السكربت
+function() -- وظيفة
+outputChatBox("The number is "..math.min(10,-20).." is good") -- نظهر نص في الشات
+end) -- اغلاق
+
+-- الرقم الي بيظهر في الشات هو -20
+
+-- ملاحظة السالب اصغر من الموجب
+
+-- By The Best</pre> </div><!-- END SECTION |23|-->
+<p><br /> 
+</p>
+<div style="background: #FFCFCF; padding: 5px; font-weight:bold; border: 1px dotted #AAAAAA;padding:10px;margin:10px;"><center>تعريب <font color="#0066cc" size="2">السالمي</font> </center>
+<center><a rel="nofollow" class="external free" href="http://ams4arab.arabstar.biz/t107-topic">http://ams4arab.arabstar.biz/t107-topic</a> <font color="#0066cc" size="2"> المصدر    </font> </center>
+</div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="../Math-13.html" title="Math">Math</a></li>
+<li><a rel="nofollow" class="external text" href="http://lua-users.org/wiki/MathLibraryTutorial">Math examples on the LUA Wiki</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727163024
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.028 seconds
+Real time usage: 0.029 seconds
+Preprocessor visited node count: 477/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 16500/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:6586-0!canonical and timestamp 20220727163024 and revision id 73365. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=AR/Math&amp;oldid=73365">https://wiki.multitheftauto.com/index.php?title=AR/Math&amp;oldid=73365</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=AR%2FMath" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=AR%2FMath" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Math.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:AR/Math&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Math.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Math&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Math&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/AR/Math.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/AR/Math.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Math&amp;oldid=73365" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=AR/Math&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=AR/Math" title="Math – العربية" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=DE/Math" title="Math – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Math" title="Math – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 15 January 2022, at 03:45.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.029","ppvisitednodes":{"value":477,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":16500,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727163024","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":64});});</script>
+</body>
+</html>

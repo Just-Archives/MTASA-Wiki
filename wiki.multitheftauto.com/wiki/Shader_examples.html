@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Shader examples - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"56772152ccae08ef8990fee7","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Shader_examples","wgTitle":"Shader examples","wgCurRevisionId":69694,"wgRevisionId":69694,"wgArticleId":5724,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Shader_examples","wgRelevantArticleId":5724,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Shader_examples rootpage-Shader_examples skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Shader examples</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>This page contains some example shader resources to try. If you are looking to make your own, please be sure to read about the <a href="Shader.html" class="mw-redirect" title="Shader">shader element</a> as well.
+<br />
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Road_shine"><span class="tocnumber">1</span> <span class="toctext">Road shine</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Road_shine_2"><span class="tocnumber">2</span> <span class="toctext">Road shine 2</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Road_shine_3_(Deluxe_edition)"><span class="tocnumber">3</span> <span class="toctext">Road shine 3 (Deluxe edition)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#UV_scroll"><span class="tocnumber">4</span> <span class="toctext">UV scroll</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#UV_scripted"><span class="tocnumber">5</span> <span class="toctext">UV scripted</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Car_paint"><span class="tocnumber">6</span> <span class="toctext">Car paint</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Water"><span class="tocnumber">7</span> <span class="toctext">Water</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Bloom"><span class="tocnumber">8</span> <span class="toctext">Bloom</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Block_world"><span class="tocnumber">9</span> <span class="toctext">Block world</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Texture_names"><span class="tocnumber">10</span> <span class="toctext">Texture names</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Skid_marks"><span class="tocnumber">11</span> <span class="toctext">Skid marks</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#HDR_contrast"><span class="tocnumber">12</span> <span class="toctext">HDR contrast</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Tessellation"><span class="tocnumber">13</span> <span class="toctext">Tessellation</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Radial_blur"><span class="tocnumber">14</span> <span class="toctext">Radial blur</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Detail"><span class="tocnumber">15</span> <span class="toctext">Detail</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Ped_morph"><span class="tocnumber">16</span> <span class="toctext">Ped morph</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Ped_shell"><span class="tocnumber">17</span> <span class="toctext">Ped shell</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Hud_mask"><span class="tocnumber">18</span> <span class="toctext">Hud mask</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#dxDrawCircle"><span class="tocnumber">19</span> <span class="toctext">dxDrawCircle</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Road_shine">Road shine</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_RoadShineScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/8/86/RoadShineScreen.jpg/200px-RoadShineScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/8/86/RoadShineScreen.jpg/300px-RoadShineScreen.jpg 1.5x, /images/8/86/RoadShineScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_RoadShineScreen.html" class="internal" title="Enlarge"></a></div>Road shine</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_roadshine.zip">Download shader_roadshine.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource creates a light reflection effect on the ground (looks best when moving). 
+It uses a custom flag in the effect file to generate <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Surface_normal">surface normals</a> for the ground model:
+</p>
+<pre class="prettyprint lang-lua">int CUSTOMFLAGS
+&lt;
+    string createNormals = "yes";
+&gt;;</pre>
+<p>Surface normals are not usually present in the ground and building models, but are useful for creating lighting effects such as these.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Road_shine_2">Road shine 2</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_RoadShine2Screen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/0/0f/RoadShine2Screen.jpg/200px-RoadShine2Screen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/0/0f/RoadShine2Screen.jpg/300px-RoadShine2Screen.jpg 1.5x, /images/0/0f/RoadShine2Screen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_RoadShine2Screen.html" class="internal" title="Enlarge"></a></div>Road shine 2</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_roadshine2.zip">Download shader_roadshine2.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+Bit more complicated than the first Road shine, as it tracks the sun or moon to calculate the position of the highlight.
+The effect can be hard to see depending on the time of day.
+<br /><br />
+Best used with the play resource as the model it modifies is near the initial spawn point.
+</p>
+</td></tr></tbody></table>
+<h2><span id="Road_shine_3_.28Deluxe_edition.29"></span><span class="mw-headline" id="Road_shine_3_(Deluxe_edition)">Road shine 3 (Deluxe edition)</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_RoadShine3Screen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/c/ce/RoadShine3Screen.jpg/200px-RoadShine3Screen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/c/ce/RoadShine3Screen.jpg/300px-RoadShine3Screen.jpg 1.5x, /images/c/ce/RoadShine3Screen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_RoadShine3Screen.html" class="internal" title="Enlarge"></a></div>Road shine 3</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_roadshine3.zip">Download shader_roadshine3.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource shows how to:
+</p>
+<ul><li>Stop a wild card match shader from being applied to certain world textures.</li>
+<li>Use isLineOfSightClear to stop an effect when something is not visible (The sun in this case).</li>
+<li>Use a shader maxDrawDistance setting to avoid GPU overload.</li></ul>
+<p>The final effect is a faster shader with less rendering issues than the previous two road shine examples.
+<br /><br />
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="UV_scroll">UV scroll</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_UVScollScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/6/62/UVScollScreen.jpg/200px-UVScollScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/6/62/UVScollScreen.jpg/300px-UVScollScreen.jpg 1.5x, /images/6/62/UVScollScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_UVScollScreen.html" class="internal" title="Enlarge"></a></div>UV scroll</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_uv_scroll.zip">Download shader_uv_scroll.zip</a>
+<br /><br />
+This resource scrolls a texture from left to right. It doesn't use vertex or pixels shaders, so it should work on all hardware.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="UV_scripted">UV scripted</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_UVScriptedScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/6/64/UVScriptedScreen.jpg/200px-UVScriptedScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/6/64/UVScriptedScreen.jpg/300px-UVScriptedScreen.jpg 1.5x, /images/6/64/UVScriptedScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_UVScriptedScreen.html" class="internal" title="Enlarge"></a></div>UV scripted</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_uv_scripted.zip">Download shader_uv_scripted.zip</a>
+<br /><br />
+This resource controls a texture's UVs using Lua. It shows that anything is possible if you can imagine it.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Car_paint">Car paint</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_CarPaintScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/8/82/CarPaintScreen.jpg/200px-CarPaintScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/8/82/CarPaintScreen.jpg/300px-CarPaintScreen.jpg 1.5x, /images/8/82/CarPaintScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_CarPaintScreen.html" class="internal" title="Enlarge"></a></div>Car paint</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_car_paint.zip">Download shader_car_paint.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource shows you how to apply a shader to the vehicle models. The shader itself is not that great, so don't get your hopes up.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Water">Water</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_WaterScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/f/f1/WaterScreen.jpg/200px-WaterScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/f/f1/WaterScreen.jpg/300px-WaterScreen.jpg 1.5x, /images/f/f1/WaterScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_WaterScreen.html" class="internal" title="Enlarge"></a></div>Water</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_water.zip">Download shader_water.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource applies a shader to the GTA world water. The Lua script shows how to use a timer to transfer the conventional water color setting to the shader.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Bloom">Bloom</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_BloomScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/2/25/BloomScreen.jpg/200px-BloomScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/2/25/BloomScreen.jpg/300px-BloomScreen.jpg 1.5x, /images/2/25/BloomScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_BloomScreen.html" class="internal" title="Enlarge"></a></div>Bloom</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_bloom.zip">Download shader_bloom.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource shows you how 'bounce' full screen effects using a render target pool. It uses the <i>onClientHUDRender</i> event to exclude the HUD from the effect.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Block_world">Block world</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_BlockWorld.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/b/b6/BlockWorld.jpg/200px-BlockWorld.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/b/b6/BlockWorld.jpg/300px-BlockWorld.jpg 1.5x, /images/b/b6/BlockWorld.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_BlockWorld.html" class="internal" title="Enlarge"></a></div>Block world</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_block_world.zip">Download shader_block_world.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource makes the textures look all blocky. It also changes colors when the 'k' key is pressed.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Texture_names">Texture names</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_TexNames.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/7/73/TexNames.jpg/200px-TexNames.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/7/73/TexNames.jpg/300px-TexNames.jpg 1.5x, /images/7/73/TexNames.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_TexNames.html" class="internal" title="Enlarge"></a></div>Texture names</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_tex_names.zip">Download shader_tex_names.zip</a>
+<br /><br />
+This resource is only a tool, and doesn't do anything pretty. It shows a list of the current visible texture names, and highlights the selected texture. Ideal for finding a texture name to use with <a href="EngineApplyShaderToWorldTexture.html" title="EngineApplyShaderToWorldTexture">engineApplyShaderToWorldTexture</a>.
+</p><p>num_8 shows/hides the texture list, num_7 and num_9 step through the list, and 'k' copies the current texture name to the clipboard.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Skid_marks">Skid marks</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_SkidMarks.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/e/ec/SkidMarks.jpg/200px-SkidMarks.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/e/ec/SkidMarks.jpg/300px-SkidMarks.jpg 1.5x, /images/e/ec/SkidMarks.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_SkidMarks.html" class="internal" title="Enlarge"></a></div>Skid marks</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_skidmarks.zip">Download shader_skidmarks.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource shows you how to do multiple passes in a shader, and input different variables to the vertex shader for each pass.
+Use the command <b>/skidmarks 1-4</b> to see the different effects. (You have skid a car to see it!)
+<br /><br />
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="HDR_contrast">HDR contrast</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_ShaderContrast.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/f/fc/ShaderContrast.jpg/200px-ShaderContrast.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/f/fc/ShaderContrast.jpg/300px-ShaderContrast.jpg 1.5x, /images/f/fc/ShaderContrast.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_ShaderContrast.html" class="internal" title="Enlarge"></a></div>HDR contrast</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_contrast.zip">Download shader_contrast.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource applies a 'High Dynamic Range' contrast effect. It uses a 1 pixel render target to sample the whole scene, and then uses that to brighten or darken the next frame.
+So going into somewhere dark will automatically brighten the scene, and visa versa
+<br /><br />
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Tessellation">Tessellation</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_Shader_flag.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/4/48/Shader_flag.jpg/200px-Shader_flag.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/4/48/Shader_flag.jpg/300px-Shader_flag.jpg 1.5x, /images/4/48/Shader_flag.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Shader_flag.html" class="internal" title="Enlarge"></a></div>Tessellation action</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_flag.zip">Download shader_flag.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource shows how to use shader tessellation to animate the shape of a dxDrawImage and use shader transform to give it a 3rd dimension.
+</p><p>The example has a GUI (press numpad-8) so you can fiddle with the settings.
+<br /><br />
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Radial_blur">Radial blur</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_Shader_radial_blur.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/c/ce/Shader_radial_blur.jpg/200px-Shader_radial_blur.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/c/ce/Shader_radial_blur.jpg/300px-Shader_radial_blur.jpg 1.5x, /images/c/ce/Shader_radial_blur.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Shader_radial_blur.html" class="internal" title="Enlarge"></a></div>Radial blur</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_radial_blur.zip">Download shader_radial_blur.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource sort of looks a little bit like the GTAIV motion blur you get when you move the mouse quickly, or drive a fast car. The fast car effect is a bit more subtle than the screen shot would suggest, as it leaves the center of the screen nice and clear so you can see where you are going.
+</p><p>It also has the option of suspending the effect during times of low FPS. Check the two settings at the top of <i><b>c_radial_blur.lua</b></i>.
+<br /><br />
+The file <i><b>c_switch.lua</b></i> contains information on how to toggle the effect from another resource using events.
+<br /><br />
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Detail">Detail</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_Shader_detail.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/4/4e/Shader_detail.jpg/200px-Shader_detail.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/4/4e/Shader_detail.jpg/300px-Shader_detail.jpg 1.5x, /images/4/4e/Shader_detail.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Shader_detail.html" class="internal" title="Enlarge"></a></div>Detail</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_detail.zip">Download shader_detail.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+Applies a few monochrome detail textures, at various scales, to (parts of) the world.
+</p><p>(Not finished and probably never will be.)
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Ped_morph">Ped morph</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_PedMorphScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/b/ba/PedMorphScreen.jpg/200px-PedMorphScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/b/ba/PedMorphScreen.jpg/300px-PedMorphScreen.jpg 1.5x, /images/b/ba/PedMorphScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_PedMorphScreen.html" class="internal" title="Enlarge"></a></div>Ped morph</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_ped_morph.zip">Download shader_ped_morph.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource uses a vertex shader to modify the geometry of a ped model as it is rendered.
+<br /><br />
+When the resource has started, use the 'k' and 'l' keys to change morph size.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Ped_shell">Ped shell</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_PedShellScreen.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/a/ab/PedShellScreen.jpg/200px-PedShellScreen.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/a/ab/PedShellScreen.jpg/300px-PedShellScreen.jpg 1.5x, /images/a/ab/PedShellScreen.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_PedShellScreen.html" class="internal" title="Enlarge"></a></div>Ped shell</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_ped_shell.zip">Download shader_ped_shell.zip</a> &#160; <i>Requires Shader Model 2 graphics card</i>
+<br /><br />
+This resource draws a translucent effect as a shader layer. The first pass is done by GTA, and the vertex shader is only applied in the second to add the effect 'on top' of the standard output.
+<br /><br />
+When the resource has started, use the 'm' key to see the shell effect.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Hud_mask">Hud mask</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_Shader_hud_mask.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/2/24/Shader_hud_mask.jpg/200px-Shader_hud_mask.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/2/24/Shader_hud_mask.jpg/300px-Shader_hud_mask.jpg 1.5x, /images/2/24/Shader_hud_mask.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Shader_hud_mask.html" class="internal" title="Enlarge"></a></div>Hud mask</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_hud_mask.zip">Download shader_hud_mask.zip</a>
+<br /><br />
+This resource shows how to draw a hud texture with a shape mask.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="dxDrawCircle">dxDrawCircle</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a href="File_DxDrawCircle.html" class="image"><img alt="" src="https://wiki.multitheftauto.com/images/thumb/c/ca/DxDrawCircle.jpg/200px-DxDrawCircle.jpg" decoding="async" width="200" height="125" class="thumbimage" srcset="/images/thumb/c/ca/DxDrawCircle.jpg/300px-DxDrawCircle.jpg 1.5x, /images/c/ca/DxDrawCircle.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_DxDrawCircle.html" class="internal" title="Enlarge"></a></div>dxDrawCircle</div></div></div>
+<table border="0"><tbody><tr><td valign="top" height="170">
+<p><a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/shader_circle.zip">Download shader_circle.zip</a>
+<br /><br />
+This resource exports a 'dxDrawCircle' function for use in your own scripts.
+<br /><br />
+Example resource calling dxDrawCircle function from shader_circle: <a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/circle_example.zip">circle_example.zip</a>
+</p>
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20220727175102
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.034 seconds
+Real time usage: 0.035 seconds
+Preprocessor visited node count: 120/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 101/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5724-0!canonical and timestamp 20220727175102 and revision id 69694. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Shader_examples&amp;oldid=69694">https://wiki.multitheftauto.com/index.php?title=Shader_examples&amp;oldid=69694</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Shader+examples" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Shader+examples" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Shader_examples.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:Shader_examples&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Shader_examples.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Shader_examples&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Shader_examples&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Shader_examples.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Shader_examples.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Shader_examples&amp;oldid=69694" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Shader_examples&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 25 March 2021, at 18:51.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.034","walltime":"0.035","ppvisitednodes":{"value":120,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":101,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727175102","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":51});});</script>
+</body>
+</html>

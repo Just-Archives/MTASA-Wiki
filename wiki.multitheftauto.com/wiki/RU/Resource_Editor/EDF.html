@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>RU/Resource:Editor/EDF - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"caab1ee45b42b52e8dd9511f","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RU/Resource:Editor/EDF","wgTitle":"RU/Resource:Editor/EDF","wgCurRevisionId":47185,"wgRevisionId":47185,"wgArticleId":4484,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["RU/Resource"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"RU/Resource:Editor/EDF","wgRelevantArticleId":4484,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='resource' data-subcaption='Resource'>
+<meta name='removenamespace' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RU_Resource_Editor_EDF rootpage-RU_Resource_Editor_EDF skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">RU/Resource:Editor/EDF</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--NS-->
+</p><p>EDF означает <i>Editor Definition File</i> (файл-описание редактора; формат объявлений редактора). EDF'ы являются XML-файлами с расширением .edf, которые описывают специфические элементы, используемые ресурсом: новые типы элементов, которых самих по себе в MTA нет. Образцами служат &lt;spawnpoint&gt; (спавн), &lt;flag&gt; (флаг), &lt;checkpoint&gt; (чекпоинт) и т.д. Они также используются для того, чтобы устанавливать настройки, используемые модами (gamemode), эти настройки находятся под тегом &lt;settings&gt; внутри <i>meta.xml</i> ресурса.
+</p>
+<h2><span id=".D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"></span><span class="mw-headline" id="Вступление">Вступление</span></h2>
+<p>Некоторые ресурсы используют специфические элементы карты. Например, мод захвата флага (CTF) скорее всего будет использовать элементы &lt;flag&gt;, которые будут содержать позиции флагов и их принадлежность командам. Когда загружается карта, мод ищет любые элементы &lt;flag&gt; и соответствующе расставляет флаги - например, через создание объекта флага и его коллизии.
+</p><p>Проблема с этими специфическими элементами в том, что в отличие от встроенных в MTA элементов, редактор карт не понимает, что они из себя представляют. Как должен быть визуально представлен собой элемент &lt;flag&gt;? Какие у него есть характеристики? Без передачи редактору этой информации, вы не сможете использовать его для создания таких специфических элементов, и вам придется прибегнуть к ручному редактированию .map-файла через текстовый редактор. К счастью, это необязательно: любой ресурс может содержать editor definition file, который опишет специфические элементы карты, используемые ресурсом.
+</p>
+<h2><span id=".D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_definition_files_.D0.B2_.D1.80.D0.B5.D0.B4.D0.B0.D0.BA.D1.82.D0.BE.D1.80.D0.B5"></span><span class="mw-headline" id="Использование_definition_files_в_редакторе">Использование definition files в редакторе</span></h2>
+<p>Как и описано в <a href="../Resource_Editor.html" title="RU/Resource:Editor">главной инструкции по редактору</a>, чтобы иметь возможность создавать специфические элементы ресурса на вашей карте, вам придется его добавить в окне <i>Definitions</i>. Нажмите кнопку <i>Definitions</i> в главном меню и дважды щелкните по ресурсу из левого списка. Затем закройте окно и крутаните колесиком мыши в панели элементов, пока не появится желаемый ресурс. С этого момента вы можете создавать и управлять специфическими элементами этого ресурса, как и любым другим элементом.
+</p>
+<h2><span id=".D0.9F.D0.BE.D1.81.D1.82.D1.80.D0.BE.D0.B5.D0.BD.D0.B8.D0.B5_EDF-.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2"></span><span class="mw-headline" id="Построение_EDF-файлов">Построение EDF-файлов</span></h2>
+<p>EDF-файлы - просто XML-файлы с расширением .edf. Начнем с образца: EDF'а мода Capture the Orb.
+</p>
+<pre class="prettyprint lang-xml">&lt;def name="Capture the Orb"&gt;
+    &lt;element name="orb" friendlyname="Orb spawnpoint" instructions="Place your orb in a position that can be collected."&gt;
+        &lt;data name="position" type="coord3d" default="0,0,0" /&gt;
+        &lt;marker size="0.5" type="corona" color="#ffff00ff" /&gt;
+    &lt;/element&gt;
+    &lt;element name="objective" friendlyname="Objective point" instructions="Place your objective point in a position that can be reached."&gt;
+        &lt;data name="position" type="coord3d" default="0,0,0" /&gt;
+        &lt;marker size="3" type="cylinder" color="#9370dbaa" /&gt;
+    &lt;/element&gt;
+    &lt;element name="spawnpoint" friendlyname="Spawnpoint"&gt;
+        &lt;object editorOnly="true" model="3092" posZ="1" /&gt;
+        &lt;data name="position" type="coord3d" default="0,0,0" /&gt;
+        &lt;data name="rotation" type="coord3d" default="0,0,0" /&gt;
+        &lt;data name="skin" type="skinID" default="0" /&gt;
+    &lt;/element&gt;
+&lt;/def&gt;
+</pre>
+<p>Как вы уже убедились, синтаксис очень легок для понимания. Root element (корневой элемент), &lt;def&gt;, содержит несколько &lt;element&gt;. Каждый из этих &lt;element&gt; описывает специфический элемент и задает его имя, визуальное представление и доступные ему настройки.
+</p>
+<h3><span id=".D0.92.D0.B8.D0.B7.D1.83.D0.B0.D0.BB.D1.8C.D0.BD.D0.BE.D0.B5_.D0.BF.D1.80.D0.B5.D0.B4.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"></span><span class="mw-headline" id="Визуальное_представление">Визуальное представление</span></h3>
+<p>Каждый child node (дочерний узел) &lt;element&gt;, не являющийся &lt;data&gt;, отвечает за визуальное представление. Объектов, маркеров, пикапов и т.д. могут быть один или несколько. Для каждого элемента вы можете опционально задать позицию (posX, posY, posZ) и угол вращения (rotX, rotY, rotZ): они <i>родственны</i> с позицией и вращенем каждого отдельно взятого элемента. На примере Capture the Orb выше, если бы вы захотели создать spawnpoint на (30, 14, 3), редактор бы отобразил объект модели 3092 на координатах (30, 14, 4), потому что posZ объекта, равная 1, была бы сложена с координатой spawnpoint по оси z, равной 3.
+</p>
+<h3><span id=".D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B8"></span><span class="mw-headline" id="Настройки">Настройки</span></h3>
+<p>Настройки специфического элемента описаны в &lt;data&gt;. Имена некоторых настроек, такие как <i>position</i> и <i>rotation</i>, особенные: они могут быть изменены при перемещении и вращении элемента прямо в редакторе. Другие настройки могут быть изменены в окне Properties.
+</p>
+<h3><span id=".D0.92.D0.B8.D0.B7.D1.83.D0.B0.D0.BB.D1.8C.D0.BD.D0.BE.D0.B5_.D0.BF.D1.80.D0.B5.D0.B4.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5.2C_.D0.B7.D0.B0.D0.B2.D0.B8.D1.81.D0.B8.D0.BC.D0.BE.D0.B5_.D0.BE.D1.82_.D0.BD.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B5.D0.BA"></span><span class="mw-headline" id="Визуальное_представление,_зависимое_от_настроек">Визуальное представление, зависимое от настроек</span></h3>
+<p>Специфический элемент можно сделать зависимым от одной или более настроек другого элемента. Например, элемент &lt;checkpoint&gt; race мода, содержащий &lt;marker&gt;: checkpoint имеет несколько атрибутов, таких как color и size, которые должны быть отражены и в marker. Чтобы это сделать, укажите какой-либо из-них в виде <i>!propertyname!</i> в качестве как одного или более атрибутов зависимого элемента. Например:
+</p>
+<pre class="prettyprint lang-xml">&lt;def name="Race"&gt;
+	&lt;element name="checkpoint" friendlyname="Race checkpoint"&gt;
+		&lt;data name="position" type="coord3d" required="true" default="0,0,0" /&gt;
+
+		&lt;data name="type" type="selection:checkpoint,ring" required="true" default="checkpoint" /&gt;
+		&lt;data name="size" type="number" required="true" default="2.25"/&gt;
+		&lt;data name="color" type="color" required="false" default="#ff0000ff" /&gt;
+		...
+		
+		&lt;marker type="!type!" size="!size!" color="!color!" /&gt;
+	&lt;/element&gt;
+&lt;/def&gt;
+</pre>
+<p>Теперь, когда бы настройки checkpoint "type", "size" или "color" не менялись, новое значение будет также скопировано в его marker, в связи с чем их внешний вид будет меняться вместе.
+</p>
+<h3><span id=".D0.98.D0.BD.D1.82.D0.B5.D0.B3.D1.80.D0.B0.D1.86.D0.B8.D1.8F_.D0.B2_.D1.80.D0.B5.D1.81.D1.83.D1.80.D1.81.D1.8B"></span><span class="mw-headline" id="Интеграция_в_ресурсы">Интеграция в ресурсы</span></h3>
+<p>Когда вы написали свой EDF, сохраните его как .edf-файл в папке своего ресурса и добавьте атрибут "edf:definition" в тег &lt;info&gt; meta.xml, как здесь:
+</p>
+<pre class="prettyprint lang-xml">&lt;meta&gt;
+    &lt;info author="erorr404" type="gamemode" ... edf:definition="cto.edf" /&gt;
+    ...
+&lt;/meta&gt;
+</pre>
+<h2><span id="EDF_.D1.81.D1.81.D1.8B.D0.BB.D0.BA.D0.B8"></span><span class="mw-headline" id="EDF_ссылки">EDF ссылки</span></h2>
+<h3><span id=".D0.92.D1.88.D0.B8.D1.82.D1.8B.D0.B5_.D1.8D.D0.BB.D0.B5.D0.BC.D0.B5.D0.BD.D1.82.D1.8B"></span><span class="mw-headline" id="Вшитые_элементы">Вшитые элементы</span></h3>
+<p>Эти элементы могут использоваться для ваших специфических элементов, вкупе с их настройками.
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;blip&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">position
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">icon
+</td>
+<td style="background-color: #EEE">blipID
+</td></tr>
+<tr>
+<td style="background-color: #EEE">size
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">color
+</td>
+<td style="background-color: #EEE">color
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;marker&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">position
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">type
+</td>
+<td style="background-color: #EEE">markerType
+</td></tr>
+<tr>
+<td style="background-color: #EEE">size
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">color
+</td>
+<td style="background-color: #EEE">color
+</td></tr>
+<tr>
+<td style="background-color: #EEE">interior
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;object&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">model
+</td>
+<td style="background-color: #EEE">objectID
+</td></tr>
+<tr>
+<td style="background-color: #EEE">position
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">rotation
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">interior
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;ped&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">position
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">model
+</td>
+<td style="background-color: #EEE">skinID
+</td></tr>
+<tr>
+<td style="background-color: #EEE">rotZ
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">interior
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;pickup&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">position
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">type
+</td>
+<td style="background-color: #EEE">pickupType
+</td></tr>
+<tr>
+<td style="background-color: #EEE">amount
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">respawn
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">interior
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;vehicle&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">model
+</td>
+<td style="background-color: #EEE">vehicleID
+</td></tr>
+<tr>
+<td style="background-color: #EEE">position
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">rotation
+</td>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<td style="background-color: #EEE">color
+</td>
+<td style="background-color: #EEE">vehiclecolors
+</td></tr>
+<tr>
+<td style="background-color: #EEE">upgrades
+</td>
+<td style="background-color: #EEE">vehicleupgrades
+</td></tr>
+<tr>
+<td style="background-color: #EEE">plate
+</td>
+<td style="background-color: #EEE">plate
+</td></tr>
+<tr>
+<td style="background-color: #EEE">interior
+</td>
+<td style="background-color: #EEE">integer
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE" colspan="2">&lt;radararea&gt;
+</th></tr>
+<tr>
+<th style="background-color: #EEE">Атрибут
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<td style="background-color: #EEE">posX
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">posY
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">sizeX
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">sizeY
+</td>
+<td style="background-color: #EEE">number
+</td></tr>
+<tr>
+<td style="background-color: #EEE">color
+</td>
+<td style="background-color: #EEE">color
+</td></tr>
+<tr>
+<td style="background-color: #EEE">dimension
+</td>
+<td style="background-color: #EEE">integer
+</td></tr></tbody></table>
+<h3><span id=".D0.92.D1.88.D0.B8.D1.82.D1.8B.D0.B5_.D0.BD.D0.B0.D0.B7.D0.B2.D0.B0.D0.BD.D0.B8.D1.8F_.D0.BD.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B5.D0.BA"></span><span class="mw-headline" id="Вшитые_названия_настроек">Вшитые названия настроек</span></h3>
+<p>Настройки с данными именами особенно воспринимаются редактором и могут быть изменены не только через окно Properties.
+</p>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Тип
+</th></tr>
+<tr>
+<th style="background-color: #EEE">position
+</th>
+<td style="background-color: #EEE">coord3d
+</td></tr>
+<tr>
+<th style="background-color: #EEE">rotation
+</th>
+<td style="background-color: #EEE">coord3d
+</td></tr></tbody></table>
+<h3><span id=".D0.A2.D0.B8.D0.BF.D1.8B_.D0.BD.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B5.D0.BA"></span><span class="mw-headline" id="Типы_настроек">Типы настроек</span></h3>
+<p>Это -  типы, которые могут быть выбранными в (&lt;data&gt;) ваших специфических элементов.
+</p>
+<h4><span id=".D0.A2.D0.B8.D0.BF.D1.8B"></span><span class="mw-headline" id="Типы">Типы</span></h4>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Описание
+</th>
+<th style="background-color: #EEE">Значение
+</th></tr>
+<tr>
+<th style="background-color: #EEE">boolean
+</th>
+<td style="background-color: #EEE">Простое двоичное (булевое) значение.
+</td>
+<td style="background-color: #EEE">"true" или "false"
+</td></tr>
+<tr>
+<th style="background-color: #EEE">natural
+</th>
+<td style="background-color: #EEE">Натуральное число (целое и неотрицательное).
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">integer
+</th>
+<td style="background-color: #EEE">Целое число.
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">number
+</th>
+<td style="background-color: #EEE">Рациональное число.
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">string
+</th>
+<td style="background-color: #EEE">Простая текстовая строка.
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">color
+</th>
+<td style="background-color: #EEE">цвет, с или без указания прозрачности (alpha).
+</td>
+<td style="background-color: #EEE">#RRGGBB или #RRGGBBAA
+</td></tr></tbody></table>
+<h4><span id=".D0.9A.D0.BE.D0.BE.D1.80.D0.B4.D0.B8.D0.BD.D0.B0.D1.82.D1.8B"></span><span class="mw-headline" id="Координаты">Координаты</span></h4>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Описание
+</th>
+<th style="background-color: #EEE">Значение
+</th></tr>
+<tr>
+<th style="background-color: #EEE">camera
+</th>
+<td style="background-color: #EEE">Позиция и угол обзора камеры.
+</td>
+<td style="background-color: #EEE">posX,posY,posZ,lookatX,lookatY,lookatZ
+</td></tr>
+<tr>
+<th style="background-color: #EEE">coord3d
+</th>
+<td style="background-color: #EEE">3-компонентный вектор, зачастую используемый для позиции и вращения.
+</td>
+<td style="background-color: #EEE">x,y,z
+</td></tr></tbody></table>
+<h4><span id=".D0.A2.D1.80.D0.B0.D0.BD.D1.81.D0.BF.D0.BE.D1.80.D1.82"></span><span class="mw-headline" id="Транспорт">Транспорт</span></h4>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Описание
+</th>
+<th style="background-color: #EEE">Значение
+</th></tr>
+<tr>
+<th style="background-color: #EEE">plate
+</th>
+<td style="background-color: #EEE">Текст номерного знака для транспортного средства.
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">vehiclecolors
+</th>
+<td style="background-color: #EEE">цвета транспортного средства
+</td>
+<td style="background-color: #EEE">colorID1,colorID2,colorID3,colorID4
+</td></tr>
+<tr>
+<th style="background-color: #EEE">vehicleupgrades
+</th>
+<td style="background-color: #EEE">апгрейды (тюнинг) транспортного средства
+</td>
+<td style="background-color: #EEE">upgradeID1,upgradeID2,...
+</td></tr></tbody></table>
+<h4><span id="ID_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D0.B5.D0.B9"></span><span class="mw-headline" id="ID_моделей">ID моделей</span></h4>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Описание
+</th>
+<th style="background-color: #EEE">Значение
+</th></tr>
+<tr>
+<th style="background-color: #EEE">blipID
+</th>
+<td style="background-color: #EEE">ID картинки для метки
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">objectID
+</th>
+<td style="background-color: #EEE">ID модели для объекта
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">pickupType
+</th>
+<td style="background-color: #EEE">Броня, хп или оружие
+</td>
+<td style="background-color: #EEE">"armor", "health" или ID-номер оружия
+</td></tr>
+<tr>
+<th style="background-color: #EEE">skinID
+</th>
+<td style="background-color: #EEE">ID скина для педа
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">vehicleID
+</th>
+<td style="background-color: #EEE">ID модели для транспортного средства
+</td>
+<td style="background-color: #EEE">&#160;
+</td></tr>
+<tr>
+<th style="background-color: #EEE">weaponID
+</th>
+<td style="background-color: #EEE">Оружие, напр. M4
+</td>
+<td style="background-color: #EEE">ID-номер оружия, напр. 31
+</td></tr></tbody></table>
+<h4><span id=".D0.9A.D0.BE.D0.BB.D1.88.D0.B5.D0.B9.D0.BF.D1.8B_.D0.B8_.D0.BC.D0.B0.D1.80.D0.BA.D0.B5.D1.80.D1.8B"></span><span class="mw-headline" id="Колшейпы_и_маркеры">Колшейпы и маркеры</span></h4>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Описание
+</th>
+<th style="background-color: #EEE">Значение
+</th></tr>
+<tr>
+<th style="background-color: #EEE">colshapeType
+</th>
+<td style="background-color: #EEE">коллизионные круг, куб, прямоугольник, сфера или труба
+</td>
+<td style="background-color: #EEE">Один из: "colcircle", "colcube", "colrectangle", "colsphere", "coltube"
+</td></tr>
+<tr>
+<th style="background-color: #EEE">markerType
+</th>
+<td style="background-color: #EEE">Стрелка, чекпоинт, кольцо, цилиндр или круглый маркер.
+</td>
+<td style="background-color: #EEE">Один из: "arrow", "checkpoint", "corona", "cylinder", "ring"
+</td></tr>
+</tbody></table>
+<h4><span id=".D0.A1.D0.BF.D0.B5.D1.86.D0.B8.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5"></span><span class="mw-headline" id="Специальные">Специальные</span></h4>
+<table cellspacing="1">
+<tbody><tr>
+<th style="background-color: #EEE">Название
+</th>
+<th style="background-color: #EEE">Описание
+</th>
+<th style="background-color: #EEE">Значение
+</th></tr>
+<tr>
+<th style="background-color: #EEE">element:type
+</th>
+<td style="background-color: #EEE">Элемент определенного типа, например: element:flag
+</td>
+<td style="background-color: #EEE">ID элемента
+</td></tr>
+<tr>
+<th style="background-color: #EEE">selection:val1,val2,...
+</th>
+<td style="background-color: #EEE">Показывает выпадающий список, из которого можно выбрать одно из значений.
+</td>
+<td style="background-color: #EEE">Выборное значение
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20220727170808
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.021 seconds
+Real time usage: 0.022 seconds
+Preprocessor visited node count: 76/1000000
+Post‐expand include size: 110/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1774/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.782      1 Template:RU/Resource_page
+100.00%    0.782      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:4484-0!canonical and timestamp 20220727170808 and revision id 47185. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Editor/EDF&amp;oldid=47185">https://wiki.multitheftauto.com/index.php?title=RU/Resource:Editor/EDF&amp;oldid=47185</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../../Category_RU/Resource.html" title="Category:RU/Resource">RU/Resource</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=RU%2FResource%3AEditor%2FEDF" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=RU%2FResource%3AEditor%2FEDF" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="EDF.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:RU/Resource:Editor/EDF&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="EDF.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Editor/EDF&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Editor/EDF&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../../Special_WhatLinksHere/RU/Resource_Editor/EDF.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../../Special_RecentChangesLinked/RU/Resource_Editor/EDF.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Editor/EDF&amp;oldid=47185" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=RU/Resource:Editor/EDF&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Resource:Editor/EDF" title="Resource:Editor/EDF – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 1 April 2016, at 03:05.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.022","ppvisitednodes":{"value":76,"limit":1000000},"postexpandincludesize":{"value":110,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1774,"limit":5000000},"timingprofile":["100.00%    0.782      1 Template:RU/Resource_page","100.00%    0.782      1 -total"]},"cachereport":{"timestamp":"20220727170808","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":57});});</script>
+</body>
+</html>

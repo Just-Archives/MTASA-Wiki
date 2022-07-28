@@ -1,0 +1,234 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Multi Theft Auto: Wiki</sitename>
+    <dbname>wiki</dbname>
+    <base>https://wiki.multitheftauto.com/wiki/Main_Page</base>
+    <generator>MediaWiki 1.38.2</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Multi Theft Auto: Wiki</namespace>
+      <namespace key="5" case="first-letter">Multi Theft Auto: Wiki talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="100" case="first-letter">Resource</namespace>
+      <namespace key="2300" case="first-letter">Gadget</namespace>
+      <namespace key="2301" case="first-letter">Gadget talk</namespace>
+      <namespace key="2302" case="case-sensitive">Gadget definition</namespace>
+      <namespace key="2303" case="case-sensitive">Gadget definition talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Main Page</title>
+    <ns>0</ns>
+    <id>3484</id>
+    <revision>
+      <id>74694</id>
+      <parentid>73290</parentid>
+      <timestamp>2022-05-31T20:31:09Z</timestamp>
+      <contributor>
+        <username>Myonlake</username>
+        <id>1667</id>
+      </contributor>
+      <minor/>
+      <comment>Use multitheftauto.com URLs</comment>
+      <origin>74694</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8272" sha1="sldcdorqe4ffnqpi1et8anx0qg9hfox" xml:space="preserve">&lt;div style="display: flex; align-items: center; padding-left: 15px; padding-right: 15px;"&gt;
+[[File:Mtalogo.png||100px|link=https://wiki.multitheftauto.com/]]
+&lt;div style="margin-left: .5em"&gt;
+'''Welcome to the [[Multi Theft Auto]] wiki.''' On this wiki you'll find a wealth of information on using Multi Theft Auto.
+ 
+There are many [[How you can help|things you can do to help us]] improve MTA - create a map, a gamemode, help document scripting functions, write example code, write tutorials or just play MTA and report the bugs you find.
+ 
+If you have any questions or problems related to scripting, feel free to get in touch with us on [[Places To Chat#Scripting Help|Discord]].
+
+&lt;span style="margin-top: 1em; display: block;"&gt;[ Stop playing with yourself ]&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style="display: flex; flex-direction: row; flex-wrap: wrap;"&gt;
+
+&lt;div style="flex-grow: 1"&gt; &lt;!-- left column start --&gt;
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px; background: #FFFCF2;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Input-gaming.png‎|link=]]&lt;/div&gt;
+&lt;h3&gt;Play&lt;/h3&gt;
+&lt;div style="background: #FFEEAA; border: 1px solid #FFCD19;"&gt;
+[[File:Go-down.png|link=https://multitheftauto.com/]] ''' [https://multitheftauto.com/ Download Multi Theft Auto: San Andreas {{Current Version|full}}]'''&lt;/div&gt;
+* [[Where to buy GTASA]]
+* [[Client Manual]]
+&lt;!-- * [[Changes_in_{{padleft:|3|{{Current Version|full}}}}|Changes in {{padleft:|3|{{Current Version|full}}}}]] --&gt;
+* [[Changes_in_{{padleft:|5|{{Current Version|full}}}}|Changes in {{padleft:|5|{{Current Version|full}}}}]]
+* [[Known_Issues_-_FAQ|Known Issues]]
+* [[Server Manual]]
+* [[Map manager|Map Manager]]
+
+&lt;h3&gt;Map Editor&lt;/h3&gt;
+*[[Resource:Editor|Manual]]
+*[[Resource:Editor/EDF|Editor Definition Format]]
+*[[Resource:Editor/Plugins|Plugins]]
+*[[Resource:Editor#FAQ|Frequently Asked Questions]]
+&lt;/div&gt;
+
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Package-x-generic.png‎|link=]]&lt;/div&gt;
+&lt;h3&gt;Databases&lt;/h3&gt;
+This section outlines all the Lua capabilites MTA or resources provide.
+* [[:Category:Resource|Resource Catalogue]] - You must learn these to make proper scripts
+* [[Client side scripts]]
+* [[Modules]]
+&lt;/div&gt;
+
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Applications-development.png‎‎‎|link=]]&lt;/div&gt;
+&lt;h3&gt;Developing Multi Theft Auto&lt;/h3&gt;
+[[File:Go-down.png|link=https://nightly.mtasa.com/]] [https://nightly.mtasa.com/ Nightly builds]
+* [[Compiling_MTASA|Compiling MTASA on Windows]]
+&lt;!--* [[Building_MTASA_Server_on_Mac_OS_X|Compiling MTASA on Mac OS X]]--&gt;
+* [[Building_MTASA_Server_on_GNU_Linux|Compiling MTASA on GNU/Linux]]
+* [[Coding guidelines]]
+* [https://github.com/multitheftauto/mtasa-blue Main GitHub repository]
+* [[Roadmap]]
+* [https://github.com/multitheftauto/mtasa-blue/issues Bugtracker]
+* [[Branches]]
+*[[Forks|Forks and anti cheat]]
+&lt;/div&gt;
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Applications-office.png|link=]]&lt;/div&gt;
+&lt;h3&gt;Wiki - How can you help&lt;/h3&gt;
+* Finish documentation for [[:Category:Incomplete|Incomplete functions]].
+* [[:Category:Needs_Example |Add examples to functions and events]].
+* Review and verify [[:Category:Needs Checking|pages that need checking]].
+* Write tutorials to help new people.
+* Translate wiki pages.
+&lt;/div&gt;
+
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Internet-group-chat.png‎|link=]]&lt;/div&gt;
+&lt;h3&gt;Community&lt;/h3&gt;
+* [https://forum.multitheftauto.com/ Forum]
+* Community Discord: [https://discord.com/invite/mtasa Official MTA Discord server] ([https://forum.multitheftauto.com/topic/95008-multi-theft-autos-official-discord-server/ Forum post])
+* Development Discord: [https://discord.com/invite/GNN6PRtTnu Server invite link]
+* [https://community.multitheftauto.com/ MTA Community] - Share and download resources.
+* [https://twitter.com/MTAQA Twitter] - [https://www.youtube.com/user/MTAQA YouTube] - [https://www.facebook.com/multitheftauto Facebook] - [https://www.moddb.com/mods/multi-theft-auto-san-andreas ModDB]
+&lt;/div&gt;
+&lt;/div&gt; &lt;!-- left column end --&gt;
+
+&lt;div style="flex-grow: 1"&gt; &lt;!-- right column start --&gt;
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Accessories-text-editor.png|link=]]&lt;/div&gt;
+&lt;h3&gt;Scripting&lt;/h3&gt;
+* [[Scripting Introduction|Introduction to Scripting]]
+* [[Introduction to Scripting the GUI]]
+* [[Debugging|Debugging Tutorial]] - How to find errors in your scripts
+* [[Resources|Introduction to Resources]]
+** [[Resource Web Access]] - How you can write websites with resources
+** [[CEF_Tutorial|CEF Tutorial]] - How you can use the in-game web browser in your resources
+** [[:Category:Resource|Resource Catalogue]]
+** [[Meta.xml]] - Behind every resource is a meta file that defines it
+** [[ACL]] - Access Control List, this is vital for complex scripts to work
+* [[Writing_Gamemodes|Writing Gamemodes]]
+Forum Links
+* [https://forum.multitheftauto.com/forum/71-scripting/ Scripting Sub-Forum], [https://forum.multitheftauto.com/forum/123-tutorials/ Scripting Tutorials Sub-Forum]
+* [https://forum.multitheftauto.com/topic/24702-mtasa-wiki-offline-copies-online-mirrors/ Offline Wiki Copies]
+&lt;div style="float:right; width: 32px;"&gt;[[File:start-here.png|link=]]&lt;/div&gt;
+&lt;h3&gt;General Lua Help&lt;/h3&gt;
+Pages designed to aid your understanding of Lua
+*[http://www.lua.org/pil/index.html "Programming in Lua" Manual]
+**[http://www.lua.org/manual/5.1/#index Internal Lua functions reference]
+*[http://lua-users.org/wiki/TutorialDirectory Lua Wiki]
+*[http://nixstaller.sourceforge.net/manual/0.5.1/nixstaller_10.html A general guide to Lua from Nixstaller]
+&lt;/div&gt;
+
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px; background:#F2F2FF;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:Preferences-system.png|link=]]&lt;/div&gt;
+&lt;h3&gt;Reference&lt;/h3&gt;
+* [[Client Scripting Functions|Client-side Functions]]
+* [[Client Scripting Events|Client-side Events]]
+* [[Server Scripting Functions|Server-side Functions]]
+* [[Server Scripting Events|Server-side Events]]
+* [[Useful Functions]]
+&lt;!-- Incomplete * [[Module functions|Server-side external module scripting functions list]] --&gt;
+* [[MTA Classes]] - Detailed descriptions of all MTA custom types
+** [[Element|MTA Elements]] / [[Element tree]]
+&lt;/div&gt;
+&lt;div style="border: 1px solid #D8D8D8; padding:4px 8px 8px 8px; margin:10px;"&gt;
+&lt;div style="float:right; width: 32px;"&gt;[[File:System-file-manager.png|link=]]&lt;/div&gt;
+&lt;h3&gt;[[Id|ID Lists]]&lt;/h3&gt;
+*[[Animations|Animations]]
+*[[Character Skins]]
+*[[CJ_Clothes|Clothing styles]]
+*[[Garage|Garage IDs]]
+*[[Interior IDs]]
+*[[Material IDs]]
+*[[Ped voices|Ped Voices]]
+*[[Projectiles]]
+*[[Radar Blips]]
+*[[Sounds]]
+*[[Vehicle IDs]]
+*[[Vehicle Colors]]
+*[[Vehicle Upgrades]]
+*[[Vehicle variants|Vehicle Variants]]
+*[[Vehicle component manipulation]]
+*[[Weapons|Weapons]]
+*[[Weather]]
+&lt;/div&gt;
+&lt;/div&gt; &lt;!-- right column end --&gt;
+&lt;/div&gt; &lt;!-- flex container close --&gt;
+
+&lt;!-- Footer --&gt;
+&lt;div style="display: flex; flex-wrap: wrap; align-items: center; padding-left: 15px; padding-right: 15px;" class="plainlinks"&gt;
+&lt;span style="margin-right: 1em;"&gt;[[File:MTALogo_8ball.png||85px|link=Archive]]&lt;/span&gt;
+
+&lt;div style="display: flex; flex-wrap: wrap;&gt;
+&lt;div style="margin-right: 5em;"&gt;
+'''About [[Multi Theft Auto]]''' &lt;br&gt;
+[[Archive]] &lt;br&gt;
+[[Press Coverage]] &lt;br&gt;
+[https://github.com/multitheftauto/mtasa-blue/graphs/contributors Developers]
+&lt;/div&gt;
+
+&lt;div style="margin-right: 5em;"&gt;
+'''Multi Theft Auto 0.5''' &lt;br&gt;
+[[Archive#Multi_Theft_Auto_0.5|Download]] &lt;br&gt;
+[[MTA 0.5r2 Known Issues|Known Issues]]
+&lt;/div&gt;
+
+&lt;div style="margin-right: 5em;"&gt;
+'''Wiki Stats''' &lt;br&gt;
+{{NUMBEROFARTICLES}} Articles &lt;br&gt;
+{{NUMBEROFPAGES}} Pages &lt;br&gt;
+{{NUMBEROFUSERS}} Registered Users &lt;br&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+[[File:Osi symbol.png|75px|link=https://opensource.org/|left]]
+'''Multi Theft Auto''' is '''Open Source'''. 
+&lt;br/&gt;This means anyone can contribute to making Multi Theft Auto even better!
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+__NOTOC__
+__NOEDITSECTION__
+{{Languages list|en}}</text>
+      <sha1>sldcdorqe4ffnqpi1et8anx0qg9hfox</sha1>
+    </revision>
+  </page>
+</mediawiki>

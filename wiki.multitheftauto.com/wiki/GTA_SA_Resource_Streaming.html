@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>GTA:SA Resource Streaming - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8a48d0a44da8e88162ee0088","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GTA:SA_Resource_Streaming","wgTitle":"GTA:SA Resource Streaming","wgCurRevisionId":48470,"wgRevisionId":48470,"wgArticleId":7335,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Development"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GTA:SA_Resource_Streaming","wgRelevantArticleId":7335,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready"
+,"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GTA_SA_Resource_Streaming rootpage-GTA_SA_Resource_Streaming skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">GTA:SA Resource Streaming</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>The <b>GTA:SA Resource Streaming system</b> loads data from disk into game memory. It is divided into IMG container management, threaded resource reading, conversion into engine objects, COL/IPL sector loading and game logic. It has been created to <b>asynchronously load resources</b>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Known_resource_types"><span class="tocnumber">1</span> <span class="toctext">Known resource types</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#IMG_Container_Management"><span class="tocnumber">2.1</span> <span class="toctext">IMG Container Management</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Possible_resource_loading_statuses"><span class="tocnumber">2.1.1</span> <span class="toctext">Possible resource loading statuses</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#(Threaded)_Resource_Reading"><span class="tocnumber">2.2</span> <span class="toctext">(Threaded) Resource Reading</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Conversion_into_Engine_Objects"><span class="tocnumber">2.3</span> <span class="toctext">Conversion into Engine Objects</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#COL/IPL_Sector_Loading"><span class="tocnumber">2.4</span> <span class="toctext">COL/IPL Sector Loading</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Game_Logic"><span class="tocnumber">2.5</span> <span class="toctext">Game Logic</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Multiplayer_Support"><span class="tocnumber">3</span> <span class="toctext">Multiplayer Support</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Ideas_for_Expansion"><span class="tocnumber">4</span> <span class="toctext">Ideas for Expansion</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Fibered_Loading"><span class="tocnumber">4.1</span> <span class="toctext">Fibered Loading</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Known_resource_types">Known resource types</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Name
+</th>
+<th>ID range
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>Models (.DFF)
+</td>
+<td>0-19999
+</td>
+<td>All game models are in these IDs. Internally this range is further split up into subsections of objects, vehicles and peds.
+</td></tr>
+<tr>
+<td>Texture Dictionaries (.TXD)
+</td>
+<td>20000-24999
+</td>
+<td>Contains texture dictionary slots. Texture dictionaries are containers with all game textures. The game assigns texture dictionaries to models.
+</td></tr>
+<tr>
+<td>Collision Sectors (.COL)
+</td>
+<td>25000-25255
+</td>
+<td>Slots holding all loaded collision sectors. Collision sectors are COLL containers that can be referenced and stretch across in-game bounds (based on buildings that use them).
+</td></tr>
+<tr>
+<td>IPL Sectors (.IPL)
+</td>
+<td>25256-25510
+</td>
+<td>Slots holding all loaded IPL sectors. IPL sectors are represented by the binary .ipl files inside of the .IMG container. The game loads them inside of its bounds, only when they are required.
+</td></tr>
+<tr>
+<td>Pathnode Containers (.DAT)
+</td>
+<td>25511-25574
+</td>
+<td>Pathnodes are aligned in 8*8 sectors of 750*750 units. When the game references such a quad, it loads the associated pathnode files, that are numbered after the (height * rowLen + rowIndex) formula.
+</td></tr>
+<tr>
+<td>Animation Blocks (.IFP)
+</td>
+<td>25575-25754
+</td>
+<td>Animation blocks contain all animation sequences. Models can reference animation blocks, so they request them along.
+</td></tr>
+<tr>
+<td>Recordings (.RRR)
+</td>
+<td>25755-25819
+</td>
+<td>Recordings hold prerecorded game motion data. This motion data is used during missions when you have to chase somebody or drive-by against enemies while a friend is driving.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<h3><span class="mw-headline" id="IMG_Container_Management">IMG Container Management</span></h3>
+<p>During engine initialization, the game loads configuration files that tell it which .IMG containers to use. When the Streaming system initializes, it attempts to load the registered .IMG containers. Every .IMG container is referenced using an unique index inside of a IMGFile array. The game keeps the .IMG container file handles open so it can constantly read from them.
+</p><p>When an .IMG container is being loaded, every file can represent a new resource ID inside of the engine (CModelInfoSA structure). <b>Models</b> get the IDs by matching their filename against an .IDE entry. If none is found, the engine maintains a small resource cache. These resources can still be loaded using RequestSpecialModel. <b>Texture Dictionaries</b> obtain a new ID. There is a hard-coded limit of 5000 TXDs. <b>COLL</b> and <b>IPL</b> sectors also obtain a new ID based on loading order. All the remaining resources go along with the same principle.
+</p><p>The internal CModelInfoSA array represents each resource entry in .IMG files. The engine supports 26310 resource IDs in total.
+</p>
+<h4><span class="mw-headline" id="Possible_resource_loading_statuses">Possible resource loading statuses</span></h4>
+<table class="wikitable">
+<tbody><tr>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>MODEL_UNAVAILABLE
+</td>
+<td>The resource has not been loaded yet. No game resource is loaded for this entry. This resource is not used by any part of the game engine.
+</td></tr>
+<tr>
+<td>MODEL_LOADED
+</td>
+<td>This resource has been loaded by the Streaming system. It is ready to be used by the game engine.
+</td></tr>
+<tr>
+<td>MODEL_LOADING
+</td>
+<td>This resource resides on the to-be-loaded queue. It waits to be picked up by the Streaming system for reading from disk.
+</td></tr>
+<tr>
+<td>MODEL_QUEUE
+</td>
+<td>A slicer is currently reading data from disk for this resource.
+</td></tr>
+<tr>
+<td>MODEL_RELOAD
+</td>
+<td>This resource is currently being loaded in coroutine fashion. Data that is associated with it is too big to be loaded in one go.
+</td></tr></tbody></table>
+<p><a href="File_Res_loader_sys.html" class="image"><img alt="Res loader sys.png" src="https://wiki.multitheftauto.com/images/thumb/2/2d/Res_loader_sys.png/960px-Res_loader_sys.png" decoding="async" width="960" height="398" srcset="/images/2/2d/Res_loader_sys.png 1.5x" /></a>
+</p>
+<h3><span id=".28Threaded.29_Resource_Reading"></span><span class="mw-headline" id="(Threaded)_Resource_Reading">(Threaded) Resource Reading</span></h3>
+<p>There is an entirely separate system just for reading data chunks from disk, known as the <b>streaming runtime</b>. The game can create <b>stream handles</b> to files on disk. By calling the <b>ReadStream</b> function, an asynchronous request to read data from a stream handle is made. Reading activity is maintained in <b>syncSemaphore</b> structures that hold internal data about the reading process (like file handle or OVERLAPPED structure). Calling <b>GetSyncSemaphoreStatus</b> with the syncSemaphore index as argument will return the request status (i.e. reading has finished). <b>CancelSyncSemaphore</b> stops any asynchronous request.
+</p><p>During start-up, the system checks the capabilities of the system. By default, <b>threading is enabled</b>. A read from GTA3.IMG is attempted using overlapped I/O to check for its support. The system will select the best compatible configuration. On modern machines, this means threading with overlapped I/O. In a worst case scenario, the game reads data synchronous on a single thread which halts game execution if data is read from slow storage media.
+</p>
+<h3><span class="mw-headline" id="Conversion_into_Engine_Objects">Conversion into Engine Objects</span></h3>
+<p>The Streaming system natively maintains two reading slicers. A reading slicer checks which requested data is close in an .IMG container and reads multiple data in one go. Using modification of the logic the engine can support an arbitrary number of slicers, that all share chunks inside of a reading buffer. The more slicers, the smaller the reading buffer section for each. If data that is read does not fit into a single slicer, the Streaming system waits for all smaller requests to finish and then reads that big data on the first slicer using the whole reading buffer. The reading buffer size is determined by the biggest resource inside any registered .IMG container.
+</p><p>There are <b>4 states</b> that a <b>slicer</b> can be in: idle, buffering, loading and waiting. Idle slicers wait for requests that can occupy them. When slicers are buffering, they wait for their read requests to finish. Loading slicers wait until the game has loaded all game resources from them. Waiting is an exceptional status that is caused if a slicer is requested to push data for engine object conversion but the read requests have not finished yet.
+</p><p>Loading is the most interesting status. The slicers push the raw data into loader routines along with their model IDs. Using the <b>model ID</b> the engine knows what that raw data is supposed to represent. For instance, model id 1361 is a model resource that is stored in a .DFF file. The loader routines usually load data in one go. If data is found too big, it can be <b>loaded across multiple slicer pulses</b> (the slicer resides in <b>loading status</b>). Then the data is processed in <b>coroutine fashion</b>. Natively, only <b>texture dictionaries</b> that exceed a certain block count use this feature. Also, the engine has been optimized to assume that all data is loaded in two slicer pulses (max.).
+</p><p>Each slicer has its own <b>syncSemaphore</b> from the streaming runtime. The syncSemaphore index corresponds to the slicer index.
+</p>
+<h3><span id="COL.2FIPL_Sector_Loading"></span><span class="mw-headline" id="COL/IPL_Sector_Loading">COL/IPL Sector Loading</span></h3>
+<p>The GTA:SA engine maps COLL and IPL sectors to world coordinate boundaries. When the streaming position (natively the player position) intersects with any sector, it will be requested to load. This activity is maintained in the <b>Sectorizer</b> template class. Every COLL and IPL sector is added into a quad tree to boost world area look-up. Sectors are allocated from a private data pool. Sectors have their own manager that specializes the Sectorizers activity (loading and unloading, pool index to model id conversion, sector marking logic). 
+</p>
+<h3><span class="mw-headline" id="Game_Logic">Game Logic</span></h3>
+<p>When the camera is close to the ground, the Streaming system pulses game activity management. Game activity is pre-loading of event models and streaming of event zones. These features have been disabled in MTA, but are interesting if SP support is considered.
+</p>
+<h2><span class="mw-headline" id="Multiplayer_Support">Multiplayer Support</span></h2>
+<p>MTA:SA sets high demands for the GTA:SA engine. The streaming system was meant to be the central location to load resources from. Hence, natively, the system does not expect interaction of outside sources, such as the MTA runtime.
+</p><p>To fix this problem, the entire system has to be understood and properly expanded. The <b>RequestModel</b> function and the <b>FreeModel</b> function are used to request resources for every game instance. By expanding the logic of these functions, MTA can offer custom resources to the game engine (i.e. models and collisions). Simple ASM hooks are insufficient, as the code requires heavy adjustments which need to be clear to every MTA developer. For instance, to prevent memory leaks and instability, the Streaming <b>slicer</b> activity and the loader queue have to be adjusted according to how MTA manipulates the resource status.
+</p><p>In MTA:Eir, the model support has been fixed by offering model resources on base model info request and preventing the deletion of custom collisions when COL sectors are being unloaded.
+</p>
+<h2><span class="mw-headline" id="Ideas_for_Expansion">Ideas for Expansion</span></h2>
+<p>Natively, the loader does not operate with perfect efficiency. As stated above, the system mimicks coroutine behavior. If very big .DFF models are loaded, the Streaming system can cause FPS drops. The way texture containers are loaded is imperfect, even if their loading is split into two pulses. The theory is that the conversion of every texture into a game instance is a complex task. Natively, streaming is not dependant on timing of the load process. If it were, then the system could yield when a TXD container takes too long to load.
+</p><p>My proposal is that every slicer obtains a fiber in a MTA execution manager. Once per frame (and at all other plausible moments) all fibers will be pulsed, thus progressing resource loading. Since every fiber maintains its own runtime stack, complex code is avoided. When a certain quota of data is read from a RenderWare stream, the fiber's execution is yielded. Such a change in resource loading is going to smoothen the FPS of GTA:SA when traveling across the world.
+</p><p>Problem with such a proposal is that the RenderWare streaming functions are hooked by the network module.
+</p>
+<h3><span class="mw-headline" id="Fibered_Loading">Fibered Loading</span></h3>
+<p>This is a technique utilized in MTA:Eir to improve the performance of low-end computers. It generally smoothens the FPS count of the game by removing lag-spikes. In native GTA:SA, resources are mostly loaded in one go. Using <a href="MTA_Eir/functions/engineStreamingSetFiberedLoadingEnabled.html" title="MTA:Eir/functions/engineStreamingSetFiberedLoadingEnabled">fibered loading</a> on the other hand, loading of resources depends on the time the Streaming system may take per frame. The time it may take is derived from the total execution time of last frame.
+</p><p>Imagine that a very big TXD container is stored inside of GTA3.IMG. Such resources take a relatively long time to be buffered into game memory and an initialization attempt during Streaming loading may cause a lagspike, since much data is processed at once. If fibered loading is enabled, a coroutine (a.k.a. fiber) is created for every resource loading <i>slicer</i> with its own execution stack. When the loader attempts to read resources from the buffer, the fiber executive manager checks whether the fiber has taken <a href="MTA_Eir/functions/engineStreamingSetFiberedPerfMultiplier.html" title="MTA:Eir/functions/engineStreamingSetFiberedPerfMultiplier">its time</a> already. If so, it yields during the read process. Execution will continue next game frame.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220726221950
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.012 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 34/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:7335-0!canonical and timestamp 20220726221950 and revision id 48470. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=GTA:SA_Resource_Streaming&amp;oldid=48470">https://wiki.multitheftauto.com/index.php?title=GTA:SA_Resource_Streaming&amp;oldid=48470</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Development.html" title="Category:Development">Development</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=GTA%3ASA+Resource+Streaming" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=GTA%3ASA+Resource+Streaming" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="GTA_SA_Resource_Streaming.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:GTA:SA_Resource_Streaming&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="GTA_SA_Resource_Streaming.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=GTA:SA_Resource_Streaming&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=GTA:SA_Resource_Streaming&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/GTA_SA_Resource_Streaming.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/GTA_SA_Resource_Streaming.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=GTA:SA_Resource_Streaming&amp;oldid=48470" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=GTA:SA_Resource_Streaming&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/GTA:SA_Resource_Streaming" title="GTA:SA Resource Streaming – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 22 July 2016, at 03:48.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.012","walltime":"0.013","ppvisitednodes":{"value":34,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220726221950","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":99});});</script>
+</body>
+</html>

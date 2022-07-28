@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>SetElementBonePosition - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8b5c6033c8d0ff571d98fa7e","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SetElementBonePosition","wgTitle":"SetElementBonePosition","wgCurRevisionId":73111,"wgRevisionId":73111,"wgArticleId":12587,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Client functions","Changes in 1.5.9"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SetElementBonePosition","wgRelevantArticleId":12587,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={
+"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<meta name='headingclass' content='' data-class='client' data-subcaption='Client-side function'>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-SetElementBonePosition rootpage-SetElementBonePosition skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">SetElementBonePosition</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--LC-->
+</p>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20704"><span style="color: #FFFFFF;">r20704</span></a>)</div><div style="padding: 4px 8px">This function sets the position of a bone to the specified coordinates. Currently the <a href="Element/Player.html" title="Element/Player">Player</a> and <a href="Element/Ped.html" title="Element/Ped">Ped</a> element types are accepted.</div></div>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #98fb98; background: transparent; border-left: 25px solid #98fb98;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Tip:</b> If you want to attach an element to a bone, see <a href="AttachElementToBone.html" title="AttachElementToBone">attachElementToBone</a>.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #d5b5f5; background: transparent; border-left: 25px solid #d5b5f5;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Note:</b> You need to use this function together with <a href="OnClientPedsProcessed.html" title="OnClientPedsProcessed">onClientPedsProcessed</a>.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<pre class="prettyprint lang-lua">bool setElementBonePosition ( element theElement, int bone, float x, float y, float z )
+</pre>
+<h3><span class="mw-headline" id="Required_Arguments">Required Arguments</span></h3>
+<ul><li><b>theElement:</b> the <a href="Element.html" title="Element">element</a> to set the bone position on.</li>
+<li><b>bone:</b> the ID of the bone to set the position of. See <a href="Bone_IDs.html" title="Bone IDs">Bone IDs</a>.</li>
+<li><b>x:</b> The X coordinate of the destination.</li>
+<li><b>y:</b> The Y coordinate of the destination.</li>
+<li><b>z:</b> The Z coordinate of the destination.</li></ul>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<p>Returns <i>true</i> if the function was successful, <i>false</i> otherwise.
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File_CJ_with_long_neck.html" class="image"><img alt="CJ with long neck" src="https://wiki.multitheftauto.com/images/thumb/0/0b/CJ_with_long_neck.png/300px-CJ_with_long_neck.png" decoding="async" width="300" height="249" class="thumbimage" srcset="/images/0/0b/CJ_with_long_neck.png 1.5x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_CJ_with_long_neck.html" class="internal" title="Enlarge"></a></div>Example preview</div></div></div>
+<p>This example shows a surprised CJ with a long neck
+</p>
+<pre class="prettyprint lang-lua">local bones = {
+    [4] = Vector3(0, 0, 0.15),
+    [5] = Vector3(0, 0, 0.15),
+    [6] = Vector3(0, 0, 0.13),
+    [7] = Vector3(0, 0, 0.13),
+    [8] = Vector3(0, 0, 0.1),
+}
+function updatePed()
+    for bone,v in pairs(bones) do
+        local pos = localPlayer:getBonePosition(bone)+v
+        setElementBonePosition(localPlayer, bone, pos)
+    end
+end
+addEventHandler("onClientPedsProcessed", root, updatePed)
+</pre>
+<h2><span class="mw-headline" id="Requirements">Requirements</span></h2>
+<table cellpadding="4" style="border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<th style="border-top-left-radius: 10px; font-weight: 400; background-color: #FFAA44; border-style: solid; border-width: 1px; border-color: #FFF; color:#7A4A20">Minimum server version
+</th>
+<th width="60" style="white-space: nowrap; border-top-right-radius: 10px; background-color: #FFCC66; border-style: solid; border-width: 1px; border-color: #fff">n/a
+</th></tr>
+<tr>
+<th style="border-bottom-left-radius: 10px; font-weight: 400; background-color: #FF6666; border-style: solid; border-width: 1px; border-color: #FFF; color:#AA0028">Minimum client version
+</th>
+<th style="white-space: nowrap; border-bottom-right-radius: 10px; background-color: #FFBBBB; border-style: solid; border-width: 1px; border-color: #FFF">1.5.8-9.20704
+</th></tr></tbody></table><p><b>Note</b>: Using this feature requires the resource to have the above minimum version declared in the <a href="Meta.html" title="Meta.xml">meta.xml</a> <b>&lt;min_mta_version&gt;</b> section. <i>e.g. &lt;min_mta_version  client="1.5.8-9.20704" /&gt;</i>
+</p><h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="AttachElements.html" title="AttachElements">attachElements</a></li>
+<li><a href="CreateElement.html" title="CreateElement">createElement</a></li>
+<li><a href="DestroyElement.html" title="DestroyElement">destroyElement</a></li>
+<li><a href="DetachElements.html" title="DetachElements">detachElements</a></li>
+<li><a href="GetAttachedElements.html" title="GetAttachedElements">getAttachedElements</a></li>
+<li><a href="GetElementAlpha.html" title="GetElementAlpha">getElementAlpha</a></li>
+<li><a href="GetElementAngularVelocity.html" title="GetElementAngularVelocity">getElementAngularVelocity</a></li>
+<li><a href="GetElementAttachedOffsets.html" title="GetElementAttachedOffsets">getElementAttachedOffsets</a></li>
+<li><a href="GetElementAttachedTo.html" title="GetElementAttachedTo">getElementAttachedTo</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20704"><span style="color: #FFFFFF;">r20704</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="GetElementBoneMatrix.html" title="GetElementBoneMatrix">getElementBoneMatrix</a></li>
+<li><a href="GetElementBonePosition.html" title="GetElementBonePosition">getElementBonePosition</a></li>
+<li><a href="GetElementBoneRotation.html" title="GetElementBoneRotation">getElementBoneRotation</a></li></ul>
+</div></div>
+<ul><li><a href="GetElementBoundingBox.html" title="GetElementBoundingBox">getElementBoundingBox</a></li>
+<li><a href="GetElementByID.html" title="GetElementByID">getElementByID</a></li>
+<li><a href="GetElementChild.html" title="GetElementChild">getElementChild</a></li>
+<li><a href="GetElementChildren.html" title="GetElementChildren">getElementChildren</a></li>
+<li><a href="GetElementChildrenCount.html" title="GetElementChildrenCount">getElementChildrenCount</a></li>
+<li><a href="GetElementCollisionsEnabled.html" title="GetElementCollisionsEnabled">getElementCollisionsEnabled</a></li>
+<li><a href="GetElementColShape.html" title="GetElementColShape">getElementColShape</a></li>
+<li><a href="GetElementData.html" title="GetElementData">getElementData</a></li>
+<li><a href="GetElementDimension.html" title="GetElementDimension">getElementDimension</a></li>
+<li><a href="GetElementDistanceFromCentreOfMassToBaseOfModel.html" title="GetElementDistanceFromCentreOfMassToBaseOfModel">getElementDistanceFromCentreOfMassToBaseOfModel</a></li>
+<li><a href="GetElementHealth.html" title="GetElementHealth">getElementHealth</a></li>
+<li><a href="GetElementID.html" title="GetElementID">getElementID</a></li>
+<li><a href="GetElementInterior.html" title="GetElementInterior">getElementInterior</a></li>
+<li><a href="GetElementMatrix.html" title="GetElementMatrix">getElementMatrix</a></li>
+<li><a href="GetElementModel.html" title="GetElementModel">getElementModel</a></li>
+<li><a href="GetElementParent.html" title="GetElementParent">getElementParent</a></li>
+<li><a href="GetElementPosition.html" title="GetElementPosition">getElementPosition</a></li>
+<li><a href="GetElementRadius.html" title="GetElementRadius">getElementRadius</a></li>
+<li><a href="GetElementRotation.html" title="GetElementRotation">getElementRotation</a></li>
+<li><a href="GetElementsByType.html" title="GetElementsByType">getElementsByType</a></li>
+<li><a href="GetElementsWithinColShape.html" title="GetElementsWithinColShape">getElementsWithinColShape</a></li>
+<li><a href="GetElementsWithinRange.html" title="GetElementsWithinRange">getElementsWithinRange</a></li>
+<li><a href="GetElementType.html" title="GetElementType">getElementType</a></li>
+<li><a href="GetElementVelocity.html" title="GetElementVelocity">getElementVelocity</a></li>
+<li><a href="GetLowLODElement.html" title="GetLowLODElement">getLowLODElement</a></li>
+<li><a href="GetRootElement.html" title="GetRootElement">getRootElement</a></li>
+<li><a href="IsElement.html" title="IsElement">isElement</a></li>
+<li><a href="IsElementAttached.html" title="IsElementAttached">isElementAttached</a></li>
+<li><a href="IsElementCallPropagationEnabled.html" title="IsElementCallPropagationEnabled">isElementCallPropagationEnabled</a></li>
+<li><a href="IsElementCollidableWith.html" title="IsElementCollidableWith">isElementCollidableWith</a></li>
+<li><a href="IsElementDoubleSided.html" title="IsElementDoubleSided">isElementDoubleSided</a></li>
+<li><a href="IsElementFrozen.html" title="IsElementFrozen">isElementFrozen</a></li>
+<li><a href="IsElementInWater.html" title="IsElementInWater">isElementInWater</a></li>
+<li><a href="IsElementLocal.html" title="IsElementLocal">isElementLocal</a></li>
+<li><a href="IsElementLowLOD.html" title="IsElementLowLOD">isElementLowLOD</a></li>
+<li><a href="IsElementOnScreen.html" title="IsElementOnScreen">isElementOnScreen</a></li>
+<li><a href="IsElementStreamable.html" title="IsElementStreamable">isElementStreamable</a></li>
+<li><a href="IsElementStreamedIn.html" title="IsElementStreamedIn">isElementStreamedIn</a></li>
+<li><a href="IsElementSyncer.html" title="IsElementSyncer">isElementSyncer</a></li>
+<li><a href="IsElementWaitingForGroundToLoad.html" title="IsElementWaitingForGroundToLoad">isElementWaitingForGroundToLoad</a></li>
+<li><a href="IsElementWithinColShape.html" title="IsElementWithinColShape">isElementWithinColShape</a></li>
+<li><a href="SetElementAlpha.html" title="SetElementAlpha">setElementAlpha</a></li>
+<li><a href="SetElementAngularVelocity.html" title="SetElementAngularVelocity">setElementAngularVelocity</a></li>
+<li><a href="SetElementAttachedOffsets.html" title="SetElementAttachedOffsets">setElementAttachedOffsets</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20704"><span style="color: #FFFFFF;">r20704</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="SetElementBoneMatrix.html" title="SetElementBoneMatrix">setElementBoneMatrix</a></li>
+<li><a class="mw-selflink selflink">setElementBonePosition</a></li>
+<li><a href="SetElementBoneRotation.html" title="SetElementBoneRotation">setElementBoneRotation</a></li></ul>
+</div></div>
+<ul><li><a href="SetElementCallPropagationEnabled.html" title="SetElementCallPropagationEnabled">setElementCallPropagationEnabled</a></li>
+<li><a href="SetElementCollidableWith.html" title="SetElementCollidableWith">setElementCollidableWith</a></li>
+<li><a href="SetElementCollisionsEnabled.html" title="SetElementCollisionsEnabled">setElementCollisionsEnabled</a></li>
+<li><a href="SetElementData.html" title="SetElementData">setElementData</a></li>
+<li><a href="SetElementDimension.html" title="SetElementDimension">setElementDimension</a></li>
+<li><a href="SetElementDoubleSided.html" title="SetElementDoubleSided">setElementDoubleSided</a></li>
+<li><a href="SetElementFrozen.html" title="SetElementFrozen">setElementFrozen</a></li>
+<li><a href="SetElementHealth.html" title="SetElementHealth">setElementHealth</a></li>
+<li><a href="SetElementID.html" title="SetElementID">setElementID</a></li>
+<li><a href="SetElementInterior.html" title="SetElementInterior">setElementInterior</a></li>
+<li><a href="SetElementMatrix.html" title="SetElementMatrix">setElementMatrix</a></li>
+<li><a href="SetElementModel.html" title="SetElementModel">setElementModel</a></li>
+<li><a href="SetElementParent.html" title="SetElementParent">setElementParent</a></li>
+<li><a href="SetElementPosition.html" title="SetElementPosition">setElementPosition</a></li>
+<li><a href="SetElementRotation.html" title="SetElementRotation">setElementRotation</a></li>
+<li><a href="SetElementStreamable.html" title="SetElementStreamable">setElementStreamable</a></li>
+<li><a href="SetElementVelocity.html" title="SetElementVelocity">setElementVelocity</a></li>
+<li><a href="SetLowLODElement.html" title="SetLowLODElement">setLowLODElement</a></li></ul>
+<div style="border: 2px solid #232933; border-radius: 10px; margin: 14px 0; overflow: hidden"><div style="background: #232933; color: #fff; padding: 4px 8px">* FEATURE ADDED IN 1.5.9 (REVISION: <a rel="nofollow" class="external text" href="https://buildinfo.mtasa.com/?Author=&amp;Branch=&amp;Revision=20704"><span style="color: #FFFFFF;">r20704</span></a>)</div><div style="padding: 4px 8px">
+<ul><li><a href="UpdateElementRpHAnim.html" title="UpdateElementRpHAnim">updateElementRpHAnim</a></li></ul>
+</div></div>
+<p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727205700
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.029 seconds
+Real time usage: 0.032 seconds
+Preprocessor visited node count: 314/1000000
+Post‐expand include size: 12827/2097152 bytes
+Template argument size: 1128/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 596/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   10.909      1 -total
+ 48.56%    5.297      4 Template:Added_feature/item
+ 26.57%    2.898      1 Template:Client_element_functions
+ 15.72%    1.715      1 Template:Tip
+ 11.88%    1.296      2 Template:MessageBox
+  9.21%    1.005      1 Template:Note
+  9.02%    0.984      4 Template:R
+  8.70%    0.949      8 Template:Next_Stable_Version
+  8.28%    0.903      8 Template:Current_Stable_Version
+  7.70%    0.840      1 Template:Requirements
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:12587-0!canonical and timestamp 20220727205700 and revision id 73111. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=SetElementBonePosition&amp;oldid=73111">https://wiki.multitheftauto.com/index.php?title=SetElementBonePosition&amp;oldid=73111</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="Category_Client_functions.html" title="Category:Client functions">Client functions</a></li><li><a href="Category_Changes_in_1.5.html" title="Category:Changes in 1.5.9">Changes in 1.5.9</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=SetElementBonePosition" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=SetElementBonePosition" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="SetElementBonePosition.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:SetElementBonePosition&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="SetElementBonePosition.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=SetElementBonePosition&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=SetElementBonePosition&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/SetElementBonePosition.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/SetElementBonePosition.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=SetElementBonePosition&amp;oldid=73111" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=SetElementBonePosition&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 7 December 2021, at 07:08.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.029","walltime":"0.032","ppvisitednodes":{"value":314,"limit":1000000},"postexpandincludesize":{"value":12827,"limit":2097152},"templateargumentsize":{"value":1128,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":596,"limit":5000000},"timingprofile":["100.00%   10.909      1 -total"," 48.56%    5.297      4 Template:Added_feature/item"," 26.57%    2.898      1 Template:Client_element_functions"," 15.72%    1.715      1 Template:Tip"," 11.88%    1.296      2 Template:MessageBox","  9.21%    1.005      1 Template:Note","  9.02%    0.984      4 Template:R","  8.70%    0.949      8 Template:Next_Stable_Version","  8.28%    0.903      8 Template:Current_Stable_Version","  7.70%    0.840      1 Template:Requirements"]},"cachereport":{"timestamp":"20220727205700","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":88});});</script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Compiling MTASA - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e905d2e28fb1b0c6898cc5b3","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Compiling_MTASA","wgTitle":"Compiling MTASA","wgCurRevisionId":73814,"wgRevisionId":73814,"wgArticleId":5231,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Development"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Compiling_MTASA","wgRelevantArticleId":5231,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":["autoconfirmed"],"wgRestrictionMove":["autoconfirmed"]};RLSTATE={"site.styles":"ready"
+,"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Compiling_MTASA rootpage-Compiling_MTASA skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Compiling MTASA</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>In order to successfully build Multi Theft Auto from source, it is necessary to perform a number of steps, which we will explain below.
+</p><p>Please read the instructions carefully and do not skip parts of it, if you have no experience.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Prerequisites"><span class="tocnumber">1</span> <span class="toctext">Prerequisites</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Visual_Studio_2022"><span class="tocnumber">1.1</span> <span class="toctext">Visual Studio 2022</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Microsoft_DirectX_SDK"><span class="tocnumber">1.2</span> <span class="toctext">Microsoft DirectX SDK</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Git_Client"><span class="tocnumber">1.3</span> <span class="toctext">Git Client</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Getting_the_latest_source_code"><span class="tocnumber">2</span> <span class="toctext">Getting the latest source code</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Compiling_the_code"><span class="tocnumber">3</span> <span class="toctext">Compiling the code</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Running_the_software"><span class="tocnumber">4</span> <span class="toctext">Running the software</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Running_the_client"><span class="tocnumber">4.1</span> <span class="toctext">Running the client</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Running_the_dedicated_server"><span class="tocnumber">4.2</span> <span class="toctext">Running the dedicated server</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Installing_the_latest_resources"><span class="tocnumber">4.2.1</span> <span class="toctext">Installing the latest resources</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Starting_the_server"><span class="tocnumber">4.2.2</span> <span class="toctext">Starting the server</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Debugging"><span class="tocnumber">4.3</span> <span class="toctext">Debugging</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#How_to_enable_breakpoints"><span class="tocnumber">4.3.1</span> <span class="toctext">How to enable breakpoints</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Extending_timeout_duration"><span class="tocnumber">4.3.2</span> <span class="toctext">Extending timeout duration</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#ReAttach_for_Visual_Studio"><span class="tocnumber">4.3.3</span> <span class="toctext">ReAttach for Visual Studio</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Getting_involved"><span class="tocnumber">5</span> <span class="toctext">Getting involved</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Additional_information"><span class="tocnumber">6</span> <span class="toctext">Additional information</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Errors"><span class="tocnumber">7</span> <span class="toctext">Errors</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#CL38_error._[netc_d.dll_not_found]"><span class="tocnumber">7.1</span> <span class="toctext">CL38 error. [netc_d.dll not found]</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#After_cloning_the_repository,_it_doesn&#39;t_compile_the_project"><span class="tocnumber">7.2</span> <span class="toctext">After cloning the repository, it doesn't compile the project</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#CL17_Load_field._Please_ensure_that_the_latest_data_files_have_been_installed_correctly"><span class="tocnumber">7.3</span> <span class="toctext">CL17 Load field. Please ensure that the latest data files have been installed correctly</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#ERROR:_Loading_network_library_(net_d.dll)_failed!"><span class="tocnumber">7.4</span> <span class="toctext">ERROR: Loading network library (net_d.dll) failed!</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Prerequisites">Prerequisites</span></h2>
+<p>Compiling the Multi Theft Auto client is only supported on Windows 10.
+</p><p>Make sure you have the following software and SDKs installed:
+</p>
+<h3><span class="mw-headline" id="Visual_Studio_2022">Visual Studio 2022</span></h3>
+<div class="floatright"><a href="https://www.visualstudio.com/vs/" rel="nofollow"><img alt="Visual Studio Community.PNG" src="https://wiki.multitheftauto.com/images/thumb/2/21/Visual_Studio_Community.PNG/150px-Visual_Studio_Community.PNG" decoding="async" width="150" height="105" srcset="/images/thumb/2/21/Visual_Studio_Community.PNG/225px-Visual_Studio_Community.PNG 1.5x, /images/thumb/2/21/Visual_Studio_Community.PNG/300px-Visual_Studio_Community.PNG 2x" /></a></div>
+<ol><li><b><a rel="nofollow" class="external text" href="https://visualstudio.microsoft.com/vs/">Download Microsoft Visual Studio 2022</a></b> - make sure you get the Community Edition, that one is free.</li>
+<li>On the installation checklist, <a href="File_VsFoundationClasses.html" title="File:VsFoundationClasses.png">make sure you tick these 2 items</a>:
+<ol><li><i>Desktop development with C++</i></li>
+<li>Optional component <i>C++ MFC for latest v143 build tools (x86 &amp; x64)</i></li></ol></li></ol>
+<p>If you don't enable MFC, you will get the following error: <code>cannot open include file 'afxres.h'</code>.
+</p><p>If you've made a mistake, you can run the <i>Visual Studio Installer</i> app to modify your current installation. There is no need to uninstall and reinstall.
+</p>
+<h3><span class="mw-headline" id="Microsoft_DirectX_SDK">Microsoft DirectX SDK</span></h3>
+<div class="floatright"><a href="http://web.archive.org/web/20200804044856/https://www.microsoft.com/en-us/download/details.aspx?id=23549" rel="nofollow"><img alt="DirectX SDK.jpg" src="https://wiki.multitheftauto.com/images/thumb/6/6b/DirectX_SDK.jpg/150px-DirectX_SDK.jpg" decoding="async" width="150" height="150" srcset="/images/thumb/6/6b/DirectX_SDK.jpg/225px-DirectX_SDK.jpg 1.5x, /images/6/6b/DirectX_SDK.jpg 2x" /></a></div>
+<p><b>Download Microsoft DirectX SDK (August 2009) (DXSDK_Aug09.exe):</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://archive.org/download/dxsdk_aug09/DXSDK_Aug09.exe">Mirror 1</a></li>
+<li><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe">Mirror 2</a></li></ul>
+<table class="wikitable" style="margin-top: 0px; width: 70%; word-break: break-all;">
+<caption>File verification
+</caption>
+<tbody><tr style="vertical-align:bottom;">
+<th colspan="2">Algorithm and variant
+</th>
+<th>Hash
+</th>
+<th>Hash file
+</th></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td rowspan="6"><b><span class="nowrap">SHA-3</span></b></td>
+<td><i>SHA3-224</i></td>
+<td>8bfcdc03518d7edd34689534fd4d21291469ff2f2eb10437ad648c58</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha3-224">DXSDK_Aug09.exe.sha3-224</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA3-256</i></td>
+<td>45bf3e08da3b3636ddb4f4a74243430f8d65759c074c0d79756ef810c4701c5a</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha3-256">DXSDK_Aug09.exe.sha3-256</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA3-384</i></td>
+<td>b358e529963d6f5fd7f8bd4b530fb18f6a2e6a442009a54e981b2f9967589ed48150af310f283640d56f9b60d41100c9</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha3-384">DXSDK_Aug09.exe.sha3-384</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA3-512</i></td>
+<td>43522187053af744250059ef69c0f3083cecd1157fe56daac16b9497ebc6fb5b525875144e42898367c55f757cffd3526f37074d544470578602a5a944a45a75</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha3-512">DXSDK_Aug09.exe.sha3-512</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHAKE128</i></td>
+<td>2a7c81bde9e867cbb5ef00b72ad8de66a3ee64c1d59f16465fa712479b6a84d28a02cc5ed08afa1d51e72011657453dbd4656cc9340d32e18179c39d03982dfc35c8f0c2a5c99e11dc74d0e23ed21b1e55f19c809a5a152bde39a2d46fcd12421f373f2d691ade1b57faf6c2ab7aded5a7d174f1f1c77127c0d6a1523b4775c569c5e1b4efa2da4bf2f708a96707a709e245a7f507382e69a81777919c90e95a091c0b699ce7f517</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha3-128000">DXSDK_Aug09.exe.sha3-128000</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHAKE256</i></td>
+<td>9c100dac5245a61774f3a2752bf9e941bdcd5654b18035155161c63b20936dfc9bd7334feb9a6fe9a99a65491161083b39ac3bd578e2cf4f90cba3c786e9924fa0611f65a725331b77b63e7c8b552e1637bc77531ba0f2c9cac72115b28e523929ede4e5b246a0755e8d5c4089d94bf16627fb08672cfffa523bba3d976489a0eec60d3c6a96ca2b</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha3-256000">DXSDK_Aug09.exe.sha3-256000</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td rowspan="6"><b><span class="nowrap">SHA-2</span></b></td>
+<td><i>SHA-224</i></td>
+<td>a3a74b89cccfe314b79418d5598aac5e94800221e5d945c74f15c004</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha2-224">DXSDK_Aug09.exe.sha2-224</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA-256</i></td>
+<td>4ab1de69312f10f6b41310a5218d80c478bbd823bc0f86627318d690b128fb9f</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha2-256">DXSDK_Aug09.exe.sha2-256</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA-384</i></td>
+<td>254ed29c6ad2cadc6f013d2d51c0ac78a6bbe236a2c94ca99610eba8b2c1200d1a62c445ca9ee51bb09354875d5eca8a</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha2-384">DXSDK_Aug09.exe.sha2-384</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA-512</i></td>
+<td style="width: 60%;">736393c0dfa32221e229890f87eb330174d70dd2a02fa0cace303816d3e7a10a332a44129748de39665d1b339e627d6028c2080268f7afdd5240c447fec8ff0b</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha2-512">DXSDK_Aug09.exe.sha2-512</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA-512/224</i></td>
+<td>7e23d9ba916000782a17e23abf48e25237f45590cfe767aed9d79f10</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha2-512224">DXSDK_Aug09.exe.sha2-512224</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td><i>SHA-512/256</i></td>
+<td>0c833a56046fe7e4213fcb1862c730acf313d1b8f60b51eebf64dc3e79730c1c</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha2-512256">DXSDK_Aug09.exe.sha2-512256</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td colspan="2"><b>MD5</b></td>
+<td>66e5379ecf46b014688779621bcc677c</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.md5">DXSDK_Aug09.exe.md5</a>
+</td></tr>
+<tr style="text-align:center;vertical-align:center;">
+<td colspan="2"><b><span class="nowrap">SHA-1</span></b></td>
+<td>5b9b969ed7b6cf5534bb7350e44c09b3573b0e71</td>
+<td><a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sha1">DXSDK_Aug09.exe.sha1</a>
+</td></tr></tbody></table>
+<p>CRC32 e9f5c61d (<a rel="nofollow" class="external text" href="https://assets.mtasa.com/DXSDK/DXSDK_Aug09.exe.sfv">DXSDK_Aug09.exe.sfv</a>)<br />
+</p><p><b>NOTE:</b> Restart your computer after installing <i>Microsoft DirectX SDK</i>, because otherwise the environment variable <b>DXSDK_DIR</b> won't be available yet. After restarting it re-run <b>create-projects.bat</b>
+</p><p><b>Cant find d3dx9.h</b><br />
+Add the <b>$(DXSDK_DIR)Include;</b> to the VC++ Directories in DirectX9GuiRenderer, GUI and Client Core projects.
+You can find the VC++ Directories list by selecting a project, then pressing the shortcut ALT + ENTER (without the +), then under the 'Configuration properties' you can find 'VC++ Directories', and in there you can find the 'Include Directories' field, click on it and add <b>;$(DXSDK_DIR)Include;</b> at the end of it. 
+<b>Note: You need to do the same thing in Release mode as well</b>
+</p><p><b>Cant find d3dx9.lib</b><br />
+Do do same as in the error above, but instead of <b>;$(DXSDK_DIR)Include;</b> you must add <b>;$(DXSDK_DIR)Lib/x86;</b> to the <b>Library directories</b> field
+<b>Note: You need to do the same thing in Release mode as well</b>
+</p><p><b>S1023 Error</b><br />
+<a rel="nofollow" class="external text" href="https://support.microsoft.com/en-us/kb/2728613">"S1023" error when you install the DirectX SDK (June 2010)</a><br style="clear:both" />
+</p><p><b>Cannot open source file "xxx.h" after upgrading to Visual Studio 2022</b><br />
+If you've just upgraded to Visual Studio 2022 and were working on MTA using a previous version, you may receive errors about header files not being found (stdio.h, stddef.h, etc) when building the project. 
+</p><p>Make sure you have the latest Windows 10 SDK installed (via the Visual Studio Installer) and restart your PC. 
+</p><p>If that doesn't work - close Visual Studio, go into the `Build` folder (where your mtasa-blue is located) and delete the `.vs` folder. Start Visual Studio and everything should be fixed.
+</p>
+<h3><span class="mw-headline" id="Git_Client">Git Client</span></h3>
+<div class="floatleft"><a href="https://git-scm.com/" rel="nofollow"><img alt="Git logo.png" src="https://wiki.multitheftauto.com/images/thumb/8/82/Git_logo.png/32px-Git_logo.png" decoding="async" width="32" height="32" srcset="/images/thumb/8/82/Git_logo.png/48px-Git_logo.png 1.5x, /images/thumb/8/82/Git_logo.png/64px-Git_logo.png 2x" /></a></div>
+<p>If you would like to contribute to MTA, you should install Git. This will allow you to collaborate with us by creating branches and pushing to your own fork. If you are not comfortable with the command line, we recommend you to download and install <a rel="nofollow" class="external text" href="https://desktop.github.com/">GitHub Desktop</a>.
+</p><p>If you only want to compile the source code and are not interested in contributing to MTA, you can download the source directly (see below).
+</p>
+<h2><span class="mw-headline" id="Getting_the_latest_source_code">Getting the latest source code</span></h2>
+<p>To get the latest code, you will have to download the latest copy of our Git repository.<br />
+We recommend cloning the repository in your Git client because you can pull any updates from there easily.
+</p>
+<ul><li><b>Repository:</b> <a rel="nofollow" class="external text" href="https://github.com/multitheftauto/mtasa-blue">multitheftauto/mtasa-blue</a></li>
+<li><b>.zip:</b> <a rel="nofollow" class="external text" href="https://github.com/multitheftauto/mtasa-blue/archive/master.zip">master.zip</a></li>
+<li><b>.tar.gz:</b> <a rel="nofollow" class="external text" href="https://github.com/multitheftauto/mtasa-blue/archive/master.tar.gz">master.tar.gz</a></li></ul>
+<h2><span class="mw-headline" id="Compiling_the_code">Compiling the code</span></h2>
+<ol><li>Execute the script <b>win-create-projects.bat</b></li>
+<li>Open the solution file <b>MTASA.sln</b> in the <b>Build</b> directory</li>
+<li>If you are asked to upgrade the project, click <b>Cancel</b></li>
+<li>Select <b>Debug</b> - <b>Win32</b> configuration in Visual Studio, then press Build &gt; Build Solution... (may take some minutes)</li>
+<li>Execute the script <b>win-install-data.bat</b></li></ol>
+<h1><span class="mw-headline" id="Running_the_software">Running the software</span></h1>
+<h2><span class="mw-headline" id="Running_the_client">Running the client</span></h2>
+<p>You can start your client in the <b>Bin</b> directory. You might find there a <i>Multi Theft Auto.exe</i> and/or <i>Multi Theft Auto_d.exe</i> executable. The <i>_d</i> suffix indicates a debug build of the software.<br />
+Furthermore, you can also run your client inside the debugger from Visual Studio if you want to investigate a stack trace or set breakpoints in interesting code regions (read more in the section Debugging below).
+</p>
+<h2><span class="mw-headline" id="Running_the_dedicated_server">Running the dedicated server</span></h2>
+<p>If you already have run step 5 (<i>Install resources</i>) in <i>Compiling the code</i> to install resources then you can go to <i>Starting the server</i>.
+</p>
+<h3><span class="mw-headline" id="Installing_the_latest_resources">Installing the latest resources</span></h3>
+<p>If you want to run the Multi Theft Auto dedicated server, you will have to install the required resources. These are required because they implement the most basic functionality (e.g. spawning players) in order to play.
+</p><p>Our official resources repository is <a rel="nofollow" class="external text" href="https://github.com/multitheftauto/mtasa-resources">hosted on GitHub</a>. You can download the latest resources from there or <a rel="nofollow" class="external text" href="http://mirror.mtasa.com/mtasa/resources/">download a zipped version</a>. Make sure that you have the latest resources package.
+</p>
+<h3><span class="mw-headline" id="Starting_the_server">Starting the server</span></h3>
+<p>To run the server, open the <i>MTA Server.exe</i> executable in the <b>Bin/server</b> directory. The <i>_d</i> suffix indicates a debug build of the software.<br />
+You can also run the debug build <i>MTA Server_d.exe</i> with the Visual Studio Debugger (as of writing, you can do that by right-clicking on the Server's Launcher project and selecting <i>Start a local instance</i> in the <i>Debugger</i> menu), but you can also attach to a running debug build MTA server (see more in the section Debugging below).
+</p>
+<h2><span class="mw-headline" id="Debugging">Debugging</span></h2>
+<p>If you already compiled the code in the <b>Debug</b> configuration then continue reading, if not, then go up to <i>Compiling the code</i> and follow the steps for a <i>Debug</i> build.<br />
+You can either launch MTA yourself and attach any debugger you want to use (also applies to the Visual Studio debugger) or you start a local debugging session in Visual Studio.<br />
+<a href="File_Local_Windows_Debugger.html" class="image"><img alt="Local Windows Debugger.PNG" src="https://wiki.multitheftauto.com/images/a/a7/Local_Windows_Debugger.PNG" decoding="async" width="808" height="84" /></a>
+</p>
+<h3><span class="mw-headline" id="How_to_enable_breakpoints">How to enable breakpoints</span></h3>
+<p>If you choose to run MTA with Visual Studio then you should also attach the debugger to the executable <b>gta_sa.exe</b> (press <i>CTRL + ALT + P</i> in Visual Studio) - otherwise, your
+breakpoints will not work for anything besides the MTA Launcher project.<br />
+<a href="File_Attach_to_Process.html" class="image"><img alt="Attach to Process.png" src="https://wiki.multitheftauto.com/images/thumb/5/53/Attach_to_Process.png/600px-Attach_to_Process.png" decoding="async" width="600" height="407" srcset="/images/5/53/Attach_to_Process.png 1.5x" /></a>
+</p>
+<h3><span class="mw-headline" id="Extending_timeout_duration">Extending timeout duration</span></h3>
+<p>When you use breakpoints during debugging, you may get kicked by the server due to timeout, because the client is frozen. To prevent this, create the <b>timeout.longtime</b> file in your <i>Bin/server/</i> directory.  
+The content of the file is the new timeout duration in seconds, so make sure you type a huge number in there. If you keep the file empty, the timeout will be set to 120 seconds.
+</p>
+<h3><span class="mw-headline" id="ReAttach_for_Visual_Studio">ReAttach for Visual Studio</span></h3>
+<p>You can use <a rel="nofollow" class="external text" href="https://marketplace.visualstudio.com/items?itemName=ErlandR.ReAttach">ReAttach</a> to re-attach the debugger to the <b>gta_sa.exe</b> executable whenever you start your local debugger in Visual Studio.<br />
+<a href="File_ReAttach_to_GTASA.html" class="image"><img alt="ReAttach to GTASA.PNG" src="https://wiki.multitheftauto.com/images/7/75/ReAttach_to_GTASA.PNG" decoding="async" width="410" height="49" /></a>
+</p>
+<h1><span class="mw-headline" id="Getting_involved">Getting involved</span></h1>
+<p>Please see our <a href="Coding_guidelines.html" title="Coding guidelines">Coding guidelines</a> for information on the coding practice.
+</p>
+<h1><span class="mw-headline" id="Additional_information">Additional information</span></h1>
+<p>If you need more information, try our <a rel="nofollow" class="external text" href="https://github.com/multitheftauto/mtasa-blue/issues">bug tracker</a> or <a rel="nofollow" class="external text" href="https://discord.com/invite/mtasa">Discord</a>.
+</p>
+<h1><span class="mw-headline" id="Errors">Errors</span></h1>
+<h2><span id="CL38_error._.5Bnetc_d.dll_not_found.5D"></span><span class="mw-headline" id="CL38_error._[netc_d.dll_not_found]">CL38 error. [netc_d.dll not found]</span></h2>
+<p>Solution: Delete <b>Multi Theft Auto_d.exe</b> and hit compile again.
+</p>
+<h2><span id="After_cloning_the_repository.2C_it_doesn.27t_compile_the_project"></span><span class="mw-headline" id="After_cloning_the_repository,_it_doesn't_compile_the_project">After cloning the repository, it doesn't compile the project</span></h2>
+<p>Solution: Execute <b>win-create-projects.bat</b> in main directory.
+</p>
+<h2><span class="mw-headline" id="CL17_Load_field._Please_ensure_that_the_latest_data_files_have_been_installed_correctly">CL17 Load field. Please ensure that the latest data files have been installed correctly</span></h2>
+<p>Solution: Execute <b>win-install-data.bat</b> in main directory.
+</p>
+<h2><span id="ERROR:_Loading_network_library_.28net_d.dll.29_failed.21"></span><span class="mw-headline" id="ERROR:_Loading_network_library_(net_d.dll)_failed!">ERROR: Loading network library (net_d.dll) failed!</span></h2>
+<p>Solution: Execute <b>win-install-data.bat</b> in main directory.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220726221246
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.026 seconds
+Real time usage: 0.028 seconds
+Preprocessor visited node count: 96/1000000
+Post‐expand include size: 99/2097152 bytes
+Template argument size: 15/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.850      1 -total
+ 93.74%    1.734      3 Template:Nowrap
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5231-0!canonical and timestamp 20220726221246 and revision id 73814. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Compiling_MTASA&amp;oldid=73814">https://wiki.multitheftauto.com/index.php?title=Compiling_MTASA&amp;oldid=73814</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Development.html" title="Category:Development">Development</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Compiling+MTASA" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Compiling+MTASA" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Compiling_MTASA.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="mw-list-item"><a href="Talk_Compiling_MTASA.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Compiling_MTASA.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Compiling_MTASA&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Compiling_MTASA&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Compiling_MTASA.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Compiling_MTASA.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Compiling_MTASA&amp;oldid=73814" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Compiling_MTASA&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Compiling_MTASA" title="Compiling MTASA – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Compiling_MTASA" title="Compiling MTASA – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-pt-br mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=PT-BR/Compilando_o_MTASA" title="Compilando o MTASA – português do Brasil" lang="pt-BR" hreflang="pt-BR" class="interlanguage-link-target"><span>Português do Brasil</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/Compiling_MTASA" title="Compiling MTASA – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 23 January 2022, at 16:54.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.028","ppvisitednodes":{"value":96,"limit":1000000},"postexpandincludesize":{"value":99,"limit":2097152},"templateargumentsize":{"value":15,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    1.850      1 -total"," 93.74%    1.734      3 Template:Nowrap"]},"cachereport":{"timestamp":"20220726221246","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":82});});</script>
+</body>
+</html>

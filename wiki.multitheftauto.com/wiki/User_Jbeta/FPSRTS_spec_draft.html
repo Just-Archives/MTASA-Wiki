@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>User:Jbeta/FPSRTS spec draft - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4fbd53f4435fc3e81200a543","wgCSPNonce":false,"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Jbeta/FPSRTS_spec_draft","wgTitle":"Jbeta/FPSRTS spec draft","wgCurRevisionId":8729,"wgRevisionId":8729,"wgArticleId":2714,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"User:Jbeta/FPSRTS_spec_draft","wgRelevantArticleId":2714,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Jbeta"};RLSTATE=
+{"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Jbeta_FPSRTS_spec_draft rootpage-User_Jbeta skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">User:Jbeta/FPSRTS spec draft</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><b>This is not a full spec. It still lacks design of the actual buildingt/tech trees and contains some ideas that haven't been discussed yet.</b>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_characteristics"><span class="tocnumber">1</span> <span class="toctext">General characteristics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Objective"><span class="tocnumber">1.1</span> <span class="toctext">Objective</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Number_of_teams"><span class="tocnumber">1.2</span> <span class="toctext">Number of teams</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Beginning_a_round"><span class="tocnumber">2</span> <span class="toctext">Beginning a round</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#The_commander"><span class="tocnumber">3</span> <span class="toctext">The commander</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Abilities"><span class="tocnumber">3.1</span> <span class="toctext">Abilities</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Creating_buildings"><span class="tocnumber">3.1.1</span> <span class="toctext">Creating buildings</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Tech_tree_researching"><span class="tocnumber">3.1.2</span> <span class="toctext">Tech tree researching</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Dropping_weapons,_armor_and_health"><span class="tocnumber">3.1.3</span> <span class="toctext">Dropping weapons, armor and health</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Marking_points_in_the_map"><span class="tocnumber">3.1.4</span> <span class="toctext">Marking points in the map</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Commander_interface"><span class="tocnumber">3.2</span> <span class="toctext">Commander interface</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#The_players"><span class="tocnumber">4</span> <span class="toctext">The players</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Spawning"><span class="tocnumber">4.1</span> <span class="toctext">Spawning</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Player_interface"><span class="tocnumber">4.2</span> <span class="toctext">Player interface</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Resources_and_money"><span class="tocnumber">5</span> <span class="toctext">Resources and money</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Buildings"><span class="tocnumber">6</span> <span class="toctext">Buildings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Command_center"><span class="tocnumber">6.1</span> <span class="toctext">Command center</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Player_spawnpoint_building"><span class="tocnumber">6.2</span> <span class="toctext">Player spawnpoint building</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Resource_extraction_building"><span class="tocnumber">6.3</span> <span class="toctext">Resource extraction building</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Vehicle_spawnpoint_building"><span class="tocnumber">6.4</span> <span class="toctext">Vehicle spawnpoint building</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Static_defenses"><span class="tocnumber">6.5</span> <span class="toctext">Static defenses</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Research_buildings"><span class="tocnumber">6.6</span> <span class="toctext">Research buildings</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_characteristics">General characteristics</span></h2>
+<h3><span class="mw-headline" id="Objective">Objective</span></h3>
+<p>A team must try to eliminate all other teams by destroying their command center.
+</p>
+<h3><span class="mw-headline" id="Number_of_teams">Number of teams</span></h3>
+<p>Map-defined, but there has to be a limited number of tech trees, so supporting 2 to 4 teams seems reasonable.
+</p>
+<h2><span class="mw-headline" id="Beginning_a_round">Beginning a round</span></h2>
+<p>All teams begin with two essential buildings: a <a href="#Command_center">command center</a> and a <a href="#Player_spawnpoint">player spawnpoint</a>.
+</p><p>When a round starts, all players spawn as regular soldiers.
+In each team, players can apply for the commander position during a short period of time by pressing a hotkey.
+After this time expires, the commander is choosen at random among applicants, removed from the map and taken to the commander screen.
+</p><p>If noone applied for the position, it will be left empty: it is possible for a team to play without a commander, but they will still lose if the command center is destroyed.
+</p><p>If no commander is in charge, any player can request a new nomination at any moment throughout the game.
+</p><p>Also, at any moment, any player can start a vote to kick him out of the position for the rest of the round, then start a new nomination.
+</p>
+<h2><span class="mw-headline" id="The_commander">The commander</span></h2>
+<h3><span class="mw-headline" id="Abilities">Abilities</span></h3>
+<p>The commander can view, and has control over, the map area within a certain radius of any of his team's units
+(that is, both players and buildings, radius varying depending on what kind of unit it is).
+</p><p>This control comprises a set of abilities, most of which require money to be used.
+</p>
+<h4><span class="mw-headline" id="Creating_buildings">Creating buildings</span></h4>
+<p>The commander can place a building site, which can become a building if players work on it.
+The money it costs is spent on site placement, and can't be recovered.
+</p><p>To build, players can just stand near the site.
+While building, health rises from some small initial amount to max health, and a progress percentage is shown for all builders and for the commander.
+</p><p>The building is not functional until it reaches max health.
+The site can be attacked to lower progress, but it can't be destroyed.
+Once finished, the building can be used whatever its health is, until it's destroyed.
+</p>
+<h4><span class="mw-headline" id="Tech_tree_researching">Tech tree researching</span></h4>
+<p>The commander can spend money unlocking team upgrades, divided in the following categories:
+</p>
+<ul><li>Vehicle research
+<ul><li>New vehicles</li>
+<li>Vehicle upgrades</li></ul></li></ul>
+<ul><li>Weapon research
+<ul><li>New weapons</li>
+<li>Weapon upgrades: rate of fire, damage, added effects...</li></ul></li></ul>
+<ul><li>Structure research
+<ul><li>Defensive structures: walls, turrets, mines...
+<ul><li>New</li>
+<li>Upgrades: resistance, rate of fire...</li></ul></li>
+<li>Spawn structures: barracks, garages, airports, naval bases...
+<ul><li>New</li>
+<li>Upgrades: respawn speed, capacity...</li></ul></li>
+<li>Ability structures: structures unlocking research or use of certain commander abilities (even unlocking research of other research branches)
+<ul><li>New</li>
+<li>Upgrade</li></ul></li></ul></li></ul>
+<p>We'll have to design 4 different, balanced trees, each of which could contain exclusive branches and 
+</p>
+<h4><span id="Dropping_weapons.2C_armor_and_health"></span><span class="mw-headline" id="Dropping_weapons,_armor_and_health">Dropping weapons, armor and health</span></h4>
+<p>The commander can drop any pickup he has unlocked through research.
+</p>
+<h4><span class="mw-headline" id="Marking_points_in_the_map">Marking points in the map</span></h4>
+<p>The commander can set and remove blips in the players' map, representing warnings or orders.
+A small set should be enough: attack, defend, move, destroy.
+This shouldn't cost any money.
+</p>
+<h3><span class="mw-headline" id="Commander_interface">Commander interface</span></h3>
+<p>The commander will be able to move around the map in RTS cam mode.
+He will be able to see only within a certain radius around his units.
+</p><p>All of his team's units will be marked with blips on his F11 map.
+Players requesting support or buildings being attacked could have their blips blink.
+</p><p>A few displays should be visible at all times.
+Those would be the amount of money, commander station health...
+</p><p>The cursor should always be on.
+On left click, units can be selected so their name/health is shown on a display.
+On right click, a pie menu would be shown listing the commander actions:
+</p>
+<ul><li>Build: Shows the building browser</li>
+<li>Drop: Shows the pickup browser</li>
+<li>Research: Shows the tech tree</li>
+<li>Mark: Pops up another pie menu with all possible mark types</li></ul>
+<h2><span class="mw-headline" id="The_players">The players</span></h2>
+<h3><span class="mw-headline" id="Spawning">Spawning</span></h3>
+<p>Dead players spawn one at a time (on a fixed interval) in a random spawning building.
+</p>
+<h3><span class="mw-headline" id="Player_interface">Player interface</span></h3>
+<p>There are no displays apart from the GTA HUD on screen for players.
+</p><p>A hotkey pops up a pie menu listing commander-related requests:
+</p>
+<ul><li>Weapons/ammo</li>
+<li>Health/armor</li>
+<li>Orders</li>
+<li>Kick commander</li></ul>
+<h2><span class="mw-headline" id="Resources_and_money">Resources and money</span></h2>
+<p>The commander acquires money by controlling resources.
+To control one, he must finish an extraction building on top of the resource.
+</p><p>If it is already occupied, it can be destroyed and taken by the other team.
+</p>
+<h2><span class="mw-headline" id="Buildings">Buildings</span></h2>
+<p>We could design a single structure tree that worked with all our tech trees.
+</p>
+<h3><span class="mw-headline" id="Command_center">Command center</span></h3>
+<p>The building holding a team's commander.
+If it is destroyed, the team is automatically eliminated.
+It can be repaired, but no new instances of this building can be built.
+</p>
+<h3><span class="mw-headline" id="Player_spawnpoint_building">Player spawnpoint building</span></h3>
+<p>A building allowing players to spawn.
+If all of these buildings are destroyed, dead players can't respawn.
+In this situation, a commander must get his team to build a new one immediately, because he won't be able to defend his station if there are no players left.
+</p>
+<h3><span class="mw-headline" id="Resource_extraction_building">Resource extraction building</span></h3>
+<p>A plant to get money from map resources.
+</p>
+<h3><span class="mw-headline" id="Vehicle_spawnpoint_building">Vehicle spawnpoint building</span></h3>
+<p>A building housing vehicle spawnpoints. These should be separated in land/air/sea buildings.
+</p>
+<h3><span class="mw-headline" id="Static_defenses">Static defenses</span></h3>
+<p>Walls, turrets, traps...
+</p>
+<h3><span class="mw-headline" id="Research_buildings">Research buildings</span></h3>
+<p>Buildings allowing research of certain tech tree branches, or allowing use of certain commander abilities.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220727231433
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 68/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:2714-0!canonical and timestamp 20220727231433 and revision id 8729. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=User:Jbeta/FPSRTS_spec_draft&amp;oldid=8729">https://wiki.multitheftauto.com/index.php?title=User:Jbeta/FPSRTS_spec_draft&amp;oldid=8729</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=User%3AJbeta%2FFPSRTS+spec+draft" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=User%3AJbeta%2FFPSRTS+spec+draft" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-user" class="selected mw-list-item"><a href="FPSRTS_spec_draft.html" title="View the user page [c]" accesskey="c"><span>User page</span></a></li><li id="ca-talk" class="mw-list-item"><a href="../User_talk_Jbeta/FPSRTS_spec_draft.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="FPSRTS_spec_draft.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=User:Jbeta/FPSRTS_spec_draft&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=User:Jbeta/FPSRTS_spec_draft&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="../Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="../Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="../How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="../Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="../DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="../Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="../Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="../Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="../Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="../Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="../Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="../MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="../Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="../Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="../Special_WhatLinksHere/User_Jbeta/FPSRTS_spec_draft.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="../Special_RecentChangesLinked/User_Jbeta/FPSRTS_spec_draft.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-contributions" class="mw-list-item"><a href="../Special_Contributions/Jbeta.html" title="A list of contributions by this user"><span>User contributions</span></a></li><li id="t-log" class="mw-list-item"><a href="../Special_Log/Jbeta.html"><span>Logs</span></a></li><li id="t-userrights" class="mw-list-item"><a href="../Special_UserRights/Jbeta.html"><span>View user groups</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=User:Jbeta/FPSRTS_spec_draft&amp;oldid=8729" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=User:Jbeta/FPSRTS_spec_draft&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 19 June 2007, at 19:26.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="../Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="../Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="../Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.008","walltime":"0.008","ppvisitednodes":{"value":68,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727231433","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":63});});</script>
+</body>
+</html>

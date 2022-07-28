@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Element/Shader - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"d5aab4b31779b19534f5e834","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Element/Shader","wgTitle":"Element/Shader","wgCurRevisionId":70561,"wgRevisionId":70561,"wgArticleId":5673,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Element Types"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Element/Shader","wgRelevantArticleId":5673,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Shader","wgInternalRedirectTargetUrl":
+"/wiki/Element/Shader"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<link rel="canonical" href="Element/Shader.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Element_Shader rootpage-Element_Shader skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Element/Shader</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">(Redirected from <a href="https://wiki.multitheftauto.com/index.php?title=Shader&amp;redirect=no" class="mw-redirect" title="Shader">Shader</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>The shader class represents a Microsoft HLSL Effect File(.fx) loaded by the client, which can be used instead of a texture when calling <a href="DxDrawImage.html" title="DxDrawImage">dxDrawImage</a>
+</p><p>The element type of this class is <b>"shader"</b>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_HLSL_Effect_Files_file_integrate_into_MTA:SA"><span class="tocnumber">1</span> <span class="toctext">How HLSL Effect Files file integrate into MTA:SA</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Techniques"><span class="tocnumber">1.1</span> <span class="toctext">Techniques</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Simplest"><span class="tocnumber">1.2</span> <span class="toctext">Simplest</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Not_so_simple"><span class="tocnumber">1.3</span> <span class="toctext">Not so simple</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Misc"><span class="tocnumber">1.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Shaders_for_world_textures"><span class="tocnumber">2</span> <span class="toctext">Shaders for world textures</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Simple"><span class="tocnumber">2.1</span> <span class="toctext">Simple</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Not_so_simple_2"><span class="tocnumber">2.2</span> <span class="toctext">Not so simple</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Multiple_pass_shaders"><span class="tocnumber">3</span> <span class="toctext">Multiple pass shaders</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Related_scripting_functions"><span class="tocnumber">4</span> <span class="toctext">Related scripting functions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Client"><span class="tocnumber">4.1</span> <span class="toctext">Client</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="How_HLSL_Effect_Files_file_integrate_into_MTA:SA">How HLSL Effect Files file integrate into MTA:SA</span></h2>
+<p>Note: This page assumes you know what an Effect File and HLSL is. If not, you better do some research first.
+</p><p>You can use this <a href="Shadertest_resource.html" title="Shadertest resource">shadertest resource</a> to try the examples below. Copy the effect source from the code boxes into <b>shadertest/clientshader.fx</b> and (re)start shadertest to see the output.
+</p><p>After you've done all that, (or maybe before if glancing below is making you panic), visit <a href="Shader_examples.html" title="Shader examples">some more shader resource examples</a>.
+</p>
+<h3><span class="mw-headline" id="Techniques">Techniques</span></h3>
+<p>Effect Files usually contain several techniques, but for simplicity, MTA will only use the first technique that will run correctly on the clients hardware. So, for any given Effect File, put your high end techniques first, and the simplest ones last. That way, players with good hardware get the best technique applied, and players with older hardware get at least something.
+</p>
+<h3><span class="mw-headline" id="Simplest">Simplest</span></h3>
+<p>Here is the contents of an Effect File with one technique which should work on all hardware:
+</p>
+<pre class="prettyprint lang-lua">//-- Declare the textures. These are set using dxSetShaderValue( shader, "Tex0", texture )
+texture Tex0;
+texture Tex1;
+
+//-- Very simple technique
+technique simple
+{
+    pass P0
+    {
+        //-- Set up texture stage 0
+        Texture[0] = Tex0;
+        ColorOp[0] = SelectArg1;
+        ColorArg1[0] = Texture;
+        AlphaOp[0] = SelectArg1;
+        AlphaArg1[0] = Texture;
+            
+        //-- Disable texture stage 1
+        ColorOp[1] = Disable;
+        AlphaOp[1] = Disable;
+    }
+}
+</pre>
+<p>It doesn't use vertex or pixel shaders, only standard D3D render states.
+Confusing reference of all the states you can set is here: <a rel="nofollow" class="external free" href="https://msdn.microsoft.com/en-us/library/bb173347(v=VS.85).aspx">https://msdn.microsoft.com/en-us/library/bb173347%28v=VS.85%29.aspx</a>
+</p>
+<h3><span class="mw-headline" id="Not_so_simple">Not so simple</span></h3>
+<p>Here is an Effect File containing a vertex and pixel shader:
+</p>
+<pre class="prettyprint lang-lua">//-- Declare the textures. These are set using dxSetShaderValue( shader, "Tex0", texture )
+texture Tex0;
+texture Tex1;
+
+//-- Declare a user variable. This can be set using dxSetShaderValue( shader, "PositionOfCheese", 1, 2, 3 )
+float3 PositionOfCheese;
+
+//-- These variables are set automatically by MTA
+float4x4 World;
+float4x4 View;
+float4x4 Projection;
+float4x4 WorldViewProjection;
+float Time;
+
+
+//---------------------------------------------------------------------
+//-- Sampler for the main texture (needed for pixel shaders)
+//---------------------------------------------------------------------
+sampler Sampler0 = sampler_state
+{
+    Texture = (Tex0);
+};
+
+
+//---------------------------------------------------------------------
+//-- Structure of data sent to the vertex shader
+//---------------------------------------------------------------------
+struct VSInput
+{
+    float3 Position&#160;: POSITION;
+    float4 Diffuse &#160;: COLOR0;
+    float2 TexCoord&#160;: TEXCOORD0;
+};
+
+//---------------------------------------------------------------------
+//-- Structure of data sent to the pixel shader ( from the vertex shader )
+//---------------------------------------------------------------------
+struct PSInput
+{
+  float4 Position&#160;: POSITION0;
+  float4 Diffuse &#160;: COLOR0;
+  float2 TexCoord&#160;: TEXCOORD0;
+};
+
+
+//-----------------------------------------------------------------------------
+//-- VertexShaderExample
+//--  1. Read from VS structure
+//--  2. Process
+//--  3. Write to PS structure
+//-----------------------------------------------------------------------------
+PSInput VertexShaderExample(VSInput VS)
+{
+    PSInput PS = (PSInput)0;
+
+    //-- Transform vertex position (You nearly always have to do something like this)
+    PS.Position = mul(float4(VS.Position, 1), WorldViewProjection);
+
+    //-- Copy the color and texture coords so the pixel shader can use them
+    PS.Diffuse = VS.Diffuse;
+    PS.TexCoord = VS.TexCoord;
+
+    return PS;
+}
+
+
+//-----------------------------------------------------------------------------
+//-- PixelShaderExample
+//--  1. Read from PS structure
+//--  2. Process
+//--  3. Return pixel color
+//-----------------------------------------------------------------------------
+float4 PixelShaderExample(PSInput PS)&#160;: COLOR0
+{
+    //-- Modify the texture coord to make the image look all wobbly
+    PS.TexCoord.y += sin(PS.TexCoord.y * 100 + Time * 10) * 0.03;
+
+    //-- Grab the pixel from the texture
+    float4 finalColor = tex2D(Sampler0, PS.TexCoord);
+
+    //-- Apply color tint
+    finalColor = finalColor * PS.Diffuse;
+
+    return finalColor;
+}
+
+
+//-----------------------------------------------------------------------------
+//-- Techniques
+//-----------------------------------------------------------------------------
+
+//--
+//-- MTA will try this technique first:
+//--
+technique complercated
+{
+    pass P0
+    {
+        VertexShader = compile vs_2_0 VertexShaderExample();
+        PixelShader  = compile ps_2_0 PixelShaderExample();
+    }
+}
+
+//--
+//-- And if the preceding technique will not validate on
+//-- the players computer, MTA will try this one:
+//--
+technique simple
+{
+    pass P0
+    {
+        //-- Set up texture stage 0
+        Texture[0] = Tex0;
+        ColorOp[0] = SelectArg1;
+        ColorArg1[0] = Texture;
+        AlphaOp[0] = SelectArg1;
+        AlphaArg1[0] = Texture;
+            
+        //-- Disable texture stage 1
+        ColorOp[1] = Disable;
+        AlphaOp[1] = Disable;
+    }
+}
+</pre>
+<p>Technique 'complercated' will be used if the computer supports Shader Model 2, otherwise technique 'simple' will be used. Comments in the source explain what MTA does and where.
+</p>
+<h3><span class="mw-headline" id="Misc">Misc</span></h3>
+<p>Points to remember when switching between editing lua and .fx files:
+</p>
+<ul><li>HLSL statements often end with a&#160;; (semi-colon)</li>
+<li>HLSL indices start from 0 (where as Lua usually starts from 1)</li>
+<li>HLSL compile errors can be viewed by typing 'debugscript 3' into the client console</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Shaders_for_world_textures">Shaders for world textures</span></h2>
+<p>Here are a couple of examples of shaders to use when replacing world textures with <a href="EngineApplyShaderToWorldTexture.html" title="EngineApplyShaderToWorldTexture">engineApplyShaderToWorldTexture</a>
+</p>
+<h3><span class="mw-headline" id="Simple">Simple</span></h3>
+<p>This shader just replaces the texture and allows GTA to control all the render states.
+</p>
+<pre class="prettyprint lang-lua">//-- Declare the texture. These are set using dxSetShaderValue( shader, "Tex0", texture )
+texture Tex0;
+
+technique simple
+{
+    pass P0
+    {
+        //-- Set up texture stage 0
+        Texture[0] = Tex0;
+
+        //-- Leave the rest of the states to the default settings
+    }
+}
+</pre><p><br />
+</p><h3><span class="mw-headline" id="Not_so_simple_2">Not so simple</span></h3>
+<p>This shader can be used as a base for replacing a world texture if you intend to add some fancy effect.
+It uses [<a rel="nofollow" class="external text" href="https://nightly.mtasa.com/files/shaders/mta-helper.fx">mta-helper.fx</a>] to handle consistent naming of the preset shader settings (gWorld, gTexture0 etc.)<br />
+<i><b>mta-helper.fx</b></i> also contains some helpful functions which calculate GTA lighting.
+</p>
+<pre class="prettyprint lang-lua">//-----------------------------------------------------------------------
+//-- Settings
+//-----------------------------------------------------------------------
+texture Tex0;   //-- Replacement texture
+
+
+//---------------------------------------------------------------------
+// Include some common stuff
+//---------------------------------------------------------------------
+#include "mta-helper.fx"
+
+
+//-----------------------------------------------------------------------
+//-- Sampler for the new texture
+//-----------------------------------------------------------------------
+sampler Sampler0 = sampler_state
+{
+    Texture = (Tex0);
+};
+
+
+//-----------------------------------------------------------------------
+//-- Structure of data sent to the vertex shader
+//-----------------------------------------------------------------------
+struct VSInput
+{
+    float3 Position&#160;: POSITION0;
+    float3 Normal&#160;: NORMAL0;
+    float4 Diffuse&#160;: COLOR0;
+    float2 TexCoord&#160;: TEXCOORD0;
+};
+
+//-----------------------------------------------------------------------
+//-- Structure of data sent to the pixel shader ( from the vertex shader )
+//-----------------------------------------------------------------------
+struct PSInput
+{
+    float4 Position&#160;: POSITION0;
+    float4 Diffuse&#160;: COLOR0;
+    float2 TexCoord&#160;: TEXCOORD0;
+};
+
+
+//--------------------------------------------------------------------------------------------
+//-- VertexShaderFunction
+//--  1. Read from VS structure
+//--  2. Process
+//--  3. Write to PS structure
+//--------------------------------------------------------------------------------------------
+PSInput VertexShaderFunction(VSInput VS)
+{
+    PSInput PS = (PSInput)0;
+
+    //-- Calculate screen pos of vertex
+    PS.Position = mul(float4(VS.Position, 1), gWorldViewProjection);
+
+    //-- Pass through tex coord
+    PS.TexCoord = VS.TexCoord;
+
+    //-- Calculate GTA lighting for buildings
+    PS.Diffuse = MTACalcGTABuildingDiffuse( VS.Diffuse );
+    //--
+    //-- NOTE: The above line is for GTA buildings.
+    //-- If you are replacing a vehicle texture, do this instead:
+    //--
+    //--      // Calculate GTA lighting for vehicles
+    //--      float3 WorldNormal = MTACalcWorldNormal( VS.Normal );
+    //--      PS.Diffuse = MTACalcGTAVehicleDiffuse( WorldNormal, VS.Diffuse );
+
+    return PS;
+}
+
+
+//--------------------------------------------------------------------------------------------
+//-- PixelShaderFunction
+//--  1. Read from PS structure
+//--  2. Process
+//--  3. Return pixel color
+//--------------------------------------------------------------------------------------------
+float4 PixelShaderFunction(PSInput PS)&#160;: COLOR0
+{
+    //-- Get texture pixel
+    float4 texel = tex2D(Sampler0, PS.TexCoord);
+
+    //-- Apply diffuse lighting
+    float4 finalColor = texel * PS.Diffuse;
+
+    return finalColor;
+}
+
+
+//--------------------------------------------------------------------------------------------
+//-- Techniques
+//--------------------------------------------------------------------------------------------
+technique tec
+{
+    pass P0
+    {
+        VertexShader = compile vs_2_0 VertexShaderFunction();
+        PixelShader = compile ps_2_0 PixelShaderFunction();
+    }
+}
+
+//-- Fallback
+technique fallback
+{
+    pass P0
+    {
+        //-- Replace texture
+        Texture[0] = Tex0;
+
+        //-- Leave the rest of the states to the default settings
+    }
+}
+</pre>
+<p><br />
+The above code as it stands will calculate the correct lighting for GTA buildings. If you are replacing a vehicle, change:
+</p>
+<pre class="prettyprint lang-lua">    //-- Calculate GTA lighting for buildings
+    PS.Diffuse = MTACalcGTABuildingDiffuse( VS.Diffuse );
+</pre>
+<p>to:
+</p>
+<pre class="prettyprint lang-lua">    //-- Calculate GTA lighting for vehicles
+    float3 WorldNormal = MTACalcWorldNormal( VS.Normal );
+    PS.Diffuse = MTACalcGTAVehicleDiffuse( WorldNormal, VS.Diffuse );
+</pre><p><br />
+</p><h2><span class="mw-headline" id="Multiple_pass_shaders">Multiple pass shaders</span></h2>
+<p>To do more than one pass, add <b>pass</b> blocks like this:
+</p>
+<pre class="prettyprint lang-lua">//-- Declare the texture. These are set using dxSetShaderValue( shader, "Tex0", texture )
+texture Tex0;
+
+technique simple
+{
+    pass P0
+    {
+        // First pass
+        Texture[0] = Tex0;
+    }
+    pass P1
+    {
+        // Second pass
+        SrcBlend = Add;
+        DestBlend = One;
+    }
+    pass P2
+    {
+        // Third pass
+        SrcBlend = InvDestColor;
+        DestBlend = InvSrcColor;
+    }
+}
+</pre><p><br />
+</p><h2><span class="mw-headline" id="Related_scripting_functions">Related scripting functions</span></h2>
+<h3><span class="mw-headline" id="Client">Client</span></h3>
+<ul><li><a href="DxConvertPixels.html" title="DxConvertPixels">dxConvertPixels</a></li>
+<li><a href="DxCreateFont.html" title="DxCreateFont">dxCreateFont</a></li>
+<li><a href="DxCreateRenderTarget.html" title="DxCreateRenderTarget">dxCreateRenderTarget</a></li>
+<li><a href="DxCreateScreenSource.html" title="DxCreateScreenSource">dxCreateScreenSource</a></li>
+<li><a href="DxCreateShader.html" title="DxCreateShader">dxCreateShader</a></li>
+<li><a href="DxCreateTexture.html" title="DxCreateTexture">dxCreateTexture</a></li></ul>
+<ul><li><a href="DxDrawCircle.html" title="DxDrawCircle">dxDrawCircle</a></li>
+<li><a href="DxDrawImage.html" title="DxDrawImage">dxDrawImage</a></li>
+<li><a href="DxDrawImageSection.html" title="DxDrawImageSection">dxDrawImageSection</a></li>
+<li><a href="DxDrawLine.html" title="DxDrawLine">dxDrawLine</a></li>
+<li><a href="DxDrawLine3D.html" title="DxDrawLine3D">dxDrawLine3D</a></li>
+<li><a href="DxDrawMaterialLine3D.html" title="DxDrawMaterialLine3D">dxDrawMaterialLine3D</a></li>
+<li><a href="DxDrawMaterialPrimitive.html" title="DxDrawMaterialPrimitive">dxDrawMaterialPrimitive</a></li>
+<li><a href="DxDrawMaterialPrimitive3D.html" title="DxDrawMaterialPrimitive3D">dxDrawMaterialPrimitive3D</a></li>
+<li><a href="DxDrawMaterialSectionLine3D.html" title="DxDrawMaterialSectionLine3D">dxDrawMaterialSectionLine3D</a></li>
+<li><a href="DxDrawPrimitive.html" title="DxDrawPrimitive">dxDrawPrimitive</a></li>
+<li><a href="DxDrawPrimitive3D.html" title="DxDrawPrimitive3D">dxDrawPrimitive3D</a></li>
+<li><a href="DxDrawRectangle.html" title="DxDrawRectangle">dxDrawRectangle</a></li>
+<li><a href="DxDrawText.html" title="DxDrawText">dxDrawText</a></li></ul>
+<ul><li><a href="DxDrawWiredSphere.html" title="DxDrawWiredSphere">dxDrawWiredSphere</a></li>
+<li><a href="DxGetBlendMode.html" title="DxGetBlendMode">dxGetBlendMode</a></li>
+<li><a href="DxGetFontHeight.html" title="DxGetFontHeight">dxGetFontHeight</a></li>
+<li><a href="DxGetMaterialSize.html" title="DxGetMaterialSize">dxGetMaterialSize</a></li>
+<li><a href="DxGetPixelColor.html" title="DxGetPixelColor">dxGetPixelColor</a></li>
+<li><a href="DxGetPixelsSize.html" title="DxGetPixelsSize">dxGetPixelsSize</a></li>
+<li><a href="DxGetPixelsFormat.html" title="DxGetPixelsFormat">dxGetPixelsFormat</a></li>
+<li><a href="DxGetStatus.html" title="DxGetStatus">dxGetStatus</a></li></ul>
+<ul><li><a href="DxGetTextSize.html" title="DxGetTextSize">dxGetTextSize</a></li>
+<li><a href="DxGetTextWidth.html" title="DxGetTextWidth">dxGetTextWidth</a></li>
+<li><a href="DxGetTexturePixels.html" title="DxGetTexturePixels">dxGetTexturePixels</a></li>
+<li><a href="DxIsAspectRatioAdjustmentEnabled.html" title="DxIsAspectRatioAdjustmentEnabled">dxIsAspectRatioAdjustmentEnabled</a></li>
+<li><a href="DxSetAspectRatioAdjustmentEnabled.html" title="DxSetAspectRatioAdjustmentEnabled">dxSetAspectRatioAdjustmentEnabled</a></li>
+<li><a href="DxSetBlendMode.html" title="DxSetBlendMode">dxSetBlendMode</a></li>
+<li><a href="DxSetPixelColor.html" title="DxSetPixelColor">dxSetPixelColor</a></li>
+<li><a href="DxSetRenderTarget.html" title="DxSetRenderTarget">dxSetRenderTarget</a></li>
+<li><a href="DxSetShaderValue.html" title="DxSetShaderValue">dxSetShaderValue</a></li>
+<li><a href="DxSetShaderTessellation.html" title="DxSetShaderTessellation">dxSetShaderTessellation</a></li>
+<li><a href="DxSetShaderTransform.html" title="DxSetShaderTransform">dxSetShaderTransform</a></li>
+<li><a href="DxSetTestMode.html" title="DxSetTestMode">dxSetTestMode</a></li>
+<li><a href="DxSetTextureEdge.html" title="DxSetTextureEdge">dxSetTextureEdge</a></li>
+<li><a href="DxSetTexturePixels.html" title="DxSetTexturePixels">dxSetTexturePixels</a></li>
+<li><a href="DxUpdateScreenSource.html" title="DxUpdateScreenSource">dxUpdateScreenSource</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727151138
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.016 seconds
+Real time usage: 0.018 seconds
+Preprocessor visited node count: 153/1000000
+Post‐expand include size: 1179/2097152 bytes
+Template argument size: 81/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8615/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.602      1 Template:Drawing_functions
+100.00%    3.602      1 -total
+ 67.66%    2.437      3 Template:New_items
+ 34.37%    1.238      3 Template:Current_Version
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:5673-0!canonical and timestamp 20220727151138 and revision id 70561. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Element/Shader&amp;oldid=70561">https://wiki.multitheftauto.com/index.php?title=Element/Shader&amp;oldid=70561</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Element_Types.html" title="Category:Element Types">Element Types</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Element%2FShader" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Element%2FShader" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Element/Shader.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:Element/Shader&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Element/Shader.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Element/Shader&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Element/Shader&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Element/Shader.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Element/Shader.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Element/Shader&amp;oldid=70561" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Element/Shader&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-en mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Element/Shader" title="Element/Shader – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/Element/Shader" title="Element/Shader – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Element/Shader" title="Element/Shader – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 15 April 2021, at 08:47.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.016","walltime":"0.018","ppvisitednodes":{"value":153,"limit":1000000},"postexpandincludesize":{"value":1179,"limit":2097152},"templateargumentsize":{"value":81,"limit":2097152},"expansiondepth":{"value":10,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8615,"limit":5000000},"timingprofile":["100.00%    3.602      1 Template:Drawing_functions","100.00%    3.602      1 -total"," 67.66%    2.437      3 Template:New_items"," 34.37%    1.238      3 Template:Current_Version"]},"cachereport":{"timestamp":"20220727151138","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":75});});</script>
+</body>
+</html>

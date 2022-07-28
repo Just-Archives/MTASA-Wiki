@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Resource:Admin - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"7fdeea345ce3c87fb4822f7a","wgCSPNonce":false,"wgCanonicalNamespace":"Resource","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Resource:Admin","wgTitle":"Admin","wgCurRevisionId":69313,"wgRevisionId":69313,"wgArticleId":3526,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Resource"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Resource:Admin","wgRelevantArticleId":3526,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Admin","wgInternalRedirectTargetUrl":
+"/wiki/Resource:Admin"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="http://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="http://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="http://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="http://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+<link rel="canonical" href="Resource_Admin.html"/>
+<meta name='headingclass' content='' data-class='resource' data-subcaption='Resource'>
+<meta name='removenamespace' content=''>
+<meta name='lowercasetitle' content=''>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-100 ns-subject page-Resource_Admin rootpage-Resource_Admin skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Resource:Admin</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">(Redirected from <a href="http://wiki.multitheftauto.com/index.php?title=Admin&amp;redirect=no" class="mw-redirect" title="Admin">Admin</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><!--HC-->
+<!--NS-->
+<!--LC-->
+A quick tutorial on how to get admin rights and install admin resource.
+</p>
+<!-- BEGIN SECTION |1|server|MTA 1.0.0 and lower|--><div class="serverHeader" onclick="expandSection(1);" style="cursor:pointer;"><div style="float:right;font-size: 0.75em;" id="sectionExpander1">Click to expand [+]</div>MTA 1.0.0 and lower</div><div style="display:none;" class="serverContent" id="section1">
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #d5b5f5; background: transparent; border-left: 25px solid #d5b5f5;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Note:</b> Since mta 1.0.5 the accounts.xml file has been removed and replaced by sqlite.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<p>At first, open the <b>accounts.xml</b> file located in <b>server\mods\deathmatch\</b> and add a line with your account details, like on the following example.
+</p>
+<pre class="prettyprint lang-xml">    &lt;accounts&gt; 
+       &lt;autologin&gt;1&lt;/autologin&gt;
+       &lt;account name="Console" password="" /&gt;
+       &lt;account name="lil_Toady" password="1234" /&gt;
+    &lt;/accounts&gt;
+</pre>
+</div><!-- END SECTION |1|-->
+<p>To add an account in <b>MTA 1.5</b> use the following command in the server
+</p>
+<pre class="prettyprint lang-lua">addaccount &lt;username&gt; &lt;password&gt;
+</pre>
+<p><br />
+</p>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #d5b5f5; background: transparent; border-left: 25px solid #d5b5f5;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[{{{image}}}|link=|]]
+</td>
+<td style=""><b>Note:</b> Server should not be running when you are editing the acl file below
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<p>Then you open the <b>acl.xml</b> file located in the same folder and add yourself as an object to the Admin group by using the 'user.*' syntax, where * would be your account name.
+</p>
+<pre class="prettyprint lang-xml">    &lt;!-- The Admin group can do anything --&gt; 
+    &lt;group name="Admin"&gt;
+        &lt;acl name="Moderator" /&gt;
+        &lt;acl name="SuperModerator" /&gt;
+        &lt;acl name="Admin" /&gt;
+        &lt;acl name="RPC" /&gt;
+        &lt;object name="user.lil_Toady" /&gt;
+        &lt;object name="resource.admin" /&gt;
+    &lt;/group&gt;
+</pre>
+<p><br />
+Now open your <b>mtaserver.conf</b> file and scroll to the bottom, make sure the admin resource is added to the ones that start with the server (note: protected="1" means that it can not be stopped).
+</p>
+<pre class="prettyprint lang-conf">    &lt;resource src="admin" startup="1" protected="0"&gt;  &lt;!-- This is --&gt;
+    &lt;resource src="helpmanager" startup="1" protected="0"&gt;
+    &lt;resource src="mapcycler" startup="1" protected="0"&gt;
+    &lt;resource src="mapmanager" startup="1" protected="0"&gt;
+</pre>
+<p><br />
+Now that you're done with server files, you can finally start it. Connect to the server itself and login with your account details: use 'login [username] &lt;password&gt;'. If it tells you to press 'p' you have done everything right, congratulations! If not, do this from the very beginning.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Resource_commands"><span class="tocnumber">1</span> <span class="toctext">Resource commands</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#admin"><span class="tocnumber">1.1</span> <span class="toctext">admin</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#ban"><span class="tocnumber">1.2</span> <span class="toctext">ban</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#blendweather"><span class="tocnumber">1.3</span> <span class="toctext">blendweather</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#blowvehicle"><span class="tocnumber">1.4</span> <span class="toctext">blowvehicle</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#createteam"><span class="tocnumber">1.5</span> <span class="toctext">createteam</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#destroyteam"><span class="tocnumber">1.6</span> <span class="toctext">destroyteam</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#destroyvehicle"><span class="tocnumber">1.7</span> <span class="toctext">destroyvehicle</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#freeze"><span class="tocnumber">1.8</span> <span class="toctext">freeze</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#givevehicle"><span class="tocnumber">1.9</span> <span class="toctext">givevehicle</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#giveweapon"><span class="tocnumber">1.10</span> <span class="toctext">giveweapon</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#jetpack"><span class="tocnumber">1.11</span> <span class="toctext">jetpack</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#kick"><span class="tocnumber">1.12</span> <span class="toctext">kick</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#mute"><span class="tocnumber">1.13</span> <span class="toctext">mute</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#register"><span class="tocnumber">1.14</span> <span class="toctext">register</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#setarmour"><span class="tocnumber">1.15</span> <span class="toctext">setarmour</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#setcolor"><span class="tocnumber">1.16</span> <span class="toctext">setcolor</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#setdimension"><span class="tocnumber">1.17</span> <span class="toctext">setdimension</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#setgame"><span class="tocnumber">1.18</span> <span class="toctext">setgame</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#setgamespeed"><span class="tocnumber">1.19</span> <span class="toctext">setgamespeed</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#setgravity"><span class="tocnumber">1.20</span> <span class="toctext">setgravity</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#sethealth"><span class="tocnumber">1.21</span> <span class="toctext">sethealth</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#setinterior"><span class="tocnumber">1.22</span> <span class="toctext">setinterior</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#setmap"><span class="tocnumber">1.23</span> <span class="toctext">setmap</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#setpaintjob"><span class="tocnumber">1.24</span> <span class="toctext">setpaintjob</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#setpassword"><span class="tocnumber">1.25</span> <span class="toctext">setpassword</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#setskin"><span class="tocnumber">1.26</span> <span class="toctext">setskin</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#setstat"><span class="tocnumber">1.27</span> <span class="toctext">setstat</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#setteam"><span class="tocnumber">1.28</span> <span class="toctext">setteam</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#settime"><span class="tocnumber">1.29</span> <span class="toctext">settime</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#setweather"><span class="tocnumber">1.30</span> <span class="toctext">setweather</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#setwelcome"><span class="tocnumber">1.31</span> <span class="toctext">setwelcome</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#shout"><span class="tocnumber">1.32</span> <span class="toctext">shout</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#slap"><span class="tocnumber">1.33</span> <span class="toctext">slap</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#unregister"><span class="tocnumber">1.34</span> <span class="toctext">unregister</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#repair"><span class="tocnumber">1.35</span> <span class="toctext">repair</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Resource_commands">Resource commands</span></h2>
+<p>Here are the commands from this resource. You need specific privileges to use most of them.
+</p>
+<h4><span class="mw-headline" id="admin">admin</span></h4>
+<p>Opens/Closes admin panel GUI.
+</p>
+<ul><li><b>Permission needed:</b> general.adminpanel</li>
+<li><b>Syntax:</b> admin</li></ul>
+<h4><span class="mw-headline" id="ban">ban</span></h4>
+<p>Bans the specified player and disconnects him from the server.
+</p>
+<ul><li><b>Permission needed:</b> command.ban</li>
+<li><b>Syntax:</b> ban &lt;playerName&gt; &lt;[reason]&gt; &lt;[period]&gt; &lt;[serial]&gt;
+<ul><li>playerName: The name of the player you wish to ban.</li>
+<li>reason: Optional. The reason to ban the player. This will be shown to everyone on chatbox and also to the banned player.</li>
+<li>period: Optional. The seconds to keep the player banned. After this period, the player will be automatically unbanned. If not specified, this is 0 by default and the player will be banned permanently.</li>
+<li>serial: Optional. This can be any value. If specified, the player will be banned by serial. Otherwise the player will be banned by IP.</li></ul></li></ul>
+<h4><span class="mw-headline" id="blendweather">blendweather</span></h4>
+<p>Changes gradually the weather to the specified.
+</p>
+<ul><li><b>Permission needed:</b> command.blendweather</li>
+<li><b>Syntax:</b> blendweather &lt;weatherID&gt;
+<ul><li>weatherID: The weather ID to gradually change to.</li></ul></li></ul>
+<h4><span class="mw-headline" id="blowvehicle">blowvehicle</span></h4>
+<p>Blows up the specified player's vehicle, killing its occupants and causing damage to nearest players and vehicles.
+</p>
+<ul><li><b>Permission needed:</b> command.blowvehicle</li>
+<li><b>Syntax:</b> blowvehicle &lt;playerName&gt;
+<ul><li>playerName: The name of the player you wish to blow up the vehicle of.</li></ul></li></ul>
+<h4><span class="mw-headline" id="createteam">createteam</span></h4>
+<p>Creates a new team that shows on TAB Score Table.
+</p>
+<ul><li><b>Permission needed:</b> command.createteam</li>
+<li><b>Syntax:</b> createteam &lt;teamName&gt; &lt;[red]&gt; &lt;[green]&gt; &lt;[blue]&gt;
+<ul><li>teamName: The name of the team you wish to create.</li>
+<li>red: Optional. An integer representing the red color value. If not specified, it is 255 by default.</li>
+<li>green: Optional. An integer representing the green color value. If not specified, it is 255 by default.</li>
+<li>blue: Optional. An integer representing the blue color value. If not specified, it is 255 by default.</li></ul></li></ul>
+<h4><span class="mw-headline" id="destroyteam">destroyteam</span></h4>
+<p>Deletes the specified team.
+</p>
+<ul><li><b>Permission needed:</b> command.destroyteam</li>
+<li><b>Syntax:</b> destroyteam &lt;teamName&gt;
+<ul><li>teamName: The name of the team you wish to delete.</li></ul></li></ul>
+<h4><span class="mw-headline" id="destroyvehicle">destroyvehicle</span></h4>
+<p>Deletes the vehicle from the specified player. The player must be inside a vehicle.
+</p>
+<ul><li><b>Permission needed:</b> command.destroyvehicle</li>
+<li><b>Syntax:</b> destroyvehicle &lt;playerName&gt;
+<ul><li>playerName: The name of the player you wish to delete the vehicle of.</li></ul></li></ul>
+<h4><span class="mw-headline" id="freeze">freeze</span></h4>
+<p>Freezes/unfreezes the specified player. If the player is inside a vehicle, the vehicle is frozen instead of the player. Also, if the player or the player's vehicle is already frozen, this command will unfrozen it.
+</p>
+<ul><li><b>Permission needed:</b> command.freeze</li>
+<li><b>Syntax:</b> freeze &lt;playerName&gt;
+<ul><li>playerName: The name of the player you wish to freeze/unfreeze.</li></ul></li></ul>
+<h4><span class="mw-headline" id="givevehicle">givevehicle</span></h4>
+<p>Creates a vehicle with the specified ID at the player position and teleports the player into the driver' seat. If the player is already in a vehicle, this command will change the vehicle model instead.
+</p>
+<ul><li><b>Permission needed:</b> command.givevehicle</li>
+<li><b>Syntax:</b> givevehicle &lt;playerName&gt; &lt;vehicleID&gt;
+<ul><li>playerName: The name of the player you wish to give a vehicle.</li>
+<li>vehicleID: The model ID of the vehicle you wish to give to the player.</li></ul></li></ul>
+<h4><span class="mw-headline" id="giveweapon">giveweapon</span></h4>
+<p>Gives a weapon with the specified ID to the specified player. If the player already has the specified weapon, the ammo is increased by the amount specified.
+</p>
+<ul><li><b>Permission needed:</b> command.giveweapon</li>
+<li><b>Syntax:</b> giveweapon &lt;playerName&gt; &lt;weaponID&gt; &lt;[ammo]&gt;
+<ul><li>playerName: The name of the player you wish to give a weapon.</li>
+<li>vehicleID: The weapon ID of the weapon you wish to give to the player.</li>
+<li>ammo: Optional. The ammo you wish to give with the weapon. If not specified, it is 30 by default.</li></ul></li></ul>
+<h4><span class="mw-headline" id="jetpack">jetpack</span></h4>
+<p>Gives/removes a jetpack to the specified player.
+</p>
+<ul><li><b>Permission needed:</b> command.jetpack</li>
+<li><b>Syntax:</b> jetpack &lt;playerName&gt;
+<ul><li>playerName: The name of the player you wish to give/remove a jetpack.</li></ul></li></ul>
+<h4><span class="mw-headline" id="kick">kick</span></h4>
+<p>Kicks the specified player from the server.
+</p>
+<ul><li><b>Permission needed:</b> command.kick</li>
+<li><b>Syntax:</b> kick &lt;playerName&gt; &lt;[reason]&gt;
+<ul><li>playerName: The name of the player you wish to kick from the server.</li>
+<li>reason: Optional. The reason to kick the player. This will be shown to the kicked player after the kick.</li></ul></li></ul>
+<h4><span class="mw-headline" id="mute">mute</span></h4>
+<p>Mutes the specified player by the specified period or until the player disconnects with the specified reason. If the player is already muted, this command will unmute the player.
+</p>
+<ul><li><b>Permission needed:</b> command.mute</li>
+<li><b>Syntax:</b> mute &lt;playerName&gt; &lt;[reason]&gt; &lt;[period]&gt;
+<ul><li>playerName: The name of the player you wish to mute.</li>
+<li>reason: Optional. The reason to mute the player. This will be shown to everyone on chatbox.</li>
+<li>period: Optional. The seconds the player will stay muted. After this period, the player will be automatically unmuted. If not specified, the player will be muted until disconnects or manually unmuted by someone.</li></ul></li></ul>
+<h4><span class="mw-headline" id="register">register</span></h4>
+<p>Adds a new account with the username and password.
+</p>
+<ul><li><b>No permission needed.</b></li>
+<li><b>Syntax:</b> register &lt;[username]&gt; &lt;password&gt;
+<ul><li>username: Optional. The name of the account you wish to add, if not specified, it is the player's name.</li>
+<li>password: This is the password used to access the account. Minimum length is 4 characters and maximum length is 30 characters.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setarmour">setarmour</span></h4>
+<p>Sets the specified player's armour health.
+</p>
+<ul><li><b>Permission needed:</b> command.setarmour</li>
+<li><b>Syntax:</b> setarmour &lt;playerName&gt; &lt;value&gt;
+<ul><li>playerName: The name of the player you wish to set armour.</li>
+<li>value: The new armour's health. Accepts values from 0 to 100.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setcolor">setcolor</span></h4>
+<p>Sets the specified player's vehicle colors.
+</p>
+<ul><li><b>Permission needed:</b> command.setcolor</li>
+<li><b>Syntax:</b> setcolor &lt;playerName&gt; &lt;[color1]&gt; &lt;[color2]&gt; &lt;[color3]&gt; &lt;[color4]&gt;
+<ul><li>playerName: The name of the player you wish to set vehicle's colors. The player must be in a vehicle.</li>
+<li>color1: Optional. An hexadecimal code of the vehicle's color 1. If not specified, it is #000000 by default.</li>
+<li>color2: Optional. An hexadecimal code of the vehicle's color 2. If not specified, it is #000000 by default.</li>
+<li>color3: Optional. An hexadecimal code of the vehicle's color 3. If not specified, it is #000000 by default. <i>Note: Only three GTA SA vehicles are using this color: Camper, Cement Truck, Squalo.</i></li>
+<li>color4: Optional. An hexadecimal code of the vehicle's color 4. If not specified, it is #000000 by default. <i>Note: Actually there's no vehicles on GTA SA using this color.</i></li></ul></li></ul>
+<table cellspacing="0" cellpadding="0" style="padding: 5px; padding-left: 12px; padding-right: 12px; border-radius: 10px; width: 60%; margin: 6px auto 2px auto; border: 1px solid #FFB2B2; background: transparent; border-left: 25px solid #FFB2B2;">
+<tbody><tr>
+<td style="width: 32px; vertical-align:top; display: none;" rowspan="2">[[|link=|]]
+</td>
+<td style=""><b>Warning:</b> This command needs corrections. Nowadays, all colors are mandatory.
+</td></tr>
+<tr>
+<td rowspan="1" style="padding-left: 10px;">
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="setdimension">setdimension</span></h4>
+<p>Sets the specified player's dimension.
+</p>
+<ul><li><b>Permission needed:</b> command.setdimension</li>
+<li><b>Syntax:</b> setdimension &lt;playerName&gt; &lt;value&gt;
+<ul><li>playerName: The name of the player you wish to set dimension.</li>
+<li>value: The new dimension. Accepts values from 0 to 65535.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setgame">setgame</span></h4>
+<p>Sets the server's game type. This will be visible in the server browser.
+</p>
+<ul><li><b>Permission needed:</b> command.setgame</li>
+<li><b>Syntax:</b> setgame &lt;gameType&gt;
+<ul><li>gameType: The name of the game type.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setgamespeed">setgamespeed</span></h4>
+<p>Sets the server's game speed.
+</p>
+<ul><li><b>Permission needed:</b> command.setgamespeed</li>
+<li><b>Syntax:</b> setgamespeed &lt;gameSpeed&gt;
+<ul><li>gameSpeed: The speed of the game. Normal speed is 1. Accepts values from 0 to 10. <i>Note: Actually only values from 0.001 to 4 make difference.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="setgravity">setgravity</span></h4>
+<p>Sets the server's game gravity.
+</p>
+<ul><li><b>Permission needed:</b> command.setgravity</li>
+<li><b>Syntax:</b> setgravity &lt;gravity&gt;
+<ul><li>gravity: The gravity of the game. Normal gravity is 0.008. <i>Note: Higher gravity also increase fall damage.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="sethealth">sethealth</span></h4>
+<p>Sets the specified player's health.
+</p>
+<ul><li><b>Permission needed:</b> command.sethealth</li>
+<li><b>Syntax:</b> sethealth &lt;playerName&gt; &lt;value&gt;
+<ul><li>playerName: The name of the player you wish to set health.</li>
+<li>value: The new health. Accepts values from 0 to 200. <i>Note: To use health higher than 100, the player must set health stats. Otherwise maximum health is 100.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="setinterior">setinterior</span></h4>
+<p>Sets the specified player's interior. Only interiors from interiors.xml can be used.
+</p>
+<ul><li><b>Permission needed:</b> command.setinterior</li>
+<li><b>Syntax:</b> setinterior &lt;playerName&gt; &lt;interiorName&gt;
+<ul><li>playerName: The name of the player you wish to change interior.</li>
+<li>interiorName: The interior name. The names are at the "id" attribute. <i>Note: Interior names are in capital letters.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="setmap">setmap</span></h4>
+<p>Sets the server's map name. This will be visible in the server browser.
+</p>
+<ul><li><b>Permission needed:</b> command.setmap</li>
+<li><b>Syntax:</b> setmap &lt;mapName&gt;
+<ul><li>mapName: The name of the map.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setpaintjob">setpaintjob</span></h4>
+<p>Sets the specified player's vehicle paintjob.
+</p>
+<ul><li><b>Permission needed:</b> command.setpaintjob</li>
+<li><b>Syntax:</b> setpaintjob &lt;playerName&gt; &lt;paintjobID&gt;
+<ul><li>playerName: The name of the player you wish to set vehicle's paintjob. The player must be in a vehicle.</li>
+<li>paintjobID: The paintjob ID. Accepts values from 0 to 3. Using 3 will remove the paintjob.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setpassword">setpassword</span></h4>
+<p>Sets the server's password. Players will need to provide the server password to join the server.
+</p>
+<ul><li><b>Permission needed:</b> command.setpassword</li>
+<li><b>Syntax:</b> setpassword &lt;password&gt;
+<ul><li>password: The password of the server. If not specified, it will remove the password.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setskin">setskin</span></h4>
+<p>Sets the specified player' skin.
+</p>
+<ul><li><b>Permission needed:</b> command.setskin</li>
+<li><b>Syntax:</b> setskin &lt;playerName&gt; &lt;skinID&gt;
+<ul><li>playerName: The name of the player you wish to change skin.</li>
+<li>skinID: The new skin ID. Accepts values from 0 to 312. <i>Note: The following IDs are not working: 3 4 5 6 8 42 65 74 86 119 149 208 273 289.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="setstat">setstat</span></h4>
+<p>Sets the specified player' stat.
+</p>
+<ul><li><b>Permission needed:</b> command.setstat</li>
+<li><b>Syntax:</b> setstat &lt;playerName&gt; &lt;statID&gt; &lt;value&gt;
+<ul><li>playerName: The name of the player you wish to change the stat.</li>
+<li>statID: The stat ID. Accepts values from 0 to 230 (with exceptions). <i>Note: See all stat IDs <a href="SetPedStat.html" title="SetPedStat">here</a>.</i></li>
+<li>value: The new value to the stat. Accepts values from 0 to 1000.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setteam">setteam</span></h4>
+<p>Sets the specified player' team.
+</p>
+<ul><li><b>Permission needed:</b> command.setteam</li>
+<li><b>Syntax:</b> setteam &lt;playerName&gt; &lt;teamName&gt;
+<ul><li>playerName: The name of the player you wish to set the team.</li>
+<li>teamName: The team name.</li></ul></li></ul>
+<h4><span class="mw-headline" id="settime">settime</span></h4>
+<p>Sets the server time.
+</p>
+<ul><li><b>Permission needed:</b> command.settime</li>
+<li><b>Syntax:</b> settime &lt;hour&gt; &lt;minute&gt;
+<ul><li>hour: The clock hour. Accepts 0-23.</li>
+<li>minute: The clock minute. Accepts 0-59.</li></ul></li></ul>
+<h4><span class="mw-headline" id="setweather">setweather</span></h4>
+<p>Sets the server weather.
+</p>
+<ul><li><b>Permission needed:</b> command.setweather</li>
+<li><b>Syntax:</b> setweather &lt;weatherID&gt;
+<ul><li>weatherID: The weatherID. Accepts from 0 to 255. <i>Note: Standard weathers are from 0 to 19. Other weathers are used for effects only.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="setwelcome">setwelcome</span></h4>
+<p>Sets the server welcome message.
+</p>
+<ul><li><b>Permission needed:</b> command.setwelcome</li>
+<li><b>Syntax:</b> setwelcome &lt;message&gt;
+<ul><li>message: The welcome message. <i>Note: You can't use spaces with this command because there's only one parameter.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="shout">shout</span></h4>
+<p>Sends a message at the specified player' screen. Useful for warn the player.
+</p>
+<ul><li><b>Permission needed:</b> command.shout</li>
+<li><b>Syntax:</b> shout &lt;playerName&gt; &lt;message&gt;
+<ul><li>playerName: The name of the player who you wish to shout at.</li>
+<li>message: The shout message. <i>Note: You can't use spaces with this command because there's only one parameter.</i></li></ul></li></ul>
+<h4><span class="mw-headline" id="slap">slap</span></h4>
+<p>Slaps the specified player with the specified damage. Useful for punish the player. The player is also pulled up.
+</p>
+<ul><li><b>Permission needed:</b> command.slap</li>
+<li><b>Syntax:</b> slap &lt;playerName&gt; &lt;damage&gt;
+<ul><li>playerName: The name of the player who you wish to slap.</li>
+<li>damage: An integer representing the slap damage. If you use 0, the player will just be pulled up.</li></ul></li></ul>
+<h4><span class="mw-headline" id="unregister">unregister</span></h4>
+<p>Removes an account with the specified username. This will also delete the account data.
+</p>
+<ul><li><b>Permission needed:</b> function.removeAccount</li>
+<li><b>Syntax:</b> unregister &lt;username&gt;
+<ul><li>username: The name of the account you wish to delete. The account can't be on other ACL Groups than "Everyone".</li></ul></li></ul>
+<h4><span class="mw-headline" id="repair">repair</span></h4>
+<p>Repairs the specified player's vehicle.
+</p>
+<ul><li><b>Permission needed:</b> command.repair</li>
+<li><b>Syntax:</b> repair &lt;playerName&gt;
+<ul><li>playerName: The name of the player who you wish to repair the vehicle.</li></ul></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220727165038
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.025 seconds
+Real time usage: 0.025 seconds
+Preprocessor visited node count: 289/1000000
+Post‐expand include size: 3387/2097152 bytes
+Template argument size: 791/2097152 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 2138/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.762      1 -total
+ 35.94%    2.071      2 Template:Note
+ 27.99%    1.613      3 Template:MessageBox
+ 18.24%    1.051      1 Template:Warning
+ 14.54%    0.838      1 Template:Current_Version
+ 13.68%    0.788      1 Template:Resource_page
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:3526-0!canonical and timestamp 20220727165038 and revision id 69313. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Resource:Admin&amp;oldid=69313">https://wiki.multitheftauto.com/index.php?title=Resource:Admin&amp;oldid=69313</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Resource.html" title="Category:Resource">Resource</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Resource%3AAdmin" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Resource%3AAdmin" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-resource" class="selected mw-list-item"><a href="Resource_Admin.html"><span>Resource</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Special:Badtitle/NS101:Admin&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Resource_Admin.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Resource:Admin&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Resource:Admin&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="http://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Resource_Admin.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Resource_Admin.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Resource:Admin&amp;oldid=69313" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=Resource:Admin&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<label id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">In other languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-hu mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=HU/Resource:Admin" title="Resource:Admin – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-it mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=IT/Resource:Admin" title="Resource:Admin – italiano" lang="it" hreflang="it" class="interlanguage-link-target"><span>Italiano</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="http://wiki.multitheftauto.com/index.php?title=RU/Resource:Admin" title="Resource:Admin – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 February 2021, at 20:39.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="http://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="http://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="http://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="http://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.025","walltime":"0.025","ppvisitednodes":{"value":289,"limit":1000000},"postexpandincludesize":{"value":3387,"limit":2097152},"templateargumentsize":{"value":791,"limit":2097152},"expansiondepth":{"value":8,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":2138,"limit":5000000},"timingprofile":["100.00%    5.762      1 -total"," 35.94%    2.071      2 Template:Note"," 27.99%    1.613      3 Template:MessageBox"," 18.24%    1.051      1 Template:Warning"," 14.54%    0.838      1 Template:Current_Version"," 13.68%    0.788      1 Template:Resource_page"]},"cachereport":{"timestamp":"20220727165038","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":66});});</script>
+</body>
+</html>

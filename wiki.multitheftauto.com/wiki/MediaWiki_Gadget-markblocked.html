@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>MediaWiki:Gadget-markblocked.js - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"d4d7ef435c544f121494fabc","wgCSPNonce":false,"wgCanonicalNamespace":"MediaWiki","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":8,"wgPageName":"MediaWiki:Gadget-markblocked.js","wgTitle":"Gadget-markblocked.js","wgCurRevisionId":73491,"wgRevisionId":73491,"wgArticleId":13465,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"javascript","wgRelevantPageName":"MediaWiki:Gadget-markblocked.js","wgRelevantArticleId":13465,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles"
+:"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.action.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=mediawiki.action.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-8 ns-subject page-MediaWiki_Gadget-markblocked_js rootpage-MediaWiki_Gadget-markblocked_js skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">MediaWiki:Gadget-markblocked.js</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div id="mw-clearyourcache" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>Note:</strong> After publishing, you may have to bypass your browser's cache to see the changes.
+</p>
+<ul><li><strong>Firefox / Safari:</strong> Hold <em>Shift</em> while clicking <em>Reload</em>, or press either <em>Ctrl-F5</em> or <em>Ctrl-R</em> (<em>⌘-R</em> on a Mac)</li>
+<li><strong>Google Chrome:</strong> Press <em>Ctrl-Shift-R</em> (<em>⌘-Shift-R</em> on a Mac)</li>
+<li><strong>Internet Explorer / Edge:</strong> Hold <em>Ctrl</em> while clicking <em>Refresh</em>, or press <em>Ctrl-F5</em></li>
+<li><strong>Opera:</strong> Press <em>Ctrl-F5</em>.</li></ul>
+</div><pre class="mw-code mw-js" dir="ltr">/*
+You can import this gadget to other wikis by using mw.loader.load and specifying the local alias for Special:Contributions. For example:
+var markblocked_contributions = 'Special:Contributions';
+mw.loader.load('//en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-markblocked.js&amp;bcache=1&amp;maxage=259200&amp;action=raw&amp;ctype=text/javascript');
+
+This gadget will pull the user accounts and IPs from the history page and will strike out the users that are currently blocked.
+*/
+function markBlocked( container ) {
+	var ipv6Regex = /^((?=.*::)(?!.*::.+::)(::)?([\dA-F]{1,4}:(:|\b)|){5}|([\dA-F]{1,4}:){6})((([\dA-F]{1,4}((?!\3)::|:\b|$))|(?!\2\3)){2}|(((2[0-4]|1\d|[1-9])?\d|25[0-5])\.?\b){4})$/i;
+
+	// Collect all the links in the page's content
+	var contentLinks = $( container ).find( 'a' );
+
+	var mbTooltip =  window.mbTooltip || '; blocked ($1) by $2: $3 ($4 ago)';
+
+	// Get all aliases for user: &amp; user_talk:
+	var userNS = [];
+	for ( var ns in mw.config.get( 'wgNamespaceIds' ) ) {
+		if ( mw.config.get( 'wgNamespaceIds' )[ns] == 2 || mw.config.get( 'wgNamespaceIds' )[ns] == 3 ) {
+			userNS.push( mw.util.escapeRegExp(ns.replace( /_/g, ' ' )) + ':' );
+		}
+	}
+
+	// Let wikis that are importing this gadget specify the local alias of Special:Contributions
+	if ( window.markblocked_contributions === undefined ) {
+		window.markblocked_contributions = 'Special:Contributions';
+	}
+	// RegExp for all titles that are  User:| User_talk: | Special:Contributions/ (for userscripts)
+	var userTitleRX = new RegExp( '^(' + userNS.join( '|' ) + '|' + window.markblocked_contributions + '\\/)+([^\\/#]+)$', 'i' );
+
+	// RegExp for links
+	// articleRX also matches external links in order to support the noping template
+	var articleRX = new RegExp( mw.config.get( 'wgArticlePath' ).replace('$1', '') + '([^#]+)' );
+	var scriptRX =  new RegExp( '^' + mw.config.get( 'wgScript' ) + '\\?title=([^#&amp;]+)' );
+
+	var userLinks = {};
+	var user, url, ma, pgTitle;
+
+
+	// Find all "user" links and save them in userLinks : { 'users': [&lt;link1>, &lt;link2>, ...], 'user2': [&lt;link3>, &lt;link3>, ...], ... }
+	contentLinks.each( function( i, lnk ) {
+		if( $( lnk ).hasClass("mw-changeslist-date") || $( lnk ).parent("span").hasClass("mw-history-undo") || $(lnk).parent("span").hasClass("mw-rollback-link") )
+		{
+			return;
+		}
+		url = $( lnk ).attr( 'href' );
+		if ( !url ) {
+			return;
+		}
+		if ( ma = articleRX.exec( url ) ) {
+			pgTitle = ma[1];
+		} else if ( ma = scriptRX.exec( url ) ) {
+			pgTitle = ma[1];
+		} else {
+			return;
+		}
+		pgTitle = decodeURIComponent( pgTitle ).replace( /_/g, ' ' );
+		user = userTitleRX.exec( pgTitle );
+		if ( !user ) {
+			return;
+		}
+		user = user[2];
+		if( ipv6Regex.test(user) ) user = user.toUpperCase();
+		$( lnk ).addClass( 'userlink' );
+		if ( !userLinks[user] ) {
+			userLinks[user] = [];
+		}
+		userLinks[user].push (lnk );
+	} );
+
+
+	// Convert users into array
+	var users = [];
+	for ( var u in userLinks ) {
+		users.push( u );
+	}
+	if ( users.length === 0 ) {
+		return;
+	}
+
+	// API request
+	var serverTime, apiRequests = 0;
+	container.addClass( 'markblocked-loading' );
+	while ( users.length > 0 ) {
+		apiRequests++;
+		$.post( 
+			mw.util.wikiScript( 'api' ) + '?format=json&amp;action=query',
+			{
+				list: 'blocks',
+				bklimit: 100,
+				bkusers: users.splice( 0, 50 ).join( '|' ),
+				bkprop: 'user|by|timestamp|expiry|reason|restrictions'
+				// no need for 'id|flags'
+			},
+			markLinks
+		);
+	}
+
+	return; // the end
+
+
+	// Callback: receive data and mark links
+	function markLinks( resp, status, xhr ) {
+
+		serverTime = new Date( xhr.getResponseHeader('Date') );
+		var list, blk, tip, links, lnk;
+		if ( !resp || !( list = resp.query ) || !( list = list.blocks ) ) {
+			return;
+		}
+
+		for ( var i = 0; i &lt; list.length; i++ ) {
+			blk = list[i];
+			var partial = blk.restrictions &amp;&amp; !Array.isArray(blk.restrictions); //Partial block
+			if ( /^in/.test( blk.expiry ) ) {
+				clss = partial ? 'user-blocked-partial' : 'user-blocked-indef';
+				blTime = blk.expiry;
+			} else {
+				clss = partial ? 'user-blocked-partial' : 'user-blocked-temp';
+				blTime = inHours ( parseTS( blk.expiry ) - parseTS( blk.timestamp ) );
+			}
+			tip = mbTooltip;
+			if (partial) {
+				tip = tip.replace( 'blocked', 'partially blocked' );
+			}
+			tip = tip.replace( '$1', blTime )
+				.replace( '$2', blk.by )
+				.replace( '$3', blk.reason )
+				.replace( '$4', inHours ( serverTime - parseTS( blk.timestamp ) ) );
+			links = userLinks[blk.user];
+			for ( var k = 0; links &amp;&amp; k &lt; links.length; k++ ) {
+				lnk = $( links[k] );
+				lnk = lnk.addClass( clss );
+				if ( window.mbTipBox ) {
+					$( '&lt;span class=user-blocked-tipbox>#&lt;/span>' ).attr( 'title', tip ).insertBefore( lnk );
+				} else {
+					lnk.attr( 'title', lnk.attr( 'title' ) + tip );
+				}
+			}
+		}
+
+		if ( --apiRequests === 0 ) { // last response
+			container.removeClass( 'markblocked-loading' );
+			$( '#ca-showblocks' ).parent().remove(); // remove added portlet link
+		}
+
+	}
+
+
+	// --------AUX functions
+
+	// 20081226220605  or  2008-01-26T06:34:19Z   -> date
+	function parseTS( ts ) {
+		var m = ts.replace( /\D/g, '' ).match( /(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)/ );
+		return new Date ( Date.UTC( m[1], m[2]-1, m[3], m[4], m[5], m[6] ) );
+	}
+
+	function inHours( ms ) { // milliseconds -> "2:30" or 5,06d or 21d
+		var mm = Math.floor( ms / 60000 );
+		if ( !mm ) {
+			return Math.floor( ms / 1000 ) + 's';
+		}
+		var hh = Math.floor( mm / 60 );
+		mm = mm % 60;
+		var dd = Math.floor( hh / 24 );
+		hh = hh % 24;
+		if ( dd ) {
+			return dd + ( dd &lt; 10 ? '.' + zz( hh ) : '' ) + 'd';
+		}
+		return hh + ':' + zz( mm );
+	}
+
+	function zz( v ) { // 6 -> '06'
+		if ( v &lt;= 9 ) {
+			v = '0' + v;
+		}
+		return v;
+	}
+}// -- end of main function
+
+// Start on some pages
+switch ( mw.config.get( 'wgAction' ) ) {
+	case 'edit':
+	case 'submit':
+		break;
+	default: // 'view', 'history', 'purge', ...
+		var maybeAutostart = $.Deferred();
+		if ( window.mbNoAutoStart ) {
+			var portletLink = mw.util.addPortletLink( 'p-cactions', '', 'XX', 'ca-showblocks' );
+			$( portletLink ).click( function ( e ) {
+				e.preventDefault();
+				maybeAutostart.resolve();
+			} );
+		} else {
+			maybeAutostart.resolve();
+		}
+
+		$.when( $.ready, mw.loader.using( 'mediawiki.util' ), maybeAutostart ).then( function() {
+			var firstTime = true;
+
+			mw.hook( 'wikipage.content' ).add( function ( container ) {
+				// On the first call after initial page load, container is mw.util.$content
+
+				// Used to limit mainspace activity to just the diff definitions
+				if ( mw.config.get( 'wgAction' ) === 'view' &amp;&amp; mw.config.get( 'wgNamespaceNumber' ) === 0 ) {
+					container = container.find( '.diff-title' );
+				}
+
+				if ( firstTime ) {
+					firstTime = false;
+
+					// On page load, also update the namespace tab
+					container = container.add( '#ca-nstab-user' );
+
+					mw.util.addCSS('\
+						.markblocked-loading a.userlink {opacity:' + ( window.mbLoadingOpacity || 0.85 ) + '}\
+						a.user-blocked-temp {'   + ( window.mbTempStyle || 'opacity: 0.7; text-decoration: line-through' ) + '}\
+						a.user-blocked-indef {'  + ( window.mbIndefStyle || 'opacity: 0.4; font-style: italic; text-decoration: line-through' ) + '}\
+						a.user-blocked-partial {'  + ( window.mbPartialStyle || 'text-decoration: underline; text-decoration-style: dotted' ) + '}\
+						.user-blocked-tipbox {' + ( window.mbTipBoxStyle || 'font-size:smaller; background:#FFFFF0; border:1px solid #FEA; padding:0 0.3em; color:#AAA' ) + '}\
+					');
+				}
+
+				markBlocked( container );
+			} );
+		} );
+}
+</pre>
+
+<!-- 
+NewPP limit report
+Cached time: 20220727215124
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.003 seconds
+Real time usage: 0.003 seconds
+Preprocessor visited node count: 2/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 1/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-markblocked.js&amp;oldid=73491">https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-markblocked.js&amp;oldid=73491</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=MediaWiki%3AGadget-markblocked.js" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=MediaWiki%3AGadget-markblocked.js" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-mediawiki" class="selected mw-list-item"><a href="MediaWiki_Gadget-markblocked.html" title="View the system message [c]" accesskey="c"><span>Message</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki_talk:Gadget-markblocked.js&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="MediaWiki_Gadget-markblocked.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-markblocked.js&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-markblocked.js&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/MediaWiki_Gadget-markblocked.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/MediaWiki_Gadget-markblocked.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-markblocked.js&amp;oldid=73491" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=MediaWiki:Gadget-markblocked.js&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 January 2022, at 22:34.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.002","walltime":"0.002","ppvisitednodes":{"value":2,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":1,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220727215124","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":74});});</script>
+</body>
+</html>

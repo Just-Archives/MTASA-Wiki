@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Lua compilation API - Multi Theft Auto: Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4726c1c607b963099638912c","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Lua_compilation_API","wgTitle":"Lua compilation API","wgCurRevisionId":73197,"wgRevisionId":73197,"wgArticleId":13207,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Lua_compilation_API","wgRelevantArticleId":13207,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user"
+:"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.GoogleCodePrettify","ext.gadget.ReferenceTooltips","ext.gadget.exlinks","ext.gadget.DotsSyntaxHighlighter","ext.gadget.purgetab","ext.gadget.markblocked"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.multitheftauto.com/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.38.2"/>
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://wiki.multitheftauto.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.multitheftauto.com/opensearch_desc.php" title="Multi Theft Auto: Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.multitheftauto.com/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/licenses/fdl-1.3.html"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Lua_compilation_API rootpage-Lua_compilation_API skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Lua compilation API</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Multi Theft Auto: Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>This page is a guide for Lua compilation API.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Syntax"><span class="tocnumber">1</span> <span class="toctext">Syntax</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Parameters"><span class="tocnumber">2</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Examples"><span class="tocnumber">3</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Linux_example_using_curl"><span class="tocnumber">3.1</span> <span class="toctext">Linux example using curl</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Linux_example_using_luac_replacement"><span class="tocnumber">3.2</span> <span class="toctext">Linux example using luac replacement</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Windows_batch_file_example_using_curl"><span class="tocnumber">3.3</span> <span class="toctext">Windows batch file example using curl</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Windows_example_using_luac.exe_replacement"><span class="tocnumber">3.4</span> <span class="toctext">Windows example using luac.exe replacement</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Lua_example"><span class="tocnumber">3.5</span> <span class="toctext">Lua example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Changelog"><span class="tocnumber">4</span> <span class="toctext">Changelog</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<pre class="prettyprint">POST "http://luac.mtasa.com/index.php"
+</pre>
+<h2><span class="mw-headline" id="Parameters">Parameters</span></h2>
+<ul><li><b>luasource:</b> type <b>file</b> the file content</li>
+<li><b>compile:</b> type <b>value</b> set to 1 to enable compilation</li>
+<li><b>debug:</b> type <b>value</b> set to 1 to enable debug information</li>
+<li><b>luasource:</b> type <b>value</b>
+<ul><li>Set to 1 to enable some obfuscation</li>
+<li>Set to 2 to enable more obfuscation (From 1.5.2-9.07903)</li>
+<li>Set to 3 to enable even more obfuscation (From 1.5.6-9.18728)</li></ul></li></ul>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<h3><span class="mw-headline" id="Linux_example_using_curl">Linux example using curl</span></h3>
+<pre class="prettyprint lang-bash">FROM="example.lua"
+TO="compiled.lua"
+curl -s -X POST -F compile=1 -F debug=0 -F obfuscate=3 -F <a href="https://wiki.multitheftauto.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ee2fbeffde1fbfcedebb3ce">[email&#160;protected]</a>$FROM http://luac.mtasa.com/ &gt; $TO
+</pre>
+<h3><span class="mw-headline" id="Linux_example_using_luac_replacement">Linux example using luac replacement</span></h3>
+<pre class="prettyprint lang-bash">luac_mta -e3 -o compiled.lua example.lua
+if [ $? -ne 0 ]; then
+   echo "Error"
+fi
+</pre>
+<p>Need luac_mta (R13 2019-07-12) for <a rel="nofollow" class="external text" href="http://luac.mtasa.com/files/linux/x86/luac_mta">Linux 32 bit</a> or <a rel="nofollow" class="external text" href="http://luac.mtasa.com/files/linux/x64/luac_mta">Linux 64 bit</a>
+</p>
+<h3><span class="mw-headline" id="Windows_batch_file_example_using_curl">Windows batch file example using curl</span></h3>
+<pre class="prettyprint lang-batch">set FROM="example.lua"
+set TO="compiled.lua"
+curl.exe -s -X POST -F compile=1 -F debug=0 -F obfuscate=3 -F <a href="https://wiki.multitheftauto.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f5998094869a80879690c8b5">[email&#160;protected]</a>%FROM% http://luac.mtasa.com/ &gt; %TO%
+</pre>
+<p>Get <a rel="nofollow" class="external text" href="http://luac.mtasa.com/files/windows/x86/curl.exe">curl.exe</a><br />
+(Original from <a rel="nofollow" class="external free" href="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a>)
+</p>
+<h3><span class="mw-headline" id="Windows_example_using_luac.exe_replacement">Windows example using luac.exe replacement</span></h3>
+<pre class="prettyprint lang-batch">luac_mta.exe -e3 -o compiled.lua example.lua
+IF NOT ERRORLEVEL 1 goto lp1
+   echo "Error"
+:lp1
+</pre>
+<p>Get <a rel="nofollow" class="external text" href="http://luac.mtasa.com/files/windows/x86/luac_mta.exe">luac_mta.exe</a> (R12 2019-07-12) <b>only x86</b>
+</p>
+<h3><span class="mw-headline" id="Lua_example">Lua example</span></h3>
+<pre class="prettyprint lang-lua">local compile = 1
+local debug = 0
+local obfuscate = 3
+local scriptsToCompile = {"server.lua"} -- can contain multiple scripts, separated by comma, e.g: "script_1.lua", "script_2.lua"
+local errorCodes = {
+	["ERROR Nothing to do - Please select compile and/or obfuscate"] = true,
+	["ERROR Could not compile file"] = true,
+	["ERROR Could not read file"] = true,
+	["ERROR Already compiled"] = true,
+	["ERROR Already encrypted"] = true,
+}
+
+local function loadScript(pPath)
+    local scriptExist = fileExists(pPath)
+
+    if scriptExist then
+        local scriptFile = fileOpen(pPath)
+
+        if scriptFile then
+            local scriptSize = fileGetSize(scriptFile)
+            local scriptCode = fileRead(scriptFile, scriptSize)
+
+            fileClose(scriptFile)
+
+            return scriptCode
+        else
+            outputDebugString("[Script compile]: Failed to open "..pPath..".")
+        end
+    else
+        outputDebugString("[Script compile]: "..pPath.." doesn't exist.")
+    end
+end
+
+local function compileCallback(pCompiledCode, pErrors, pScript)
+    if pErrors == 0 then
+        local haveError = errorCodes[pCompiledCode]
+
+        if haveError then
+            outputDebugString("[Script compile]: Failed with error: "..pCompiledCode.." ("..pScript..")")
+            return false
+        end
+
+        local compiledScript = fileCreate("compiled/"..pScript)
+
+        if compiledScript then
+            fileWrite(compiledScript, pCompiledCode)
+            fileClose(compiledScript)
+
+            outputDebugString("[Script compile]: "..pScript.." compiled successfully.")
+        else
+            outputDebugString("[Script compile]: Failed to create "..pScript..".")
+        end
+    else
+        outputDebugString("[Script compile]: Couldn't compile "..pScript..".")
+    end
+end
+
+local function compileScripts()
+    local fetchURL = string.format("https://luac.mtasa.com/?compile=%d&amp;debug=%d&amp;obfuscate=%d", compile, debug, obfuscate)
+
+    for scriptID = 1, #scriptsToCompile do
+        local scriptName = scriptsToCompile[scriptID]
+
+        fetchRemote(fetchURL, compileCallback, loadScript(scriptName), true, scriptName)
+    end
+end
+addEventHandler("onResourceStart", resourceRoot, compileScripts)
+</pre>
+<h2><span class="mw-headline" id="Changelog">Changelog</span></h2>
+<table cellpadding="4" style="border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<th width="140" style="background-color: #d0d0e0; border-style: solid; border-width: 1px; border-color: #FFF; color:#00000">Version
+</th>
+<th width="500" style="white-space: nowrap; background-color: #d0d0e0; border-style: solid; border-width: 1px; border-color: #FFF">Description
+</th></tr></tbody></table>
+<table cellpadding="4" style="text-align:center; border-collapse: collapse; border-width: 1px; border-style: solid; border-color: #FFF">
+
+<tbody><tr>
+<td width="140" style="text-align:center; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF; color:#000000">2014-08-10
+</td>
+<td width="500" style="text-align:center; white-space: nowrap; background-color: #f0f0ff; border-style: solid; border-width: 1px; border-color: #FFF"><i>encrypt</i> has been renamed to <i>obfuscate</i>.<br /><i>blockdecompile</i> has been removed.
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20220727032034
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.006 seconds
+Real time usage: 0.007 seconds
+Preprocessor visited node count: 65/1000000
+Post‐expand include size: 906/2097152 bytes
+Template argument size: 96/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2968/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.555      1 -total
+ 48.24%    0.750      1 Template:ChangelogHeader
+ 47.72%    0.742      1 Template:ChangelogItem
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_dev_:pcache:idhash:13207-0!canonical and timestamp 20220727032034 and revision id 73197. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.multitheftauto.com/index.php?title=Lua_compilation_API&amp;oldid=73197">https://wiki.multitheftauto.com/index.php?title=Lua_compilation_API&amp;oldid=73197</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:CreateAccount&amp;returnto=Lua+compilation+API" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Special:UserLogin&amp;returnto=Lua+compilation+API" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Lua_compilation_API.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Talk:Lua_compilation_API&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Lua_compilation_API.html"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Lua_compilation_API&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Lua_compilation_API&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="https://wiki.multitheftauto.com/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Multi Theft Auto: Wiki" aria-label="Search Multi Theft Auto: Wiki" autocapitalize="sentences" title="Search Multi Theft Auto: Wiki [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="Main_Page.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Home" class="mw-list-item"><a href="Main_Page.html"><span>Home</span></a></li><li id="n-How-you-can-help" class="mw-list-item"><a href="How_you_can_help.html"><span>How you can help</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="Special_RecentChanges.html" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="DgsGridListSetItemSelectable.html" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Reference" class="mw-portlet mw-portlet-Reference vector-menu vector-menu-portal portal" aria-labelledby="p-Reference-label" role="navigation" 
+	 >
+	<label id="p-Reference-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Reference</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Client-Functions" class="mw-list-item"><a href="Client_Scripting_Functions.html"><span>Client Functions</span></a></li><li id="n-Client-Events" class="mw-list-item"><a href="Client_Scripting_Events.html"><span>Client Events</span></a></li><li id="n-Server-Functions" class="mw-list-item"><a href="Server_Scripting_Functions.html"><span>Server Functions</span></a></li><li id="n-Server-Events" class="mw-list-item"><a href="Server_Scripting_Events.html"><span>Server Events</span></a></li><li id="n-Shared-Functions" class="mw-list-item"><a href="Shared_Scripting_Functions.html"><span>Shared Functions</span></a></li><li id="n-Useful-Functions" class="mw-list-item"><a href="Useful_Functions.html"><span>Useful Functions</span></a></li><li id="n-MTA-Classes" class="mw-list-item"><a href="MTA_Classes.html"><span>MTA Classes</span></a></li><li id="n-MTA-Elements" class="mw-list-item"><a href="Element.html"><span>MTA Elements</span></a></li><li id="n-Element-Tree" class="mw-list-item"><a href="Element_tree.html"><span>Element Tree</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="Special_WhatLinksHere/Lua_compilation_API.html" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="Special_RecentChangesLinked/Lua_compilation_API.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Lua_compilation_API&amp;oldid=73197" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.multitheftauto.com/index.php?title=Lua_compilation_API&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 26 December 2021, at 12:28.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="Multi_Theft_Auto__Wiki_Privacy_policy.html" title="Multi Theft Auto: Wiki:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="Multi_Theft_Auto__Wiki_About.html" title="Multi Theft Auto: Wiki:About">About Multi Theft Auto: Wiki</a></li>
+	<li id="footer-places-disclaimer"><a href="Multi_Theft_Auto__Wiki_General_disclaimer.html" title="Multi Theft Auto: Wiki:General disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.gnu.org/licenses/fdl-1.3.html"><img src="https://wiki.multitheftauto.com/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="https://wiki.multitheftauto.com/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script data-cfasync="false" src="https://wiki.multitheftauto.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/main.js"></script><script src="https://wiki.multitheftauto.com/extensions/_MTAThemeExtensions/topmenu.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.006","walltime":"0.007","ppvisitednodes":{"value":65,"limit":1000000},"postexpandincludesize":{"value":906,"limit":2097152},"templateargumentsize":{"value":96,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2968,"limit":5000000},"timingprofile":["100.00%    1.555      1 -total"," 48.24%    0.750      1 Template:ChangelogHeader"," 47.72%    0.742      1 Template:ChangelogItem"]},"cachereport":{"timestamp":"20220727032034","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":86});});</script>
+</body>
+</html>
