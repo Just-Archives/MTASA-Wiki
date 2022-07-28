@@ -1,0 +1,554 @@
+/* inter-regular - vietnamese_latin_greek_cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('inter-v11-vietnamese_latin_greek_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('inter-v11-vietnamese_latin_greek_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* See MediaWiki:Common.css instead */
+/* Theme overrides */
+.projectstable {
+ width: 100%;
+ text-align: center;
+ padding: 2px;
+}
+.reportstable {
+ width: 75%;
+ border: 2px solid grey;
+}
+
+body.page-Main_Page h1.firstHeading { 
+  display:none; 
+}
+
+/***************************************/
+.clientContent h1,
+.clientContent h2,
+.serverContent h1,
+.serverContent h2 {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+body,
+input,
+textarea {
+  font-family: Inter, sans-serif;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: #f3f8f8;
+}
+#mw-page-base {
+  background: #f3f8f8;
+}
+.skin-vector .mw-body[style] {
+  border-radius: 3px;
+}
+.skin-darkvector .mw-body h1,
+.skin-darkvector .mw-body-content h1,
+.skin-darkvector .mw-body-content h2,
+.skin-vector .mw-body h1,
+.skin-vector .mw-body-content h1,
+.skin-vector .mw-body-content h2 {
+  font-family: inherit;
+}
+.skin-darkvector #p-logo,
+.skin-vector #p-logo {
+  height: 25px;
+}
+body.skin-monobook {
+  padding-top: 5em;
+}
+body::before {
+  background: #121319 url(color-strip.png) no-repeat left bottom / 100% 3px;
+  content: '';
+  display: block;
+  height: 135px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+body.skin-darkvector::after,
+body.skin-vector::after {
+  background: url(wikilogo.png) no-repeat left 20px top 54px / 330px;
+  content: '';
+  display: block;
+  height: 135px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@media (min-width: 980px) {
+  body.skin-darkvector::after,
+  body.skin-vector::after {
+    background-position: left 29px top 54px;
+  }
+}
+body.skin-darkvector,
+body.skin-vector {
+  padding-top: 135px;
+}
+#mw-head,
+#mw-panel {
+  top: 135px;
+}
+.nav_bar {
+  align-items: center;
+  background: #0B0B0F;
+  color: #9F9FA2 !important;
+  display: flex;
+  font-size: 14px;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 40px;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.nav_bar a {
+  color: #9F9FA2 !important;
+  border: 0 !important;
+  display: none;
+  padding: 7px 10px;
+  transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media (min-width: 980px) {
+  .nav_bar a {
+    display: inline-block;
+  }
+}
+.nav_bar a:first-child {
+  margin-left: -10px;
+}
+.nav_bar a:hover,
+.nav_bar a:focus,
+.nav_bar a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.nav_bar__container {
+  align-items: center;
+  padding: 0 16px;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+#onlinePlayers {
+  margin-left: 12px;
+  position: relative;
+}
+@media (min-width: 980px) {
+  #onlinePlayers {
+    margin-left: auto;
+  }
+}
+@keyframes onlinePlayers {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#onlinePlayers:not(:empty)::before {
+  animation: onlinePlayers 1s infinite forwards alternate;
+  background: lightgreen;
+  border-radius: 100px;
+  content: '';
+  display: block;
+  height: 6px;
+  left: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+}
+
+
+/***************************************/
+.skin-monobook #globalWrapper {
+	background: url(wikilogo.png) no-repeat 2em 0.35em / 330px;
+}
+
+.skin-monobook div#content {
+	margin: 120px 0 0 12.2em;
+	padding: 0 1em 1em 1em;
+	z-index: 2;
+}
+
+.skin-monobook div#column-one {
+	padding-top: 108px;
+}
+
+/***************************************/
+.skin-monobook #p-logo {
+    top: 0;
+    height: 75px;
+    width: 380px;
+    margin: 0;
+}
+
+.skin-monobook #p-logo a {
+    height: 100%;
+    width: 100%;
+}
+
+.skin-darkvector #p-logo a,
+.skin-vector #p-logo a {
+    display: block;
+    height: 80px;
+    position: absolute;
+    top: -90px;
+    width: 380px;
+    z-index: 10;
+}
+
+/***************************************/
+.skin-monobook #p-cactions {
+	top: 8em;
+ 	list-style: none;
+}
+
+.skin-monobook #p-cactions ul {
+	list-style: none;
+}
+
+.skin-monobook #p-cactions li {
+	color: black;
+	padding: 0 0 .1em 0;
+  border: 0;
+}
+
+.skin-monobook #p-cactions li.selected {
+  padding: 0 0 .2em 0;
+}
+
+.skin-monobook #p-cactions li a {
+  background-color: transparent;
+	color: black;
+}
+
+.skin-monobook #p-cactions li.selected a {
+	font-weight: bold;
+	padding: 0 1em .2em!important;
+}
+
+.skin-monobook #p-cactions li a:hover {
+  text-decoration: underline;
+}
+
+/***************************************/
+.skin-monobook #p-personal {
+  z-index: 0;
+}
+
+.skin-monobook #p-personal li {
+  color: white;
+}
+
+.skin-monobook #p-personal li a {
+  color: white;
+}
+
+.skin-monobook #p-personal li a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#firstHeading {
+  padding-top: 10px;
+  position: relative;
+}
+
+/***************************************/
+/* Make code highlighting fancier */
+.kwd {
+  font-weight: bold;
+}
+
+.str {
+    font-weight: bold;
+}
+
+.pun {
+    color: #66cc66;
+}
+
+.lit {
+    color: #cc66cc;
+}
+
+.com {
+    color: #808080;
+    font-style: italic;
+}
+
+code,
+pre.prettyprint {
+    color: black;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd !important;
+    border-radius: 5px;
+    margin: 0;
+    padding: 14px !important;
+    white-space: pre;
+    line-height: 1.2;
+    overflow-x: auto;
+    direction: ltr;
+}
+
+code {
+    padding: 5px 10px !important;
+}
+
+/***************************************/
+.scriptedFunctionsFirstHeading {
+    margin-bottom: .1em;
+	border-bottom: 3px solid #007F00;
+}
+
+.resourceFirstHeading {
+    margin-bottom: .1em;
+	border-bottom: 3px solid #7F007F;
+}
+
+.httpFirstHeading {
+    margin-bottom: .1em;
+	border-bottom: 3px solid #008800;
+}
+
+.clientFirstHeading {
+    margin-bottom: .1em;
+	border-bottom: 3px solid #FF0000;
+}
+
+.serverFirstHeading {
+    margin-bottom: .1em;
+	border-bottom: 3px solid #FF7F00;
+}
+
+.bothFirstHeading {
+    margin-bottom: .1em;
+	border-bottom: 3px solid #0000FF;
+}
+/***************************************/
+.sectionSubCaption {
+	float: right;
+	font-size: 1.8em;
+	padding-left: 1em;
+	padding-top: 11px;
+	position: relative;
+	z-index: 1;
+}
+/***************************************/
+/* For the code boxes                  */
+.scriptedFunctionsHeader {
+	border: 2px solid #FF0000;
+	background: #FF6666;
+	padding: 4px;
+	font-weight: bold;
+	color: #AA0000;
+	margin-top: 2px;
+}
+
+.clientHeader {
+	border: 2px solid #FF0000;
+	background: #FF6666;
+	padding: 4px;
+	font-weight: bold;
+	color: #AA0000;
+	margin-top: 2px;
+}
+
+.serverHeader {
+	border: 2px solid #FF7F00;
+	background: #FFAA44;
+	padding: 4px;
+	font-weight: bold;
+	color: #AA5600;
+	margin-top: 2px;
+}
+
+.bothHeader {
+	border: 2px solid #0000FF;
+	background: #AAAAFF;
+	padding: 4px;
+	font-weight: bold;
+	color: #AA5600;
+	margin-top: 2px;
+}
+
+.genericHeader {
+	border: 2px solid #000000;
+	background: #CCCCCC;
+	padding: 4px;
+	font-weight: bold;
+	color: #000000;
+	margin-top: 2px;
+}
+
+
+.httpHeader {
+	border: 2px solid #004400;
+	background: #448844;
+	padding: 4px;
+	font-weight: bold;
+	color: #004400;
+	margin-top: 2px;
+}
+/***************************************/
+.httpContent {
+	border: 2px solid #004400;
+	border-top: 1px solid #004400;
+	background: #668866;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.clientContent {
+	border: 2px solid #FF0000;
+	border-top: 1px solid #FF0000;
+	background: #FFBBBB;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.serverContent {
+	border: 2px solid #FF7F00;
+	border-top: 1px solid #FF7F00;
+	background: #FFCC66;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.bothContent {
+	border: 2px solid #0000FF;
+	border-top: 1px solid #0000FF;
+	background: #DDDDFF;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.genericContent {
+	border: 2px solid #000000;
+	border-top: 1px solid #000000;
+	background: #FFFFFF;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/***************************************/
+
+
+/***************************************/
+.toc {
+  border: 0;
+  border-radius: 5px;
+  padding: 25px;
+}
+.toc.tochidden .toctitle {
+  margin: 0;
+}
+.toc .toctitle {
+  margin: 0 0 6px;
+  text-align: left;
+}
+.toc .tocnumber {
+  color: inherit;
+}
+/***************************************/
+
+
+/***************************************/
+code,
+pre.prettyprint {
+  background: #f3f8f8;
+  border: 0;
+  border-radius: 5px;
+  margin: 14px 0;
+  padding: 14px 16px;
+}
+code,
+pre.prettyprint a {
+  text-decoration: none;
+}
+/***************************************/
+
+
+/***************************************/
+div.thumbinner {
+  background: #f3f8f8;
+  border: 0;
+  padding: 10px;
+}
+/***************************************/
+
+
+/***************************************/
+.catlinks {
+  background: #f3f8f8;
+  border: 0;
+  border-radius: 100px;
+  padding: 6px 15px;
+}
+/***************************************/
+
+
+/***************************************/
+#simpleSearch {
+  background: #fff;
+  border-color: #ddd;
+  border-radius: 100px;
+  border-width: 1px;
+  padding: 0;
+}
+#searchInput {
+  background: 0;
+  border: 0;
+  border-radius: 100px;
+  padding-left: 11px;
+  padding-right: 30px;
+}
+#searchInput ~ #searchButton {
+  right: 5px;
+}
+/***************************************/
+
+
+/***************************************/
+.betaWrap {
+  border: 2px solid #434d5f;
+  border-radius: 10px;
+  margin: 14px 0;
+  overflow: hidden;
+}
+.betaWrap :first-child {
+  background: #434d5f;
+  color: #fff;
+  font-weight: bold;
+}
+.betaWrap > * {
+  display: block;
+  padding: 4px 8px;
+}
+/***************************************/
+
+
+/***************************************/
+.mw-changeslist-legend {
+  border-radius: 10px;
+  line-height: 1.2;
+  padding: 15px;
+}
+
+fieldset {
+  border-radius: 5px;
+}
+/***************************************/
